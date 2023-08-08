@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../../assets/logo4.png'
 
 
 const Navbar = () => {
@@ -28,10 +29,14 @@ const Navbar = () => {
             <nav className="bg-orange-700">
                 <div className="container mx-auto px-4">
                     <div className="flex items-center justify-between h-16">
-                        <div className="flex ">
+                        <div className="flex items-center">
                             <div className="">
                                 {/*  logo image or text */}
-                                <NavLink to='/' className="text-white hover:text-orange-400 text-3xl">Logo here</NavLink>
+                                <NavLink to='/' className="text-white hover:text-orange-400 text-3xl">
+                                    <div style={{width:'full',height:'62px'}}>
+                                    <img className='w-full h-full'  src={logo} alt="" />
+                                    </div>
+                                      </NavLink>
                             </div>
                             <  div className="hidden md:block">
                                 <ul className="ml-40 flex items-center space-x-14 text-lg">
