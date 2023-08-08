@@ -3,6 +3,9 @@ import Main from "../Main";
 import Home from "../../pages/Home/home/Home";
 import Services from "../../pages/services/Services";
 import MobileRecharge from "../../pages/FinancialPlatform/MobileRecharge/MobileRecharge";
+import SendMoney from "../../pages/FinancialPlatform/SendMoney/SendMoney";
+import CashOut from "../../pages/FinancialPlatform/CashOut/CashOut";
+import Payment from "../../pages/FinancialPlatform/Payment/Payment";
 
 const router = createBrowserRouter([
     {
@@ -20,7 +23,19 @@ const router = createBrowserRouter([
             {
                 path: '/mobileRecharge',
                 element: <MobileRecharge></MobileRecharge>,
-            }
+            },
+            {
+                path: '/sendMoney',
+                element: <SendMoney></SendMoney>
+            },
+            {
+                path: '/cashOut',
+                element: <CashOut></CashOut>
+            },
+            {
+                path: '/payment',
+                element: <Payment></Payment>
+            },
         ]
     }
 ])
