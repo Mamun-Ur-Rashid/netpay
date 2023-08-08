@@ -15,11 +15,11 @@ const Navbar = () => {
         <>
             <li> <NavLink to='/' className="text-white hover:text-orange-400">Home</NavLink></li>
             <li> <NavLink to='/services' className="text-white hover:text-orange-400">Services</NavLink></li>
-            <li> <NavLink to='' className="text-white hover:text-orange-400">option2</NavLink></li>
-            <li> <NavLink to='' className="text-white hover:text-orange-400">option3</NavLink></li>
-            <li> <NavLink to='' className="text-white hover:text-orange-400">option4</NavLink></li>
-            <li> <NavLink to='' className="text-white hover:text-orange-400">option5</NavLink></li>
-            <li> <NavLink to='' className="text-white hover:text-orange-400">option6</NavLink></li>
+            <li> <NavLink to='' className="text-white hover:text-orange-400">Business</NavLink></li>
+            <li> <NavLink to='' className="text-white hover:text-orange-400">Help</NavLink></li>
+            <li> <NavLink to='' className="text-white hover:text-orange-400">Career</NavLink></li>
+            <li> <NavLink to='' className="text-white hover:text-orange-400">About</NavLink></li>
+            <li> <NavLink to='' className="text-white hover:text-orange-400">Blog</NavLink></li>
 
         </>
 
@@ -33,10 +33,10 @@ const Navbar = () => {
                             <div className="">
                                 {/*  logo image or text */}
                                 <NavLink to='/' className="text-white hover:text-orange-400 text-3xl">
-                                    <div style={{width:'full',height:'62px'}}>
-                                    <img className='w-full h-full'  src={logo} alt="" />
+                                    <div style={{ width: 'full', height: '62px' }}>
+                                        <img className='w-full h-full' src={logo} alt="" />
                                     </div>
-                                      </NavLink>
+                                </NavLink>
                             </div>
                             <  div className="hidden md:block">
                                 <ul className="ml-40 flex items-center space-x-14 text-lg">
