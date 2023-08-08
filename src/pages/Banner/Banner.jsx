@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Banner = () => {
     return (
-        <div >
+        <div className='mb-14'>
             <Carousel>
                 <div>
                     <img src="https://www.bkash.com/uploaded_contents/banners/desktop/Business-Hero-Banner_Mehjabeen_1680677736196.webp" />
