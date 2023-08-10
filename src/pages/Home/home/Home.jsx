@@ -3,10 +3,10 @@ import FinancialCard from "../../FinancialPlatform/FinancialCard/FinancialCard";
 
 const Home = () => {
     return (
-        <div>
+        <div className="mt-16">
             <Banner></Banner>
             <FinancialCard></FinancialCard>
-            
+
         </div>
     );
 };

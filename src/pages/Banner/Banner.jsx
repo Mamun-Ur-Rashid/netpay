@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Banner = () => {
     return (
-        <div >
+        <div className='mb-14'>
             <Carousel>
                 <div>
                     <img src="https://media.gettyimages.com/id/1366223220/vector/send-money-related-web-banner-line-style-modern-design-vector-illustration-for-web-banner.jpg?s=612x612&w=0&k=20&c=rnkvfeyASDyAXqIhnQDmqBswwopim6hlsNmjUp4zeGM=" />
