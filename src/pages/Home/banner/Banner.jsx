@@ -6,24 +6,23 @@ const Banner = () => {
         <div >
             <Carousel>
                 <div>
-                    <img src="https://www.bkash.com/uploaded_contents/banners/desktop/Business-Hero-Banner_Mehjabeen_1680677736196.webp" />
+                    <img src="https://media.gettyimages.com/id/1366223220/vector/send-money-related-web-banner-line-style-modern-design-vector-illustration-for-web-banner.jpg?s=612x612&w=0&k=20&c=rnkvfeyASDyAXqIhnQDmqBswwopim6hlsNmjUp4zeGM=" />
+
+                </div>
+                <div>                     <img src="https://media.gettyimages.com/id/1267210633/vector/mobile-payment-isometric-banner-design.jpg?s=612x612&w=0&k=20&c=BdkhBGAoIA0rKnD9nyjlJFaRBi3OIopWVXcSGCsthUQ=" />
 
                 </div>
                 <div>
-                    <img src="https://www.bkash.com/uploaded_contents/banners/desktop/05_Anti%20Fraud_1666003655336.webp" />
-
+                    <img src="https://media.gettyimages.com/id/1157981987/vector/money-related-banner-template-with-line-icons-modern-vector-illustration-for-advertisement.jpg?s=612x612&w=0&k=20&c=ndAEpWLKyQOHYnJ5OgnOmgoPGZTXz74QmOzUe1w2z5A=" />
                 </div>
                 <div>
-                    <img src="https://www.bkash.com/uploaded_contents/banners/desktop/website-hero-banner_1920-X-500_BANGLA_1683625439652.webp" />
+                    <img src="https://media.gettyimages.com/id/1366223220/vector/send-money-related-web-banner-line-style-modern-design-vector-illustration-for-web-banner.jpg?s=612x612&w=0&k=20&c=rnkvfeyASDyAXqIhnQDmqBswwopim6hlsNmjUp4zeGM=" />
                 </div>
                 <div>
-                    <img src="https://www.bkash.com/uploaded_contents/banners/desktop/Business-Hero-Banner_Nisho_1682399227820.webp" />
+                    <img src="https://media.gettyimages.com/id/1366470731/vector/mobile-payment-related-web-banner-line-style-modern-design-vector-illustration-for-web.jpg?s=612x612&w=0&k=20&c=cMlwJY1Fv7xFyod9nqM2_xxxCqp9wQJU-kWjK91TGwU=" />
                 </div>
                 <div>
-                    <img src="https://www.bkash.com/uploaded_contents/banners/desktop/Business-Hero-Banner-3_1668700005422.webp" />
-                </div>
-                <div>
-                    <img src="https://www.bkash.com/uploaded_contents/banners/desktop/No-1-Brand-1920x500_1675085573334.webp" />
+                    <img src="https://media.gettyimages.com/id/896216558/vector/card-payment-line-infographic-web-banner.jpg?s=612x612&w=0&k=20&c=ijo8VAnVQeXvzWy32fPsghydZ9keSG5is7TSr3YW8g0=" />
                 </div>
             </Carousel>
         </div>
