@@ -10,7 +10,7 @@ const FinancialCard = () => {
                 <Link to='/mobileRecharge'>
                     <div className="card w-50 h-full bg-base-100 shadow-2xl cursor-pointer">
                         <figure className="px-10 pt-10">
-                            <img src="https://www.bkash.com/uploaded_contents/services/home_images/02-MR_1675164134643.webp" alt="mobile" className="rounded-xl " />
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.NnxUeTqipwoDkadhWjGRHwHaEK&pid=Api&P=0&h=220" alt="mobile" className="rounded-xl " />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Mobile Recharge</h2>
@@ -27,11 +27,11 @@ const FinancialCard = () => {
                 <Link to='/sendMoney'>
                     <div className="card w-50 h-full bg-base-100 shadow-2xl cursor-pointer">
                         <figure className="px-10 pt-10">
-                            <img src="https://www.bkash.com/uploaded_contents/services/home_images/01-send-money_1675164089657.webp" alt="mobile" className="rounded-xl" />
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.t_lyfA4Pj8rILeKP_sNGlwHaE7&pid=Api&rs=1&c=1&qlt=95&w=150&h=99" alt="mobile" className="rounded-xl" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Send money</h2>
-                            <p>Send Money from bKash to any number instantly</p>
+                            <p>Send Money from netpay to any number instantly</p>
                             <div className="card-actions">
                                 <Link className="text-red-700 font-semibold text-xl" to='/sendMoney'>Learn More</Link>
                             </div>
@@ -43,7 +43,7 @@ const FinancialCard = () => {
                 <Link to='/cashOut'>
                     <div className="card w-50 h-full bg-base-100 shadow-2xl cursor-pointer">
                         <figure className="px-10 pt-10">
-                            <img src="https://www.bkash.com/uploaded_contents/services/home_images/03-cashout_1675164155438.webp" alt="mobile" className="rounded-xl" />
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.l3jhiW51U0zDlgYmaFvavgHaEK&pid=Api&rs=1&c=1&qlt=95&w=202&h=113" alt="mobile" className="rounded-xl" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Cash Out</h2>
@@ -59,11 +59,11 @@ const FinancialCard = () => {
                 <Link to='/payment'>
                     <div className="card w-50 h-full bg-base-100 shadow-2xl cursor-pointer">
                         <figure className="px-10 pt-10">
-                            <img src="https://www.bkash.com/uploaded_contents/services/home_images/04-payment_1675164341242.webp" alt="mobile" className="rounded-xl" />
+                            <img src="https://tse2.mm.bing.net/th?id=OIP.cJ6knShXSr08kzE2JiqCtgHaD4&pid=Api&P=0&h=220" alt="mobile" className="rounded-xl" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Payment</h2>
-                            <p>Making Payment is now much easier through the bKash App</p>
+                            <p>Making Payment is now much easier through the Netpay App</p>
                             <div className="card-actions">
                                 <Link className="text-red-700 font-semibold text-xl" to='/payment'>Learn More</Link>
                             </div>
