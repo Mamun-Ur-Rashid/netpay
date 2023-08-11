@@ -23,7 +23,7 @@ const FinancialCard = () => {
                             <div className="card-actions">
                                 {/* <button className="btn btn-primary">Learn More</button>
                                  */}
-                                <Link><button className="btn bg-orange-700 text-white px-6 py-2 hover:bg-orange-600 hover:text-black rounded-3xl">Details</button></Link>
+                                <button className="btn bg-orange-700 text-white px-6 py-2 hover:bg-orange-600 hover:text-black rounded-3xl">Details</button>
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@ const FinancialCard = () => {
                             <div className="card-actions">
                                 {/* <button className="btn btn-primary">Learn More</button>
                                  */}
-                                <Link><button className="btn bg-orange-700 text-white px-6 py-2 hover:bg-orange-600 hover:text-black rounded-3xl">Details</button></Link>
+                            <button className="btn bg-orange-700 text-white px-6 py-2 hover:bg-orange-600 hover:text-black rounded-3xl">Details</button>
                             </div>
                         </div>
                     </div>
@@ -55,10 +55,10 @@ const FinancialCard = () => {
                            <img className="w-full h-[264px]  rounded-md" src={sendmoney} alt="" />
                         </figure>
                         <div className="card-body items-center text-center">
-                            <h2 className="card-title">Send Money</h2>
+                            <h2 className="card-title text-2xl text-orange-700">Send Money</h2>
                             <p>Withdraw cash anytime from the largest Agent and ATM network</p>
                             <div className="card-actions">
-                            <Link><button className="btn bg-orange-700 text-white px-6 py-2 hover:bg-orange-600 hover:text-black rounded-3xl">Details</button></Link>
+                            <button className="btn bg-orange-700 text-white px-6 py-2 hover:bg-orange-600 hover:text-black rounded-3xl">Details</button>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ const FinancialCard = () => {
                             <div className="card-actions">
                                 {/* <button className="btn btn-primary">Learn More</button>
                                  */}
-                                <Link><button className="btn bg-orange-700 text-white px-6 py-2 hover:bg-orange-600 hover:text-black rounded-3xl">Details</button></Link>
+                                <button className="btn bg-orange-700 text-white px-6 py-2 hover:bg-orange-600 hover:text-black rounded-3xl">Details</button>
                             </div>
                         </div>
                     </div>
