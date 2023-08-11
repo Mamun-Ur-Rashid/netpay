@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import cashin from '../../../assets/cashin.jpg'
+import cashout from '../../../assets/cashout.jpg'
+import sendMoney from '../../../assets/sendmoney.webp'
+import payment from "../../../assets/payment.webp"
 
 const FinancialCard = () => {
     return (
@@ -10,9 +13,9 @@ const FinancialCard = () => {
             <div className="my-10 grid grid-cols-1 md:grid-3 lg:grid-cols-4 gap-10 container mx-auto">
 
                 <Link to='/mobileRecharge'>
-                    <div className="card w-50 h-full bg-[#FFEAEA] shadow-2xl cursor-pointer">
+                    <div className="card w-50 h-full  shadow-2xl cursor-pointer">
                         <figure className="px-0 pt-0">
-                           <img className="w-full rounded-md" src={cashin} alt="" />
+                            <img className="" src={cashin} alt="" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title text-2xl text-orange-700">Cash In</h2>
@@ -26,10 +29,25 @@ const FinancialCard = () => {
                     </div>
                 </Link>
 
+                <Link to='/cashOut'>
+                    <div className="card w-50 h-full bg-base-100 shadow-2xl cursor-pointer">
+                        <figure className="px-10 pt-10">
+                            <img src={cashout} alt="mobile" className="rounded-xl" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Cash Out</h2>
+                            <p>Withdraw cash anytime from the largest Agent and ATM network</p>
+                            <div className="card-actions">
+                                <Link className="text-red-700 font-semibold text-xl" to='/cashOut'>Learn More</Link>
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+
                 <Link to='/sendMoney'>
                     <div className="card w-50 h-full bg-base-100 shadow-2xl cursor-pointer">
                         <figure className="px-10 pt-10">
-                            <img src="https://www.bkash.com/uploaded_contents/services/home_images/01-send-money_1675164089657.webp" alt="mobile" className="rounded-xl" />
+                            <img src={sendMoney} alt="mobile" className="rounded-xl" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Send money</h2>
@@ -42,26 +60,13 @@ const FinancialCard = () => {
                 </Link>
 
 
-                <Link to='/cashOut'>
-                    <div className="card w-50 h-full bg-base-100 shadow-2xl cursor-pointer">
-                        <figure className="px-10 pt-10">
-                            <img src="https://www.bkash.com/uploaded_contents/services/home_images/03-cashout_1675164155438.webp" alt="mobile" className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <h2 className="card-title">Cash Out</h2>
-                            <p>Withdraw cash anytime from the largest Agent and ATM network</p>
-                            <div className="card-actions">
-                                <Link className="text-red-700 font-semibold text-xl" to='/cashOut'>Learn More</Link>
-                            </div>
-                        </div>
-                    </div>
-                </Link>
+
 
 
                 <Link to='/payment'>
                     <div className="card w-50 h-full bg-base-100 shadow-2xl cursor-pointer">
                         <figure className="px-10 pt-10">
-                            <img src="https://www.bkash.com/uploaded_contents/services/home_images/04-payment_1675164341242.webp" alt="mobile" className="rounded-xl" />
+                            <img src={payment} alt="mobile" className="rounded-xl" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Payment</h2>
