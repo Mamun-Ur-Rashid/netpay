@@ -16,7 +16,7 @@ const FinancialCard = () => {
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title text-2xl text-orange-700">Cash In</h2>
-                            <p></p>
+                            <p>Recharge any number and get the best offer</p>
                             <div className="card-actions">
                                 {/* <button className="btn btn-primary">Learn More</button>
                                  */}
