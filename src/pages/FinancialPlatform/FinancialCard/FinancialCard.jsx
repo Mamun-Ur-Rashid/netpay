@@ -1,20 +1,22 @@
 import { Link } from "react-router-dom";
+import cashin from '../../../assets/cashin.jpg'
 
 const FinancialCard = () => {
     return (
         <div>
-            <h1 className="text-center font-bold text-4xl my-5">One Platform for all Financial Solutions</h1>
+            <h1 className="text-center font-bold text-5xl my-5"><span className="border-b-4 border-orange-700 text-orange-700">Our Services</span></h1>
+            <p className="mt-5 text-center">Our services are designed to make your rregular financial <br /> transactions convenient and easy</p>
 
             <div className="my-10 grid grid-cols-1 md:grid-3 lg:grid-cols-4 gap-10 container mx-auto">
 
                 <Link to='/mobileRecharge'>
-                    <div className="card w-50 h-full bg-base-100 shadow-2xl cursor-pointer">
-                        <figure className="px-10 pt-10">
-                            <img src="https://www.bkash.com/uploaded_contents/services/home_images/02-MR_1675164134643.webp" alt="mobile" className="rounded-xl " />
+                    <div className="card w-50 h-full bg-[#FFEAEA] shadow-2xl cursor-pointer">
+                        <figure className="px-0 pt-0">
+                           <img className="w-full rounded-md" src={cashin} alt="" />
                         </figure>
                         <div className="card-body items-center text-center">
-                            <h2 className="card-title">Mobile Recharge</h2>
-                            <p>Recharge any number and get the best offer</p>
+                            <h2 className="card-title text-2xl text-orange-700">Cash In</h2>
+                            <p></p>
                             <div className="card-actions">
                                 {/* <button className="btn btn-primary">Learn More</button>
                                  */}
