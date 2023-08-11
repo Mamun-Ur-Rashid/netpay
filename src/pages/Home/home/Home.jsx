@@ -1,6 +1,7 @@
 // import Banner from "../../Banner/Banner";
 import Banner from '../../Home/banner/Banner'
 import FinancialCard from "../../FinancialPlatform/FinancialCard/FinancialCard";
+import AccountSystem from '../AccountSystem/AccountSystem';
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             {/* <Banner></Banner> */}
             <Banner></Banner>
             <FinancialCard></FinancialCard>
+            <AccountSystem></AccountSystem>
 
         </div>
     );
