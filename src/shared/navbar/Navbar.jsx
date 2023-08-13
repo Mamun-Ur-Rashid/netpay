@@ -20,6 +20,7 @@ const Navbar = () => {
             <li> <NavLink to='' className="text-white hover:text-orange-400">Career</NavLink></li>
             <li> <NavLink to='' className="text-white hover:text-orange-400">About</NavLink></li>
             <li> <NavLink to='' className="text-white hover:text-orange-400">Blog</NavLink></li>
+            <li> <NavLink to='/signup' className="text-white hover:text-orange-400">Sign Up</NavLink></li>
 
         </>
 
