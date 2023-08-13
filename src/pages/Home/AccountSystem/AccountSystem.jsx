@@ -22,15 +22,15 @@ const AccountSystem = () => {
                         <img className='mx-auto w-[164px] h-[164px]' src={photo} alt="" />
                     </div>
                     <div style={{borderRadius:"80px 0px 80px 0px", boxShadow: "1px 1px 5px 2px"}} className='w-full h-20 bg-[#FFEAEA] flex items-center justify-between'>
-                        <p className='px-5 font-bold text-center'>Give your national id number and some ininformation</p>
+                        <p className='px-5 font-bold text-center'>Upload your photo and  digital signature</p>
                     </div>
                 </div>
-                <div className='lg:w-[30%] sm:mt-5 px-4'>
+                <div className='md:w-[30%] sm:mt-5 px-4'>
                     <div className=''>
                         <img className='mx-auto w-[164px] h-[164px]' src={password} alt="" />
                     </div>
                     <div style={{borderRadius:"80px 0px 80px 0px",boxShadow: "1px 1px 5px 2px"}} className='w-full h-20 bg-[#FFEAEA] flex items-center justify-between'>
-                        <p className='px-5 font-bold text-center'>Give your national id number and some ininformation</p>
+                        <p className='px-5 font-bold sm:text-center'>Set your 4 digit password </p>
                     </div>
                 </div>
             </div>
