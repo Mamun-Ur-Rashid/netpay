@@ -6,6 +6,8 @@ import SendMoney from "../../pages/FinancialPlatform/SendMoney/SendMoney";
 import CashOut from "../../pages/FinancialPlatform/CashOut/CashOut";
 import Payment from "../../pages/FinancialPlatform/Payment/Payment";
 import Service from "../../pages/services/service/Service";
+import Login from "../../pages/Login/Login";
+import Signup from "../../pages/Signup/Signup";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
                 path: '/payment',
                 element: <Payment></Payment>
             },
+            {
+                path: '/login',
+                element:<Login></Login>
+            },
+            {
+                path: '/signup',
+                element: <Signup></Signup>
+            }
         ]
     }
 ])
