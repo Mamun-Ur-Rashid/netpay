@@ -4,9 +4,9 @@ import ServiceCard from "../serviceCard/ServiceCard";
 
 const Service = () => {
     return (
-        <div className='mt-16'>
+        <div className='mt-16 bg-orange-200'>
             <ServiceBanner></ServiceBanner>
-            <div className="container mx-auto py-4 px-12 md:px-0">
+            <div className="container mx-auto py-4 px-12 md:px-0 ">
                 <AllService></AllService>
                 <ServiceCard></ServiceCard>
 

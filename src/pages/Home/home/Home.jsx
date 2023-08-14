@@ -6,8 +6,8 @@ import TuchPoint from '../TuchPoint/TuchPoint';
 
 const Home = () => {
     return (
-        <div className="mt-16">
-            {/* <Banner></Banner> */}
+        <div className="mt-16 bg-orange-200">
+
             <Banner></Banner>
             <FinicialSection></FinicialSection>
             <TuchPoint></TuchPoint>
