@@ -4,7 +4,7 @@ import password from '../../../assets/pincode.png'
 
 const AccountSystem = () => {
     return (
-        <div className='container mx-auto my-20'>
+        <div className='container mx-auto pb-20 mt-20'>
             <h1 className="text-center font-bold text-5xl my-5"><span className="border-b-4 border-orange-700 text-orange-700">Create Netpay Account</span></h1>
             <p className='text-center text-xl font-semibold mt-8'>Easy 3 steps to create your Netpay account</p>
             <div className="md:flex justify-between mt-16">
