@@ -5,7 +5,10 @@ const Service = () => {
     return (
         <div className='mt-16'>
             <ServiceBanner></ServiceBanner>
-            <AllService></AllService>
+            <div className="container mx-auto py-4">
+                <AllService></AllService>
+
+            </div>
         </div>
     );
 };
