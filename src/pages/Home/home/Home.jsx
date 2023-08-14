@@ -1,7 +1,7 @@
 // import Banner from "../../Banner/Banner";
 import Banner from '../../Home/banner/Banner'
-import FinancialCard from "../../FinancialPlatform/FinancialCard/FinancialCard";
 import AccountSystem from '../AccountSystem/AccountSystem';
+import FinicialSection from '../FinicialSection/FinicialSection';
 import TuchPoint from '../TuchPoint/TuchPoint';
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
         <div className="mt-16">
             {/* <Banner></Banner> */}
             <Banner></Banner>
-            <FinancialCard></FinancialCard>
+            <FinicialSection></FinicialSection>
             <TuchPoint></TuchPoint>
             <AccountSystem></AccountSystem>
 
