@@ -10,7 +10,7 @@ const FinancialCard = () => {
             <h1 className="text-center font-bold text-5xl my-5"><span className="border-b-4 border-orange-700 text-orange-700">Our Services</span></h1>
             <p className="mt-5 text-center">Our services are designed to make your rregular financial <br /> transactions convenient and easy</p>
 
-            <div className="my-10 grid grid-cols-1 md:grid-3 lg:grid-cols-4 gap-10 container mx-auto">
+            <div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 container mx-auto">
 
                 <Link to='/mobileRecharge'>
                     <div style={{ boxShadow: "2px 2px 5px" }} className="card w-50 h-full bg-[#FFEAEA] cursor-pointer">
