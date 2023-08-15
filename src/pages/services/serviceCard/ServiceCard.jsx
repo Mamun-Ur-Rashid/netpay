@@ -8,12 +8,14 @@ const ServiceCard = () => {
             title: 'Send Money',
             description: 'Send money from NetPay to another acount instanly.',
             buttonText: 'Learn More',
+            link: '/services/send-money',
         },
         {
             imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
-            title: 'Send Money',
+            title: 'Cash Out',
             description: 'Send money from NetPay to another acount instanly.',
             buttonText: 'Learn More',
+            link: '/services/cash-out'
         },
         {
             imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
@@ -50,6 +52,7 @@ const ServiceCard = () => {
                     <SingleCard key={index}
                         imageUrl={card?.imageUrl}
                         title={card?.title}
+                        link={card?.link}
                         description={card?.description}
                         buttonText={card?.buttonText}></SingleCard>
                 ))}
