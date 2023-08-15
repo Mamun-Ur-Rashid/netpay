@@ -9,7 +9,6 @@ const Service = () => {
             <div className="container mx-auto py-4 px-12 md:px-0 ">
                 <AllService></AllService>
                 <ServiceCard></ServiceCard>
-
             </div>
         </div>
     );

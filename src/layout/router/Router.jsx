@@ -4,6 +4,10 @@ import Home from "../../pages/Home/home/Home";
 import Service from "../../pages/services/service/Service";
 import Login from "../../pages/Login/Login";
 import Signup from "../../pages/Signup/Signup";
+import SendMoney from "../../pages/services/sendMoney/sendMoney/SendMoney";
+import CashOut from "../../pages/services/cashOut/cashOut/CashOut";
+import AddMoney from "../../pages/services/addMoney/addMoney/AddMoney";
+import Payment from "../../pages/services/payment/payment/Payment";
 
 const router = createBrowserRouter([
     {
@@ -16,7 +20,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/services',
-                element: <Service></Service>
+                element: <Service></Service>,
             },
             {
                 path: '/login',
@@ -25,6 +29,22 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <Signup></Signup>
+            },
+            {
+                path: '/services/send-money',
+                element: <SendMoney></SendMoney>
+            },
+            {
+                path: '/services/cash-out',
+                element: <CashOut></CashOut>
+            },
+            {
+                path: '/services/add-money',
+                element: <AddMoney></AddMoney>
+            },
+            {
+                path: '/services/payment',
+                element: <Payment></Payment>
             }
         ]
     }
