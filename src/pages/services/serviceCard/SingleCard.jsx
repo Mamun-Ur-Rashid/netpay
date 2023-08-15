@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 
-const SingleCard = ({ imageUrl, title, description, buttonText }) => {
+const SingleCard = ({ imageUrl, title, description, buttonText, link }) => {
     return (
         <div>
             <div className="bg-white p-4 rounded-lg shadow-md">
@@ -8,9 +9,12 @@ const SingleCard = ({ imageUrl, title, description, buttonText }) => {
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{title}</h3>
                 <p className="text-gray-600 py-4 mb-4">{description}</p>
-                <button className="bg-blue-500 text-white py-2 px-4 mx-auto rounded-full w-1/2">
-                    {buttonText}
-                </button>
+                <Link to={link}>
+                    <button className="bg-blue-500 text-white py-2 px-4 mx-auto rounded-full w-1/2">
+                        {buttonText}
+                    </button>
+                </Link>
+
             </div>
         </div>
     );
