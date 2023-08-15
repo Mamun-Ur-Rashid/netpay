@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import background from '../../assets/signup.jpg'
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
+    const {handleLogin} = useContext(AuthContext)
     const { register, handleSubmit, reset,formState: { errors } } = useForm();
     const onSubmit = data =>{
-        console.log(data)
-        reset();
+        handleLogin(data.email,data.password)
+        .then(result => {
+            console.log(result)
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Login successfuly',
+                showConfirmButton: false,
+                timer: 1500
+              })
+              reset();
+        })
+        .catch(error => {
+            console.log(error.message)
+        })
+        
         
     };
     console.log(errors);
@@ -25,7 +42,7 @@ const Login = () => {
                                         <label className="label">
                                             <span className="label-text text-base text-white">Email</span>
                                         </label>
-                                        <input className="input input-bordered" type="email" placeholder="Email" {...register("Email", { required: true, })} />
+                                        <input className="input input-bordered" type="email" placeholder="Email" {...register("email", { required: true, })} />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
