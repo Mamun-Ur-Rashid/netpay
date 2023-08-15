@@ -1,4 +1,3 @@
-import React from 'react';
 import background from '../../assets/signup.jpg'
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
@@ -62,6 +61,9 @@ const Signup = () => {
                                                 
                                             </div>
                                     <p className='text-white mt-4'>Allready have an account? <Link to='/login'><span className='hover:font-semibold hover:text-green-300'>Please login</span></Link></p>
+                                    <div className='text-center mt-10'>
+                                        <input className="btn bg-orange-700 text-white px-6 py-2 border-none w-full hover:bg-orange-600 hover:text-black rounded-3xl" type="submit" value='Login' />
+                                    </div>
                                     <div className='text-center mt-10'>
                                         <input className="btn bg-orange-700 text-white px-6 py-2 border-none w-full hover:bg-orange-600 hover:text-black rounded-3xl" type="submit" value='Login' />
                                     </div>

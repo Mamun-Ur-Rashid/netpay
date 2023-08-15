@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Main";
 import Home from "../../pages/Home/home/Home";
-import MobileRecharge from "../../pages/FinancialPlatform/MobileRecharge/MobileRecharge";
-import SendMoney from "../../pages/FinancialPlatform/SendMoney/SendMoney";
-import CashOut from "../../pages/FinancialPlatform/CashOut/CashOut";
-import Payment from "../../pages/FinancialPlatform/Payment/Payment";
 import Service from "../../pages/services/service/Service";
 import Login from "../../pages/Login/Login";
 import Signup from "../../pages/Signup/Signup";
+import SendMoney from "../../pages/services/sendMoney/sendMoney/SendMoney";
+import CashOut from "../../pages/services/cashOut/cashOut/CashOut";
+import AddMoney from "../../pages/services/addMoney/addMoney/AddMoney";
+import Payment from "../../pages/services/payment/payment/Payment";
 
 const router = createBrowserRouter([
     {
@@ -20,31 +20,31 @@ const router = createBrowserRouter([
             },
             {
                 path: '/services',
-                element: <Service></Service>
-            },
-            {
-                path: '/mobileRecharge',
-                element: <MobileRecharge></MobileRecharge>,
-            },
-            {
-                path: '/sendMoney',
-                element: <SendMoney></SendMoney>
-            },
-            {
-                path: '/cashOut',
-                element: <CashOut></CashOut>
-            },
-            {
-                path: '/payment',
-                element: <Payment></Payment>
+                element: <Service></Service>,
             },
             {
                 path: '/login',
-                element:<Login></Login>
+                element: <Login></Login>
             },
             {
                 path: '/signup',
                 element: <Signup></Signup>
+            },
+            {
+                path: '/services/send-money',
+                element: <SendMoney></SendMoney>
+            },
+            {
+                path: '/services/cash-out',
+                element: <CashOut></CashOut>
+            },
+            {
+                path: '/services/add-money',
+                element: <AddMoney></AddMoney>
+            },
+            {
+                path: '/services/payment',
+                element: <Payment></Payment>
             }
         ]
     }
