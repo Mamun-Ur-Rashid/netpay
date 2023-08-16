@@ -1,12 +1,32 @@
+import { useContext } from 'react';
 import background from '../../assets/signup.jpg'
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Signup = () => {
+    const {handleSignUp}= useContext(AuthContext);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
+
     const onSubmit = data => {
         console.log(data)
-        reset();
+        handleSignUp(data.email,data.password)
+        .then((result) => {
+            console.log(result)
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Sign up successfuly',
+                showConfirmButton: false,
+                timer: 1500
+              })
+              reset();
+        })
+        .catch(error => {
+            console.log(error.message)
+        })
+       
 
     };
     console.log(errors);
@@ -62,11 +82,9 @@ const Signup = () => {
                                             </div>
                                     <p className='text-white mt-4'>Allready have an account? <Link to='/login'><span className='hover:font-semibold hover:text-green-300'>Please login</span></Link></p>
                                     <div className='text-center mt-10'>
-                                        <input className="btn bg-orange-700 text-white px-6 py-2 border-none w-full hover:bg-orange-600 hover:text-black rounded-3xl" type="submit" value='Login' />
+                                        <input className="btn bg-orange-700 text-white px-6 py-2 border-none w-full hover:bg-orange-600 hover:text-black rounded-3xl" type="submit" value='Signup' />
                                     </div>
-                                    <div className='text-center mt-10'>
-                                        <input className="btn bg-orange-700 text-white px-6 py-2 border-none w-full hover:bg-orange-600 hover:text-black rounded-3xl" type="submit" value='Login' />
-                                    </div>
+                                  
                                 </form>
                             </div>
                         </div>
