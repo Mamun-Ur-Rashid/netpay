@@ -8,6 +8,7 @@ import SendMoney from "../../pages/services/sendMoney/sendMoney/SendMoney";
 import CashOut from "../../pages/services/cashOut/cashOut/CashOut";
 import AddMoney from "../../pages/services/addMoney/addMoney/AddMoney";
 import Payment from "../../pages/services/payment/payment/Payment";
+import MobileRecharge from "../../pages/services/mobileRecharge/mobileRecharge/MobileRecharge";
 
 const router = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
             {
                 path: '/services/payment',
                 element: <Payment></Payment>
+            },
+            {
+                path: '/services/mobile-recharge',
+                element: <MobileRecharge></MobileRecharge>
             }
         ]
     }

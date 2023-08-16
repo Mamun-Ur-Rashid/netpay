@@ -1,4 +1,3 @@
-import React from 'react';
 import image from '../../../assets/login.png'
 
 const TuchPoint = () => {
@@ -22,7 +21,7 @@ const TuchPoint = () => {
                         <p className='text-2xl mt-4'>List of Netpay Customer Care Centers</p>
                     </div>
                     <div>
-                    <img className='mx-auto' src={image} alt="" />
+                        <img className='mx-auto' src={image} alt="" />
                     </div>
                 </div>
                 <div className='md:w-[30%] px-4'>
@@ -31,7 +30,7 @@ const TuchPoint = () => {
                         <p className='text-2xl mt-4'>List of Merchants that accepts Netpay Payment</p>
                     </div>
                     <div>
-                    <img className='mx-auto' src={image} alt="" />
+                        <img className='mx-auto' src={image} alt="" />
                     </div>
                 </div>
             </div>

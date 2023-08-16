@@ -6,12 +6,11 @@ const AllService = () => {
         { serviceName: 'Cash Out', serviceIcon: 'Icon', link: '/services/cash-out' },
         { serviceName: 'Add Money', serviceIcon: 'Icon', link: '/services/add-money' },
         { serviceName: 'Payment', serviceIcon: 'QQQQ', link: '/services/payment' },
-        { serviceName: 'Mobile Recharge', serviceIcon: 'Icon' },
+        { serviceName: 'Mobile Recharge', serviceIcon: 'Icon', link: '/services/mobile-recharge' },
     ]
     return (
         <div className="mb-10">
-            <h1 className="text-center text-4xl py-10 text-red-500"> Select a Service</h1>
-
+            <h1 className="text-center font-bold text-4xl md:text-4xl py-10 text-red-500"> Select a Service</h1>
             {/* service item */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 ">
                 {
