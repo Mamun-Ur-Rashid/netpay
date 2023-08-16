@@ -13,33 +13,23 @@ const ServiceCard = () => {
         {
             imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
             title: 'Cash Out',
-            description: 'Send money from NetPay to another acount instanly.',
+            description: 'Cash Out from NetPay to Your acount instanly.',
             buttonText: 'Learn More',
             link: '/services/cash-out'
         },
         {
             imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
-            title: 'Send Money',
-            description: 'Send money from NetPay to another acount instanly.',
+            title: 'Add Money',
+            description: 'Add money from NetPay to another acount instanly.',
             buttonText: 'Learn More',
+            link: '/services/add-money'
         },
         {
             imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
-            title: 'Send Money',
-            description: 'Send money from NetPay to another acount instanly.',
+            title: 'Payment',
+            description: 'Payment from NetPay to another acount instanly.',
             buttonText: 'Learn More',
-        },
-        {
-            imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
-            title: 'Send Money',
-            description: 'Send money from NetPay to another acount instanly.',
-            buttonText: 'Learn More',
-        },
-        {
-            imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
-            title: 'Send Money',
-            description: 'Send money from NetPay to another acount instanly.',
-            buttonText: 'Learn More',
+            link: '/services/payment'
         },
 
         // Add more card data
