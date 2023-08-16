@@ -1,6 +1,7 @@
 import ServiceBanner from '../../serviceBanner/ServiceBanner';
 import AllService from '../../allService/AllService';
 import AllServicesHeader from '../../allServicesHeader/AllServicesHeader';
+import Faq from '../../allServicesFAQ/Faq';
 
 const MobileRecharge = () => {
 
@@ -9,6 +10,27 @@ const MobileRecharge = () => {
         title: 'Mobile Recharge',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo eu nisl gravida finibus non at odio. In vestibulum nisi sed lacus commodo, nec feugiat nulla fermentum.',
     };
+
+    const faqData = [
+        {
+            question: 'How can I send money?',
+            answer: 'You can easily send money by logging into your account and selecting the "Send Money" option.You can easily send money by logging into your account and selecting the "Send Money" option.You can easily send money by logging into your account and selecting the "Send Money" option.You can easily send money by logging into your account and selecting the "Send Money" option.You can easily send money by logging into your account and selecting the "Send Money" option.',
+        },
+        {
+            question: 'What payment methods are supported?',
+            answer: 'We support a wide range of payment methods, including credit cards, bank transfers, and digital wallets.You can easily send money by logging into your account and selecting the "Send Money" option.You can easily send money by logging into your account and selecting the "Send Money" option.You can easily send money by logging into your account and selecting the "Send Money" option.You can easily send money by logging into your account and selecting the "Send Money" option.',
+        },
+        {
+            question: 'What payment methods are supported?',
+            answer: 'We support a wide range of payment methods, including credit cards, bank transfers, and digital wallets.You can easily send money by logging into your account and selecting the "Send Money" option.You can easily send money by logging into your account and selecting the "Send Money" option.You can easily send money by logging into your account and selecting the "Send Money" option.You can easily send money by logging into your account and selecting the "Send Money" option.',
+        },
+        {
+            question: 'What payment methods are supported?',
+            answer: 'We support a wide range of payment methods, including credit cards, bank transfers, and digital wallets.You can easily send money by logging into your account and selecting the "Send Money" option.You can easily send money by logging into your account and selecting the "Send Money" option.You can easily send money by logging into your account and selecting the "Send Money" option.',
+        },
+        // Add more FAQ data
+    ];
+
 
     return (
         <div className='mt-16 bg-stone-200'>
@@ -23,6 +45,7 @@ const MobileRecharge = () => {
                         text={headerData?.text}
                     ></AllServicesHeader>
                 </div>
+                <Faq faqData={faqData}></Faq>
             </div>
         </div>
     );
