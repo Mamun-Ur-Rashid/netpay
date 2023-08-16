@@ -6,13 +6,11 @@ import TuchPoint from '../TuchPoint/TuchPoint';
 
 const Home = () => {
     return (
-        <div className="mt-16 bg-orange-200">
-
+        <div className="mt-16 bg-stone-100">
             <Banner></Banner>
             <FinicialSection></FinicialSection>
             <TuchPoint></TuchPoint>
             <AccountSystem></AccountSystem>
-
         </div>
     );
 };
