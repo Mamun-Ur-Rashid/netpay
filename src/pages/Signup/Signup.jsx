@@ -15,15 +15,31 @@ const Signup = () => {
         handleSignUp(data.email, data.password)
             .then((result) => {
                 console.log(result)
-                Swal.fire({
-                    position: 'center',
-                    icon: 'success',
-                    title: 'Sign up successfuly',
-                    showConfirmButton: false,
-                    timer: 1500
+                const user = result.user
+                const userInfo = {name:user.name,email:user.email, phone:user.phone, photo: user.photo, nid:user.nid}
+                fetch('http://localhost:3000/allUsers',{
+                    method:'POST',
+                    headers:{
+                        'content-type':'application/json'
+                    },
+                    body:JSON.stringify(userInfo)
                 })
-                reset();
-                navigate('/')
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if(data.insertedId){
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'success',
+                            title: 'Sign up successfuly',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                        reset();
+                        navigate('/')
+                    }
+                })
+               
             })
             .catch(error => {
                 console.log(error.message)
