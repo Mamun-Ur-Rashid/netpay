@@ -11,6 +11,8 @@ import Payment from "../../pages/services/payment/payment/Payment";
 import MobileRecharge from "../../pages/services/mobileRecharge/mobileRecharge/MobileRecharge";
 import About from "../../pages/aboutUs/about/About";
 import Business from "../../pages/business/business/Business";
+import Help from "../../pages/help/help/Help";
+import Blog from "../../pages/blog/blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
             {
                 path: '/business',
                 element: <Business></Business>
+            },
+            {
+                path: '/help',
+                element: <Help></Help>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
             },
             {
                 path: '/login',
