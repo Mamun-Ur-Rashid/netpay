@@ -14,6 +14,10 @@ import About from "../../pages/aboutUs/about/About";
 import Business from "../../pages/business/business/Business"
 import Help from "../../pages/help/help/Help";
 import Blog from "../../pages/blog/blog/Blog";
+import DashLayout from "../../pages/Dashboard/DashboardLayout/DashLayout";
+import DashCashOut from "../../pages/Dashboard/UserDashboard/Dash-CashOut/DashCashOut";
+import DashSendMoney from "../../pages/Dashboard/UserDashboard/DashSendMoney/DashSendMoney";
+import DashHome from "../../pages/Dashboard/UserDashboard/DashHome/DashHome";
 
 const router = createBrowserRouter([
     {
@@ -75,8 +79,21 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path: '/dashboard',
-        element: <UserDashboard></UserDashboard>
+        path:'dashboard',
+        element:<DashLayout></DashLayout>,
+        children:[
+            {
+                path:'dashboard/home',
+                element: <DashHome></DashHome>
+            },
+            {
+                path:'dashboard/cashout',
+                element:<DashCashOut></DashCashOut>
+
+            },
+            
+        ]
+        
     }
 ])
 export default router;
