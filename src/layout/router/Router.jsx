@@ -11,7 +11,7 @@ import Payment from "../../pages/services/payment/payment/Payment";
 import MobileRecharge from "../../pages/services/mobileRecharge/mobileRecharge/MobileRecharge";
 import UserDashboard from "../../pages/Dashboard/UserDashboard/UserDashboard";
 import About from "../../pages/aboutUs/about/About";
-import Business from "../../pages/business/business/Business";
+import Business from "../../pages/business/business/Business"
 import Help from "../../pages/help/help/Help";
 import Blog from "../../pages/blog/blog/Blog";
 import DashLayout from "../../pages/Dashboard/DashboardLayout/DashLayout";

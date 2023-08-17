@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 
 
 const Navbar = () => {
-    const {user,handlelogOut} = useContext(AuthContext)
+    const { user, handlelogOut } = useContext(AuthContext)
     const [isMenuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -17,18 +17,18 @@ const Navbar = () => {
 
     const logOut = () => {
         handlelogOut()
-        .then(() => {
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Logout successfuly',
-                showConfirmButton: false,
-                timer: 1500
-              })
-        })
-        .catch(error => {
-            console.log(error.message)
-        })
+            .then(() => {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Logout successfuly',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
     }
 
     const li = (
@@ -38,18 +38,16 @@ const Navbar = () => {
             <li> <NavLink to='/business' className="text-white hover:text-orange-400">Business</NavLink></li>
             <li> <NavLink to='/about' className="text-white hover:text-orange-400">About</NavLink></li>
 
-            <li> <NavLink to='' className="text-white hover:text-orange-400">Help</NavLink></li>
-            <li> <NavLink to='' className="text-white hover:text-orange-400">Career</NavLink></li>
-            <li> <NavLink to='' className="text-white hover:text-orange-400">Blog</NavLink></li>
-           {
-            user ?<>
-            <li> <NavLink to='dashboard' className="text-white hover:text-orange-400">Dashboard</NavLink></li>
-            <button onClick={logOut} className="text-white hover:text-orange-400">Logout</button>
-            </>  
-           :<li> <NavLink to='/login' className="text-white hover:text-orange-400">Login</NavLink></li>
-        }
-
-
+            <li> <NavLink to='/help' className="text-white hover:text-orange-400">Help</NavLink></li>
+            {/* <li> <NavLink to='' className="text-white hover:text-orange-400">Career</NavLink></li> */}
+            <li> <NavLink to='/blog' className="text-white hover:text-orange-400">Blog</NavLink></li>
+            {
+                user ? <>
+                    <li> <NavLink to='dashboard' className="text-white hover:text-orange-400">Dashboard</NavLink></li>
+                    <button onClick={logOut} className="text-white hover:text-orange-400">Logout</button>
+                </>
+                    : <li> <NavLink to='/login' className="text-white hover:text-orange-400">Login</NavLink></li>
+            }
         </>
 
     )
