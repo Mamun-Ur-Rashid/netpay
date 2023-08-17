@@ -1,15 +1,34 @@
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo4.png'
+import { AuthContext } from '../../pages/AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 const Navbar = () => {
+    const {users,handlelogOut} = useContext(AuthContext)
     const [isMenuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
     };
+
+    const logOut = () => {
+        handlelogOut()
+        .then(() => {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Logout successfuly',
+                showConfirmButton: false,
+                timer: 1500
+              })
+        })
+        .catch(error => {
+            console.log(error.message)
+        })
+    }
 
     const li = (
         <>
@@ -17,10 +36,18 @@ const Navbar = () => {
             <li> <NavLink to='/services' className="text-white hover:text-orange-400">Services</NavLink></li>
             <li> <NavLink to='/business' className="text-white hover:text-orange-400">Business</NavLink></li>
             <li> <NavLink to='/about' className="text-white hover:text-orange-400">About</NavLink></li>
-            <li> <NavLink to='/help' className="text-white hover:text-orange-400">Help</NavLink></li>
-            {/* <li> <NavLink to='' className="text-white hover:text-orange-400">Career</NavLink></li> */}
-            <li> <NavLink to='/blog' className="text-white hover:text-orange-400">Blog</NavLink></li>
-            <li> <NavLink to='/signup' className="text-white hover:text-orange-400">Sign Up</NavLink></li>
+
+            <li> <NavLink to='' className="text-white hover:text-orange-400">Help</NavLink></li>
+            <li> <NavLink to='' className="text-white hover:text-orange-400">Career</NavLink></li>
+            <li> <NavLink to='' className="text-white hover:text-orange-400">Blog</NavLink></li>
+           {
+            users ?<>
+            <li> <NavLink to='dashboard' className="text-white hover:text-orange-400">Dashboard</NavLink></li>
+            <button onClick={logOut} className="text-white hover:text-orange-400">Logout</button>
+            </>  
+           :<li> <NavLink to='/signup' className="text-white hover:text-orange-400">Sign Up</NavLink></li>
+        }
+
 
         </>
 
