@@ -9,6 +9,8 @@ import CashOut from "../../pages/services/cashOut/cashOut/CashOut";
 import AddMoney from "../../pages/services/addMoney/addMoney/AddMoney";
 import Payment from "../../pages/services/payment/payment/Payment";
 import MobileRecharge from "../../pages/services/mobileRecharge/mobileRecharge/MobileRecharge";
+import About from "../../pages/aboutUs/about/About";
+import Business from "../../pages/business/business/Business";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
             {
                 path: '/services',
                 element: <Service></Service>,
+            },
+            {
+                path: '/about',
+                element: <About></About>
+            },
+            {
+                path: '/business',
+                element: <Business></Business>
             },
             {
                 path: '/login',
