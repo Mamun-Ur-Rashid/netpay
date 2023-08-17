@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import background from '../../assets/signup.jpg'
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
@@ -9,6 +9,7 @@ const Signup = () => {
     const { handleSignUp } = useContext(AuthContext);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const navigate = useNavigate();
+    const [error, setError] = useState(null)
 
     const onSubmit = data => {
         console.log(data)
@@ -42,12 +43,13 @@ const Signup = () => {
                
             })
             .catch(error => {
+                setError(error)
                 console.log(error.message)
             })
 
 
     };
-    console.log(errors);
+    
     return (
         <div style={{ backgroundImage: `url(${background})`, backgroundPosition: 'center', backgroundSize: 'cover', }} className='container mx-auto my-20 py-20'>
             <div className='text-center fond-bold text-white text-5xl'>Please Signup</div>
@@ -108,6 +110,11 @@ const Signup = () => {
                                         </div>
                                     </div>
                                     <p className='text-white mt-4'>Allready have an account? <Link to='/login'><span className='hover:font-semibold hover:text-green-300'>Please login</span></Link></p>
+                                    {
+                                        error?
+                                        <p className='text-red-600 font-semibold'>{error.message}</p>
+                                        :<></>
+                                    }
                                     <div className='text-center mt-10'>
                                         <input className="btn bg-orange-700 text-white px-6 py-2 border-none w-full hover:bg-orange-600 hover:text-black rounded-3xl" type="submit" value='Signup' />
                                     </div>

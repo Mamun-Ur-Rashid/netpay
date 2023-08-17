@@ -9,6 +9,7 @@ import CashOut from "../../pages/services/cashOut/cashOut/CashOut";
 import AddMoney from "../../pages/services/addMoney/addMoney/AddMoney";
 import Payment from "../../pages/services/payment/payment/Payment";
 import MobileRecharge from "../../pages/services/mobileRecharge/mobileRecharge/MobileRecharge";
+import UserDashboard from "../../pages/Dashboard/UserDashboard/UserDashboard";
 
 const router = createBrowserRouter([
     {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
                 element: <MobileRecharge></MobileRecharge>
             }
         ]
+    },
+    {
+        path:'/dashboard',
+        element:<UserDashboard></UserDashboard>
     }
 ])
 export default router;

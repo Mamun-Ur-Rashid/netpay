@@ -7,12 +7,13 @@ import Swal from 'sweetalert2';
 
 
 const Navbar = () => {
-    const {users,handlelogOut} = useContext(AuthContext)
+    const {user,handlelogOut} = useContext(AuthContext)
     const [isMenuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
     };
+    console.log(user)
 
     const logOut = () => {
         handlelogOut()
@@ -40,11 +41,11 @@ const Navbar = () => {
             <li> <NavLink to='' className="text-white hover:text-orange-400">About</NavLink></li>
             <li> <NavLink to='' className="text-white hover:text-orange-400">Blog</NavLink></li>
            {
-            users ?<>
+            user ?<>
             <li> <NavLink to='dashboard' className="text-white hover:text-orange-400">Dashboard</NavLink></li>
             <button onClick={logOut} className="text-white hover:text-orange-400">Logout</button>
             </>  
-           :<li> <NavLink to='/signup' className="text-white hover:text-orange-400">Sign Up</NavLink></li>
+           :<li> <NavLink to='/login' className="text-white hover:text-orange-400">Login</NavLink></li>
         }
 
         </>
