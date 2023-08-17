@@ -40,7 +40,10 @@ const Navbar = () => {
             <li> <NavLink to='' className="text-white hover:text-orange-400">About</NavLink></li>
             <li> <NavLink to='' className="text-white hover:text-orange-400">Blog</NavLink></li>
            {
-            users ?<button onClick={logOut} className="text-white hover:text-orange-400">Logout</button>  
+            users ?<>
+            <li> <NavLink to='dashboard' className="text-white hover:text-orange-400">Dashboard</NavLink></li>
+            <button onClick={logOut} className="text-white hover:text-orange-400">Logout</button>
+            </>  
            :<li> <NavLink to='/signup' className="text-white hover:text-orange-400">Sign Up</NavLink></li>
         }
 

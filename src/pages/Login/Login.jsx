@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import background from '../../assets/signup.jpg'
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
 const Login = () => {
+    const navigate = useNavigate()
     const {handleLogin} = useContext(AuthContext)
     const { register, handleSubmit, reset,formState: { errors } } = useForm();
     const onSubmit = data =>{
@@ -20,6 +21,7 @@ const Login = () => {
                 timer: 1500
               })
               reset();
+              navigate('/')
         })
         .catch(error => {
             console.log(error.message)
