@@ -9,14 +9,11 @@ import CashOut from "../../pages/services/cashOut/cashOut/CashOut";
 import AddMoney from "../../pages/services/addMoney/addMoney/AddMoney";
 import Payment from "../../pages/services/payment/payment/Payment";
 import MobileRecharge from "../../pages/services/mobileRecharge/mobileRecharge/MobileRecharge";
-<<<<<<< HEAD
 import UserDashboard from "../../pages/Dashboard/UserDashboard/UserDashboard";
-=======
 import About from "../../pages/aboutUs/about/About";
-import Business from "../../pages/business/business/Business";
+import Business from "../../pages/business/business/Business"
 import Help from "../../pages/help/help/Help";
 import Blog from "../../pages/blog/blog/Blog";
->>>>>>> 7d5e04ca19636ca9be26503b8c645527f5e5aba5
 
 const router = createBrowserRouter([
     {
@@ -78,8 +75,8 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path:'/dashboard',
-        element:<UserDashboard></UserDashboard>
+        path: '/dashboard',
+        element: <UserDashboard></UserDashboard>
     }
 ])
 export default router;
