@@ -1,9 +1,9 @@
-import React from 'react';
 
 const DashSendMoney = () => {
     return (
         <div>
             this is send money
+            <h1>yes</h1>
         </div>
     );
 };

@@ -9,15 +9,14 @@ import CashOut from "../../pages/services/cashOut/cashOut/CashOut";
 import AddMoney from "../../pages/services/addMoney/addMoney/AddMoney";
 import Payment from "../../pages/services/payment/payment/Payment";
 import MobileRecharge from "../../pages/services/mobileRecharge/mobileRecharge/MobileRecharge";
-import UserDashboard from "../../pages/Dashboard/UserDashboard/UserDashboard";
 import About from "../../pages/aboutUs/about/About";
 import Business from "../../pages/business/business/Business"
 import Help from "../../pages/help/help/Help";
 import Blog from "../../pages/blog/blog/Blog";
-import DashLayout from "../../pages/Dashboard/DashboardLayout/DashLayout";
-import DashCashOut from "../../pages/Dashboard/UserDashboard/Dash-CashOut/DashCashOut";
-import DashSendMoney from "../../pages/Dashboard/UserDashboard/DashSendMoney/DashSendMoney";
-import DashHome from "../../pages/Dashboard/UserDashboard/DashHome/DashHome";
+import DashLayout from "../../pages/Dashboard/dashboardLayout/DashLayout";
+import DashCashOut from "../../pages/Dashboard/UserDashboard/dash-CashOut/DashCashOut";
+import DashHome from "../../pages/Dashboard/UserDashboard/dashHome/DashHome";
+import DashSendMoney from "../../pages/Dashboard/UserDashboard/dashSendMoney/DashSendMoney"
 
 const router = createBrowserRouter([
     {
@@ -79,21 +78,25 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path:'dashboard',
-        element:<DashLayout></DashLayout>,
-        children:[
+        path: 'dashboard',
+        element: <DashLayout></DashLayout>,
+        children: [
             {
-                path:'dashboard/home',
+                path: 'dashboard/home',
                 element: <DashHome></DashHome>
             },
             {
-                path:'dashboard/cashout',
-                element:<DashCashOut></DashCashOut>
+                path: 'dashboard/send-money',
+                element: <DashSendMoney></DashSendMoney>
+            },
+            {
+                path: 'dashboard/cashout',
+                element: <DashCashOut></DashCashOut>
 
             },
-            
+
         ]
-        
+
     }
 ])
 export default router;
