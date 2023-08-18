@@ -1,9 +1,9 @@
-import React from 'react';
+
 
 const DashHome = () => {
     return (
-        <div>
-            this is home page
+        <div className=' text-white text-center'>
+            <h1 className="text-4xl py-3 font-bold bg-[#1ba8c6]"> User Dashboard</h1>
         </div>
     );
 };

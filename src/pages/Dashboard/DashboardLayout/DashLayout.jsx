@@ -11,21 +11,22 @@ const DashLayout = () => {
         <div className=' mx-auto'>
             <CommonBanner BannerImage={img}></CommonBanner>
             <DashboardInfo />
-            <div className='bg-white'>
+            <div className='bg-[#070b29]'>
                 <div className='pb-20 pr-10 pl-10 md:px-32 md:flex gap-10'>
-                    <div className=' md:w-1/4 bg-red-400'>
-                        <ul className='text-black' >
-                            <li className='h-14 text-center text-2xl pt-2 bg-blue-200'><NavLink to='dashboard/home'>DASHBOAED</NavLink></li>
-                            <li className='h-14 text-center text-2xl pt-2 bg-blue-300'><NavLink to='dashboard/send-money'>SEND MONEY</NavLink></li>
-                            <li className='h-14 text-center text-2xl pt-2 bg-blue-200'><NavLink to='dashboard/cashout'>CASH OUT</NavLink></li>
-                            <li className='h-14 text-center text-2xl pt-2 bg-blue-300'><NavLink to='dashboard/cashout'>Deposite Money</NavLink></li>
-                            <li className='h-14 text-center text-2xl pt-2 bg-blue-200'><NavLink to='dashboard/cashout'>Bank account</NavLink></li>
-                            <li className='h-14 text-center text-2xl pt-2 bg-blue-300'><NavLink to='dashboard/cashout'>Card Number</NavLink></li>
-                            <li className='h-14 text-center text-2xl pt-2 bg-blue-200'><NavLink to='dashboard/cashout'>Seeting</NavLink></li>
-                            <li className='h-14 text-center text-2xl pt-2 bg-blue-300'><NavLink to='dashboard/cashout'>CASH OUT</NavLink></li>
+                    <div className=' md:w-1/4 bg-[#1B2654]'>
+                        <ul className='text-white' >
+
+                            <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/home'>DASHBOAED</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 bg-[#1ba8c6]'><NavLink to='dashboard/send-money'>SEND MONEY</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/cashout'>CASH OUT</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/cashout'>Deposite Money</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/cashout'>Bank account</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/cashout'>Card Number</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/cashout'>Seeting</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 '><NavLink to='/'>Home</NavLink></li>
                         </ul>
                     </div>
-                    <div className=' md:w-3/4 bg-blue-200 mt-10 md:mt-0'>
+                    <div className=' md:w-3/4 bg-[#1B2654] mt-10 md:mt-0'>
                         <Outlet></Outlet>
                     </div>
                 </div>
