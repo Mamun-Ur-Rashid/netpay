@@ -6,40 +6,42 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
 const Signup = () => {
-    const { handleSignUp } = useContext(AuthContext);
+    const { handleSignUp,updateUserProfile } = useContext(AuthContext);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const navigate = useNavigate();
     const [error, setError] = useState(null)
 
     const onSubmit = data => {
         console.log(data)
+       
         handleSignUp(data.email, data.password)
             .then((result) => {
                 console.log(result)
                 const user = result.user
-                const userInfo = {name:user.name,email:user.email, phone:user.phone, photo: user.photo, nid:user.nid}
-                fetch('http://localhost:3000/allUsers',{
-                    method:'POST',
-                    headers:{
-                        'content-type':'application/json'
-                    },
-                    body:JSON.stringify(userInfo)
-                })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                    if(data.insertedId){
-                        Swal.fire({
-                            position: 'center',
-                            icon: 'success',
-                            title: 'Sign up successfuly',
-                            showConfirmButton: false,
-                            timer: 1500
-                        })
-                        reset();
-                        navigate('/')
-                    }
-                })
+                const userInfo = {email:user.email}
+                fetch('https://netpay-server-muhammadali246397.vercel.app/allUsers',{
+                        method:'POST',
+                        headers:{
+                            'content-type':'application/json'
+                        },
+                        body:JSON.stringify(userInfo)
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if(data.insertedId){
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Sign up successfuly',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                            reset();
+                            navigate('/')
+                        }
+                    })
+                
                
             })
             .catch(error => {
@@ -109,7 +111,7 @@ const Signup = () => {
 
                                         </div>
                                     </div>
-                                    <p className='text-white mt-4'>Allready have an account? <Link to='/login'><span className='hover:font-semibold hover:text-green-300'>Please login</span></Link></p>
+                                    <p className='text-white mt-4'>Allready have an account? <Link  to='/login'><span className='hover:font-semibold hover:text-green-300'>Please login</span></Link></p>
                                     {
                                         error?
                                         <p className='text-red-600 font-semibold'>{error.message}</p>
