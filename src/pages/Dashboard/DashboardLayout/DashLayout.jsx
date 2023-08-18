@@ -1,43 +1,35 @@
-// import { useContext } from 'react';
-// import { NavLink, Outlet } from 'react-router-dom';
-// import { AuthContext } from '../../AuthProvider/AuthProvider';
+
+
 import CommonBanner from '../../../shared/commonBanner/CommonBanner';
 import img from "../../../assets/dashboard.jpg"
+import DashboardInfo from '../dashboardInfo/DashboardInfo';
+import { NavLink, Outlet } from 'react-router-dom';
 
 const DashLayout = () => {
-    // const { user } = useContext(AuthContext)
+
     return (
         <div className=' mx-auto'>
             <CommonBanner BannerImage={img}></CommonBanner>
-            <div className=' bg-white'>
-                <div className='py-20 pl-10 md:px-32 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 '>
-                    <div className='bg-blue-200 h-40 md:h-52 w-96 md:w-64'>
-                        <div>
-                            <div className=" text-center mt-4 md:mt-8">
-                                <div>
-                                    <div className="avatar">
-                                        <div className="w-24 rounded-full ">
-                                            <img src={img} />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className=' mt-2'>
-                                    <h1 className='text-black'>Name</h1>
-                                </div>
-                            </div>
-                        </div>
+            <DashboardInfo />
+            <div className='bg-white'>
+                <div className='pb-20 pr-10 pl-10 md:px-32 md:flex gap-10'>
+                    <div className=' md:w-1/4 bg-red-400'>
+                        <ul className='text-black' >
+                            <li className='h-14 text-center text-2xl pt-2 bg-blue-200'><NavLink to='dashboard/home'>DASHBOAED</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 bg-blue-300'><NavLink to='dashboard/send-money'>SEND MONEY</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 bg-blue-200'><NavLink to='dashboard/cashout'>CASH OUT</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 bg-blue-300'><NavLink to='dashboard/cashout'>Deposite Money</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 bg-blue-200'><NavLink to='dashboard/cashout'>Bank account</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 bg-blue-300'><NavLink to='dashboard/cashout'>Card Number</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 bg-blue-200'><NavLink to='dashboard/cashout'>Seeting</NavLink></li>
+                            <li className='h-14 text-center text-2xl pt-2 bg-blue-300'><NavLink to='dashboard/cashout'>CASH OUT</NavLink></li>
+                        </ul>
                     </div>
-                    <div className='bg-blue-200 h-40 md:h-52 w-96 md:w-64'>
-                        a div
+                    <div className=' md:w-3/4 bg-blue-200 mt-10 md:mt-0'>
+                        <Outlet></Outlet>
                     </div>
-                    <div className='bg-blue-200 h-40 md:h-52 w-96 md:w-64'>
-                        a div
-                    </div>
-                    <div className='bg-blue-200 h-40 md:h-52 w-96 md:w-64'>
-                        a div
-                    </div>
-
                 </div>
+
             </div>
 
             {/* <div className="drawer lg:drawer-open">
