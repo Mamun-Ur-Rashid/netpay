@@ -3,6 +3,7 @@ import Banner from '../../Home/banner/Banner'
 import AccountSystem from '../AccountSystem/AccountSystem';
 import FinicialCard from '../FinicialSection/FinicialCard';
 import TuchPoint from '../TuchPoint/TuchPoint';
+import WhyChooseUs from '../whyChooseUs/WhyChooseUs';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <div className='px-20 md:px-24'>
                 <FinicialCard></FinicialCard>
                 <TuchPoint></TuchPoint>
+                <WhyChooseUs></WhyChooseUs>
                 <AccountSystem></AccountSystem>
             </div>
 
