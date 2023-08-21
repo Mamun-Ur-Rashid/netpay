@@ -1,7 +1,7 @@
 
 const DetailsBusiness = () => {
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto bg-[#1B2654] p-8 my-20">
             <h1 className=" text-center font-bold text-4xl py-10 text-red-500"> Business</h1>
             <div className="text-white pb-8">
                 <p>

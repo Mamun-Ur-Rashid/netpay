@@ -15,7 +15,6 @@ const DashLayout = () => {
                 <div className='pb-20 pr-10 pl-10 md:px-32 md:flex gap-10'>
                     <div className=' md:w-1/4 bg-[#1B2654]'>
                         <ul className='text-white' >
-
                             <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/home'>DASHBOAED</NavLink></li>
                             <li className='h-14 text-center text-2xl pt-2 bg-[#1ba8c6]'><NavLink to='dashboard/send-money'>SEND MONEY</NavLink></li>
                             <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/cashout'>CASH OUT</NavLink></li>
