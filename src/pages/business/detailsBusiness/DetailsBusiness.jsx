@@ -3,7 +3,7 @@ const DetailsBusiness = () => {
     return (
         <div className="container mx-auto">
             <h1 className=" text-center font-bold text-4xl py-10 text-red-500"> Business</h1>
-            <div className="text-black pb-8">
+            <div className="text-white pb-8">
                 <p>
                     Welcome to NetPay&apos;s Business Solutions – the ultimate destination for modernizing and optimizing your business&apos;s financial operations. At NetPay, we understand the intricacies and demands of running a successful enterprise, and that&apos;s why we&apos;ve tailored our platform to cater specifically to your needs. With our comprehensive suite of tools and services, businesses of all sizes can streamline their financial processes, enhance efficiency, and unlock new avenues for growth..
                 </p>

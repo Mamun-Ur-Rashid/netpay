@@ -92,9 +92,7 @@ const router = createBrowserRouter([
             {
                 path: 'dashboard/cashout',
                 element: <DashCashOut></DashCashOut>
-
             },
-
         ]
 
     }
