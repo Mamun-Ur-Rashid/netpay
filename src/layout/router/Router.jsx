@@ -81,6 +81,8 @@ const router = createBrowserRouter([
         path: 'dashboard',
         element: <DashLayout></DashLayout>,
         children: [
+
+            //user dashboard route here .......
             {
                 path: 'dashboard/home',
                 element: <DashHome></DashHome>
@@ -92,6 +94,16 @@ const router = createBrowserRouter([
             {
                 path: 'dashboard/cashout',
                 element: <DashCashOut></DashCashOut>
+            },
+
+            // admin dashboard route here.....
+            {
+
+            },
+
+            // aggent dashboard route here.........
+            {
+
             },
         ]
 
