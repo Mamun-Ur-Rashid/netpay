@@ -6,7 +6,10 @@ const Business = () => {
     return (
         <div className="mt-16 bg-[#070b29]">
             <CommonBanner BannerImage={img}></CommonBanner>
-            <DetailsBusiness></DetailsBusiness>
+            <div className=" ">
+
+                <DetailsBusiness></DetailsBusiness>
+            </div>
         </div>
     );
 };

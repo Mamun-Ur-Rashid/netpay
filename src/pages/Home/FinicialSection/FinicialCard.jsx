@@ -1,4 +1,3 @@
-import ServiceCard from "../../services/serviceCard/ServiceCard";
 import FinicialHomeCard from "./FinicialHomeCard";
 
 const FinicialCard = () => {

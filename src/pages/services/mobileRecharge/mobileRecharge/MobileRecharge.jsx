@@ -84,7 +84,7 @@ const MobileRecharge = () => {
 
 
     return (
-        <div className='mt-16 bg-stone-200'>
+        <div className='mt-16 bg-[#070b29]'>
             <ServiceBanner></ServiceBanner>
             <div className="container mx-auto py-4 px-12 md:px-0 ">
                 <AllService></AllService>
@@ -96,7 +96,9 @@ const MobileRecharge = () => {
                         text={headerData?.text}
                     ></AllServicesHeader>
                 </div>
-                <Faq faqData={faqData}></Faq>
+                <div className="bg-[#1B2654] p-8 mt-10">
+                    <Faq faqData={faqData}></Faq>
+                </div>
             </div>
         </div>
     );
