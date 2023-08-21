@@ -4,15 +4,17 @@ import AccountSystem from '../AccountSystem/AccountSystem';
 import FinicialCard from '../FinicialSection/FinicialCard';
 import TuchPoint from '../TuchPoint/TuchPoint';
 import WhyChooseUs from '../whyChooseUs/WhyChooseUs';
+import AnotherSEction from '../whyChooseUs/anotherSection/AnotherSEction';
 
 const Home = () => {
     return (
-        <div className="mt-16 bg-[#070b29]">
+        <div className="mt-16 bg-[#070c33]">
             <Banner></Banner>
             <div className='px-20 md:px-24'>
                 <FinicialCard></FinicialCard>
                 <TuchPoint></TuchPoint>
                 <WhyChooseUs></WhyChooseUs>
+                <AnotherSEction></AnotherSEction>
                 <AccountSystem></AccountSystem>
             </div>
 
