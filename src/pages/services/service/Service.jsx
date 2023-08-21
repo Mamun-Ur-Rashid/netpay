@@ -4,7 +4,7 @@ import ServiceCard from "../serviceCard/ServiceCard";
 
 const Service = () => {
     return (
-        <div className='mt-16 bg-stone-200 '>
+        <div className='mt-16 bg-[#070b29] '>
             <ServiceBanner></ServiceBanner>
             <div className="container mx-auto">
                 <AllService></AllService>
