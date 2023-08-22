@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 
 
 const Navbar = () => {
-    const { user, handlelogOut } = useContext(AuthContext)
+    const { user, handleLogOut } = useContext(AuthContext)
     const [isMenuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
     console.log(user)
 
     const logOut = () => {
-        handlelogOut()
+        handleLogOut()
             .then(() => {
                 Swal.fire({
                     position: 'center',
