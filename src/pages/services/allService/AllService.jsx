@@ -15,7 +15,7 @@ const AllService = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 ">
                 {
                     services?.map((service, index) => (
-                        <div key={index} className="bg-white text-black p-4 rounded-lg shadow-md text-center">
+                        <div key={index} className="bg-[#1B2654] hover:bg-[#17aac9] text-white p-4 rounded-lg shadow-md text-center">
                             <Link to={service?.link}>
                                 <p>{service?.serviceIcon}</p>
                                 <h1 className="text-2xl mt-6">{service?.serviceName}</h1>
