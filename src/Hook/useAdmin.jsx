@@ -33,10 +33,11 @@ const useAdmin = () => {
     const { user } = useContext(AuthContext);
 
     const { data: isAdmin, isLoading } = useQuery(['isAdmin', user?.email], async () => {
-        const response = await fetch(`https://netpay-server-muhammadali246397.vercel.app/users/checkadmin/${user?.email}`);
-        const data = await response.json(); 
+        const response = await fetch(` https://netpay-server-muhammadali246397.vercel.app/users/checkadmin/${user?.email}`);
+        const data = await response.json();
         return data.admin;
     });
+
     return [isAdmin, isLoading];
 };
 
