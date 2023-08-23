@@ -31,7 +31,7 @@ const Signup = () => {
                         const images = imageRes.data.display_url
                         const { name, email, nid, number, password } = data
 
-                        const userInfo = { name, email, nid, number, password, ImgUrl: images, role: 'user' }
+                        const userInfo = { name, email, nid, number, password, ImgUrl: images, role:'user' }
                         console.log(userInfo)
 
                         handleSignUp(data.email, data.password)

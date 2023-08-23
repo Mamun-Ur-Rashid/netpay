@@ -13,10 +13,11 @@ import About from "../../pages/aboutUs/about/About";
 import Business from "../../pages/business/business/Business"
 import Help from "../../pages/help/help/Help";
 import Blog from "../../pages/blog/blog/Blog";
-import DashLayout from "../../pages/Dashboard/dashboardLayout/DashLayout";
+
 import DashCashOut from "../../pages/Dashboard/UserDashboard/dash-CashOut/DashCashOut";
 import DashHome from "../../pages/Dashboard/UserDashboard/dashHome/DashHome";
 import DashSendMoney from "../../pages/Dashboard/UserDashboard/dashSendMoney/DashSendMoney"
+import DashLayout from "../../pages/Dashboard/DashboardLayout/DashLayout";
 
 const router = createBrowserRouter([
     {
