@@ -6,47 +6,78 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
 const Signup = () => {
-    const { handleSignUp,updateUserProfile } = useContext(AuthContext);
+
+
+    const { handleSignUp, updateUserProfile } = useContext(AuthContext);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const navigate = useNavigate();
     const [error, setError] = useState(null)
 
     const onSubmit = data => {
         console.log(data)
-       
-        handleSignUp(data.email, data.password)
-            .then((result) => {
-                console.log(result)
-                const user = result.user
-                const userInfo = {name:user.name,email:user.email, phone:user.phone, photo: user.photo, nid:user.nid}
-                fetch('https://netpay-server-muhammadali246397.vercel.app/allUsers',{
-                    method:'POST',
-                    headers:{
-                        'content-type':'application/json'
-                    },
-                    body:JSON.stringify(userInfo)
-                })
+        const image = data.photo[0];
+
+        if (image) {
+            const formData = new FormData();
+            formData.append('image', image);
+
+            fetch(`https://api.imgbb.com/1/upload?expiration=600&key=${import.meta.env.VITE_Image_upload}`, {
+                method: 'POST',
+                body: formData
+            })
                 .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                    if(data.insertedId){
-                        Swal.fire({
-                            position: 'center',
-                            icon: 'success',
-                            title: 'Sign up successfuly',
-                            showConfirmButton: false,
-                            timer: 1500
-                        })
-                        reset();
-                        navigate('/')
+                .then(imageRes => {
+                    if (imageRes.success) {
+                        const images = imageRes.data.display_url
+                        const { name, email, nid, number, password } = data
+
+                        const userInfo = { name, email, nid, number, password, ImgUrl: images, role: 'user' }
+                        console.log(userInfo)
+
+                        handleSignUp(data.email, data.password)
+                            .then((result) => {
+                                console.log(result)
+                                const user = result.user
+
+                                fetch('https://netpay-server-muhammadali246397.vercel.app/allUsers', {
+                                    method: 'POST',
+                                    headers: {
+                                        'content-type': 'application/json'
+                                    },
+                                    body: JSON.stringify(userInfo)
+                                })
+                                    .then(res => res.json())
+                                    .then(data => {
+                                        console.log(data)
+                                        if (data.insertedId) {
+                                            Swal.fire({
+                                                position: 'center',
+                                                icon: 'success',
+                                                title: 'Sign up successfuly',
+                                                showConfirmButton: false,
+                                                timer: 1500
+                                            })
+                                            reset();
+                                            navigate('/')
+                                        }
+                                    })
+
+                            })
+                            .catch(error => {
+                                setError(error)
+                                console.log(error.message)
+                            })
+
                     }
                 })
-               
-            })
-            .catch(error => {
-                setError(error)
-                console.log(error.message)
-            })
+                .catch(error => {
+                    console.error('Error uploading image:', error);
+                });
+        } else {
+            console.error('No image data found.');
+        }
+
+
 
 
     };
@@ -110,7 +141,7 @@ const Signup = () => {
 
                                         </div>
                                     </div>
-                                    <p className='text-white mt-4'>Allready have an account? <Link  to='/login'><span className='hover:font-semibold hover:text-green-300'>Please login</span></Link></p>
+                                    <p className='text-white mt-4'>Allready have an account? <Link to='/login'><span className='hover:font-semibold hover:text-green-300'>Please login</span></Link></p>
                                     {
                                         error ?
                                             <p className='text-red-600 font-semibold'>{error.message}</p>
