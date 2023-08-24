@@ -17,7 +17,7 @@ import Blog from "../../pages/blog/blog/Blog";
 import DashCashOut from "../../pages/Dashboard/UserDashboard/dash-CashOut/DashCashOut";
 import DashHome from "../../pages/Dashboard/UserDashboard/dashHome/DashHome";
 import DashSendMoney from "../../pages/Dashboard/UserDashboard/dashSendMoney/DashSendMoney"
-import DashLayout from "../../pages/Dashboard/DashboardLayout/DashLayout";
+import DashLayout from "../../pages/Dashboard/dashboardLayout/DashLayout";
 
 const router = createBrowserRouter([
     {
