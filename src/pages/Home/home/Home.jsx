@@ -6,14 +6,13 @@ import FinicialCard from '../FinicialSection/FinicialCard';
 import TuchPoint from '../TuchPoint/TuchPoint';
 import WhyChooseUs from '../whyChooseUs/WhyChooseUs';
 import AnotherSEction from '../whyChooseUs/anotherSection/AnotherSEction';
-import img from "../../../assets/josh-appel.jpg"
 
 const Home = () => {
 
     // Scroll to the top of the page when it loads
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, []);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="mt-16 bg-[#070c33]">
@@ -23,7 +22,6 @@ const Home = () => {
                 <TuchPoint></TuchPoint>
                 <WhyChooseUs></WhyChooseUs>
                 <AnotherSEction></AnotherSEction>
-
                 <AccountSystem></AccountSystem>
             </div>
 
