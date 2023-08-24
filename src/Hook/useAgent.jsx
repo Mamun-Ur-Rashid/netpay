@@ -1,21 +1,17 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { AuthContext } from '../pages/AuthProvider/AuthProvider';
-import useAxiosSecure from './useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 
 const useAgent = () => {
-    const {user} = useContext(AuthContext);
-    const [axiosSecure] = useAxiosSecure();
+    const { user } = useContext(AuthContext);
 
-    const {data: isAgent, isLoading : isAgentLoading} = useQuery({
-        queryKey: ['isAgent', user?.email],
-        queryFn: async () => {
-            const res = await axiosSecure.get(`/allUsers/agent/${user?.email}`);
-            console.log('is Agent response', res);
-            return res.data.agent;
-        }
-    })
-    return [isAgent, isAgentLoading];
+    const { data: isAgent, isLoading } = useQuery(['isAgent', user?.email], async () => {
+        const response = await fetch(` https://netpay-server-muhammadali246397.vercel.app/users/checkagent/${user?.email}`);
+        const data = await response.json(); 
+        return data.agent;
+    });
+
+    return [isAgent, isLoading];
 };
 
 export default useAgent;
