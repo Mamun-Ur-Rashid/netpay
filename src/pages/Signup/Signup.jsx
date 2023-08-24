@@ -19,7 +19,7 @@ const Signup = () => {
                 console.log(result)
                 const user = result.user
                 const userInfo = {name:user.name,email:user.email, phone:user.phone, photo: user.photo, nid:user.nid}
-                fetch('https://netpay-server-muhammadali246397.vercel.app/allUsers',{
+                fetch('http://localhost:3000/allUsers',{
                     method:'POST',
                     headers:{
                         'content-type':'application/json'
