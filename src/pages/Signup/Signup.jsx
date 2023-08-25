@@ -6,50 +6,82 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
 const Signup = () => {
-    const { handleSignUp } = useContext(AuthContext);
+
+
+    const { handleSignUp, updateUserProfile } = useContext(AuthContext);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const navigate = useNavigate();
     const [error, setError] = useState(null)
 
     const onSubmit = data => {
         console.log(data)
-        handleSignUp(data.email, data.password)
-            .then((result) => {
-                console.log(result)
-                const user = result.user
-                const userInfo = {name:user.name,email:user.email, phone:user.phone, photo: user.photo, nid:user.nid}
-                fetch('http://localhost:3000/allUsers',{
-                    method:'POST',
-                    headers:{
-                        'content-type':'application/json'
-                    },
-                    body:JSON.stringify(userInfo)
-                })
+        const image = data.photo[0];
+
+        if (image) {
+            const formData = new FormData();
+            formData.append('image', image);
+
+            fetch(`https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_Image_upload}`, {
+                method: 'POST',
+                body: formData
+            })
                 .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                    if(data.insertedId){
-                        Swal.fire({
-                            position: 'center',
-                            icon: 'success',
-                            title: 'Sign up successfuly',
-                            showConfirmButton: false,
-                            timer: 1500
-                        })
-                        reset();
-                        navigate('/')
+                .then(imageRes => {
+                    if (imageRes.success) {
+                        const images = imageRes.data.display_url
+                        const { name, email, nid, number, password } = data
+                            const tk = '1000'
+                        const userInfo = { name, email, nid, number, password, ImgUrl: images, role:'user',balance:parseInt(tk)}
+                        console.log(userInfo)
+
+                        handleSignUp(data.email, data.password)
+                            .then((result) => {
+                                console.log(result)
+                                const user = result.user
+
+                                fetch('https://netpay-server-muhammadali246397.vercel.app/allUsers', {
+                                    method: 'POST',
+                                    headers: {
+                                        'content-type': 'application/json'
+                                    },
+                                    body: JSON.stringify(userInfo)
+                                })
+                                    .then(res => res.json())
+                                    .then(data => {
+                                    
+                                        if (data.insertedId) {
+                                            Swal.fire({
+                                                position: 'center',
+                                                icon: 'success',
+                                                title: 'Sign up successfuly',
+                                                showConfirmButton: false,
+                                                timer: 1500
+                                            })
+                                            reset();
+                                            navigate('/')
+                                        }
+                                    })
+
+                            })
+                            .catch(error => {
+                                setError(error)
+                                console.log(error.message)
+                            })
+
                     }
                 })
-               
-            })
-            .catch(error => {
-                setError(error)
-                console.log(error.message)
-            })
+                .catch(error => {
+                    console.error('Error uploading image:', error);
+                });
+        } else {
+            console.error('No image data found.');
+        }
+
+
 
 
     };
-    
+
     return (
         <div style={{ backgroundImage: `url(${background})`, backgroundPosition: 'center', backgroundSize: 'cover', }} className='container mx-auto my-20 py-20'>
             <div className='text-center fond-bold text-white text-5xl'>Please Signup</div>
@@ -111,9 +143,9 @@ const Signup = () => {
                                     </div>
                                     <p className='text-white mt-4'>Allready have an account? <Link to='/login'><span className='hover:font-semibold hover:text-green-300'>Please login</span></Link></p>
                                     {
-                                        error?
-                                        <p className='text-red-600 font-semibold'>{error.message}</p>
-                                        :<></>
+                                        error ?
+                                            <p className='text-red-600 font-semibold'>{error.message}</p>
+                                            : <></>
                                     }
                                     <div className='text-center mt-10'>
                                         <input className="btn bg-orange-700 text-white px-6 py-2 border-none w-full hover:bg-orange-600 hover:text-black rounded-3xl" type="submit" value='Signup' />

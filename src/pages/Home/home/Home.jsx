@@ -1,16 +1,30 @@
 // import Banner from "../../Banner/Banner";
+import { useEffect } from 'react';
 import Banner from '../../Home/banner/Banner'
 import AccountSystem from '../AccountSystem/AccountSystem';
-import FinicialSection from '../FinicialSection/FinicialSection';
+import FinicialCard from '../FinicialSection/FinicialCard';
 import TuchPoint from '../TuchPoint/TuchPoint';
+import WhyChooseUs from '../whyChooseUs/WhyChooseUs';
+import AnotherSEction from '../whyChooseUs/anotherSection/AnotherSEction';
 
 const Home = () => {
+
+    // Scroll to the top of the page when it loads
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
-        <div className="mt-16 bg-stone-100">
+        <div className="mt-16 bg-[#070c33]">
             <Banner></Banner>
-            <FinicialSection></FinicialSection>
-            <TuchPoint></TuchPoint>
-            <AccountSystem></AccountSystem>
+            <div className='px-6 md:px-24'>
+                <FinicialCard></FinicialCard>
+                <TuchPoint></TuchPoint>
+                <WhyChooseUs></WhyChooseUs>
+                <AnotherSEction></AnotherSEction>
+                <AccountSystem></AccountSystem>
+            </div>
+
         </div>
     );
 };
