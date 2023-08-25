@@ -17,7 +17,7 @@ const Home = () => {
     return (
         <div className="mt-16 bg-[#070c33]">
             <Banner></Banner>
-            <div className='px-20 md:px-24'>
+            <div className='px-6 md:px-24'>
                 <FinicialCard></FinicialCard>
                 <TuchPoint></TuchPoint>
                 <WhyChooseUs></WhyChooseUs>

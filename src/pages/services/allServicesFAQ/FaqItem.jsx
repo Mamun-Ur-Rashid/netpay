@@ -11,7 +11,7 @@ const FaqItem = ({ question, answer, isOpen, onClick }) => {
             </h3>
             <div className="bg-gray-400 h-1"></div>
             {isOpen &&
-                <p className="text-whiteP text p-4 ">
+                <p className="text-white text p-4 ">
                     {answer}
                 </p>}
         </div>

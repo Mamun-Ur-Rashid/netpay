@@ -4,7 +4,7 @@ import DetailsHelp from "../detailsHelp/DetailsHelp";
 
 const Help = () => {
     return (
-        <div className="mt-16 bg-stone-200">
+        <div className="mt-16 bg-[#070b29]">
             <CommonBanner BannerImage={img}></CommonBanner>
             <DetailsHelp></DetailsHelp>
         </div>

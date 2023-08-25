@@ -16,9 +16,9 @@
 
 //         console.log("is Admin response", response.data);
 
-        
+
 //     });
-   
+
 
 //     return [isAdmin, isLoading];
 // };
@@ -37,8 +37,9 @@ const useAdmin = () => {
         const data = await response.json();
         return data.admin;
     });
-
+    console.log(isAdmin);
     return [isAdmin, isLoading];
+
 };
 
 export default useAdmin;
