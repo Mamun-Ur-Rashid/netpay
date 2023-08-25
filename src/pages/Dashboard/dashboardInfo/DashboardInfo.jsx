@@ -1,9 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import img from "../../../assets/dashboard.jpg"
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
+
 const DashboardInfo = () => {
-    const { user } = useContext(AuthContext)
+    
+    const { user,userInfor } = useContext(AuthContext)
+
+
     return (
         <div className=' bg-[#070b29]'>
             <h1 className="text-center text-white text-4xl font-bold pt-8"> DASHBOARD</h1>
@@ -14,12 +18,12 @@ const DashboardInfo = () => {
                             <div>
                                 <div className="avatar">
                                     <div className="w-24 rounded-full ">
-                                        <img src={user?.photoURL} />
+                                        <img src={userInfor?.ImgUrl} />
                                     </div>
                                 </div>
                             </div>
                             <div className=' mt-2'>
-                                <h1 className='text-white text-2xl'>{user?.displayName}</h1>
+                                <h1 className='text-white text-2xl'>{userInfor?.name}</h1>
                             </div>
                         </div>
                     </div>
@@ -35,7 +39,7 @@ const DashboardInfo = () => {
                                 </div>
                             </div>
                             <div className=' md:mt-2'>
-                                <h1 className='text-white text-2xl'>Balance : 00</h1>
+                                <h1 className='text-white text-2xl'>Balance : {userInfor?.balance} tk</h1>
                             </div>
                         </div>
                     </div>

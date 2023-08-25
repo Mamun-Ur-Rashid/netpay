@@ -50,6 +50,14 @@ const AuthProvider = ({ children }) => {
         }
     }, [])
 
+    const [userInfor, setUserInfor] = useState();
+    console.log(userInfor)
+    useEffect(() => {
+        fetch(`https://netpay-server-muhammadali246397.vercel.app/allUsers/${user?.email}`)
+        .then(res => res.json())
+        .then(data =>setUserInfor(data))
+    },[user])
+
     const updateUserProfile = ((name, photo, number) => {
         return updateProfile(auth.currentUser,{
             displayName:name,
@@ -67,7 +75,8 @@ const AuthProvider = ({ children }) => {
         handleLogin,
         handleLogOut,
         updateUserProfile,
-        loading
+        loading,
+        userInfor
     }
     return (
         <AuthContext.Provider value={userInfo}>
