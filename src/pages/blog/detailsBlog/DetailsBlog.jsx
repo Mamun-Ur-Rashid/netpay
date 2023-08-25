@@ -1,9 +1,9 @@
 
 const DetailsBlog = () => {
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto bg-[#1B2654] p-8 my-20">
             <h1 className=" text-center font-bold text-4xl py-10 text-red-500"> Blog </h1>
-            <div className="text-black pb-8">
+            <div className="text-white pb-8">
                 <p>
                     Welcome to NetPay&apos;s Help Center – your resource for getting the assistance you need, whenever you need it. We understand that navigating financial platforms can sometimes raise questions, and that&apos;s why our dedicated support team is here to provide you with the answers and guidance you seek.
                 </p>
