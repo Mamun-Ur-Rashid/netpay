@@ -21,7 +21,7 @@ const Signup = () => {
             const formData = new FormData();
             formData.append('image', image);
 
-            fetch(`https://api.imgbb.com/1/upload?expiration=600&key=${import.meta.env.VITE_Image_upload}`, {
+            fetch(`https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_Image_upload}`, {
                 method: 'POST',
                 body: formData
             })
@@ -30,8 +30,8 @@ const Signup = () => {
                     if (imageRes.success) {
                         const images = imageRes.data.display_url
                         const { name, email, nid, number, password } = data
-
-                        const userInfo = { name, email, nid, number, password, ImgUrl: images, role:'user' }
+                            const tk = '1000'
+                        const userInfo = { name, email, nid, number, password, ImgUrl: images, role:'user',balance:parseInt(tk)}
                         console.log(userInfo)
 
                         handleSignUp(data.email, data.password)
@@ -48,7 +48,7 @@ const Signup = () => {
                                 })
                                     .then(res => res.json())
                                     .then(data => {
-                                        console.log(data)
+                                    
                                         if (data.insertedId) {
                                             Swal.fire({
                                                 position: 'center',
