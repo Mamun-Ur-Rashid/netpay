@@ -11,8 +11,11 @@ const Business = () => {
     }, []);
 
     return (
-        <div className="mt-16 bg-[#070b29]">
-            <CommonBanner BannerImage={img}></CommonBanner>
+        <div className=" mt-16 bg-[#070b29]">
+
+            <div className="w-full">
+                <CommonBanner BannerImage={img}></CommonBanner>
+            </div>
             <div className=" ">
                 <DetailsBusiness></DetailsBusiness>
             </div>

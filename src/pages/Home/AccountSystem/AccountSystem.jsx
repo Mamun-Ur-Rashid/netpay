@@ -12,8 +12,8 @@ const AccountSystem = () => {
                     <div className=''>
                         <img className='mx-auto w-[164px] h-[164px]' src={nid} alt="" />
                     </div>
-                    <div style={{ borderRadius: "80px 0px 80px 0px", boxShadow: "1px 1px 5px 2px" }} className='w-full h-20 mt-4 flex items-center justify-between'>
-                        <p className='px-5 font-bold text-center'>Give your national id number and some ininformation</p>
+                    <div style={{ borderRadius: "80px 0px 80px 0px", boxShadow: "1px 1px 5px 2px" }} className='w-full h-20 mt-4 flex items-center justify-between text-white'>
+                        <p className='px-5 p-8 font-bold text-center text-white'>Give your national id number and some ininformation</p>
                     </div>
                 </div>
                 <div className='md:w-[30%] sm:mt-5 px-4 py-12 md:py-0'>
@@ -21,7 +21,7 @@ const AccountSystem = () => {
                         <img className='mx-auto w-[164px] h-[164px]' src={photo} alt="" />
                     </div>
                     <div style={{ borderRadius: "80px 0px 80px 0px", boxShadow: "1px 1px 5px 2px" }} className='w-full h-20 mt-4 flex items-center justify-between'>
-                        <p className='px-5 font-bold text-center'>Upload your photo and  digital signature</p>
+                        <p className='px-5 font-bold text-center text-white'>Upload your photo and  digital signature</p>
                     </div>
                 </div>
                 <div className='md:w-[30%] sm:mt-5 px-4'>
@@ -29,7 +29,7 @@ const AccountSystem = () => {
                         <img className='mx-auto w-[164px] h-[164px]' src={password} alt="" />
                     </div>
                     <div style={{ borderRadius: "80px 0px 80px 0px", boxShadow: "1px 1px 5px 2px" }} className='w-full h-20 mt-4 flex items-center justify-between'>
-                        <p className='px-5 font-bold sm:text-center'>Set your 4 digit password </p>
+                        <p className='px-5 font-bold sm:text-center text-white'>Set your 4 digit password </p>
                     </div>
                 </div>
             </div>
