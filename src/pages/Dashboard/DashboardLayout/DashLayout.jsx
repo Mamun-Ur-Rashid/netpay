@@ -6,6 +6,7 @@ import DashboardInfo from '../dashboardInfo/DashboardInfo';
 import { NavLink, Outlet } from 'react-router-dom';
 import useAdmin from '../../../Hook/useAdmin';
 import useAgent from '../../../Hook/useAgent';
+import { FaUserGroup } from "react-icons/fa6";
 
 const DashLayout = () => {
     const [isAdmin] = useAdmin();
@@ -13,7 +14,7 @@ const DashLayout = () => {
 
     return (
         <div className=' mx-auto'>
-            <CommonBanner BannerImage={img}></CommonBanner>
+            {/* <CommonBanner BannerImage={img}></CommonBanner> */}
             <DashboardInfo />
             <div className='bg-[#070b29]'>
                 <div className='pb-20 pr-10 pl-10 md:px-32 md:flex gap-10'>
@@ -21,13 +22,11 @@ const DashLayout = () => {
                         <ul className='text-white' >
                             {isAdmin?(
                                 <> 
-                                <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/home'>ADMIN DASHBOAED</NavLink></li>
-                                <li className='h-14 text-center text-2xl pt-2 bg-[#1ba8c6]'><NavLink to='dashboard/send-money'>SEND MONEY</NavLink></li>
-                                <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/cashout'>CASH OUT</NavLink></li>
-                                <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/cashout'>Deposite Money</NavLink></li>
-                                <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/cashout'>Bank account</NavLink></li>
-                                <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/cashout'>Card Number</NavLink></li>
-                                <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/cashout'>Seeting</NavLink></li>
+                                <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/adminHome'> Admin Dashboard</NavLink></li>
+                                <li className='h-14 text-center text-2xl pt-2'><NavLink to='dashboard/paymentHistory'>Payment History</NavLink></li>
+                                <li className='h-14 text-center text-2xl pt-2'><NavLink to='dashboard/allUsers'><FaUserGroup></FaUserGroup> All Users</NavLink></li>
+                                <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/adminSendMoney'>Send Money</NavLink></li>
+        
                                 <li className='h-14 text-center text-2xl pt-2 '><NavLink to='/'>Home</NavLink></li></>
                             ) 
                             : isAgent ? (
@@ -55,7 +54,7 @@ const DashLayout = () => {
                             
                         </ul>
                     </div>
-                    <div className=' md:w-3/4 bg-[#608096] mt-10 md:mt-0'>
+                    <div className=' md:w-3/4 bg-[#4180aa] mt-10 md:mt-0'>
                         <Outlet></Outlet>
                     </div>
                 </div>
