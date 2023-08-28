@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const axiosSecure = axios.create({
-    baseURL: 'https://netpay-server-muhammadali246397.vercel.app/'
+    baseURL: 'http://localhost:3000'
 })
 
 const useAxiosSecure = () => {
@@ -23,7 +23,7 @@ const useAxiosSecure = () => {
 
         axiosSecure.interceptors.response.use(
             (response) => response,
-             (error) => {
+             async (error) => {
                 if(error.response && (error?.response.status === 401 || error?.response.status === 403)){
                      handleLogOut();
                     navigate('/login');

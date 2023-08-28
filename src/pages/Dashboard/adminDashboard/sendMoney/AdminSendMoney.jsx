@@ -21,7 +21,7 @@ const AdminSendMoney = () => {
                 </div>
                 <div className='form-control md:w-3/4 mx-auto'>
                     <label htmlFor="">Amount</label>
-                    <input type='number' className='input input-bordered mt-2' {...register("amount", { minLength: 3, maxLength:6 })} placeholder='Enter Agent Account Number' />
+                    <input type='number' className='input input-bordered mt-2' {...register("amount", { minLength: 3, maxLength:6 })} placeholder='Enter Amount' />
                     {errors.amount && <span className='mt-3 text-red-600'>Please input correct value!</span>}
                 </div>
                 <div className='form-control md:w-3/4 mx-auto'>
