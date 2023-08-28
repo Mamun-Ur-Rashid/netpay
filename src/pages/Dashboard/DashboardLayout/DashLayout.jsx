@@ -23,12 +23,12 @@ const DashLayout = () => {
                         <ul className='text-white' >
                             {isAdmin?(
                                 <> 
-                                <li className='h-14 ml-4 text-2xl pt-2 '><NavLink to='dashboard/adminHome'> <FaChartColumn className='mx-2 inline-flex mb-[2px]'></FaChartColumn> Admin Dashboard</NavLink></li>
-                                <li className='h-14 ml-4 text-2xl pt-2'><NavLink to='dashboard/paymentHistory'><FaHistory className='inline-flex mb-[2px] mx-2'></FaHistory> Payment History</NavLink></li>
-                                <li className='h-14 ml-4 text-2xl pt-2'><NavLink to='dashboard/allUsers'><FaUserGroup className='inline-flex mb-[2px] mx-2'></FaUserGroup> All Users</NavLink></li>
-                                <li className='h-14 ml-4 text-2xl pt-2 '><NavLink to='dashboard/adminSendMoney'> <FaHourglassHalf className='inline-flex mb-[2px] mx-2'></FaHourglassHalf>Send Money</NavLink></li>
+                                <li className='h-14  text-2xl pt-2 '><NavLink to='dashboard/adminHome'> <FaChartColumn className='mx-2 inline-flex mb-[2px]'></FaChartColumn> Admin Dashboard</NavLink></li>
+                                <li className='h-14  text-2xl pt-2'><NavLink to='dashboard/paymentHistory'><FaHistory className='inline-flex mb-[2px] mx-2'></FaHistory> Payment History</NavLink></li>
+                                <li className='h-14  text-2xl pt-2'><NavLink to='dashboard/allUsers'><FaUserGroup className='inline-flex mb-[2px] mx-2'></FaUserGroup> All Users</NavLink></li>
+                                <li className='h-14  text-2xl pt-2 '><NavLink to='dashboard/adminSendMoney'> <FaHourglassHalf className='inline-flex mb-[2px] mx-2'></FaHourglassHalf>Send Money</NavLink></li>
         
-                                <li className='h-14 ml-4 text-2xl pt-2 '><NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome>Home</NavLink></li></>
+                                <li className='h-14  text-2xl pt-2 '><NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome>Home</NavLink></li></>
                             ) 
                             : isAgent ? (
                                 <> <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/home'>AGENT DASHBOAED</NavLink></li>
