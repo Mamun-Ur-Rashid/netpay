@@ -1,11 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, } from "react";
 import img from "../../../assets/dashboard.jpg"
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 const DashboardInfo = () => {
-    
-    const { user,userInfor } = useContext(AuthContext)
+
+    const { user, userInfor } = useContext(AuthContext)
 
 
     return (
