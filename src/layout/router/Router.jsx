@@ -18,6 +18,10 @@ import DashCashOut from "../../pages/Dashboard/UserDashboard/dash-CashOut/DashCa
 import DashHome from "../../pages/Dashboard/UserDashboard/dashHome/DashHome";
 import DashSendMoney from "../../pages/Dashboard/UserDashboard/dashSendMoney/DashSendMoney"
 import DashLayout from "../../pages/Dashboard/dashboardLayout/DashLayout";
+import AdminHome from "../../pages/Dashboard/adminDashboard/adminHome/AdminHome";
+import PaymentHistory from "../../pages/Dashboard/adminDashboard/paymentHistory/PaymentHistory";
+import AllUsers from "../../pages/Dashboard/adminDashboard/allUsers/AllUsers";
+import AdminSendMoney from "../../pages/Dashboard/adminDashboard/sendMoney/AdminSendMoney";
 
 const router = createBrowserRouter([
     {
@@ -99,7 +103,20 @@ const router = createBrowserRouter([
 
             // admin dashboard route here.....
             {
-
+                path:'dashboard/adminHome',
+                element:<AdminHome></AdminHome>
+            },
+            {
+                path:'dashboard/paymentHistory',
+                element:<PaymentHistory></PaymentHistory>
+            },
+            {
+                path:'dashboard/allUsers',
+                element:<AllUsers></AllUsers>
+            },
+            {
+                path:'dashboard/adminSendMoney',
+                element:<AdminSendMoney></AdminSendMoney>
             },
 
             // aggent dashboard route here.........
