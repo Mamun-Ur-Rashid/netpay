@@ -85,7 +85,7 @@ const AddMoney = () => {
     return (
         <div className='mt-16 bg-[#070b29]'>
             <ServiceBanner></ServiceBanner>
-            <div className="container mx-auto py-4 px-12 md:px-0 ">
+            <div className="px-8 md:px-24">
                 <AllService></AllService>
                 <h1 className="text-center font-bold text-4xl py-10 text-red-500"> Add Money</h1>
                 <div className="py-4">

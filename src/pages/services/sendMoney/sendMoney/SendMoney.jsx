@@ -1,7 +1,9 @@
+import Title from "../../../../shared/title/Title";
 import AllService from "../../allService/AllService";
 import Faq from "../../allServicesFAQ/Faq";
 import AllServicesHeader from "../../allServicesHeader/AllServicesHeader";
 import ServiceBanner from "../../serviceBanner/ServiceBanner";
+import SendMoneyServiceDatails from "../sendMoneyProcess/SendMoneyServiceDatails";
 
 const SendMoney = () => {
 
@@ -85,15 +87,18 @@ const SendMoney = () => {
     return (
         <div className='mt-16 bg-[#070b29]'>
             <ServiceBanner></ServiceBanner>
-            <div className="container mx-auto py-4 px-12 md:px-0 ">
+            <div className="px-8 md:px-24">
                 <AllService></AllService>
-                <h1 className="text-center font-bold text-4xl py-10 text-red-500"> Send Money</h1>
+                <Title title={'Send Money'}></Title>
                 <div className="py-4">
                     <AllServicesHeader
                         imageUrl={headerData?.imageUrl}
                         title={headerData?.title}
                         text={headerData?.text}
                     ></AllServicesHeader>
+                </div>
+                <div>
+                    <SendMoneyServiceDatails />
                 </div>
                 <div className="bg-[#1B2654] p-8 mt-10">
                     <Faq faqData={faqData}></Faq>

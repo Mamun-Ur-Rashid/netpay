@@ -2,7 +2,7 @@ import './button.css'
 
 const Button = ({ text }) => {
     return (
-        <button className='btn hover:text'> {text} </button>
+        <button className='btn'> {text} </button>
     );
 };
 
