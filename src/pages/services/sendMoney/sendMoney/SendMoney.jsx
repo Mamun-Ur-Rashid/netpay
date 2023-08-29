@@ -11,6 +11,7 @@ const SendMoney = () => {
         imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
         title: 'Send Money',
         text: 'Send Money is now more easier to using NetPay. You can send money to one account to another account 24 hours in 7days. It can happend anywhere anytime.',
+        btnText: 'Send Money Now'
     };
 
     const faqData = [
@@ -95,6 +96,7 @@ const SendMoney = () => {
                         imageUrl={headerData?.imageUrl}
                         title={headerData?.title}
                         text={headerData?.text}
+                        btnText={headerData?.btnText}
                     ></AllServicesHeader>
                 </div>
                 <div>
