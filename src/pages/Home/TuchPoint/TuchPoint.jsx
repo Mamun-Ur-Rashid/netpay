@@ -1,10 +1,10 @@
 import image from '../../../assets/login.png'
+import Title from '../../../shared/title/Title';
 
 const TuchPoint = () => {
     return (
         <div className='container mx-auto  md:my-12'>
-            <h1 className="text-center font-bold text-4xl md:text-5xl text-red-600">Nearest NetPay Touchpoints</h1>
-
+            <Title title={'Nearest NetPay Touchpoints'} subTitle={'Discover Convenient Locations for Accessing NetPay Services'}></Title>
             <div className='md:flex justify-between mt-4 md:mt-10 gap-9 '>
                 <div className='w-full md:w-1/3  px-4 py- md:py-0 bg-[#1B2654] h-96'>
                     <div className='text-center p-4 text-white '>
