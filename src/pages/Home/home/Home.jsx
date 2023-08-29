@@ -6,6 +6,7 @@ import FinicialCard from '../FinicialSection/FinicialCard';
 import TuchPoint from '../TuchPoint/TuchPoint';
 import WhyChooseUs from '../whyChooseUs/WhyChooseUs';
 import AnotherSEction from '../whyChooseUs/anotherSection/AnotherSEction';
+import LatestNewes from '../latestNews/LatestNewes';
 
 const Home = () => {
 
@@ -23,6 +24,8 @@ const Home = () => {
                 <WhyChooseUs></WhyChooseUs>
                 <AnotherSEction></AnotherSEction>
                 <AccountSystem></AccountSystem>
+                <LatestNewes></LatestNewes>
+
             </div>
 
         </div>
