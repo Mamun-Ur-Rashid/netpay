@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FaqItem from "./FaqItem";
+import Title from "../../../shared/title/Title";
 
 const Faq = ({ faqData }) => {
 
@@ -15,7 +16,7 @@ const Faq = ({ faqData }) => {
 
     return (
         <div className="py-8">
-            <h1 className="text-2xl md:text-4xl text-white text-center font-semibold mb-4">Frequently Asked Questions</h1>
+            <Title title={'Frequently Asked Questions'}></Title>
             <div className="py-6">
                 {faqData.map((item, index) => (
                     <FaqItem
