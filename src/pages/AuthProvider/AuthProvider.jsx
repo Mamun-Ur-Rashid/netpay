@@ -48,7 +48,7 @@ const AuthProvider = ({ children }) => {
         return () => {
             return unsubscribe()
         }
-    }, [])
+    }, []);
 
     const [userInfor, setUserInfor] = useState();
     console.log(userInfor)

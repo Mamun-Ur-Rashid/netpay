@@ -17,16 +17,16 @@ const AllUsers = () => {
         <div> 
             <h2 className='text-4xl my-6 text-center font-bold'>All Users</h2>
             <div>
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto p-4">
                     <table className="table">
                         {/* head */}
                         <thead>
-                            <tr>
+                            <tr className='bg-slate-400 text-lg'>
                                 <th>#</th>
                                 <th>User Name</th>
                                 <th>Image</th>
                                 <th>Email</th>
-                                <th>Phone Number</th>
+                                <th>Account</th>
                                 <th>Balance</th>
                                 <th>NID</th>
                             </tr>
@@ -37,7 +37,7 @@ const AllUsers = () => {
                                     key={user._id}>
                                     <th>{index + 1}</th>
                                     <th>{user.name}</th>
-                                    <th><img className='h-10 w-28 rounded-full' src={user.ImgUrl} alt="" /></th>
+                                    <th><img className='h-10 w-10 rounded-full' src={user.ImgUrl} alt="" /></th>
                                     <th>{user.email}</th>
                                     <th>{user.number}</th>
                                     <th>{user.balance} Tk</th>

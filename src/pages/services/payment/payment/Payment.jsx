@@ -1,3 +1,4 @@
+import Title from "../../../../shared/title/Title";
 import AllService from "../../allService/AllService";
 import Faq from "../../allServicesFAQ/Faq";
 import AllServicesHeader from "../../allServicesHeader/AllServicesHeader";
@@ -9,6 +10,7 @@ const Payment = () => {
         imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
         title: 'Payment',
         text: 'Payment seytem is now more than easier to using NetPay. You can get any bill to using your NetPay account.',
+        btnText: 'Payment Now'
     };
 
     const faqData = [
@@ -87,12 +89,13 @@ const Payment = () => {
             <ServiceBanner></ServiceBanner>
             <div className="px-8 md:px-24">
                 <AllService></AllService>
-                <h1 className="text-center text-4xl py-10 text-red-500"> Payment</h1>
+                <Title title={'Payment'} />
                 <div className="py-4">
                     <AllServicesHeader
                         imageUrl={headerData?.imageUrl}
                         title={headerData?.title}
                         text={headerData?.text}
+                        btnText={headerData?.btnText}
                     ></AllServicesHeader>
                 </div>
                 <div className="bg-[#1B2654] p-8 mt-10">

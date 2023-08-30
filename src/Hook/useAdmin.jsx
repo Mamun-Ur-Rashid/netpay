@@ -6,21 +6,21 @@
 
 // const useAdmin = () => {
 //     const { user } = useContext(AuthContext);
-//     console.log(user)
-//     const axiosSecure = useAxiosSecure();
+//     // console.log(user)
+//     const [axiosSecure] = useAxiosSecure();
 
 
-//     const { data: isAdmin, isLoading } = useQuery(['isAdmin', user?.email], async () => {
-
-//         const response = await fetch(`http://localhost:3000/users/checkadmin/${user?.email}`);
-
-//         console.log("is Admin response", response.data);
-
-
+//     const { data: isAdmin=[], isLoading: loading,  } = useQuery({
+//         queryKey: ['isAdmin'],
+//         queryFn: async () => {
+//             const res = await axiosSecure.get(`/users/checkAdmin/${user?.email}`);
+//             console.log(res.data);
+//             return res.data;
+//         }
 //     });
 
 
-//     return [isAdmin, isLoading];
+//     return [isAdmin, loading];
 // };
 
 // export default useAdmin;
@@ -33,7 +33,7 @@ const useAdmin = () => {
     const { user } = useContext(AuthContext);
 
     const { data: isAdmin, isLoading } = useQuery(['isAdmin', user?.email], async () => {
-        const response = await fetch(` https://netpay-server-muhammadali246397.vercel.app/users/checkadmin/${user?.email}`);
+        const response = await fetch(`https://netpay-server-muhammadali246397.vercel.app/users/checkAdmin/${user?.email}`);
         const data = await response.json();
         return data.admin;
     });

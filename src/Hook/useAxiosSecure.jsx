@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:3000'
+    baseURL: 'https://netpay-server-muhammadali246397.vercel.app'
 })
 
 const useAxiosSecure = () => {
@@ -13,12 +13,12 @@ const useAxiosSecure = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axiosSecure.interceptors.request.use((req) => {
+        axiosSecure.interceptors.request.use((config) => {
             const token = localStorage.getItem('access-token');
             if(token){
-                req.headers.Authorization =`Bearer ${token}`;
+                config.headers.Authorization =`Bearer ${token}`;
             }
-            return req;
+            return config;
         });
 
         axiosSecure.interceptors.response.use(
