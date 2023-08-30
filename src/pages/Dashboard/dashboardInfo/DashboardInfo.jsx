@@ -11,7 +11,7 @@ const DashboardInfo = () => {
     return (
         <div className=' bg-[#070b29]'>
            
-            <div className='py-14 pl-10 md:px-28 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 '>
+            <div className='py-14 pl-10 md:px-20 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 '>
                 <div className='bg-[#1B2654] h-40 md:h-52 w-96 md:w-64'>
                     <div>
                         <div className=" text-center mt-4 md:mt-8">

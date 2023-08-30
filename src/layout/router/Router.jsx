@@ -22,6 +22,8 @@ import AdminHome from "../../pages/Dashboard/adminDashboard/adminHome/AdminHome"
 import PaymentHistory from "../../pages/Dashboard/adminDashboard/paymentHistory/PaymentHistory";
 import AllUsers from "../../pages/Dashboard/adminDashboard/allUsers/AllUsers";
 import AdminSendMoney from "../../pages/Dashboard/adminDashboard/sendMoney/AdminSendMoney";
+import AgentHome from "../../pages/Dashboard/agentDashboard/agentHome/AgentHome";
+import AgentCashOut from "../../pages/Dashboard/agentDashboard/cashOut/AgentCashOut";
 
 const router = createBrowserRouter([
     {
@@ -121,8 +123,13 @@ const router = createBrowserRouter([
 
             // aggent dashboard route here.........
             {
-
+                path:'dashboard/agentHome',
+                element: <AgentHome></AgentHome>
             },
+            {
+                path:'dashboard/agentCashOut',
+                element:<AgentCashOut></AgentCashOut>
+            }
         ]
 
     }
