@@ -1,3 +1,4 @@
+import Title from "../../../../shared/title/Title";
 import AllService from "../../allService/AllService";
 import Faq from "../../allServicesFAQ/Faq";
 import AllServicesHeader from "../../allServicesHeader/AllServicesHeader";
@@ -9,6 +10,7 @@ const CashOut = () => {
         imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
         title: 'Cash Out',
         text: 'Cash Out now more fun to using NetPay. You can get money to using your account in any aggent house. NetPay aggent are present everyWhere in Bangladesh.',
+        btnText: 'Cash Out Now'
     };
 
 
@@ -86,14 +88,15 @@ const CashOut = () => {
     return (
         <div className='mt-16 bg-[#070b29]'>
             <ServiceBanner></ServiceBanner>
-            <div className="container mx-auto py-4 px-12 md:px-0 ">
+            <div className="px-8 md:px-24 ">
                 <AllService></AllService>
-                <h1 className="text-center font-bold text-4xl py-10 text-red-500"> Cash Out</h1>
+                <Title title={'Cash Out'} />
                 <div className="py-4">
                     <AllServicesHeader
                         imageUrl={sendMoneyHeader?.imageUrl}
                         title={sendMoneyHeader?.title}
                         text={sendMoneyHeader?.text}
+                        btnText={sendMoneyHeader?.btnText}
                     ></AllServicesHeader>
                 </div>
                 <div className="bg-[#1B2654] p-8 mt-10">

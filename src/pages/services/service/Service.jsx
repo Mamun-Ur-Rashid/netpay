@@ -10,9 +10,9 @@ const Service = () => {
     }, []);
 
     return (
-        <div className='mt-16 bg-[#070b29] '>
+        <div className='mt-16 bg-[#070c33]'>
             <ServiceBanner></ServiceBanner>
-            <div className="container px-12">
+            <div className="px-8 md:px-24">
                 <AllService></AllService>
                 <ServiceCard></ServiceCard>
             </div>

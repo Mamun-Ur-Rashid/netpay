@@ -3,8 +3,8 @@ import logo from '../../assets/logo4.png'
 
 const Footer = () => {
     return (
-        <div >
-            <footer className="footer py-20 p-10 bg-neutral text-neutral-content text-xl mx-auto">
+        <div className='bg-[#070c33] mt-28'>
+            <footer className="footer  p-10 bg-neutral text-neutral-content text-xl mx-auto">
 
                 <div>
                     <img className="w-4/6" src={logo} alt="" />
