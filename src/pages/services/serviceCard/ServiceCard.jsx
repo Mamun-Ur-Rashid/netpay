@@ -4,28 +4,28 @@ const ServiceCard = () => {
 
     const cardData = [
         {
-            imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
+            imageUrl: 'https://thumbs.dreamstime.com/b/online-money-transfer-vector-illustration-cartoon-flat-tiny-friend-man-character-transferring-send-transaction-coin-out-178490363.jpg',
             title: 'Send Money',
             description: 'Send money from NetPay to another acount instanly.',
             buttonText: 'Learn More',
             link: '/services/send-money',
         },
         {
-            imageUrl: 'https://www.studytienganh.vn/upload/2021/05/101183.png',
+            imageUrl: 'https://img.freepik.com/premium-vector/3d-cartoon-smartphone-with-credit-card-money-online-payment-concept-mobile-wallet-application-banking-app-transfer-money-via-smartphone-vector-3d-illustration_221648-593.jpg',
             title: 'Cash Out',
             description: 'Cash Out from NetPay to Your acount instanly.',
             buttonText: 'Learn More',
             link: '/services/cash-out'
         },
         {
-            imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
+            imageUrl: 'https://img.freepik.com/free-vector/transfer-money-concept-illustration_114360-3762.jpg?w=2000',
             title: 'Add Money',
             description: 'Add money from NetPay to another acount instanly.',
             buttonText: 'Learn More',
             link: '/services/add-money'
         },
         {
-            imageUrl: 'https://img.freepik.com/premium-vector/bill-expenses-is-mobile-phonepay-bills-with-mobile-phoneonline-shopping-spendingonline-shop_196604-13.jpg?w=2000',
+            imageUrl: 'https://i.pinimg.com/736x/95/a1/d0/95a1d0a1226d81bde38336c7eee5c5d4.jpg',
             title: 'Payment',
             description: 'Payment from NetPay to another acount instanly.',
             buttonText: 'Learn More',

@@ -1,7 +1,5 @@
 
 
-import CommonBanner from '../../../shared/commonBanner/CommonBanner';
-import img from "../../../assets/dashboard.jpg"
 import DashboardInfo from '../dashboardInfo/DashboardInfo';
 import { NavLink, Outlet } from 'react-router-dom';
 import useAdmin from '../../../Hook/useAdmin';
@@ -12,6 +10,7 @@ import logo from '../../../assets/logo4.png'
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useAxiosSecure from '../../../Hook/useAxiosSecure';
+
 
 const DashLayout = () => {
     const [isAdmin] = useAdmin();
