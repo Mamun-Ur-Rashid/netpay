@@ -1,14 +1,14 @@
 
 
-import CommonBanner from '../../../shared/commonBanner/CommonBanner';
-import img from "../../../assets/dashboard.jpg"
+// import CommonBanner from '../../../shared/commonBanner/CommonBanner';
+// import img from "../../../assets/dashboard.jpg"
 import DashboardInfo from '../dashboardInfo/DashboardInfo';
 import { NavLink, Outlet } from 'react-router-dom';
 import useAdmin from '../../../Hook/useAdmin';
 import useAgent from '../../../Hook/useAgent';
 import { FaHistory, FaHome, FaHourglassHalf, FaSearch } from "react-icons/fa";
 import { FaChartColumn, FaUserGroup } from "react-icons/fa6";
-import logo from '../../../assets/logo4.png'
+import logo from '../../../assets/logo5.png'
 
 const DashLayout = () => {
     const [isAdmin] = useAdmin();

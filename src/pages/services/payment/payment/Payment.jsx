@@ -8,7 +8,7 @@ import PaymentServiceDetails from "../paymentProcess/PaymentServiceDetails";
 const Payment = () => {
 
     const headerData = {
-        imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
+        imageUrl: 'https://i.pinimg.com/736x/95/a1/d0/95a1d0a1226d81bde38336c7eee5c5d4.jpg',
         title: 'Payment',
         text: 'Payment seytem is now more than easier to using NetPay. You can get any bill to using your NetPay account.',
         btnText: 'Payment Now'
