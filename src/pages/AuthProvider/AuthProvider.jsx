@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import app from '../../Firebase/Config';
 import axios from 'axios';
+import useAxiosSecure from '../../Hook/useAxiosSecure';
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -10,7 +11,6 @@ const AuthProvider = ({ children }) => {
 
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
-    console.log(user)
 
     const handleSignUp = (email, password) => {
         setLoading(true);
@@ -29,19 +29,25 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            setLoading(false);
             setUser(currentUser)
 
             // get and set token
-            if(currentUser){
-                axios.post('https://netpay-server-muhammadali246397.vercel.app/jwt', {email: currentUser.email})
-                .then(data => {
-                console.log(data.data.token)
-                    localStorage.setItem('access-token',data.data.token)
+            if (currentUser?.email) {
+                fetch('https://netpay-server-muhammadali246397.vercel.app/jwt', {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify({ email: currentUser.email })
                 })
-            
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        localStorage.setItem('access-token', data.token)
+                        setLoading(false);
+                    })
             }
-            else{
+            else {
                 localStorage.removeItem('access-token')
             }
         })
@@ -50,20 +56,12 @@ const AuthProvider = ({ children }) => {
         }
     }, []);
 
-    const [userInfor, setUserInfor] = useState();
-    console.log(userInfor)
-    useEffect(() => {
-        fetch(`https://netpay-server-muhammadali246397.vercel.app/allUsers/${user?.email}`)
-        .then(res => res.json())
-        .then(data =>setUserInfor(data))
-    },[user])
-
     const updateUserProfile = ((name, photo, number) => {
-        return updateProfile(auth.currentUser,{
-            displayName:name,
-            photoURL:photo,
-            phoneNumber:number
-            
+        return updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: photo,
+            phoneNumber: number
+
 
         })
     })
@@ -76,7 +74,7 @@ const AuthProvider = ({ children }) => {
         handleLogOut,
         updateUserProfile,
         loading,
-        userInfor
+        // userInfor
     }
     return (
         <AuthContext.Provider value={userInfo}>
