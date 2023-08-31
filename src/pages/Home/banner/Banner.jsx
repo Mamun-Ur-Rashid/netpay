@@ -1,23 +1,13 @@
-import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import img from "../../../assets/bannar.png"
+import img2 from "../../../assets/bb.jpg"
+
 
 const Banner = () => {
     return (
         <div >
-            <Carousel>
-                <div>
-                    <img src={img} />
-                </div>
-                <div>
-                    <img src={img} />
-                </div>
-                <div>
-                    <img src={img} />
-                </div>
-
-
-            </Carousel>
+            <div className="carousel w-full mb-4 md:mb-8">
+                <img className='h-44 md:h-[450px]' src={img2} alt="" />
+            </div>
         </div>
     );
 };
