@@ -1,6 +1,7 @@
 import React from 'react';
 import useAxiosSecure from '../../../../Hook/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 const AllUsers = () => {
     const [axiosSecure] = useAxiosSecure();
@@ -8,7 +9,7 @@ const AllUsers = () => {
     const {data: allUsers = [], isLoading: loading, refetch} = useQuery({
         queryKey: ['allUsers'],
         queryFn: async () => {
-            const res = await axiosSecure.get('/allUsers');
+            const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/alluser');
             console.log(res.data);
             return res.data;
         }
