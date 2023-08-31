@@ -99,9 +99,7 @@ const SendMoney = () => {
                         btnText={headerData?.btnText}
                     ></AllServicesHeader>
                 </div>
-                <div>
-                    <SendMoneyServiceDatails />
-                </div>
+                <SendMoneyServiceDatails />
                 <div className="bg-[#1B2654] p-8 mt-10">
                     <Faq faqData={faqData}></Faq>
                 </div>
