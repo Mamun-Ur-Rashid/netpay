@@ -3,6 +3,7 @@ import AllService from "../../allService/AllService";
 import Faq from "../../allServicesFAQ/Faq";
 import AllServicesHeader from "../../allServicesHeader/AllServicesHeader";
 import ServiceBanner from "../../serviceBanner/ServiceBanner";
+import CashOutServiceDetails from "../cashOutProcess/CashOutServiceDetails";
 
 const CashOut = () => {
 
@@ -99,6 +100,7 @@ const CashOut = () => {
                         btnText={sendMoneyHeader?.btnText}
                     ></AllServicesHeader>
                 </div>
+                <CashOutServiceDetails />
                 <div className="bg-[#1B2654] p-8 mt-10">
                     <Faq faqData={faqData}></Faq>
                 </div>

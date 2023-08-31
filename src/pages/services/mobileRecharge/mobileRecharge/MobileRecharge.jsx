@@ -3,6 +3,7 @@ import AllService from '../../allService/AllService';
 import AllServicesHeader from '../../allServicesHeader/AllServicesHeader';
 import Faq from '../../allServicesFAQ/Faq';
 import Title from '../../../../shared/title/Title';
+import MobileRechareServiceDetails from '../mobileRechargeProcess/MobileRechareServiceDetails';
 
 const MobileRecharge = () => {
 
@@ -99,6 +100,7 @@ const MobileRecharge = () => {
                         btnText={headerData?.btnText}
                     ></AllServicesHeader>
                 </div>
+                <MobileRechareServiceDetails />
                 <div className="bg-[#1B2654] p-8 mt-10">
                     <Faq faqData={faqData}></Faq>
                 </div>

@@ -3,6 +3,7 @@ import AllService from "../../allService/AllService";
 import Faq from "../../allServicesFAQ/Faq";
 import AllServicesHeader from "../../allServicesHeader/AllServicesHeader";
 import ServiceBanner from "../../serviceBanner/ServiceBanner";
+import AddMoneyServiceDetalis from "../addMoneyProcess/AddMoneyServiceDetalis";
 
 const AddMoney = () => {
 
@@ -98,6 +99,7 @@ const AddMoney = () => {
                         btnText={headerData?.btnText}
                     ></AllServicesHeader>
                 </div>
+                <AddMoneyServiceDetalis />
                 <div className="bg-[#1B2654] p-8 mt-10">
                     <Faq faqData={faqData}></Faq>
                 </div>
