@@ -8,7 +8,7 @@ import SendMoneyServiceDatails from "../sendMoneyProcess/SendMoneyServiceDatails
 const SendMoney = () => {
 
     const headerData = {
-        imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
+        imageUrl: 'https://thumbs.dreamstime.com/b/online-money-transfer-vector-illustration-cartoon-flat-tiny-friend-man-character-transferring-send-transaction-coin-out-178490363.jpg',
         title: 'Send Money',
         text: 'Send Money is now more easier to using NetPay. You can send money to one account to another account 24 hours in 7days. It can happend anywhere anytime.',
         btnText: 'Send Money Now'
@@ -99,9 +99,7 @@ const SendMoney = () => {
                         btnText={headerData?.btnText}
                     ></AllServicesHeader>
                 </div>
-                <div>
-                    <SendMoneyServiceDatails />
-                </div>
+                <SendMoneyServiceDatails />
                 <div className="bg-[#1B2654] p-8 mt-10">
                     <Faq faqData={faqData}></Faq>
                 </div>

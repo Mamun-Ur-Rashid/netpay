@@ -3,11 +3,13 @@ import AllService from '../../allService/AllService';
 import AllServicesHeader from '../../allServicesHeader/AllServicesHeader';
 import Faq from '../../allServicesFAQ/Faq';
 import Title from '../../../../shared/title/Title';
+import MobileRechareServiceDetails from '../mobileRechargeProcess/MobileRechareServiceDetails';
 
 const MobileRecharge = () => {
 
     const headerData = {
-        imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
+        imageUrl: 'https://www.specificstep.com/wp-content/uploads/2021/06/mobile-recharge-apiimg.jpg',
+
         title: 'Mobile Recharge',
         text: 'Mobile Recharge is now more easier to using NetPay. You can recharge your phone in anytime when you need. Only need to an account of NetPay.',
         btnText: 'Mobile Recharge Now'
@@ -99,6 +101,7 @@ const MobileRecharge = () => {
                         btnText={headerData?.btnText}
                     ></AllServicesHeader>
                 </div>
+                <MobileRechareServiceDetails />
                 <div className="bg-[#1B2654] p-8 mt-10">
                     <Faq faqData={faqData}></Faq>
                 </div>

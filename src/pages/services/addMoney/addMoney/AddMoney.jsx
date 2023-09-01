@@ -3,11 +3,12 @@ import AllService from "../../allService/AllService";
 import Faq from "../../allServicesFAQ/Faq";
 import AllServicesHeader from "../../allServicesHeader/AllServicesHeader";
 import ServiceBanner from "../../serviceBanner/ServiceBanner";
+import AddMoneyServiceDetalis from "../addMoneyProcess/AddMoneyServiceDetalis";
 
 const AddMoney = () => {
 
     const headerData = {
-        imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
+        imageUrl: 'https://img.freepik.com/free-vector/transfer-money-concept-illustration_114360-3762.jpg?w=2000',
         title: 'Add Money',
         text: 'You can add money in your NetPay account to anytime when You need. It provide more secquer to using NetPay account.',
         btnText: 'Add Money Now'
@@ -98,6 +99,7 @@ const AddMoney = () => {
                         btnText={headerData?.btnText}
                     ></AllServicesHeader>
                 </div>
+                <AddMoneyServiceDetalis />
                 <div className="bg-[#1B2654] p-8 mt-10">
                     <Faq faqData={faqData}></Faq>
                 </div>

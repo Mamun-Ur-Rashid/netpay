@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import app from '../../Firebase/Config';
 import axios from 'axios';
+import useAxiosSecure from '../../Hook/useAxiosSecure';
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -10,9 +11,8 @@ const AuthProvider = ({ children }) => {
 
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
-    console.log(user)
 
-    const createUser = (email, password) => {
+    const handleSignUp = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
@@ -22,66 +22,54 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    // user profile update
-    const updateUserProfile = (name, photo) => {
-        return updateProfile(auth.currentUser, {
-            displayName: name, photoURL: photo
-        })
-    }
-
     const handleLogOut = () => {
         setLoading(true);
         return signOut(auth)
     }
 
-    // auth observer
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            console.log('auth currentUser', currentUser);
             setUser(currentUser)
 
             // get and set token
-            if(currentUser){
-                axios.post('http://localhost:5000/jwt', {email: currentUser.email})
-                .then(data => {
-                console.log(data.data.token)
-                    localStorage.setItem('access-token',data.data.token);
-                    setLoading(false);
+            if (currentUser?.email) {
+                fetch('https://netpay-server-muhammadali246397.vercel.app/jwt', {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify({ email: currentUser.email })
                 })
-            
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        localStorage.setItem('access-token', data.token)
+                        setLoading(false);
+                    })
             }
-            else{
+            else {
                 localStorage.removeItem('access-token')
             }
-            setLoading(false);
         })
         return () => {
             return unsubscribe()
         }
     }, []);
 
-    // const [userInfor, setUserInfor] = useState();
-    // console.log(userInfor)
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/allUsers/${user?.email}`)
-    //     .then(res => res.json())
-    //     .then(data =>setUserInfor(data))
-    // },[user])
+    const updateUserProfile = ((name, photo, number) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: photo,
+            phoneNumber: number
 
-    // const updateUserProfile = ((name, photo, number) => {
-    //     return updateProfile(auth.currentUser,{
-    //         displayName:name,
-    //         photoURL:photo,
-    //         phoneNumber:number
-            
 
-    //     })
-    // })
+        })
+    })
 
 
     const userInfo = {
         user,
-        createUser,
+        handleSignUp,
         handleLogin,
         handleLogOut,
         updateUserProfile,
