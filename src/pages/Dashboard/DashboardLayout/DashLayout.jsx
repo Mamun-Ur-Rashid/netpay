@@ -35,8 +35,8 @@ const DashLayout = () => {
             {/* <DashboardInfo /> */}
 
             <div className='bg-[#070b29]'>
-                <div className='pb-20 pr-10 pl-10 md:px-32 md:flex'>
-                    <div className=' md:w-1/4 bg-[#1D2939] sticky top-0 h-screen'>
+                <div className='pb-20 md:flex w-full'>
+                    <div className=' md:w-[250px] bg-[#1D2939] sticky top-0 h-screen'>
                         <ul className='text-white' >
                             {isAdmin ? (
                                 <>
@@ -45,12 +45,12 @@ const DashLayout = () => {
                                             <img className='w-full h-full mb-6' src={logo} alt="" />
                                         </div>
                                     </NavLink>
-                                    <li className='h-14  text-2xl pt-2 '><NavLink to='dashboard/adminHome'> <FaChartColumn className='mx-2 inline-flex mb-[2px]'></FaChartColumn> Admin Dashboard</NavLink></li>
-                                    <li className='h-14  text-2xl pt-2'><NavLink to='dashboard/paymentHistory'><FaHistory className='inline-flex mb-[2px] mx-2'></FaHistory> Payment History</NavLink></li>
-                                    <li className='h-14  text-2xl pt-2'><NavLink to='dashboard/allUsers'><FaUserGroup className='inline-flex mb-[2px] mx-2'></FaUserGroup> All Users</NavLink></li>
-                                    <li className='h-14  text-2xl pt-2 '><NavLink to='dashboard/adminSendMoney'> <FaHourglassHalf className='inline-flex mb-[2px] mx-2'></FaHourglassHalf>Send Money</NavLink></li>
+                                    <li className='h-10  text-lg ml-6 pt-2 mt-10 '><NavLink to='dashboard/adminHome'> <FaChartColumn className='mx-2 inline-flex mb-[2px]'></FaChartColumn> Admin Dashboard</NavLink></li>
+                                    <li className='h-10  text-lg ml-6 pt-2'><NavLink to='dashboard/paymentHistory'><FaHistory className='inline-flex mb-[2px] mx-2'></FaHistory> Payment History</NavLink></li>
+                                    <li className='h-10  text-lg ml-6 pt-2'><NavLink to='dashboard/allUsers'><FaUserGroup className='inline-flex mb-[2px] mx-2'></FaUserGroup> All Users</NavLink></li>
+                                    <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/adminSendMoney'> <FaHourglassHalf className='inline-flex mb-[2px] mx-2'></FaHourglassHalf>Send Money</NavLink></li>
 
-                                    <li className='h-14  text-2xl pt-2 '><NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome>Home</NavLink></li></>
+                                    <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome>Home</NavLink></li></>
                             )
                                 : isAgent ? (
                                     <> <li className='h-14 text-center text-2xl pt-2 '><NavLink to='dashboard/home'>AGENT DASHBOAED</NavLink></li>
@@ -85,7 +85,7 @@ const DashLayout = () => {
                                     <button className='text-slate-400 absolute top-7 left-[95%]'><FaSearch></FaSearch></button>
                                 </div>
                                 <div className='flex '>
-                                    <img className='w-[65px] h-[65px] mt-[7px]' src={userInfor?.ImgUrl} alt="" />
+                                    <img className='w-12 h-12 rounded-full mt-[7px]' src={userInfor?.ImgUrl} alt="" />
                                     <div className='mt-2'>
                                         <p className='ml-3 pr-2 font-semibold'>{userInfor?.email}</p>
                                         <p className='ml-3 mt-1 '><span className='bg-cyan-800 flex items-center justify-center w-1/2 text-white'>{userInfor?.role}</span></p>
