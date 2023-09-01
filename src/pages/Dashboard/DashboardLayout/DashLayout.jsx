@@ -10,6 +10,7 @@ import useAxiosSecure from '../../../Hook/useAxiosSecure';
 
 
 const DashLayout = () => {
+
     const [isAdmin] = useAdmin();
     const [isAgent] = useAgent();
     const { user } = useContext(AuthContext)
@@ -36,13 +37,15 @@ const DashLayout = () => {
 
             <div className='bg-[#070b29]'>
                 <div className='pb-20 md:flex w-full'>
-                    <div className=' md:w-[250px] bg-[#1D2939] sticky top-0 h-screen'>
+
+                    {/* Side bar */}
+                    <div className=' md:w-[280px] bg-[#1D2939] sticky top-0 md:h-screen'>
                         <ul className='text-white' >
                             {isAdmin ? (
                                 <>
                                     <NavLink to='/' className="text-white hover:text-orange-400 text-3xl">
                                         <div style={{ width: 'full', height: '79px' }}>
-                                            <img className='w-full h-full mb-6' src={logo} alt="" />
+                                            <img className=' w-full h-full mb-6' src={logo} alt="" />
                                         </div>
                                     </NavLink>
                                     <li className='h-10  text-lg ml-6 pt-2 mt-10 '><NavLink to='dashboard/adminHome'> <FaChartColumn className='mx-2 inline-flex mb-[2px]'></FaChartColumn> Admin Dashboard</NavLink></li>
@@ -77,7 +80,9 @@ const DashLayout = () => {
 
                         </ul>
                     </div>
-                    <div className=' md:w-3/4 bg-slate-200 mt-10 md:mt-0'>
+
+                    {/* Main contenet */}
+                    <div className=' w-full bg-slate-200 mt-10 md:mt-0'>
                         <div className='w-full h-20 bg-white border-b-[1px] shadow-sm shadow-[#1D2939] sticky top-0 border-b-[#1D2939]'>
                             <div className='flex justify-between'>
                                 <div className='relative'>
@@ -95,6 +100,8 @@ const DashLayout = () => {
                         </div>
                         <Outlet></Outlet>
                     </div>
+
+
                 </div>
 
             </div>
