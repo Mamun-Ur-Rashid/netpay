@@ -10,7 +10,7 @@ const About = () => {
     }, []);
 
     return (
-        <div className="mt-16 bg-[#070b29]">
+        <div className="mt-16 bg-[#070b29] pb-20">
             <CommonBanner BannerImage={img}></CommonBanner>
             <DetailsAbout />
         </div>
