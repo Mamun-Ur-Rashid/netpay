@@ -69,11 +69,13 @@ const AdminHome = () => {
 
     return (
         <div>
-            <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-1 mr-5 mt-5'>
-                <div className='m-5 pl-3 pt-8 w-[90%] h-28 bg-[#cccbd1d4] rounded-xl'>Total Users : {users.length} </div>
-                <div className='m-5 pl-3 pt-8 w-[90%] h-28 bg-[#cccbd1d4] rounded-xl'>Total Tranjections : </div>
-                <div className='m-5 pl-3 pt-8 w-[90%] h-28 bg-[#cccbd1d4] rounded-xl'>Total Agents : </div>
-                <div className='m-5 mr-5 pl-3 pt-8 w-[90%] h-28 bg-[#cccbd1d4] rounded-xl'>Total Amount : </div>
+            <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-1 mr-5 mt-5 text-white'>
+                <div className='m-5 pl-3 pt-4 w-[90%] h-38 bg-[#33C49D] rounded-xl text-2xl'>
+                   <p className='text-center font-bold pb-4'> Total Users <br /> <small className='text-5xl'>{users.length}</small></p> 
+                </div>
+                <div className='m-5 pl-3 pt-8 w-[90%] h-28 bg-[#C44933] rounded-xl'>Total Tranjections : </div>
+                <div className='m-5 pl-3 pt-8 w-[90%] h-28 bg-[#3348C4] rounded-xl'>Total Agents : </div>
+                <div className='m-5 mr-5 pl-3 pt-8 w-[90%] h-28 bg-[#0F101A] rounded-xl'>Total Amount : </div>
             </div>
             <div className='w-full p-4'>
                 <h2 className='text-2xl font-semibold'>Transaction Analytics</h2>
