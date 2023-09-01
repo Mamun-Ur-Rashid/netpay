@@ -10,17 +10,17 @@
 //     const [axiosSecure] = useAxiosSecure();
 
 
-//     const { data: isAdmin=[], isLoading: loading,  } = useQuery({
-//         queryKey: ['isAdmin'],
+//     const { data: isAdmin, isLoading: isAdminLoading,  } = useQuery({
+//         queryKey: ['isAdmin', user?.email],
 //         queryFn: async () => {
-//             const res = await axiosSecure.get(`/users/checkAdmin/${user?.email}`);
-//             console.log(res.data);
+//             const res = await axiosSecure.get(`/users/admin/${user?.email}`);
+//             console.log("Is admin response", res);
 //             return res.data;
 //         }
 //     });
 
 
-//     return [isAdmin, loading];
+//     return [isAdmin, isAdminLoading];
 // };
 
 // export default useAdmin;
