@@ -162,7 +162,7 @@ const Signup = () => {
                         balance: parseInt(tk),
                     };
 
-                    const response = await fetch('http://localhost:5000/users', {
+                    const response = await fetch('https://netpay-server-muhammadali246397.vercel.app/users', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
