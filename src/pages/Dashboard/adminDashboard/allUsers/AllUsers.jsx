@@ -5,10 +5,10 @@ import { useQuery } from '@tanstack/react-query';
 const AllUsers = () => {
     const [axiosSecure] = useAxiosSecure();
     
-    const {data: allUsers = [], isLoading: loading, refetch} = useQuery({
-        queryKey: ['allUsers'],
+    const {data: users = [], isLoading: loading, refetch} = useQuery({
+        queryKey: ['users'],
         queryFn: async () => {
-            const res = await axiosSecure.get('/allUsers');
+            const res = await axiosSecure.get('/users');
             console.log(res.data);
             return res.data;
         }
@@ -33,7 +33,7 @@ const AllUsers = () => {
                         </thead>
                         <tbody>
                             {
-                                allUsers.map((user, index) => <tr
+                                users.map((user, index) => <tr
                                     key={user._id}>
                                     <th>{index + 1}</th>
                                     <th>{user.name}</th>

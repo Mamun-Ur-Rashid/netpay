@@ -15,7 +15,7 @@ const DashSendMoney = () => {
 
         const sendMoneyInfo = { sdn: senderNumber, rcn: receiverNumber, tk: amount };
 
-        fetch(`https://netpay-server-muhammadali246397.vercel.app/sendmoney`, {
+        fetch(`http://localhost:5000/sendmoney`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

@@ -10,17 +10,17 @@
 //     const [axiosSecure] = useAxiosSecure();
 
 
-//     const { data: isAdmin=[], isLoading: loading,  } = useQuery({
-//         queryKey: ['isAdmin'],
+//     const { data: isAdmin, isLoading: isAdminLoading,  } = useQuery({
+//         queryKey: ['isAdmin', user?.email],
 //         queryFn: async () => {
-//             const res = await axiosSecure.get(`/users/checkAdmin/${user?.email}`);
-//             console.log(res.data);
+//             const res = await axiosSecure.get(`/users/admin/${user?.email}`);
+//             console.log("Is admin response", res);
 //             return res.data;
 //         }
 //     });
 
 
-//     return [isAdmin, loading];
+//     return [isAdmin, isAdminLoading];
 // };
 
 // export default useAdmin;
@@ -31,9 +31,10 @@ import { useQuery } from '@tanstack/react-query';
 
 const useAdmin = () => {
     const { user } = useContext(AuthContext);
+    console.log(user);
 
     const { data: isAdmin, isLoading } = useQuery(['isAdmin', user?.email], async () => {
-        const response = await fetch(`https://netpay-server-muhammadali246397.vercel.app/users/checkAdmin/${user?.email}`);
+        const response = await fetch(`http://localhost:5000/users/checkAdmin/${user?.email}`);
         const data = await response.json();
         return data.admin;
     });

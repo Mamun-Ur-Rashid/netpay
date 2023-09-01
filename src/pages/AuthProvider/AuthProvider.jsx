@@ -12,7 +12,7 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     console.log(user)
 
-    const handleSignUp = (email, password) => {
+    const createUser = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
@@ -22,61 +22,71 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
+    // user profile update
+    const updateUserProfile = (name, photo) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo
+        })
+    }
+
     const handleLogOut = () => {
         setLoading(true);
         return signOut(auth)
     }
 
+    // auth observer
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            setLoading(false);
+            console.log('auth currentUser', currentUser);
             setUser(currentUser)
 
             // get and set token
             if(currentUser){
-                axios.post('https://netpay-server-muhammadali246397.vercel.app/jwt', {email: currentUser.email})
+                axios.post('http://localhost:5000/jwt', {email: currentUser.email})
                 .then(data => {
                 console.log(data.data.token)
-                    localStorage.setItem('access-token',data.data.token)
+                    localStorage.setItem('access-token',data.data.token);
+                    setLoading(false);
                 })
             
             }
             else{
                 localStorage.removeItem('access-token')
             }
+            setLoading(false);
         })
         return () => {
             return unsubscribe()
         }
     }, []);
 
-    const [userInfor, setUserInfor] = useState();
-    console.log(userInfor)
-    useEffect(() => {
-        fetch(`https://netpay-server-muhammadali246397.vercel.app/allUsers/${user?.email}`)
-        .then(res => res.json())
-        .then(data =>setUserInfor(data))
-    },[user])
+    // const [userInfor, setUserInfor] = useState();
+    // console.log(userInfor)
+    // useEffect(() => {
+    //     fetch(`http://localhost:5000/allUsers/${user?.email}`)
+    //     .then(res => res.json())
+    //     .then(data =>setUserInfor(data))
+    // },[user])
 
-    const updateUserProfile = ((name, photo, number) => {
-        return updateProfile(auth.currentUser,{
-            displayName:name,
-            photoURL:photo,
-            phoneNumber:number
+    // const updateUserProfile = ((name, photo, number) => {
+    //     return updateProfile(auth.currentUser,{
+    //         displayName:name,
+    //         photoURL:photo,
+    //         phoneNumber:number
             
 
-        })
-    })
+    //     })
+    // })
 
 
     const userInfo = {
         user,
-        handleSignUp,
+        createUser,
         handleLogin,
         handleLogOut,
         updateUserProfile,
         loading,
-        userInfor
+        // userInfor
     }
     return (
         <AuthContext.Provider value={userInfo}>
