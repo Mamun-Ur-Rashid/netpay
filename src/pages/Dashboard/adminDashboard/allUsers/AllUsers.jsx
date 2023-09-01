@@ -3,8 +3,8 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
 const AllUsers = () => {
-    
-    const {data: users = [], isLoading: loading, refetch} = useQuery({
+
+    const { data: users = [], isLoading: loading, refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
             const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/alluser');
@@ -13,7 +13,7 @@ const AllUsers = () => {
         }
     })
     return (
-        <div> 
+        <div>
             <h2 className='text-4xl my-6 text-center font-bold'>All Users</h2>
             <div>
                 <div className="overflow-x-auto p-4">
@@ -41,7 +41,7 @@ const AllUsers = () => {
                                     <th>{user.number}</th>
                                     <th>{user.balance} Tk</th>
                                     <th>{user.nid}</th>
-                                    
+
                                 </tr>)
                             }
                         </tbody>

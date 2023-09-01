@@ -1,4 +1,3 @@
-import React from 'react';
 import useAxiosSecure from '../../../../Hook/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
@@ -8,7 +7,6 @@ const data = [
     {
         name: 'Jan',
         totalAmount: 10000
-
     },
     {
         name: 'Feb',
@@ -67,7 +65,8 @@ const AdminHome = () => {
             const res = await axiosSecure.get('/users');
             return res.data;
         }
-    })
+    });
+
     return (
         <div>
             <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-1 mr-5 mt-5'>

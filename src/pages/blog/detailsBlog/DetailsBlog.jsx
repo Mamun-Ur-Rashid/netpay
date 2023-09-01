@@ -22,6 +22,8 @@ const DetailsBlog = () => {
                     Thank you for choosing NetPay as your financial partner. Let us assist you on your financial journey.
 
                     Feel free to tailor this paragraph to highlight specific channels of customer support you provide and any unique features of your Help Center. This text emphasizes NetPay&apos;s commitment to customer support and aims to assure users that help is readily available whenever they need it.
+
+                    If you&apos;re facing a challenge that isn&apos;t covered in our resources, don&apos;t worry – our support agents are just a message away. Reach out to us through our contact channels, and we&apos;ll ensure that your inquiries are met with personalized and expert assistance. We value your time, and our goal is to resolve your issues quickly, so you can get back to managing your finances seamlessly. At NetPay, we consider your satisfaction our success. Our Help Center is designed with you in mind, aiming to provide clear solutions and explanations to enhance your experience using our platform. Your journey with us matters, and we&apos;re here to support you at every step.
                 </p>
 
 
