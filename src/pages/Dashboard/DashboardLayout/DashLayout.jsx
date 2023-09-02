@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import useAdmin from '../../../Hook/useAdmin';
 import useAgent from '../../../Hook/useAgent';
-import { FaHistory, FaHome, FaHourglassHalf, FaSearch } from "react-icons/fa";
+import { FaHistory, FaHome, FaHourglassHalf, FaMoneyBillWave, FaSearch, FaWhmcs } from "react-icons/fa";
 import { FaChartColumn, FaUserGroup } from "react-icons/fa6";
 import logo from '../../../assets/logo5.png'
 import { useContext, useEffect, useState } from 'react';
@@ -16,6 +16,7 @@ const DashLayout = () => {
     const { user } = useContext(AuthContext)
     const [axiosSecure] = useAxiosSecure();
     const [userInfor, setUserInfor] = useState();
+    const [sendMoneyDropdown, setSendMoneyDropdown] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -62,14 +63,29 @@ const DashLayout = () => {
                                                 <img className=' w-full h-full mb-6' src={logo} alt="" />
                                             </div>
                                         </NavLink>
-                                        <li className='h-10  text-lg ml-6 pt-2 mt-10  '><NavLink to='dashboard/agentHome'>Agent Dashboard</NavLink></li>
-                                        <li className='h-10  text-lg ml-6 pt-2'><NavLink to='dashboard/addMoney'>Add Money</NavLink></li>
-                                        <li className='h-10  text-lg ml-6 pt-2  '><NavLink to='dashboard/sendMoney'>Send Money</NavLink></li>
-                                        <li className='h-10  text-lg ml-6 pt-2   '><NavLink to='dashboard/cashout'>Deposite Money</NavLink></li>
-                                        <li className='h-10  text-lg ml-6 pt-2   '><NavLink to='dashboard/cashout'>Bank account</NavLink></li>
-                                        <li className='h-10  text-lg ml-6 pt-2  '><NavLink to='dashboard/cashout'>Card Number</NavLink></li>
-                                        <li className='h-10  text-lg ml-6 pt-2 mt  '><NavLink to='dashboard/cashout'>Setting</NavLink></li>
-                                        <li className='h-10  text-lg ml-6 pt-2'><NavLink to='/'>Home</NavLink></li></>
+                                        <li className='h-10  text-lg ml-6 pt-2 mt-10  '><NavLink to='dashboard/agentHome'> <FaChartColumn className='mx-2 inline-flex mb-[2px]'></FaChartColumn>Agent Dashboard</NavLink></li>
+                                        <li className='h-10  text-lg ml-6 pt-2'><NavLink to='dashboard/agentAddMoney'> <FaMoneyBillWave className='inline-flex mb-[2px] mx-2'></FaMoneyBillWave> Add Money</NavLink></li>
+                                        <li className='h-10  text-lg ml-6 pt-2 '>
+                                        {/* Step 2: Add a dropdown button */}
+                                        <button
+                                            onClick={() => setSendMoneyDropdown(!sendMoneyDropdown)}
+                                            className="text-white hover:text-[#df390be6] flex items-center text-lg"
+                                        >
+                                            <FaHourglassHalf className='inline-flex mb-[2px] mx-2'></FaHourglassHalf> Send Money
+                                        </button>
+
+                                        {/* Step 3: Create the dropdown menu */}
+                                        {sendMoneyDropdown && (
+                                            <ul className="menu menu-sm dropdown-content mt-3  mr-4 z-[1] shadow bg-base-100 rounded-box  bg-[hsla(11,66%,51%,1)] p-2 text-black">
+                                                <li><NavLink to='dashboard/agentToAgent'>Agent to Agent</NavLink></li>
+                                                <li><NavLink to='dashboard/agentToAdmin'>Agent to Admin</NavLink></li>
+                                                <li><NavLink to='dashboard/agentToUser'>Agent to User</NavLink></li>
+                                            </ul>
+                                        )}
+                                    </li>
+                                        <li className='h-10  text-lg ml-6 pt-2   '><NavLink to='dashboard/agentTransaction'> <FaHistory className='inline-flex mb-[2px] mx-2'></FaHistory> Transaction History</NavLink></li>
+                                        <li className='h-10  text-lg ml-6 pt-2 mt  '><NavLink to='dashboard/cashout'> <FaWhmcs className='inline-flex mb-[2px] mx-2'></FaWhmcs> Setting</NavLink></li>
+                                        <li className='h-10  text-lg ml-6 pt-2'><NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome>Home</NavLink></li></>
                                 )
                                     : (
                                         <>
@@ -93,8 +109,8 @@ const DashLayout = () => {
                         </ul>
                     </div>
 
-                    {/* Main contenet */}
-                    <div className=' w-full bg-slate-200 mt-10 md:mt-0'>
+                    {/* Main content */}
+                    <div className=' w-full bg-slate-300 mt-10 md:mt-0'>
                         <div className='w-full h-20 bg-white border-b-[1px] shadow-sm shadow-[#1D2939] sticky top-0 border-b-[#1D2939]'>
                             <div className='flex justify-between'>
                                 <div className='relative'>

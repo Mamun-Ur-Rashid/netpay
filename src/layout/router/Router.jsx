@@ -23,7 +23,12 @@ import PaymentHistory from "../../pages/Dashboard/adminDashboard/paymentHistory/
 import AllUsers from "../../pages/Dashboard/adminDashboard/allUsers/AllUsers";
 import AdminSendMoney from "../../pages/Dashboard/adminDashboard/sendMoney/AdminSendMoney";
 import AgentHome from "../../pages/Dashboard/agentDashboard/agentHome/AgentHome";
-import AgentCashOut from "../../pages/Dashboard/agentDashboard/cashOut/AgentCashOut";
+import AgentAddMoney from "../../pages/Dashboard/agentDashboard/agentAddMoney/AgentAddMoney";
+import AgentSendMoney from "../../pages/Dashboard/agentDashboard/agentSendMoney/AgentSendMoney";
+import TransactionHistory from "../../pages/Dashboard/agentDashboard/transactionHistory/TransactionHistory";
+import AgentToAgent from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToAgent/AgentToAgent";
+import AgentToAdmin from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToAdmin/AgentToAdmin";
+import AgentToUser from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToUser/AgentToUser";
 
 const router = createBrowserRouter([
     {
@@ -121,14 +126,34 @@ const router = createBrowserRouter([
                 element:<AdminSendMoney></AdminSendMoney>
             },
 
-            // aggent dashboard route here.........
+            // agent dashboard route here.........
             {
-                path:'dashboard/agentHome',
-                element: <AgentHome></AgentHome>
+               path:'dashboard/agentHome',
+               element:<AgentHome></AgentHome>
             },
             {
-                path:'dashboard/agentCashOut',
-                element:<AgentCashOut></AgentCashOut>
+                path:'dashboard/agentAddMoney',
+                element:<AgentAddMoney></AgentAddMoney>
+            },
+            {
+                path:'dashboard/agentSendMoney',
+                element: <AgentSendMoney></AgentSendMoney>
+            },
+            {
+                path:'dashboard/agentToAgent',
+                element:<AgentToAgent></AgentToAgent>
+            },
+            {
+                path:'dashboard/agentToAdmin',
+                element:<AgentToAdmin></AgentToAdmin>
+            },
+            {
+                path:'dashboard/agentToUser',
+                element:<AgentToUser></AgentToUser>
+            },
+            {
+                path:'dashboard/agentTransaction',
+                element:<TransactionHistory></TransactionHistory>
             }
         ]
 
