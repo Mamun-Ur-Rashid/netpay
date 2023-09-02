@@ -110,7 +110,7 @@ const DashLayout = () => {
                     </div>
 
                     {/* Main content */}
-                    <div className=' w-full bg-slate-300 mt-10 md:mt-0'>
+                    <div className=' w-full bg-slate-200 mt-10 md:mt-0'>
                         <div className='w-full h-20 bg-white border-b-[1px] shadow-sm shadow-[#1D2939] sticky top-0 border-b-[#1D2939]'>
                             <div className='flex justify-between'>
                                 <div className='relative'>
