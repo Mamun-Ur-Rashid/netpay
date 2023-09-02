@@ -23,7 +23,8 @@ import PaymentHistory from "../../pages/Dashboard/adminDashboard/paymentHistory/
 import AllUsers from "../../pages/Dashboard/adminDashboard/allUsers/AllUsers";
 import AdminSendMoney from "../../pages/Dashboard/adminDashboard/sendMoney/AdminSendMoney";
 import AgentHome from "../../pages/Dashboard/agentDashboard/agentHome/AgentHome";
-import AgentCashOut from "../../pages/Dashboard/agentDashboard/cashOut/AgentCashOut";
+import AgentAddMoney from "../../pages/Dashboard/agentDashboard/addMoney/AgentAddMoney";
+import AgentSendMoney from "../../pages/Dashboard/agentDashboard/sendMoney/AgentSendMoney";
 
 const router = createBrowserRouter([
     {
@@ -127,8 +128,12 @@ const router = createBrowserRouter([
                 element: <AgentHome></AgentHome>
             },
             {
-                path:'dashboard/agentCashOut',
-                element:<AgentCashOut></AgentCashOut>
+               path:'dashboard/addMoney',
+               element:<AgentAddMoney></AgentAddMoney>
+            },
+            {
+                path:'dashboard/sendMoney',
+                element:<AgentSendMoney></AgentSendMoney>
             }
         ]
 
