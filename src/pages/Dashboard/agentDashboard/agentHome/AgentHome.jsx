@@ -7,5 +7,3 @@ const AgentHome = () => {
         </div>
     );
 };
-
-export default AgentHome;

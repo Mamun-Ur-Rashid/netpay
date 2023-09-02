@@ -56,23 +56,35 @@ const DashLayout = () => {
                                     <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome>Home</NavLink></li></>
                             )
                                 : isAgent ? (
-                                    <> <li className='h-10  text-lg ml-6 pt-2 mt-10  '><NavLink to='dashboard/home'>AGENT DASHBOAED</NavLink></li>
-                                        <li className='h-10  text-lg ml-6 pt-2'><NavLink to='dashboard/send-money'>SEND MONEY</NavLink></li>
-                                        <li className='h-10  text-lg ml-6 pt-2  '><NavLink to='dashboard/cashout'>CASH OUT</NavLink></li>
+                                    <>
+                                        <NavLink to='/' className="text-white hover:text-orange-400 text-3xl">
+                                            <div style={{ width: 'full', height: '79px' }}>
+                                                <img className=' w-full h-full mb-6' src={logo} alt="" />
+                                            </div>
+                                        </NavLink>
+                                        <li className='h-10  text-lg ml-6 pt-2 mt-10  '><NavLink to='dashboard/agentHome'>Agent Dashboard</NavLink></li>
+                                        <li className='h-10  text-lg ml-6 pt-2'><NavLink to='dashboard/addMoney'>Add Money</NavLink></li>
+                                        <li className='h-10  text-lg ml-6 pt-2  '><NavLink to='dashboard/sendMoney'>Send Money</NavLink></li>
                                         <li className='h-10  text-lg ml-6 pt-2   '><NavLink to='dashboard/cashout'>Deposite Money</NavLink></li>
                                         <li className='h-10  text-lg ml-6 pt-2   '><NavLink to='dashboard/cashout'>Bank account</NavLink></li>
                                         <li className='h-10  text-lg ml-6 pt-2  '><NavLink to='dashboard/cashout'>Card Number</NavLink></li>
-                                        <li className='h-10  text-lg ml-6 pt-2 mt  '><NavLink to='dashboard/cashout'>Seeting</NavLink></li>
+                                        <li className='h-10  text-lg ml-6 pt-2 mt  '><NavLink to='dashboard/cashout'>Setting</NavLink></li>
                                         <li className='h-10  text-lg ml-6 pt-2'><NavLink to='/'>Home</NavLink></li></>
                                 )
                                     : (
-                                        <> <li className='h-10  text-lg ml-6 pt-2 mt-10 '><NavLink to='dashboard/home'>User Dashboard</NavLink></li>
+                                        <>
+                                            <NavLink to='/' className="text-white hover:text-orange-400 text-3xl">
+                                                <div style={{ width: 'full', height: '79px' }}>
+                                                    <img className=' w-full h-full mb-6' src={logo} alt="" />
+                                                </div>
+                                            </NavLink>
+                                            <li className='h-10  text-lg ml-6 pt-2 mt-10 '><NavLink to='dashboard/home'>User Dashboard</NavLink></li>
                                             <li className='h-10  text-lg ml-6 pt-2'><NavLink to='dashboard/send-money'>Send Money</NavLink></li>
                                             <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/cashout'>Cash Out</NavLink></li>
                                             <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/cashout'>Deposite Money</NavLink></li>
                                             <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/cashout'>Bank account</NavLink></li>
                                             <li className='h-10  text-lg ml-6 pt-2'><NavLink to='dashboard/cashout'>Card Number</NavLink></li>
-                                            <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/cashout'>Seeting</NavLink></li>
+                                            <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/cashout'>Setting</NavLink></li>
                                             <li className='h-10  text-lg ml-6 pt-2'><NavLink to='/'>Home</NavLink></li></>
                                     )
 
@@ -100,10 +112,7 @@ const DashLayout = () => {
                         </div>
                         <Outlet></Outlet>
                     </div>
-
-
                 </div>
-
             </div>
         </div>
     );
