@@ -86,6 +86,7 @@ const DashLayout = () => {
                                         <li className='h-10  text-lg ml-6 pt-2   '><NavLink to='dashboard/agentTransaction'> <FaHistory className='inline-flex mb-[2px] mx-2'></FaHistory> Transaction History</NavLink></li>
                                         <li className='h-10  text-lg ml-6 pt-2 mt  '><NavLink to='dashboard/cashout'> <FaWhmcs className='inline-flex mb-[2px] mx-2'></FaWhmcs> Setting</NavLink></li>
                                         <li className='h-10  text-lg ml-6 pt-2'><NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome>Home</NavLink></li></>
+
                                 )
                                     : (
                                         <>
