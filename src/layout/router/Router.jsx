@@ -24,7 +24,6 @@ import AllUsers from "../../pages/Dashboard/adminDashboard/allUsers/AllUsers";
 import AdminSendMoney from "../../pages/Dashboard/adminDashboard/sendMoney/AdminSendMoney";
 import AgentHome from "../../pages/Dashboard/agentDashboard/agentHome/AgentHome";
 import AgentAddMoney from "../../pages/Dashboard/agentDashboard/agentAddMoney/AgentAddMoney";
-import AgentSendMoney from "../../pages/Dashboard/agentDashboard/agentSendMoney/AgentSendMoney";
 import TransactionHistory from "../../pages/Dashboard/agentDashboard/transactionHistory/TransactionHistory";
 import AgentToAgent from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToAgent/AgentToAgent";
 import AgentToAdmin from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToAdmin/AgentToAdmin";
@@ -136,10 +135,7 @@ const router = createBrowserRouter([
                 path:'dashboard/agentAddMoney',
                 element:<AgentAddMoney></AgentAddMoney>
             },
-            {
-                path:'dashboard/agentSendMoney',
-                element: <AgentSendMoney></AgentSendMoney>
-            },
+           
             {
                 path:'dashboard/agentToAgent',
                 element:<AgentToAgent></AgentToAgent>

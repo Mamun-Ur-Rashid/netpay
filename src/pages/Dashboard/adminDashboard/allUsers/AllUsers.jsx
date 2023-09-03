@@ -7,7 +7,7 @@ const AllUsers = () => {
     const { data: users = [], isLoading: loading, refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/alluser');
+            const res = await axios.get('http://localhost:3000/alluser');
             console.log(res.data);
             return res.data;
         }
