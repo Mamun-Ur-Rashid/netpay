@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
 const DashSendMoney = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const {userInfor} = useContext(AuthContext)
+    const [userInfor, setUserInfor] = useState();
 
     const sendMoney = (event) => {
         event.preventDefault();
@@ -40,6 +40,21 @@ const DashSendMoney = () => {
         setIsSubmitted(true);
         event.target.reset();
     };
+
+    
+    
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axiosSecure.get(`/allUsers/${user?.email}`);
+                setUserInfor(response.data);
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        };
+
+        fetchData();
+    }, [user]);
 
     return (
         <div className="text-white text-center">
