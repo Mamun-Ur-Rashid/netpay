@@ -11,12 +11,12 @@ const AdminSendMoney = () => {
             <form onSubmit={handleSubmit(onSubmit)} className='space-y-4 text-2xl'>
                 <div className='form-control md:w-3/4 mx-auto'>
                     <label htmlFor="">Admin Account</label>
-                    <input type='number' className='input input-bordered mt-2' {...register("adminAccount", { minLength: 11, maxLength:11 })} placeholder='Enter Admin Account Number' />
+                    <input type='text' className='input input-bordered mt-2' {...register("adminAccount", { minLength: 11, maxLength:11 })} placeholder='Enter Admin Account Number' />
                     {errors.adminAccount && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
                 </div>
                 <div className='form-control md:w-3/4 mx-auto'>
                     <label htmlFor="">Agent Account</label>
-                    <input type='number' className='input input-bordered mt-2' {...register("agentAccount", { minLength: 11, maxLength:11 })} placeholder='Enter Agent Account Number' />
+                    <input type='text' className='input input-bordered mt-2' {...register("agentAccount", { minLength: 11, maxLength:11 })} placeholder='Enter Agent Account Number' />
                     {errors.agentAccount && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
                 </div>
                 <div className='form-control md:w-3/4 mx-auto'>
