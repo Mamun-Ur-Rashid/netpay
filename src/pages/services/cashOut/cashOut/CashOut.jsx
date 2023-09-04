@@ -8,7 +8,7 @@ import CashOutServiceDetails from "../cashOutProcess/CashOutServiceDetails";
 const CashOut = () => {
 
     const sendMoneyHeader = {
-        imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
+        imageUrl: 'https://img.freepik.com/premium-vector/3d-cartoon-smartphone-with-credit-card-money-online-payment-concept-mobile-wallet-application-banking-app-transfer-money-via-smartphone-vector-3d-illustration_221648-593.jpg',
         title: 'Cash Out',
         text: 'Cash Out now more fun to using NetPay. You can get money to using your account in any aggent house. NetPay aggent are present everyWhere in Bangladesh.',
         btnText: 'Cash Out Now'
