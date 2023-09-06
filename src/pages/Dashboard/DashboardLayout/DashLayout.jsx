@@ -77,7 +77,6 @@ const DashLayout = () => {
                                         {/* Step 3: Create the dropdown menu */}
                                         {sendMoneyDropdown && (
                                             <ul className="menu menu-sm dropdown-content mt-3  mr-4 z-[1] shadow bg-base-100 rounded-box  bg-[hsla(11,66%,51%,1)] p-2 text-black">
-                                                <li><NavLink to='dashboard/agentToAgent'>Agent to Agent</NavLink></li>
                                                 <li><NavLink to='dashboard/agentToAdmin'>Agent to Admin</NavLink></li>
                                                 <li><NavLink to='dashboard/agentToUser'>Agent to User</NavLink></li>
                                             </ul>
