@@ -85,6 +85,15 @@ const AdminHome = () => {
         }
     });
 
+    const { data: transection = [], isLoading } = useQuery({
+        queryKey: ['transection'],
+        queryFn: async () => {
+            const res = await axios.get('http://localhost:3000/adminTransection');
+            console.log(res.data);
+            return res.data;
+        }
+    })
+
     return (
         <div>
             <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-1 mr-5 mt-6 text-white'>
@@ -92,10 +101,10 @@ const AdminHome = () => {
                    <p className='text-center font-bold pb-4'> Total Users <br /> <small className='text-5xl'>{users.length}</small></p> 
                 </div>
                 <div className='m-5 pl-3 pt-8 w-[90%] h-38 bg-[#C44933] rounded-xl text-2xl'>
-                    <p className='text-center font-bold pb-4'> Total Transactions </p>
+                    <p className='text-center font-bold pb-4'> Total Transactions <br /> <small className='text-5xl'>{transection.length}</small></p>
                 </div>
                 <div className='m-5 pl-3 pt-8 w-[90%] h-38 bg-[#3348C4] rounded-xl text-2xl'> 
-                    <p className='text-center font-bold pb-4'>  Total Agents </p>
+                    <p className='text-center font-bold pb-4'>  Total Agents <br /> <small className='text-5xl'>8</small></p>
                 </div>
                 <div className='m-5 mr-5 pl-3 pt-8 w-[90%] h-38 bg-[#0F101A] rounded-xl text-2xl'> 
                     <p className='text-center font-bold pb-4'>   Total Amount (Tk) <br /> 
@@ -105,11 +114,11 @@ const AdminHome = () => {
             <div className='w-full p-4 mt-10'>
                 <h2 className='text-2xl font-semibold'>Transaction Analytics</h2>
                 <BarChart
-                    width={900}
+                    width={1200}
                     height={400}
                     data={data}
 
-                    barSize={30}
+                    barSize={40}
                     className='mt-5'
                 >
                     <XAxis dataKey="name" />
