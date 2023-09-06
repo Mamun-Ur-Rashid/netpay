@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo5.png'
 import { AuthContext } from '../../pages/AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import { FaWindowClose, } from "react-icons/fa";
 
 
 const Navbar = () => {
@@ -77,7 +78,7 @@ const Navbar = () => {
                                 onClick={toggleMenu}
                                 className="text-gray-300  focus:outline-none "
                             >
-                                {isMenuOpen ? 'close' : 'open'}
+                                {isMenuOpen ? <FaWindowClose /> : 'open'}
                             </button>
                         </div>
                     </div>

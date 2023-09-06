@@ -90,6 +90,7 @@ const router = createBrowserRouter([
             }
         ]
     },
+
     {
         path: 'dashboard',
         element: <DashLayout></DashLayout>,
@@ -111,53 +112,54 @@ const router = createBrowserRouter([
 
             // admin dashboard route here.....
             {
-                path:'dashboard/adminHome',
-                element:<AdminHome></AdminHome>
+                path: 'dashboard/adminHome',
+                element: <AdminHome></AdminHome>
             },
             {
-                path:'dashboard/paymentHistory',
-                element:<PaymentHistory></PaymentHistory>
+                path: 'dashboard/paymentHistory',
+                element: <PaymentHistory></PaymentHistory>
             },
             {
-                path:'dashboard/allUsers',
-                element:<AllUsers></AllUsers>
+                path: 'dashboard/allUsers',
+                element: <AllUsers></AllUsers>
             },
             {
-                path:'dashboard/adminSendMoney',
-                element:<AdminSendMoney></AdminSendMoney>
+                path: 'dashboard/adminSendMoney',
+                element: <AdminSendMoney></AdminSendMoney>
             },
 
             // agent dashboard route here.........
             {
-               path:'dashboard/agentHome',
-               element:<AgentHome></AgentHome>
+                path: 'dashboard/agentHome',
+                element: <AgentHome></AgentHome>
             },
             {
-                path:'dashboard/agentAddMoney',
-                element:<AgentAddMoney></AgentAddMoney>
+                path: 'dashboard/agentAddMoney',
+                element: <AgentAddMoney></AgentAddMoney>
             },
             {
-                path:'dashboard/agentSendMoney',
+                path: 'dashboard/agentSendMoney',
                 element: <AgentSendMoney></AgentSendMoney>
             },
             {
-                path:'dashboard/agentToAgent',
-                element:<AgentToAgent></AgentToAgent>
+                path: 'dashboard/agentToAgent',
+                element: <AgentToAgent></AgentToAgent>
             },
             {
-                path:'dashboard/agentToAdmin',
-                element:<AgentToAdmin></AgentToAdmin>
+                path: 'dashboard/agentToAdmin',
+                element: <AgentToAdmin></AgentToAdmin>
             },
             {
-                path:'dashboard/agentToUser',
-                element:<AgentToUser></AgentToUser>
+                path: 'dashboard/agentToUser',
+                element: <AgentToUser></AgentToUser>
             },
             {
-                path:'dashboard/agentTransaction',
-                element:<TransactionHistory></TransactionHistory>
+                path: 'dashboard/agentTransaction',
+                element: <TransactionHistory></TransactionHistory>
             }
         ]
 
-    }
+    },
+
 ])
 export default router;
