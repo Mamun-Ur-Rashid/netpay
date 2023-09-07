@@ -14,7 +14,7 @@ const AgentAddMoney = () => {
 
     const onSubmit = async (data) => {
         try {
-            const response = await fetch('http://localhost:3000/agentToUser', {
+            const response = await fetch('http://localhost:3000/agentAddMoney', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -51,7 +51,7 @@ const AgentAddMoney = () => {
         <div className='p-2 md:m-4 '>
             <div className='md:flex gap-4 text-center items-center'>
             <div className='w-1/4 rounded-xl bg-[#C44933] text-center'>
-                <p className='text-lg p-4'>Total Amount (Tk) <br /> <small className='text-2xl'>{totalBalance}</small></p>
+                <p className='text-lg p-4'>Total Amount (Tk)  <small className='text-2xl font-bold'>{totalBalance}</small></p>
             </div>
             <div>
                 <p className='text-center text-2xl ml-20 font-bold'>Agent From User</p>

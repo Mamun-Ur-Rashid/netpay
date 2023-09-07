@@ -23,10 +23,11 @@ import PaymentHistory from "../../pages/Dashboard/adminDashboard/paymentHistory/
 import AllUsers from "../../pages/Dashboard/adminDashboard/allUsers/AllUsers";
 import AdminSendMoney from "../../pages/Dashboard/adminDashboard/sendMoney/AdminSendMoney";
 import AgentHome from "../../pages/Dashboard/agentDashboard/agentHome/AgentHome";
-import AgentAddMoney from "../../pages/Dashboard/agentDashboard/agentAddMoney/AgentAddMoney";
+
 import TransactionHistory from "../../pages/Dashboard/agentDashboard/transactionHistory/TransactionHistory";    
 import AgentToAdmin from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToAdmin/AgentToAdmin";
 import AgentToUser from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToUser/AgentToUser";
+import AgentAddMoney from "../../pages/Dashboard/agentDashboard/addMoney/AgentAddMoney";
 
 
 const router = createBrowserRouter([
