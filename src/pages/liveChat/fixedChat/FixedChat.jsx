@@ -17,7 +17,8 @@ const FixedChat = () => {
 
     const socket = io();
     console.log(socket);
-    // Send message
+
+    // Send message here.
     const handelSend = (e) => {
         e.preventDefault()
         const message = {
