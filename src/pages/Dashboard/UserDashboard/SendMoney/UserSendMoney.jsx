@@ -3,7 +3,7 @@ import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../../Hook/useAxiosSecure';
 
-const DashSendMoney = () => {
+const UserSendMoney = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const {user} = useContext(AuthContext);
     const [axiosSecure] = useAxiosSecure();
@@ -32,7 +32,7 @@ const DashSendMoney = () => {
 
         const sendMoneyInfo = { sdn: senderNumber, rcn: receiverNumber, tk: amount };
 
-        fetch(`https://netpay-server-muhammadali246397.vercel.app/sendmoney`, {
+        fetch(`http://localhost:3000/sendmoney`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -43,12 +43,12 @@ const DashSendMoney = () => {
         .then(data => {
             console.log(data);
             Swal.fire({
-                position: 'center',
+                position: 'top-end',
                 icon: 'success',
-                title: `${data.message}`,
+                title: 'Send Money Successfully Completed!',
                 showConfirmButton: false,
-                timer: 2000
-            })
+                timer: 1500
+              })
         })
         .catch(error => {
             console.error('Error:', error);
@@ -57,6 +57,21 @@ const DashSendMoney = () => {
         setIsSubmitted(true);
         event.target.reset();
     };
+
+    
+    
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axiosSecure.get(`/allUsers/${user?.email}`);
+                setUserInfor(response.data);
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        };
+
+        fetchData();
+    }, [user]);
 
     return (
         <div className=" text-center mb-40">
@@ -108,4 +123,4 @@ const DashSendMoney = () => {
     );
 };
 
-export default DashSendMoney;
+export default UserSendMoney;

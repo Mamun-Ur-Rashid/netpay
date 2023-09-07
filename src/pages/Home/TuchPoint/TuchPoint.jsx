@@ -11,15 +11,17 @@ const TuchPoint = () => {
         <div className='container mx-auto  md:my-12'>
             <Title title={'Nearest NetPay Touchpoints'} subTitle={'Discover Convenient Locations for Accessing NetPay Services'}></Title>
             <div className='md:flex justify-between mt-4 md:mt-10 gap-9 '>
-                <div className='w-full md:w-1/3  px-4 py- md:py-0 bg-[#1B2654] h-96'>
-                    <div className='text-center p-4 text-white '>
+
+                <div className='w-full md:w-1/3 px-4 mb-10 md:py-0 bg-[#1B2654] h-[400px] md:h-96'>
+                    <div className='text-center p-4 text-white'>
                         <h4 className='text-3xl font-semibold'>ATM Cash Out Points</h4>
-                        <p className='text-sm md:text-base py-2'>List of Partner Banks&apos; ATM booths to Cash Out</p>
+                        <p className='text-sm md:text-base py-2'> ATM booths to Cash Out</p>
                     </div>
-                    <div >
-                        <img className='mx-auto h-50' src={atmImg} alt="" />
+                    <div>
+                        <img className='mx-auto' src={atmImg} alt="" />
                     </div>
                 </div>
+
                 <div className='w-full md:w-1/3 px-4 md:py-0 bg-[#1B2654] h-96'>
                     <div className='text-center p-4 text-white '>
                         <h4 className='text-3xl font-semibold'>Customer Care Points</h4>
@@ -38,6 +40,7 @@ const TuchPoint = () => {
                         <img className='mx-auto' src={marchentImg} alt="" />
                     </div>
                 </div>
+
             </div>
         </div>
     );

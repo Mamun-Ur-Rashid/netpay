@@ -1,8 +1,7 @@
 import { createContext, useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import app from '../../Firebase/Config';
-import axios from 'axios';
-import useAxiosSecure from '../../Hook/useAxiosSecure';
+
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -33,7 +32,7 @@ const AuthProvider = ({ children }) => {
 
             // get and set token
             if (currentUser?.email) {
-                fetch('https://netpay-server-muhammadali246397.vercel.app/jwt', {
+                fetch('http://localhost:3000/jwt', {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",

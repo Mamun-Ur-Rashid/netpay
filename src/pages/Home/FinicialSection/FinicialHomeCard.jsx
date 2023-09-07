@@ -4,7 +4,7 @@ const FinicialHomeCard = () => {
 
     const cardData = [
         {
-            imageUrl: 'https://thumbs.dreamstime.com/b/online-money-transfer-vector-illustration-cartoon-flat-tiny-friend-man-character-transferring-send-transaction-coin-out-178490363.jpg',
+            imageUrl: 'https://img.freepik.com/free-vector/people-using-mobile-bank-remittance-money_74855-6617.jpg?w=2000',
             // imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
             title: 'Send Money',
             description: 'Send money from NetPay to another acount instanly.',
