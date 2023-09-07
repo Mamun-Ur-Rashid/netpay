@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 const AdminSendMoney = () => {
     const [error, SetError] = useState(null)
     const [user] = useUser()
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
         fetch('http://localhost:3000/adminToAgent', {

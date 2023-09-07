@@ -16,17 +16,18 @@ import Blog from "../../pages/blog/blog/Blog";
 
 import DashCashOut from "../../pages/Dashboard/UserDashboard/dash-CashOut/DashCashOut";
 import DashHome from "../../pages/Dashboard/UserDashboard/dashHome/DashHome";
-import DashSendMoney from "../../pages/Dashboard/UserDashboard/dashSendMoney/DashSendMoney"
+import DashSendMoney from "../../pages/Dashboard/UserDashboard/dashSendMoney/DashSendMoney";
 import DashLayout from "../../pages/Dashboard/dashboardLayout/DashLayout";
 import AdminHome from "../../pages/Dashboard/adminDashboard/adminHome/AdminHome";
 import PaymentHistory from "../../pages/Dashboard/adminDashboard/paymentHistory/PaymentHistory";
 import AllUsers from "../../pages/Dashboard/adminDashboard/allUsers/AllUsers";
 import AdminSendMoney from "../../pages/Dashboard/adminDashboard/sendMoney/AdminSendMoney";
 import AgentHome from "../../pages/Dashboard/agentDashboard/agentHome/AgentHome";
-import AgentAddMoney from "../../pages/Dashboard/agentDashboard/agentAddMoney/AgentAddMoney";
-import TransactionHistory from "../../pages/Dashboard/agentDashboard/transactionHistory/TransactionHistory";
+
+import TransactionHistory from "../../pages/Dashboard/agentDashboard/transactionHistory/TransactionHistory";    
 import AgentToAdmin from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToAdmin/AgentToAdmin";
 import AgentToUser from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToUser/AgentToUser";
+import AgentAddMoney from "../../pages/Dashboard/agentDashboard/addMoney/AgentAddMoney";
 
 
 const router = createBrowserRouter([
