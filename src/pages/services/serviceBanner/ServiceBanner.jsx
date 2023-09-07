@@ -1,4 +1,5 @@
-import BannerImage from '../../../assets/serviceBanner.jpg'
+// import BannerImage from '../../../assets/serviceBanner.jpg'
+import BannerImage from '../../../assets/sb.png'
 
 const ServiceBanner = () => {
 

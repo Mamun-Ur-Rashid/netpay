@@ -6,10 +6,9 @@ import Swal from 'sweetalert2';
 const AgentToUser = () => {
     const [isUserInfo] = useUser();
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
-    const [totalBalance, setTotalBalance] = useState(isUserInfo.balance); // Initial total balance
+    const [totalBalance, setTotalBalance] = useState(isUserInfo.balance);
 
     useEffect(() => {
-        // Update total balance when isUserInfo changes
         setTotalBalance(isUserInfo.balance);
     }, [isUserInfo]);
 
@@ -25,17 +24,21 @@ const AgentToUser = () => {
 
             if (response.ok) {
                 const responseData = await response.json();
+
+                // Check if responseData contains 'totalBalance'
+                if (responseData.hasOwnProperty('totalBalance')) {
+                    setTotalBalance(responseData.totalBalance);
+                }
+
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Send Money Successfully Completed!',
+                    title: `${responseData.message}`,
                     showConfirmButton: false,
                     timer: 1500
-                  })
-                reset();
+                });
 
-                // Update the total balance in the UI
-                setTotalBalance(responseData.totalBalance); // Assuming the response contains the updated total balance
+                reset();
             } else {
                 console.error('Failed to send money');
             }
@@ -43,6 +46,7 @@ const AgentToUser = () => {
             console.error('An error occurred', error);
         }
     };
+
 
    
     return (

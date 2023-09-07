@@ -1,5 +1,5 @@
-import CommonBanner from "../../../shared/commonBanner/CommonBanner";
-import img from "../../../assets/commonBanner.jpg"
+import BannerImage from "../../../assets/Banner/aboutB.png";
+
 import DetailsAbout from "../detailsAbout/DetailsAbout";
 import { useEffect } from "react";
 
@@ -11,7 +11,12 @@ const About = () => {
 
     return (
         <div className="mt-16 bg-[#070b29] pb-20">
-            <CommonBanner BannerImage={img}></CommonBanner>
+            {/* Banner image */}
+            <div >
+                <div className="carousel w-full mb-4 md:mb-8">
+                    <img className='h-44 md:h-[450px]' src={BannerImage} alt="" />
+                </div>
+            </div>
             <DetailsAbout />
         </div>
     );

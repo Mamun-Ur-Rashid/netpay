@@ -8,7 +8,7 @@ import SendMoneyServiceDatails from "../sendMoneyProcess/SendMoneyServiceDatails
 const SendMoney = () => {
 
     const headerData = {
-        imageUrl: 'https://thumbs.dreamstime.com/b/online-money-transfer-vector-illustration-cartoon-flat-tiny-friend-man-character-transferring-send-transaction-coin-out-178490363.jpg',
+        imageUrl: 'https://img.freepik.com/free-vector/people-using-mobile-bank-remittance-money_74855-6617.jpg?w=2000',
         title: 'Send Money',
         text: 'Send Money is now more easier to using NetPay. You can send money to one account to another account 24 hours in 7days. It can happend anywhere anytime.',
         btnText: 'Send Money Now'
