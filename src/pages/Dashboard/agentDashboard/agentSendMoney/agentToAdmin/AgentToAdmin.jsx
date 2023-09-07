@@ -5,12 +5,17 @@ const AgentToAdmin = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
     return (
-        <div className='p-2 md:m-8 '>
-            <div className='w-1/4 rounded-xl bg-orange-500 text-center'>
-                <p className='text-xl p-4'>Total Amount (Tk) <br /> <small className='text-3xl'>1200</small></p>
+        <div className='p-2 md:m-4 '>
+             <div className='md:flex gap-4 text-center items-center'>
+            <div className='w-1/4 rounded-xl bg-[#C44933] text-center'>
+                <p className='text-lg p-4'>Total Amount (Tk) <br /> <small className='text-2xl'>1200</small></p>
+            </div>
+            <div>
+                <p className='text-center text-4xl ml-20 font-bold'>Agent to Admin</p>
+            </div>
             </div>
             <h3 className='text-4xl font-semibold text-center mb-7 '>Send Money</h3>
-            <div className='shadow-2xl p-5 md:w-1/2 my-4 mx-auto bg-slate-400 rounded-xl'>
+            <div className='shadow-2xl p-5 md:w-1/2 my-4 mx-auto bg-gradient-to-r from-violet-400 to-fuchsia-400 rounded-xl'>
             <form onSubmit={handleSubmit(onSubmit)} className='space-y-2 text-2xl'>
                 <div className='form-control md:w-3/4 mx-auto'>
                     <label htmlFor="">Agent Account</label>
