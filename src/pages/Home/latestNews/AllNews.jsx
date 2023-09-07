@@ -7,9 +7,9 @@ const AllNews = () => {
     const img2 = 'https://us.123rf.com/450wm/peopleimages12/peopleimages122303/peopleimages12230332555/201180237-their-meeting-is-in-full-swing-a-laptop-on-a-table-with-businesspeople-having-a-meeting-in-the.jpg?ver=6'
 
     return (
-        <div className='md:flex justify-between my-4 md:my-10 gap-9'>
+        <div className='lg:flex justify-between my-4 lg:my-10 gap-9'>
 
-            <div className="relative inline-block group w-full md:w-1/3 md:py-0 bg-[#1B2654] h-80 shadow-2xl ">
+            <div className="relative inline-block group w-full lg:w-1/3 md:py-0 bg-[#1B2654]  shadow-2xl ">
                 <img
                     src={img2}
                     alt="Image"
@@ -25,7 +25,7 @@ const AllNews = () => {
                 </div>
             </div>
 
-            <div className="relative inline-block group w-full md:w-1/3 md:py-0 bg-[#1B2654] h-96 md:h-80  shadow-2xl ">
+            <div className="relative inline-block group w-full lg:w-1/3 md:py-0 bg-[#1B2654]  shadow-2xl ">
                 <img
                     src={img2}
                     alt="Image"
@@ -41,7 +41,7 @@ const AllNews = () => {
                 </div>
             </div>
 
-            <div className="relative inline-block group w-full md:w-1/3 md:py-0 bg-[#1B2654] h-80 shadow-2xl ">
+            <div className="relative inline-block group w-full lg:w-1/3 md:py-0 bg-[#1B2654] h-80 shadow-2xl ">
                 <img
                     src={img2}
                     alt="Image"
