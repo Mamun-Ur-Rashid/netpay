@@ -1,23 +1,52 @@
 import { useState } from 'react';
 import { GrClose } from "react-icons/gr";
-import { BsPlus } from "react-icons/bs";
-import { MdSubdirectoryArrowRight } from "react-icons/md";
+import InputEmoji from "react-input-emoji";
+import { io } from 'socket.io-client';
 
+
+// const socket = io('http://localhost:5000');
 
 const FixedChat = () => {
     const [menuVisible, setMenuVisible] = useState(false);
+    const [newMessage, setNewMessage] = useState("");
+    console.log(newMessage);
 
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
     };
 
-    return (
+    const socket = io();
+    console.log(socket);
 
+    // Send message here.
+    const handelSend = (e) => {
+        e.preventDefault()
+        const message = {
+            senderId: 'hi',
+            text: newMessage,
+            chatId: 'comming soon',
+        };
+
+        // Emit the message to the server
+        socket.emit('paglaMessage', message);
+
+        // Clear the input field after sending
+        setNewMessage('');
+        console.log('btn', message)
+    };
+
+
+    // function handleOnEnter(text) {
+    //     setText(text)
+    //     console.log("enter", text);
+    // }
+
+    return (
         <div>
             {
                 menuVisible ?
                     <div>
-                        <div className="fixed bottom-2 right-2 w-[370px] md:w-[400px] h-[500px] md:h-[550px] bg-slate-300 shadow-md rounded-md p-4">
+                        <div className="fixed bottom-2 right-2 w-[370px] md:w-[500px] h-[500px] md:h-[550px] bg-slate-300 shadow-md rounded-md p-4">
                             {/* Menu content */}
                             <div className='flex justify-between items-center h-16 '>
                                 <img src="" alt="" />
@@ -28,33 +57,21 @@ const FixedChat = () => {
                             </div>
                             <hr />
                             <div className=' h-[340px] md:h-[400px]  overflow-y-auto'>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
 
-                                {/*  need contained here */}
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
-                                <p>dfdfd</p>
                             </div >
                             <hr />
+                            {/* chat-sender */}
                             <div className='flex'>
-                                <BsPlus className='text-4xl ' />
-                                <input type="text" placeholder="Type here" className="input w-full max-w-xs" />
-                                <MdSubdirectoryArrowRight className='text-4xl' />
+                                <div></div>
+                                <InputEmoji
+                                    value={newMessage}
+                                    onChange={setNewMessage}
+                                    cleanOnEnter
+                                    // onEnter={handleOnEnter}
+                                    placeholder="Type a message"
+                                />
+                                <button className='text-black text-2xl bg-slate-500' onClick={handelSend} > Send</button>
                             </div>
-
                         </div>
                     </div> :
                     <div>

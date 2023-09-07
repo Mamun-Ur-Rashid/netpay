@@ -4,10 +4,10 @@ import axios from 'axios';
 
 const AllUsers = () => {
 
-    const { data: users = [], isLoading: loading, refetch } = useQuery({
+    const { data: users = [], isLoading, refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:3000/alluser');
+            const res = await axios.get('http://localhost:3000/allUsers');
             console.log(res.data);
             return res.data;
         }

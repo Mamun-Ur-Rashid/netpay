@@ -16,7 +16,7 @@ import Blog from "../../pages/blog/blog/Blog";
 
 import DashCashOut from "../../pages/Dashboard/UserDashboard/dash-CashOut/DashCashOut";
 import DashHome from "../../pages/Dashboard/UserDashboard/dashHome/DashHome";
-import DashSendMoney from "../../pages/Dashboard/UserDashboard/dashSendMoney/DashSendMoney"
+import DashSendMoney from "../../pages/Dashboard/UserDashboard/dashSendMoney/DashSendMoney";
 import DashLayout from "../../pages/Dashboard/dashboardLayout/DashLayout";
 import AdminHome from "../../pages/Dashboard/adminDashboard/adminHome/AdminHome";
 import PaymentHistory from "../../pages/Dashboard/adminDashboard/paymentHistory/PaymentHistory";
@@ -133,13 +133,13 @@ const router = createBrowserRouter([
                 element: <AgentHome></AgentHome>
             },
             {
-                path:'dashboard/agentAddMoney',
-                element:<AgentAddMoney></AgentAddMoney>
+                path: 'dashboard/agentAddMoney',
+                element: <AgentAddMoney></AgentAddMoney>
             },
-           
+
             {
-                path:'dashboard/agentToAdmin',
-                element:<AgentToAdmin></AgentToAdmin>
+                path: 'dashboard/agentToAdmin',
+                element: <AgentToAdmin></AgentToAdmin>
             },
             {
                 path: 'dashboard/agentToUser',
