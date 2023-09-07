@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useContext, useEffect, useState } from 'react';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import axios from 'axios';
 
 
 const data = [
@@ -79,7 +80,7 @@ const AdminHome = () => {
     const { data: users = [], isLoading: loading, refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axiosSecure.get('/alluser');
+            const res = await axios.get('http://localhost:3000/allUsers');
             console.log(res.data)
             return res.data;
         }
