@@ -4,7 +4,8 @@ import { useQuery } from "@tanstack/react-query";
 
 const TransactionHistory =() => {
     const [isUserInfo] = useUser();
-   const { data: agentTransactions = [], isLoading, refetch } = useQuery({
+
+   const { data: agentTransactions = [], refetch } = useQuery({
     queryKey: ['agentTransactions'],
     queryFn: async () => {
         const res = await axios.get(`http://localhost:3000/agentTransactions/${isUserInfo?.number}`);
