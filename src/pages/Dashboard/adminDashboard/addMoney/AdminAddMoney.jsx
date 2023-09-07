@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AdminAddMone = () => {
+const AdminAddMoney = () => {
     return (
         <div>
             admin add money
@@ -8,4 +8,4 @@ const AdminAddMone = () => {
     );
 };
 
-export default AdminAddMone;
+export default AdminAddMoney;
