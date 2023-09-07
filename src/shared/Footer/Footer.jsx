@@ -1,4 +1,4 @@
-import logo from '../../assets/logo5.png'
+import logo from '../../assets/logo/new2.png'
 
 
 const Footer = () => {
@@ -7,7 +7,7 @@ const Footer = () => {
             <footer className="footer  p-10 bg-neutral text-neutral-content text-xl mx-auto">
 
                 <div>
-                    <img className="w-4/6" src={logo} alt="" />
+                    <img className="w-4/12" src={logo} alt="" />
 
                     <p className="text-sm">Netpay provides fast, secure and convenient <br></br> money transfer and payment services via mobile <br></br> phone to the people of Bangladesh</p>
                 </div>

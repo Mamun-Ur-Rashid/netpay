@@ -2,8 +2,9 @@ import Title from "../../../../shared/title/Title";
 import AllService from "../../allService/AllService";
 import Faq from "../../allServicesFAQ/Faq";
 import AllServicesHeader from "../../allServicesHeader/AllServicesHeader";
-import ServiceBanner from "../../serviceBanner/ServiceBanner";
+import BannerImage from '../../../../assets/Banner/serviceB.png'
 import SendMoneyServiceDatails from "../sendMoneyProcess/SendMoneyServiceDatails";
+import ServiceBanner from "../../serviceBanner/ServiceBanner";
 
 const SendMoney = () => {
 
@@ -87,7 +88,7 @@ const SendMoney = () => {
 
     return (
         <div className='mt-16 bg-[#070b29]'>
-            <ServiceBanner></ServiceBanner>
+            <ServiceBanner BannerImage={BannerImage} />
             <div className="px-8 md:px-24">
                 <AllService></AllService>
                 <Title title={'Send Money'}></Title>

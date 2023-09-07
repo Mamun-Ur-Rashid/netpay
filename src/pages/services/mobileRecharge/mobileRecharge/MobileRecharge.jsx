@@ -4,6 +4,8 @@ import AllServicesHeader from '../../allServicesHeader/AllServicesHeader';
 import Faq from '../../allServicesFAQ/Faq';
 import Title from '../../../../shared/title/Title';
 import MobileRechareServiceDetails from '../mobileRechargeProcess/MobileRechareServiceDetails';
+import BannerImage from '../../../../assets/Banner/serviceB.png'
+
 
 const MobileRecharge = () => {
 
@@ -89,7 +91,7 @@ const MobileRecharge = () => {
 
     return (
         <div className='mt-16 bg-[#070b29]'>
-            <ServiceBanner></ServiceBanner>
+            <ServiceBanner BannerImage={BannerImage}></ServiceBanner>
             <div className="px-8 md:px-24">
                 <AllService></AllService>
                 <Title title={'Mobile Recharge'} />
