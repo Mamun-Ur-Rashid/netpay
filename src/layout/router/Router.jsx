@@ -13,11 +13,6 @@ import About from "../../pages/aboutUs/about/About";
 import Business from "../../pages/business/business/Business"
 import Help from "../../pages/help/help/Help";
 import Blog from "../../pages/blog/blog/Blog";
-
-import DashCashOut from "../../pages/Dashboard/UserDashboard/dash-CashOut/DashCashOut";
-import DashHome from "../../pages/Dashboard/UserDashboard/dashHome/DashHome";
-import DashSendMoney from "../../pages/Dashboard/UserDashboard/dashSendMoney/DashSendMoney";
-import DashLayout from "../../pages/Dashboard/dashboardLayout/DashLayout";
 import AdminHome from "../../pages/Dashboard/adminDashboard/adminHome/AdminHome";
 import PaymentHistory from "../../pages/Dashboard/adminDashboard/paymentHistory/PaymentHistory";
 import AllUsers from "../../pages/Dashboard/adminDashboard/allUsers/AllUsers";
@@ -28,6 +23,13 @@ import TransactionHistory from "../../pages/Dashboard/agentDashboard/transaction
 import AgentToAdmin from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToAdmin/AgentToAdmin";
 import AgentToUser from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToUser/AgentToUser";
 import AgentAddMoney from "../../pages/Dashboard/agentDashboard/addMoney/AgentAddMoney";
+import UserHome from "../../pages/Dashboard/UserDashboard/userHome/UserHome";
+import CashIn from "../../pages/Dashboard/UserDashboard/cashIn/CashIn";
+import DashLayout from "../../pages/Dashboard/DashboardLayout/DashLayout";
+import UserCashOut from "../../pages/Dashboard/UserDashboard/cashOut/UserCashOut";
+import AdminAddMoney from "../../pages/Dashboard/adminDashboard/addMoney/AdminAddMoney";
+import Setting from "../../pages/Dashboard/UserDashboard/setting/Setting";
+import UserSendMoney from "../../pages/Dashboard/UserDashboard/SendMoney/UserSendMoney";
 
 
 const router = createBrowserRouter([
@@ -96,17 +98,25 @@ const router = createBrowserRouter([
         children: [
 
             //user dashboard route here .......
-            {
-                path: 'dashboard/home',
-                element: <DashHome></DashHome>
-            },
+           {
+                path:'dashboard/userHome',
+                element: <UserHome></UserHome>
+           },
+           {
+                path:'dashboard/cashIn',
+                element: <CashIn></CashIn>
+           },
+           {
+                path: 'dashboard/cashOut',
+                element:<UserCashOut></UserCashOut>
+           },
             {
                 path: 'dashboard/send-money',
-                element: <DashSendMoney></DashSendMoney>
+                element: <UserSendMoney></UserSendMoney>
             },
             {
-                path: 'dashboard/cashout',
-                element: <DashCashOut></DashCashOut>
+                path:'dashboard/setting',
+                element:<Setting></Setting>
             },
 
             // admin dashboard route here.....
@@ -125,6 +135,10 @@ const router = createBrowserRouter([
             {
                 path: 'dashboard/adminSendMoney',
                 element: <AdminSendMoney></AdminSendMoney>
+            },
+            {
+                path:'dashboard/adminAddMoney',
+                element:<AdminAddMoney></AdminAddMoney>
             },
 
             // agent dashboard route here.........

@@ -3,7 +3,7 @@ import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../../Hook/useAxiosSecure';
 
-const DashSendMoney = () => {
+const UserSendMoney = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const {user} = useContext(AuthContext);
     const [axiosSecure] = useAxiosSecure();
@@ -123,4 +123,4 @@ const DashSendMoney = () => {
     );
 };
 
-export default DashSendMoney;
+export default UserSendMoney;
