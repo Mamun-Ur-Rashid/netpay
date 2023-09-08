@@ -9,7 +9,7 @@ const AdminSendMoney = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
-        fetch('http://localhost:3000/adminToAgent', {
+        fetch('https://netpay-server-muhammadali246397.vercel.app/adminToAgent', {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"
