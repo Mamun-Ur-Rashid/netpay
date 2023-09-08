@@ -4,6 +4,7 @@ import AllService from "../allService/AllService";
 import ServiceCard from "../serviceCard/ServiceCard";
 import BannerImage from '../../../assets/Banner/serviceB.png'
 import ServiceBanner from "../serviceBanner/ServiceBanner";
+import Massage from "../../liveChat/massage/Massage";
 
 const Service = () => {
 
@@ -18,6 +19,7 @@ const Service = () => {
                 <AllService></AllService>
                 <ServiceCard></ServiceCard>
             </div>
+            <Massage />
         </div>
     );
 };
