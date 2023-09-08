@@ -9,7 +9,7 @@ const UserCashOut = () => {
     const [error, SetError] = useState(null)
     const onSubmit = data => {
         console.log(data)
-        fetch('http://localhost:3000/cashOut', {
+        fetch('https://netpay-server-muhammadali246397.vercel.app/cashOut', {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"
