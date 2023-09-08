@@ -60,18 +60,18 @@ const UserSendMoney = () => {
 
     
     
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axiosSecure.get(`/allUsers/${user?.email}`);
-                setUserInfor(response.data);
-            } catch (error) {
-                console.error('Error fetching user data:', error);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const response = await axiosSecure.get(`/allUsers/${user?.email}`);
+    //             setUserInfor(response.data);
+    //         } catch (error) {
+    //             console.error('Error fetching user data:', error);
+    //         }
+    //     };
 
-        fetchData();
-    }, [user]);
+    //     fetchData();
+    // }, [user]);
 
     return (
         <div className=" text-center mb-40">
