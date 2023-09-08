@@ -11,7 +11,7 @@ const TransactionHistory =() => {
    const { data: agentTransactions = [], isLoading, refetch } = useQuery({
     queryKey: ['agentTransactions'],
     queryFn: async () => {
-        const res = await axios.get('http://localhost:3000/agentAllTransactions');
+        const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/agentAllTransactions');
         console.log(res.data);
         return res.data;
     }
