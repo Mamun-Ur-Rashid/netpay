@@ -24,7 +24,6 @@ import AgentToAdmin from "../../pages/Dashboard/agentDashboard/agentSendMoney/ag
 import AgentToUser from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToUser/AgentToUser";
 import AgentAddMoney from "../../pages/Dashboard/agentDashboard/addMoney/AgentAddMoney";
 import UserHome from "../../pages/Dashboard/UserDashboard/userHome/UserHome";
-import CashIn from "../../pages/Dashboard/UserDashboard/cashIn/CashIn";
 import DashLayout from "../../pages/Dashboard/DashboardLayout/DashLayout";
 import UserCashOut from "../../pages/Dashboard/UserDashboard/cashOut/UserCashOut";
 import AdminAddMoney from "../../pages/Dashboard/adminDashboard/addMoney/AdminAddMoney";
@@ -101,10 +100,6 @@ const router = createBrowserRouter([
            {
                 path:'dashboard/userHome',
                 element: <UserHome></UserHome>
-           },
-           {
-                path:'dashboard/cashIn',
-                element: <CashIn></CashIn>
            },
            {
                 path: 'dashboard/cashOut',
