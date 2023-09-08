@@ -74,24 +74,7 @@ const UserSendMoney = () => {
     }, [user]);
 
     return (
-        <div className=" text-center mb-40">
-            <div>
-            <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-1 mr-5 mt-6 text-white'>
-                <div className='m-5 pl-3 pt-4 w-[90%] h-38 bg-[#33C49D] rounded-xl text-2xl'>
-                   <p className='text-center font-bold pb-4'> Total Users <br /> <small className='text-5xl'>{isUserInfo.length}</small></p> 
-                </div>
-                <div className='m-5 pl-3 pt-8 w-[90%] h-38 bg-[#C44933] rounded-xl'>
-                    <p className='text-center font-bold pb-4'> Total Transactions </p>
-                </div>
-                <div className='m-5 pl-3 pt-8 w-[90%] h-38 bg-[#3348C4] rounded-xl'> 
-                    <p className='text-center font-bold pb-4'>  Total Agents </p>
-                </div>
-                <div className='m-5 mr-5 pl-3 pt-8 w-[90%] h-38 bg-[#0F101A] rounded-xl'> 
-                    <p className='text-center font-bold pb-4'>   Total Amount <br /> <small className='text-5xl'> {isUserInfo.balance} Tk</small>
-                     </p>
-                </div>
-            </div>
-            </div>
+        <div className=" text-center mb-40 mt-8">
             <h1 className="text-4xl mt-4 font-bold">Send Money</h1>
             <div className="pl-4 mt-4 md:w-3/4 mx-auto shadow-2xl bg-slate-400 rounded-lg">
                 <form action="" onSubmit={sendMoney} className='md:w-3/4 mx-auto md:px-20 mt-5'>
