@@ -3,6 +3,8 @@ import AllService from "../allService/AllService";
 // import ServiceBanner from "../serviceBanner/ServiceBanner";
 import ServiceCard from "../serviceCard/ServiceCard";
 import BannerImage from '../../../assets/Banner/serviceB.png'
+import ServiceBanner from "../serviceBanner/ServiceBanner";
+import Massage from "../../liveChat/massage/Massage";
 
 const Service = () => {
 
@@ -12,15 +14,12 @@ const Service = () => {
 
     return (
         <div className='mt-16 bg-[#070c33]'>
-            <div >
-                <div className="carousel w-full mb-4 md:mb-8">
-                    <img className='h-44 md:h-[450px]' src={BannerImage} alt="" />
-                </div>
-            </div>
+            <ServiceBanner BannerImage={BannerImage} />
             <div className="px-8 md:px-24">
                 <AllService></AllService>
                 <ServiceCard></ServiceCard>
             </div>
+            <Massage />
         </div>
     );
 };

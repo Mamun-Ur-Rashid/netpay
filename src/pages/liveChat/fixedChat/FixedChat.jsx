@@ -7,6 +7,17 @@ import { io } from 'socket.io-client';
 // const socket = io('http://localhost:5000');
 
 const FixedChat = () => {
+    // this messages array comes from server... { now use testing parpes }
+    const messages = [
+        { id: 1 },
+        { chatId: 1 },
+        {
+            text: [
+                'hello', 'how are you', 'i am fine'
+            ]
+        },
+    ];
+
     const [menuVisible, setMenuVisible] = useState(false);
     const [newMessage, setNewMessage] = useState("");
     console.log(newMessage);
@@ -18,7 +29,7 @@ const FixedChat = () => {
     const socket = io();
     console.log(socket);
 
-    // Send message here.
+    // Send message here..
     const handelSend = (e) => {
         e.preventDefault()
         const message = {
@@ -35,12 +46,6 @@ const FixedChat = () => {
         console.log('btn', message)
     };
 
-
-    // function handleOnEnter(text) {
-    //     setText(text)
-    //     console.log("enter", text);
-    // }
-
     return (
         <div>
             {
@@ -56,8 +61,11 @@ const FixedChat = () => {
                                 </div>
                             </div>
                             <hr />
+                            {/* Show massage..... */}
                             <div className=' h-[340px] md:h-[400px]  overflow-y-auto'>
-
+                                {/* {
+                                    messages.map(message => console.log(message.text))
+                                } */}
                             </div >
                             <hr />
                             {/* chat-sender */}

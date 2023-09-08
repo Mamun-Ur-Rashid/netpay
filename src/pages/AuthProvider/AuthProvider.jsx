@@ -32,7 +32,7 @@ const AuthProvider = ({ children }) => {
 
             // get and set token
             if (currentUser?.email) {
-                fetch('http://localhost:3000/jwt', {
+                fetch('https://netpay-server-muhammadali246397.vercel.app/jwt', {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",

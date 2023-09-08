@@ -32,7 +32,7 @@ const UserSendMoney = () => {
 
         const sendMoneyInfo = { sdn: senderNumber, rcn: receiverNumber, tk: amount };
 
-        fetch(`http://localhost:3000/sendmoney`, {
+        fetch(`https://netpay-server-muhammadali246397.vercel.app/sendmoney`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -60,18 +60,18 @@ const UserSendMoney = () => {
 
     
     
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axiosSecure.get(`/allUsers/${user?.email}`);
-                setUserInfor(response.data);
-            } catch (error) {
-                console.error('Error fetching user data:', error);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const response = await axiosSecure.get(`/allUsers/${user?.email}`);
+    //             setUserInfor(response.data);
+    //         } catch (error) {
+    //             console.error('Error fetching user data:', error);
+    //         }
+    //     };
 
-        fetchData();
-    }, [user]);
+    //     fetchData();
+    // }, [user]);
 
     return (
         <div className=" text-center mb-40 mt-8">
