@@ -1,3 +1,4 @@
+import SimpleChatBot from "../../chatBot/simpleChatBot/SimpleChatBot";
 import FixedChat from "../fixedChat/FixedChat";
 
 const Massage = () => {
@@ -6,7 +7,8 @@ const Massage = () => {
             {/* Your main content */}
 
             {/* Fixed Icon and Menu */}
-            <FixedChat />
+            {/* <FixedChat /> */}
+            <SimpleChatBot />
         </div>
     );
 };
