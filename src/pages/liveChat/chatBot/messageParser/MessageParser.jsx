@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MessagePersar = ({ children, actions }) => {
+const MessageParser = ({ children, actions }) => {
     const parse = (message) => {
         console.log(message);
     };
@@ -17,4 +17,4 @@ const MessagePersar = ({ children, actions }) => {
     );
 };
 
-export default MessagePersar;
+export default MessageParser;

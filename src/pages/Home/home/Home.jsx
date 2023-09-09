@@ -7,7 +7,6 @@ import TuchPoint from '../TuchPoint/TuchPoint';
 import WhyChooseUs from '../whyChooseUs/WhyChooseUs';
 import AnotherSEction from '../whyChooseUs/anotherSection/AnotherSEction';
 import LatestNewes from '../latestNews/LatestNewes';
-import SimpleChatBot from '../../chatBot/simpleChatBot/SimpleChatBot';
 
 const Home = () => {
 
@@ -26,7 +25,6 @@ const Home = () => {
                 <AnotherSEction></AnotherSEction>
                 <AccountSystem></AccountSystem>
                 <LatestNewes></LatestNewes>
-                {/* <SimpleChatBot /> */}
             </div>
 
         </div>
