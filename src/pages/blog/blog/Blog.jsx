@@ -13,6 +13,7 @@ const Blog = () => {
     return (
         <div className="mt-16 bg-[#070b29]">
             {/* Banner image */}
+            <h1></h1>
             <div >
                 <div className="carousel w-full mb-4 md:mb-8">
                     <img className='h-44 md:h-[450px]' src={BannerImage} alt="" />
