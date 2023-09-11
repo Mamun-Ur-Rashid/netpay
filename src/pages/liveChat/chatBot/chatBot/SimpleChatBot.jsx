@@ -6,15 +6,33 @@ import MessageParser from '../messageParser/MessageParser';
 import ActionProvider from '../actionProvider/ActionProvider';
 import { useState } from 'react';
 import { GrClose } from "react-icons/gr";
-
-
+import BotAvater from '../component/BotAvater';
 
 const SimpleChatBot = () => {
+
     const config = {
-        initialMessages: [createChatBotMessage(`Hello world`)],
-        botName: 'NetPay'
+        initialMessages: [createChatBotMessage(`Hello, How can I help you?`, {
+            widget: 'start',
+        })],
+        botName: 'NetPay',
+        customComponents: {
+            botAvatar: (props) => <BotAvater {...props} />,
+        },
+        widgets: [
+            // {
+            //     widgetName: 'start',
+            //     widgetFunc: (props) => <StartBtn text1={`Let's get start`} {...props} />,
+            //     //   mapStateToProps: ['gist'],
+            // },
+            // {
+            //     widgetName: 'hello',
+            //     widgetFunc: (props) => <StartBtn text2={`Hello`} {...props} />,
+            //     //   mapStateToProps: ['gist'],
+            // },
+        ]
     };
 
+    // toggle menubar
     const [menuVisible, setMenuVisible] = useState(false);
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
@@ -49,7 +67,6 @@ const SimpleChatBot = () => {
                         </div>
                     </div>
             }
-
         </div>
     );
 };
