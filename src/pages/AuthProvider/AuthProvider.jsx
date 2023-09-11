@@ -31,23 +31,22 @@ const AuthProvider = ({ children }) => {
             setUser(currentUser)
 
             // get and set token
-            if (currentUser?.email) {
+            if (currentUser) {
                 fetch('https://netpay-server-muhammadali246397.vercel.app/jwt', {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",
                     },
                     body: JSON.stringify({ email: currentUser.email })
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data)
-                        localStorage.setItem('access-token', data.token)
-                        setLoading(false);
-                    })
-            }
-            else {
-                localStorage.removeItem('access-token')
+                }).then(res => console.log(res))
+                    // .then(data => {
+                    // console.log(data)
+                    // localStorage.setItem('access-token', data.token)
+                    // setLoading(false);
+                // })
+                console.log('hello', currentUser)
+            }else {
+                // localStorage.removeItem('access-token')
             }
         })
         return () => {

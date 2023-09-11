@@ -1,16 +1,11 @@
-import BannerImage from "../../../assets/Banner/supportB.png";
-
+import CommonBanner from "../../../shared/commonBanner/CommonBanner";
+import img from "../../../assets/help.jpg"
 import DetailsHelp from "../detailsHelp/DetailsHelp";
 
 const Help = () => {
     return (
         <div className="mt-16 bg-[#070b29]">
-            {/* Banner image */}
-            <div >
-                <div className="carousel w-full mb-4 md:mb-8">
-                    <img className='h-44 md:h-[450px]' src={BannerImage} alt="" />
-                </div>
-            </div>
+            <CommonBanner BannerImage={img}></CommonBanner>
             <DetailsHelp></DetailsHelp>
         </div>
     );

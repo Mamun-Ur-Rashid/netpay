@@ -3,7 +3,6 @@ import { useQuery } from '@tanstack/react-query';
 import { useContext, useEffect, useState } from 'react';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
-import axios from 'axios';
 
 
 const data = [
@@ -77,23 +76,14 @@ const AdminHome = () => {
         fetchData();
     }, [user]);
 
-    const { data: users = [], refetch } = useQuery({
+    const { data: users = [], isLoading: loading, refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/allUsers');
+            const res = await axiosSecure.get('/alluser');
             console.log(res.data)
             return res.data;
         }
     });
-
-    const { data: transection = [] } = useQuery({
-        queryKey: ['transection'],
-        queryFn: async () => {
-            const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/adminTransection');
-            console.log(res.data);
-            return res.data;
-        }
-    })
 
     return (
         <div>
@@ -102,10 +92,10 @@ const AdminHome = () => {
                    <p className='text-center font-bold pb-4'> Total Users <br /> <small className='text-5xl'>{users.length}</small></p> 
                 </div>
                 <div className='m-5 pl-3 pt-8 w-[90%] h-38 bg-[#C44933] rounded-xl text-2xl'>
-                    <p className='text-center font-bold pb-4'> Total Transactions <br /> <small className='text-5xl'>{transection.length}</small></p>
+                    <p className='text-center font-bold pb-4'> Total Transactions </p>
                 </div>
                 <div className='m-5 pl-3 pt-8 w-[90%] h-38 bg-[#3348C4] rounded-xl text-2xl'> 
-                    <p className='text-center font-bold pb-4'>  Total Agents <br /> <small className='text-5xl'>8</small></p>
+                    <p className='text-center font-bold pb-4'>  Total Agents </p>
                 </div>
                 <div className='m-5 mr-5 pl-3 pt-8 w-[90%] h-38 bg-[#0F101A] rounded-xl text-2xl'> 
                     <p className='text-center font-bold pb-4'>   Total Amount (Tk) <br /> 
@@ -115,11 +105,11 @@ const AdminHome = () => {
             <div className='w-full p-4 mt-10'>
                 <h2 className='text-2xl font-semibold'>Transaction Analytics</h2>
                 <BarChart
-                    width={1200}
+                    width={900}
                     height={400}
                     data={data}
 
-                    barSize={40}
+                    barSize={30}
                     className='mt-5'
                 >
                     <XAxis dataKey="name" />

@@ -52,7 +52,6 @@ const DashLayout = () => {
                                     <li className='h-10  text-lg ml-6 pt-2 mt-10 '><NavLink to='dashboard/adminHome'> <FaChartColumn className='mx-2 inline-flex mb-[2px]'></FaChartColumn> Admin Dashboard</NavLink></li>
                                     <li className='h-10  text-lg ml-6 pt-2'><NavLink to='dashboard/paymentHistory'><FaHistory className='inline-flex mb-[2px] mx-2'></FaHistory> Payment History</NavLink></li>
                                     <li className='h-10  text-lg ml-6 pt-2'><NavLink to='dashboard/allUsers'><FaUserGroup className='inline-flex mb-[2px] mx-2'></FaUserGroup> All Users</NavLink></li>
-                                    <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/adminAddMoney '> <FaMoneyBillWave className='inline-flex mb-[2px] mx-2'></FaMoneyBillWave>Add Money</NavLink></li>
                                     <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/adminSendMoney'> <FaHourglassHalf className='inline-flex mb-[2px] mx-2'></FaHourglassHalf>Send Money</NavLink></li>
 
                                     <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome>Home</NavLink></li></>
@@ -78,6 +77,7 @@ const DashLayout = () => {
                                         {/* Step 3: Create the dropdown menu */}
                                         {sendMoneyDropdown && (
                                             <ul className="menu menu-sm dropdown-content mt-3  mr-4 z-[1] shadow bg-base-100 rounded-box  bg-[hsla(11,66%,51%,1)] p-2 text-black">
+                                                <li><NavLink to='dashboard/agentToAgent'>Agent to Agent</NavLink></li>
                                                 <li><NavLink to='dashboard/agentToAdmin'>Agent to Admin</NavLink></li>
                                                 <li><NavLink to='dashboard/agentToUser'>Agent to User</NavLink></li>
                                             </ul>
@@ -95,11 +95,14 @@ const DashLayout = () => {
                                                     <img className=' w-full h-full mb-6' src={logo} alt="" />
                                                 </div>
                                             </NavLink>
-                                            <li className='h-10  text-lg ml-6 pt-2 mt-10 '><NavLink to='dashboard/userHome'> <FaChartColumn className='mx-2 inline-flex mb-[2px]'></FaChartColumn> User Dashboard</NavLink></li>
-                                            <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/cashOut'> <FaMoneyBillWave className='inline-flex mb-[2px] mx-2'></FaMoneyBillWave> Cash Out</NavLink></li>
-                                            <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/send-money'><FaHourglassHalf className='inline-flex mb-[2px] mx-2'></FaHourglassHalf> Send Money</NavLink></li>
-                                            <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/setting'> <FaWhmcs className='inline-flex mb-[2px] mx-2'></FaWhmcs> Setting</NavLink></li>
-                                            <li className='h-10  text-lg ml-6 pt-2'><NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome> Home</NavLink></li></>
+                                            <li className='h-10  text-lg ml-6 pt-2 mt-10 '><NavLink to='dashboard/home'>User Dashboard</NavLink></li>
+                                            <li className='h-10  text-lg ml-6 pt-2'><NavLink to='dashboard/send-money'>Send Money</NavLink></li>
+                                            <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/cashout'>Cash Out</NavLink></li>
+                                            <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/cashout'>Deposite Money</NavLink></li>
+                                            <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/cashout'>Bank account</NavLink></li>
+                                            <li className='h-10  text-lg ml-6 pt-2'><NavLink to='dashboard/cashout'>Card Number</NavLink></li>
+                                            <li className='h-10  text-lg ml-6 pt-2 '><NavLink to='dashboard/cashout'>Setting</NavLink></li>
+                                            <li className='h-10  text-lg ml-6 pt-2'><NavLink to='/'>Home</NavLink></li></>
                                     )
 
                             }
@@ -108,7 +111,7 @@ const DashLayout = () => {
                     </div>
 
                     {/* Main content */}
-                    <div className=' w-[1100px] bg-slate-200 mt-10 md:mt-0'>
+                    <div className=' w-full bg-slate-200 mt-10 md:mt-0'>
                         <div className='w-full h-20 bg-white border-b-[1px] shadow-sm shadow-[#1D2939] sticky top-0 border-b-[#1D2939]'>
                             <div className='flex justify-between'>
                                 <div className='relative'>
