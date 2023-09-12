@@ -25,7 +25,6 @@ const Home = () => {
                 <AnotherSEction></AnotherSEction>
                 <AccountSystem></AccountSystem>
                 <LatestNewes></LatestNewes>
-
             </div>
 
         </div>
