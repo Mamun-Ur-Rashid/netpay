@@ -80,7 +80,7 @@ const AdminHome = () => {
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/allUsers');
+            const res = await axios.get('http://localhost:3000/allUsers');
             console.log(res.data)
             return res.data;
         }
@@ -89,7 +89,7 @@ const AdminHome = () => {
     const { data: transection = [] } = useQuery({
         queryKey: ['transection'],
         queryFn: async () => {
-            const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/adminTransection');
+            const res = await axios.get('http://localhost:3000/adminTransection');
             console.log(res.data);
             return res.data;
         }

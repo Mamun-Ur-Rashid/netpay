@@ -10,7 +10,7 @@ const useAxiosSecure = () => {
   const navigate = useNavigate(); 
 
   const axiosSecure = axios.create({
-    baseURL: 'https://netpay-server-muhammadali246397.vercel.app', 
+    baseURL: 'http://localhost:3000', 
   });
 
   useEffect(() => {
