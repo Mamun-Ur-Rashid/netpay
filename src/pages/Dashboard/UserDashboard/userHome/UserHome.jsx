@@ -1,9 +1,11 @@
 import React from 'react';
+import useUser from '../../../../Hook/useUser';
 
 const UserHome = () => {
+    const [isUserInfo] = useUser();
     return (
         <div>
-            <h2> user Home</h2>
+            <div><p>Total Amount: {isUserInfo.balance}</p></div>
         </div>
     );
 };
