@@ -17,17 +17,15 @@ const Login = () => {
     const onSubmit = data =>{
         handleLogin(data.email,data.password)
         .then(result => {
-            console.log(result)
             Swal.fire({
                 position: 'center',
                 icon: 'success',
                 title: 'Login successfuly',
                 showConfirmButton: false,
                 timer: 1500
-              })
-              reset();
-              navigate('/')
-
+            })
+            reset();
+            navigate('/')
         })
         .catch(error => {
             setError(error)

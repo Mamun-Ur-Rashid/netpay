@@ -73,8 +73,9 @@ const Navbar = () => {
                         <NavLink to='/business' className="">Business</NavLink>
                         <NavLink to='/about' className="">About</NavLink>
                         { user &&
-                            <NavLink to='dashboard' className=" hover:text-orange-400">Dashboard</NavLink>
+                            <NavLink to='dashboard' className=" hover:text-blue-700">Dashboard</NavLink>
                         }
+                        
                     
                     </ul>
 

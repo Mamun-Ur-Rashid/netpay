@@ -32,19 +32,17 @@ const AuthProvider = ({ children }) => {
 
             // get and set token
             if (currentUser) {
-                fetch('https://netpay-server-muhammadali246397.vercel.app/jwt', {
+                fetch('https://attractive-hoodie-newt.cyclic.app/jwt', {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",
                     },
                     body: JSON.stringify({ email: currentUser.email })
-                }).then(res => console.log(res))
-                    // .then(data => {
-                    // console.log(data)
-                    // localStorage.setItem('access-token', data.token)
-                    // setLoading(false);
-                // })
-                console.log('hello', currentUser)
+                }).then(res => res.json())
+                    .then(data => {
+                    localStorage.setItem('access-token', data.token)
+                    setLoading(false);
+                })
             }else {
                 // localStorage.removeItem('access-token')
             }

@@ -1,14 +1,57 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import useUser from '../../../../../Hook/useUser';
+import Swal from 'sweetalert2';
 
 const AgentToAdmin = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const [isUserInfo] = useUser();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const [totalBalance, setTotalBalance] = useState(isUserInfo.balance);
+
+    useEffect(() => {
+        setTotalBalance(isUserInfo.balance);
+    }, [isUserInfo]);
+
+    const onSubmit = async (data) => {
+        try {
+            const response = await fetch('https://attractive-hoodie-newt.cyclic.app/agentToAdmin', {
+                method: 'PATCH',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                const responseData = await response.json();
+
+                // Check if responseData contains 'totalBalance'
+                if (responseData.hasOwnProperty('totalBalance')) {
+                    setTotalBalance(responseData.totalBalance);
+                }
+
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: `${responseData.message}`,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+
+                reset();
+            } else {
+                console.error('Failed to send money');
+            }
+        } catch (error) {
+            console.error('An error occurred', error);
+        }
+    };
+
     return (
         <div className='p-2 md:m-4 '>
              <div className='md:flex gap-4 text-center items-center'>
             <div className='w-1/4 rounded-xl bg-[#C44933] text-center'>
-                <p className='text-lg p-4'>Total Amount (Tk) <br /> <small className='text-2xl'>1200</small></p>
+                <p className='text-lg p-4'>Total Amount (Tk) <small className='text-2xl font-bold'>{totalBalance}</small></p>
             </div>
             <div>
                 <p className='text-center text-4xl ml-20 font-bold'>Agent to Admin</p>
@@ -19,7 +62,7 @@ const AgentToAdmin = () => {
             <form onSubmit={handleSubmit(onSubmit)} className='space-y-2 text-2xl'>
                 <div className='form-control md:w-3/4 mx-auto'>
                     <label htmlFor="">Agent Account</label>
-                    <input type='number' className='input input-bordered mt-2' {...register("agentAccount", { minLength: 11, maxLength:11 })} placeholder='Enter Agent Account Number' />
+                    <input type='number' className='input input-bordered mt-2' {...register("agentAccount", { minLength: 11, maxLength:11 })} defaultValue={isUserInfo?.number} placeholder='Enter Agent Account Number' />
                     {errors.agentAccount && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
                 </div>
                 <div className='form-control md:w-3/4 mx-auto'>

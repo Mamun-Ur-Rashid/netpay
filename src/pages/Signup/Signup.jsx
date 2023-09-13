@@ -19,66 +19,62 @@ import {ImProfile} from 'react-icons/im'
 const Signup = () => {
 
 
-    const { handleSignUp, updateUserProfile } = useContext(AuthContext);
-    const { register, handleSubmit,watch, reset, formState: { errors } } = useForm();
-    const navigate = useNavigate();
-    const [error, setError] = useState(null)
+  const { handleSignUp, updateUserProfile } = useContext(AuthContext);
+  const { register, handleSubmit,watch, reset, formState: { errors } } = useForm();
+  const navigate = useNavigate();
+  const [error, setError] = useState(null)
 
-    const onSubmit = data => {
-        console.log(data)
-        const image = data.photo[0];
+  const onSubmit = data => {
 
-        if (image) {
-            const formData = new FormData();
-            formData.append('image', image);
+    console.log(data)
+    const image = data.photo[0];
 
-            fetch(`https://api.imgbb.com/1/upload?key=0c21f447728055a7e1f8a7d0fef93110`, {
-                method: 'POST',
-                body: formData
-            })
-                .then(res => res.json())
-    .then(imageRes => {
+    if(image) {
+
+      const formData = new FormData();
+      formData.append('image', image);
+
+      fetch(`https://api.imgbb.com/1/upload?key=0c21f447728055a7e1f8a7d0fef93110`, {
+        method: 'POST',
+        body: formData
+      }).then(res => res.json())
+      .then(imageRes => {
         if (imageRes.success) {
-            const images = imageRes.data.display_url
-            const { name, email, nid, number, password } = data
-            const tk = '1000'
-            const userInfo = { name, email, nid, number, password, ImgUrl: images, role: 'user', balance: parseInt(tk) }
-            console.log(userInfo)
+          const images = imageRes.data.display_url
+          const { name, email, nid, number, password } = data
+          const tk = '1000'
+          const userInfo = { name, email, nid, number, password, ImgUrl: images, role: 'user', balance: parseInt(tk) }
 
-            handleSignUp(data.email, data.password)
-                .then((result) => {
-                    console.log(result)
-                    const user = result.user
+          console.log(userInfo)
 
-                    fetch('https://netpay-server-muhammadali246397.vercel.app/allUsers', {
-                        method: 'POST',
-                        headers: {
-                            'content-type': 'application/json'
-                        },
-                        body: JSON.stringify(userInfo)
-                    })
-                        .then(res => res.json())
-                        .then(data => {
+          handleSignUp(data.email, data.password).then((result) => {
 
-                            if (data.insertedId) {
-                                Swal.fire({
-                                    position: 'center',
-                                    icon: 'success',
-                                    title: 'Sign up successfuly',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                })
-                                reset();
-                                navigate('/')
-                            }
-                        })
+            const user = result.user
 
-                })
-                .catch(error => {
-                    setError(error)
-                    console.log(error.message)
-                })
-
+            fetch('https://attractive-hoodie-newt.cyclic.app/allUsers', {
+              method: 'POST',
+              headers: {
+                'content-type': 'application/json'
+              },
+              body: JSON.stringify(userInfo)
+            }).then(res => res.json())
+              .then(data => {
+                if (data.insertedId) {
+                  Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Sign up successfuly',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                  reset();
+                  navigate('/')
+                }
+              })
+          }).catch(error => {
+            setError(error)
+            console.log(error.message)
+          })
         }
     }).catch(error => {
         console.error('Error uploading image:', error);
@@ -86,11 +82,11 @@ const Signup = () => {
     } else {
     console.error('No image data found.');
     }
-};
+  };
 
 
    
-const validatePassword = (value) => {
+  const validatePassword = (value) => {
     if (!value) {
         return 'Password is required';
     }
@@ -104,10 +100,10 @@ const validatePassword = (value) => {
         return 'Password must contain at least one special character';
     }
     return true;
-};
+  };
 
-return (
-
+    return (
+  
     // <div className="mt-10 flex items-center w-fit mx-auto rounded-lg justify-center ">
 
     //     <div className=' border-2 h-full'>

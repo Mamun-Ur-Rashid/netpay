@@ -6,16 +6,15 @@ import Swal from 'sweetalert2';
 const AgentToUser = () => {
     const [isUserInfo] = useUser();
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
-    const [totalBalance, setTotalBalance] = useState(isUserInfo.balance); // Initial total balance
+    const [totalBalance, setTotalBalance] = useState(isUserInfo.balance);
 
     useEffect(() => {
-        // Update total balance when isUserInfo changes
         setTotalBalance(isUserInfo.balance);
     }, [isUserInfo]);
 
     const onSubmit = async (data) => {
         try {
-            const response = await fetch('https://netpay-server-muhammadali246397.vercel.app/agentToUser', {
+            const response = await fetch('https://attractive-hoodie-newt.cyclic.app/agentToUser', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -25,17 +24,21 @@ const AgentToUser = () => {
 
             if (response.ok) {
                 const responseData = await response.json();
+
+                // Check if responseData contains 'totalBalance'
+                if (responseData.hasOwnProperty('totalBalance')) {
+                    setTotalBalance(responseData.totalBalance);
+                }
+
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Send Money Successfully Completed!',
+                    title: `${responseData.message}`,
                     showConfirmButton: false,
                     timer: 1500
-                  })
-                reset();
+                });
 
-                // Update the total balance in the UI
-                setTotalBalance(responseData.totalBalance); // Assuming the response contains the updated total balance
+                reset();
             } else {
                 console.error('Failed to send money');
             }
@@ -43,13 +46,12 @@ const AgentToUser = () => {
             console.error('An error occurred', error);
         }
     };
-
    
     return (
         <div className='p-2 md:m-4 '>
             <div className='md:flex gap-4 text-center items-center'>
             <div className='w-1/4 rounded-xl bg-[#C44933] text-center'>
-                <p className='text-lg p-4'>Total Amount (Tk) <br /> <small className='text-2xl'>{totalBalance}</small></p>
+                <p className='text-lg p-4'>Total Amount (Tk) <small className='text-2xl font-bold'>{totalBalance}</small></p>
             </div>
             <div>
                 <p className='text-center text-2xl ml-20 font-bold'>Agent to User</p>
