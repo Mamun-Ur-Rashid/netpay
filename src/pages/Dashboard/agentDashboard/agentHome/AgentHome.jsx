@@ -61,13 +61,11 @@ const AgentHome = () => {
     const [axiosSecure] = useAxiosSecure();
     const {user} = useContext(AuthContext);
     const [isUserInfo, setUserInfo ] = useState(false);
-    console.log(isUserInfo);
 
     const { data: allTransactions = [], isLoading, refetch } = useQuery({
         queryKey: ['allTransactions'],
         queryFn: async () => {
             const res = await axios.get('https://attractive-hoodie-newt.cyclic.app/agentAllTransactions');
-            console.log(res.data);
             return res.data;
         }
     })

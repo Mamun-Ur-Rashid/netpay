@@ -12,7 +12,6 @@ const TransactionHistory =() => {
     queryKey: ['agentTransactions'],
     queryFn: async () => {
         const res = await axios.get('https://attractive-hoodie-newt.cyclic.app/agentAllTransactions');
-        console.log(res.data);
         return res.data;
     }
 })

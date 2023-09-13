@@ -56,7 +56,7 @@ const DashLayout = () => {
                                     </NavLink>
                                     <NavLink to='dashboard/adminHome' className='flex items-center mt-12'> <FaChartColumn className=' m-3'/> Admin Dashboard</NavLink>
                                     <NavLink to='dashboard/adminAddMoney' className='flex items-center'> <FaMoneyBillWave className=' m-3'/> Add Money</NavLink>
-                                    <NavLink to='dashboard/adminSendMoney' className='flex items-center'> <FaHourglassHalf className=' m-3'/>Send Money</NavLink>
+                                    <NavLink to='dashboard/send-money' className='flex items-center'> <MdSendToMobile size={20} className='ml-[8px] m-3'/> Send Money</NavLink>
                                     <NavLink to='dashboard/paymentHistory' className='flex items-center'> <FaHistory className='m-3'/>Transactions</NavLink>
                                     <NavLink to='dashboard/allUsers' className='flex items-center'> <FaUserGroup className=' m-3'/> All Users</NavLink>
                                     <NavLink to='dashboard/cashout' className='flex items-center'> <FaWhmcs className='m-3'/>Setting</NavLink>
@@ -71,6 +71,7 @@ const DashLayout = () => {
                                     </NavLink>
                                     <NavLink to='dashboard/agentHome' className='flex items-center mt-12'> <FaChartColumn className=' m-3'/> Agent Dashboard</NavLink>
                                     <NavLink to='dashboard/agentAddMoney' className='flex items-center'> <FaMoneyBillWave className=' m-3'/> Add Money</NavLink>
+                                    <NavLink to='dashboard/send-money' className='flex items-center'> <MdSendToMobile size={20} className='ml-[8px] m-3'/> Send Money</NavLink>
                                     <NavLink to='dashboard/agentTransaction' className='flex items-center'> <FaHistory className='m-3'/>Transactions</NavLink>
                                     <NavLink to='dashboard/cashout' className='flex items-center'> <FaWhmcs className='m-3'/>Setting</NavLink>
                                     <NavLink to='/' className='flex items-center m-3'> <FaHome className='mr-2'/> Home</NavLink>
@@ -101,10 +102,10 @@ const DashLayout = () => {
                                     </NavLink>
                                     <NavLink to='dashboard/home' className='flex items-center mt-12'> <FaChartColumn className=' m-3'/> User Dashboard</NavLink>
                                     <NavLink to='dashboard/send-money' className='flex items-center'> <MdSendToMobile size={20} className='ml-[8px] m-3'/> Send Money</NavLink>
-                                    <NavLink to='dashboard/cashout' className='flex items-center'> <MdOutlineRequestQuote size={20} className='ml-[8px] m-3'/> Request Payment</NavLink>
+                                    {/* <NavLink to='dashboard/cashout' className='flex items-center'> <MdOutlineRequestQuote size={20} className='ml-[8px] m-3'/> Request Payment</NavLink> */}
                                     <NavLink to='dashboard/cashout' className='flex items-center'> <IoCashOutline size={20} className='ml-[8px] m-3'/>Cash Out</NavLink>
-                                    <NavLink to='dashboard/cashout' className='flex items-center'> <FaHistory size={20} className='ml-[8px] m-3'/>Transactions</NavLink>
-                                    <NavLink to='/' className='flex items-center'> <FaHourglassHalf className='m-3'/>Deposit Money</NavLink>
+                                    {/* <NavLink to='dashboard/cashout' className='flex items-center'> <FaHistory size={20} className='ml-[8px] m-3'/>Transactions</NavLink> */}
+                                    {/* <NavLink to='/' className='flex items-center'> <FaHourglassHalf className='m-3'/>Deposit Money</NavLink> */}
                                     {/* <NavLink to='/' className='flex items-center'> <FaHourglassHalf className='m-3'/>Bank Account</NavLink>
                                     <NavLink to='/' className='flex items-center'> <FaHourglassHalf className='m-3'/>Card Number</NavLink>
                                     <NavLink to='/' className='flex items-center'> <FaHourglassHalf className='m-3'/>Setting</NavLink> */}

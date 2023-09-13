@@ -7,7 +7,6 @@ const PaymentHistory = () => {
         queryKey: ['transection'],
         queryFn: async () => {
             const res = await axios.get('https://attractive-hoodie-newt.cyclic.app/adminTransection');
-            console.log(res.data);
             return res.data;
         }
     })

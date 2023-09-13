@@ -23,9 +23,11 @@ const DashSendMoney = () => {
 
 
 
+
     const sendMoney = (event) => {
+        
         event.preventDefault();
-        const senderNumber = event.target.senderNumber.value;
+        const senderNumber = data?.data.number;
         const receiverNumber = event.target.receiverNumber.value;
         const amount = event.target.amount.value;
         
@@ -38,24 +40,24 @@ const DashSendMoney = () => {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(sendMoneyInfo)
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            Swal.fire({
+        }).then(res => res.json()).then(data => {
+
+            if(data.message == 'no user found'){
+                console.log('no user found')
+            }else if (data.message == 'Insufficient balance') {
+                console.log('insufficient balance')
+            }else if (data.modifiedCount === 1){
+                refetch();
+                event.target.reset();
+                Swal.fire({
                 position: 'top-end',
                 icon: 'success',
                 title: 'Send Money Successfully Completed!',
                 showConfirmButton: false,
                 timer: 1500
-              })
+                })
+            }
         })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-        
-        setIsSubmitted(true);
-        event.target.reset();
     };
 
     
@@ -106,16 +108,16 @@ const DashSendMoney = () => {
                         <label className="label">
                             <span className="label-text text-base text-white">Receiver Number</span>
                         </label>
-                        <input type="text" name="receiverNumber" placeholder="Receiver Number" className="input input-bordered text-black w-full max-w-xs" />
+                        <input type="number" name="receiverNumber" placeholder="Receiver Number" className="input input-bordered text-black w-full max-w-xs" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text text-base text-white">Type Amount</span>
                         </label>
-                        <input type="text" name="amount" placeholder="Amount" className="input input-bordered w-full text-black max-w-xs" />
+                        <input type="number" name="amount" placeholder="Amount" className="input input-bordered w-full text-black max-w-xs" />
                     </div>
                     <div className="mt-4 form-control">
-                        <input type="submit" className="bg-[#1ba8c6] w-1/2 ml-14 p-2 rounded-lg mb-10" />
+                        <input type="submit" className="bg-[#1ba8c6] w-1/2 ml-14 p-2 rounded-lg mb-10 cursor-pointer" />
                     </div>
                 </form>
                
