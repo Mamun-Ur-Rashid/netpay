@@ -115,7 +115,7 @@ const AdminHome = () => {
             <div className='w-full p-4 mt-10'>
                 <h2 className='text-2xl font-semibold'>Transaction Analytics</h2>
                 <BarChart
-                    width={1200}
+                    width={1000}
                     height={400}
                     data={data}
 

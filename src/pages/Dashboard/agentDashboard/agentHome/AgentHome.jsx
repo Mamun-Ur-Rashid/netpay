@@ -66,7 +66,7 @@ const AgentHome = () => {
     const { data: allTransactions = [], isLoading, refetch } = useQuery({
         queryKey: ['allTransactions'],
         queryFn: async () => {
-            const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/agentAllTransactions');
+            const res = await axios.get('https://netpay-server-muhammadali246397.vercel.appagentAllTransactions');
             console.log(res.data);
             return res.data;
         }

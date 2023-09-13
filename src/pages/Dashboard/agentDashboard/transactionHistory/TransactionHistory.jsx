@@ -8,7 +8,7 @@ const TransactionHistory =() => {
    const { data: agentTransactions = [], refetch } = useQuery({
     queryKey: ['agentTransactions'],
     queryFn: async () => {
-        const res = await axios.get(`https://netpay-server-muhammadali246397.vercel.app/agentTransactions/${isUserInfo?.number}`);
+        const res = await axios.get(`https://netpay-server-muhammadali246397.vercel.appagentTransactions/${isUserInfo?.number}`);
         console.log(res.data);
         return res.data;
     }

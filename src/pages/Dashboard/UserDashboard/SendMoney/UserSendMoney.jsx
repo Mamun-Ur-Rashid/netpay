@@ -32,7 +32,7 @@ const UserSendMoney = () => {
 
         const sendMoneyInfo = { sdn: senderNumber, rcn: receiverNumber, tk: amount };
 
-        fetch(`https://netpay-server-muhammadali246397.vercel.app/sendmoney`, {
+        fetch(`https://netpay-server-muhammadali246397.vercel.appsendmoney`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
