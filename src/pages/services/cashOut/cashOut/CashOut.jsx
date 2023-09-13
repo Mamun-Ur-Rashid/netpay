@@ -2,9 +2,8 @@ import Title from "../../../../shared/title/Title";
 import AllService from "../../allService/AllService";
 import Faq from "../../allServicesFAQ/Faq";
 import AllServicesHeader from "../../allServicesHeader/AllServicesHeader";
-import BannerImage from '../../../../assets/Banner/serviceB.png'
-import CashOutServiceDetails from "../cashOutProcess/CashOutServiceDetails";
 import ServiceBanner from "../../serviceBanner/ServiceBanner";
+import CashOutServiceDetails from "../cashOutProcess/CashOutServiceDetails";
 
 const CashOut = () => {
 
@@ -89,7 +88,7 @@ const CashOut = () => {
 
     return (
         <div className='mt-16 bg-[#070b29]'>
-            <ServiceBanner BannerImage={BannerImage}></ServiceBanner>
+            <ServiceBanner></ServiceBanner>
             <div className="px-8 md:px-24 ">
                 <AllService></AllService>
                 <Title title={'Cash Out'} />

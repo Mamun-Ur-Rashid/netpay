@@ -4,8 +4,6 @@ import Faq from "../../allServicesFAQ/Faq";
 import AllServicesHeader from "../../allServicesHeader/AllServicesHeader";
 import ServiceBanner from "../../serviceBanner/ServiceBanner";
 import AddMoneyServiceDetalis from "../addMoneyProcess/AddMoneyServiceDetalis";
-import BannerImage from '../../../../assets/Banner/serviceB.png'
-
 
 const AddMoney = () => {
 
@@ -89,7 +87,7 @@ const AddMoney = () => {
 
     return (
         <div className='mt-16 bg-[#070b29]'>
-            <ServiceBanner BannerImage={BannerImage}></ServiceBanner>
+            <ServiceBanner></ServiceBanner>
             <div className="px-8 md:px-24">
                 <AllService></AllService>
                 <Title title={'Add Money'} />

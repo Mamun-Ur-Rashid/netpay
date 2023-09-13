@@ -2,8 +2,8 @@
 const Title = ({ title, subTitle }) => {
     return (
         <div >
-            <h1 className="text-center font-bold text-4xl md:text-5xl text-[#17aac9]">{title}</h1>
-            <p className="mt-1 text-sm py-2 text-center text-slate-200">{subTitle}</p>
+            <h1 className="text-center font-bold text-5xl md:text-5xl text-blue-500">{title}</h1>
+            <p className="mt-1 pt-4 pb-10 text-center text-black font-semibold">{subTitle}</p>
         </div>
     );
 };

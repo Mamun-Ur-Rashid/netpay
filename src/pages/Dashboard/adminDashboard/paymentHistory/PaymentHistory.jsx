@@ -6,8 +6,7 @@ const PaymentHistory = () => {
     const { data: transection = [], isLoading, refetch } = useQuery({
         queryKey: ['transection'],
         queryFn: async () => {
-            const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/adminTransection');
-            console.log(res.data);
+            const res = await axios.get('https://attractive-hoodie-newt.cyclic.app/adminTransection');
             return res.data;
         }
     })

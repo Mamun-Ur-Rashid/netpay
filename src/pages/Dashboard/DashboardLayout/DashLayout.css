@@ -1,0 +1,5 @@
+#dashboard a.active {
+    background-color: #23445b;
+    color: white;
+    border-radius: 10px;
+}
