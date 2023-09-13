@@ -10,7 +10,7 @@ const useAxiosSecure = () => {
   const navigate = useNavigate(); 
 
   const axiosSecure = axios.create({
-    baseURL: 'http://localhost:3000', 
+    baseURL: 'https://attractive-hoodie-newt.cyclic.app/', 
   });
 
   useEffect(() => {

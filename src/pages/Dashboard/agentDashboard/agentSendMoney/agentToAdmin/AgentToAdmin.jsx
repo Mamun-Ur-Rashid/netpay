@@ -14,7 +14,7 @@ const AgentToAdmin = () => {
 
     const onSubmit = async (data) => {
         try {
-            const response = await fetch('https://netpay-server-muhammadali246397.vercel.app/agentToAdmin', {
+            const response = await fetch('https://attractive-hoodie-newt.cyclic.app/agentToAdmin', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
