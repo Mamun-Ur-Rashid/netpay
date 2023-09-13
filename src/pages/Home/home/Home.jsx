@@ -23,7 +23,7 @@ const Home = () => {
                 <WhyChooseUs></WhyChooseUs>
                 <TuchPoint></TuchPoint>
                 <AnotherSEction></AnotherSEction>
-                {/* <AccountSystem></AccountSystem> */}
+                <AccountSystem></AccountSystem>
                 {/* <LatestNewes></LatestNewes> */}
 
             </div>
