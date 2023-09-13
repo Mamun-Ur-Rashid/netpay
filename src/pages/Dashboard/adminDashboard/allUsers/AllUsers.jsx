@@ -7,7 +7,7 @@ const AllUsers = () => {
     const { data: users = [], isLoading: loading, refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://attractive-hoodie-newt.cyclic.app/allUsers');
+            const res = await axios.get('https://red-quaint-snail.cyclic.app/allUsers');
             console.log(res.data);
             return res.data;
         }

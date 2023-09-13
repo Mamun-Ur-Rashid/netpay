@@ -15,7 +15,7 @@ const AdminAddMoney = () => {
 
     const onSubmit = async (data) => {
         try {
-            const response = await fetch('https://attractive-hoodie-newt.cyclic.app/adminAddMoney', {
+            const response = await fetch('https://red-quaint-snail.cyclic.app/adminAddMoney', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
