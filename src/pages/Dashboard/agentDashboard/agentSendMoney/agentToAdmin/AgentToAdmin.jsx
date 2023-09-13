@@ -14,7 +14,7 @@ const AgentToAdmin = () => {
 
     const onSubmit = async (data) => {
         try {
-            const response = await fetch('https://attractive-hoodie-newt.cyclic.app/agentToAdmin', {
+            const response = await fetch('https://red-quaint-snail.cyclic.app/agentToAdmin', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

@@ -51,7 +51,7 @@ const Signup = () => {
 
             const user = result.user
 
-            fetch('https://attractive-hoodie-newt.cyclic.app/allUsers', {
+            fetch('https://red-quaint-snail.cyclic.app/allUsers', {
               method: 'POST',
               headers: {
                 'content-type': 'application/json'

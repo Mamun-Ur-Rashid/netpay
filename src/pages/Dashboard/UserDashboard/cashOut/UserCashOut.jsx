@@ -8,8 +8,10 @@ const UserCashOut = () => {
     const [user] = useUser();
     const [error, SetError] = useState(null)
     const onSubmit = data => {
+        data.userNumber = user?.number;
         console.log(data)
-        fetch('https://attractive-hoodie-newt.cyclic.app/cashOut', {
+
+        fetch('https://red-quaint-snail.cyclic.app/cashOut', {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"
@@ -18,6 +20,7 @@ const UserCashOut = () => {
         })
         .then(res => res.json())
         .then(data => {
+            console.log(data)
             if(data.acknowledged){
                 Swal.fire({
                     position: 'center',
@@ -40,7 +43,7 @@ const UserCashOut = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-4 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">User Account</label>
-                        <input type='text' className='input input-bordered mt-2' defaultValue={user?.number} {...register("userNumber", { minLength: 11, maxLength: 11 })} placeholder='Enter Admin Account Number' />
+                        <input type='text' className='input input-bordered mt-2' disabled defaultValue={user?.number} {...register("userNumber", { maxLength: 11 })} placeholder='Enter Admin Account Number' />
                         {errors.adminAccount && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
                     </div>
                     <div className='form-control md:w-3/4 mx-auto'>

@@ -11,7 +11,7 @@ const TransactionHistory =() => {
    const { data: agentTransactions = [], isLoading, refetch } = useQuery({
     queryKey: ['agentTransactions'],
     queryFn: async () => {
-        const res = await axios.get('https://attractive-hoodie-newt.cyclic.app/agentAllTransactions');
+        const res = await axios.get('https://red-quaint-snail.cyclic.app/agentAllTransactions');
         return res.data;
     }
 })

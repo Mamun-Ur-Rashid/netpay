@@ -212,7 +212,7 @@ const AdminHome = () => {
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://attractive-hoodie-newt.cyclic.app/allUsers');
+            const res = await axios.get('https://red-quaint-snail.cyclic.app/allUsers');
             
             return res.data;
         }
@@ -221,7 +221,7 @@ const AdminHome = () => {
     const { data: transection = [] } = useQuery({
         queryKey: ['transection'],
         queryFn: async () => {
-            const res = await axios.get('https://attractive-hoodie-newt.cyclic.app/adminTransection');
+            const res = await axios.get('https://red-quaint-snail.cyclic.app/adminTransection');
             return res.data;
         }
     })
