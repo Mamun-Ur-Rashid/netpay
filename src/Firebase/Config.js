@@ -5,13 +5,15 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey:import.meta.env.VITE_apiKey,
-  authDomain:import.meta.env.VITE_authDomain,
-  projectId:import.meta.env.VITE_projectId,
-  storageBucket:import.meta.env.VITE_storageBucket,
-  messagingSenderId:import.meta.env.VITE_messagingSenderId,
-  appId:import.meta.env.VITE_appId,
+  apiKey:"AIzaSyDx7KiOehUCZOKtme6adZugpmWX4PwujWM",
+  authDomain:"netpay-e96e5.firebaseapp.com",
+  projectId:"netpay-e96e5",
+  storageBucket:"netpay-e96e5.appspot.com",
+  messagingSenderId:"591393718449",
+  appId:"1:591393718449:web:000ebe89e96d67cb22e290"
 };
+
+ 
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

@@ -5,7 +5,7 @@ const MobileRechareServiceDetails = () => {
     return (
         <div className="mt-4 md:mt-8">
             <Title title={'Mobile Recharge Service Details'}></Title>
-            <div className="bg-[#1B2654] text-slate-200 p-8 md:p-10">
+            <div className="bg-[#4e63b8] text-slate-200 p-8 md:p-10">
                 <p>At NetPay, we&apos;re here to simplify your mobile recharge experience. Our Mobile Recharge feature allows you to top up your phone&apos;s balance quickly and conveniently, ensuring you stay connected without any interruptions.
 
                     Whether you need to make an urgent call, send a text, or use mobile data, our Mobile Recharge feature ensures you have the means to communicate effortlessly.

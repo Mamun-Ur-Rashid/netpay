@@ -1,11 +1,10 @@
 import Title from "../../../../shared/title/Title";
+import Massage from "../../../liveChat/massage/Massage";
 import AllService from "../../allService/AllService";
 import Faq from "../../allServicesFAQ/Faq";
 import AllServicesHeader from "../../allServicesHeader/AllServicesHeader";
 import ServiceBanner from "../../serviceBanner/ServiceBanner";
 import PaymentServiceDetails from "../paymentProcess/PaymentServiceDetails";
-import BannerImage from '../../../../assets/Banner/serviceB.png'
-
 
 const Payment = () => {
 
@@ -88,8 +87,8 @@ const Payment = () => {
     ];
 
     return (
-        <div className='mt-16 bg-[#070b29]'>
-            <ServiceBanner BannerImage={BannerImage}></ServiceBanner>
+        <div className=' '>
+            <ServiceBanner></ServiceBanner>
             <div className="px-8 md:px-24">
                 <AllService></AllService>
                 <Title title={'Payment'} />
@@ -102,10 +101,11 @@ const Payment = () => {
                     ></AllServicesHeader>
                 </div>
                 <PaymentServiceDetails />
-                <div className="bg-[#1B2654] p-8 mt-10">
+                <div className="bg-[#4e63b8] p-8 mt-10">
                     <Faq faqData={faqData}></Faq>
                 </div>
             </div>
+            <Massage />
         </div>
     );
 };

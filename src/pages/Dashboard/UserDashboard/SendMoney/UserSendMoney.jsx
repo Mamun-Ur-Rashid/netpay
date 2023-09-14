@@ -2,8 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../../Hook/useAxiosSecure';
+import { useQuery } from "@tanstack/react-query";
 
-const UserSendMoney = () => {
+
+const DashSendMoney = () => {
+
+
+
     const [isSubmitted, setIsSubmitted] = useState(false);
     const {user} = useContext(AuthContext);
     const [axiosSecure] = useAxiosSecure();
@@ -32,7 +37,7 @@ const UserSendMoney = () => {
 
         const sendMoneyInfo = { sdn: senderNumber, rcn: receiverNumber, tk: amount };
 
-        fetch(`https://netpay-server-muhammadali246397.vercel.app/sendmoney`, {
+        fetch(`https://red-quaint-snail.cyclic.app/sendmoney`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -43,7 +48,7 @@ const UserSendMoney = () => {
         .then(data => {
             console.log(data);
             Swal.fire({
-                position: 'top-end',
+                position: 'top-center',
                 icon: 'success',
                 title: 'Send Money Successfully Completed!',
                 showConfirmButton: false,
@@ -58,52 +63,59 @@ const UserSendMoney = () => {
         event.target.reset();
     };
 
-    
-    
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const response = await axiosSecure.get(`/allUsers/${user?.email}`);
-    //             setUserInfor(response.data);
-    //         } catch (error) {
-    //             console.error('Error fetching user data:', error);
-    //         }
-    //     };
 
-    //     fetchData();
-    // }, [user]);
+    
 
     return (
-        <div className=" text-center mb-40 mt-8">
-            <h1 className="text-4xl mt-4 font-bold">Send Money</h1>
-            <div className="pl-4 mt-4 md:w-3/4 mx-auto shadow-2xl bg-slate-400 rounded-lg">
-                <form action="" onSubmit={sendMoney} className='md:w-3/4 mx-auto md:px-20 mt-5'>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text text-bas mt-8">Sender Number</span>
-                        </label>
-                        <input type="text" defaultValue={isUserInfo?.number} name="senderNumber" placeholder="Sender Number" className="input input-bordered w-full text-black max-w-xs" />
-                    </div>
-                    <div className="form-control py-2">
-                        <label className="label">
-                            <span className="label-text text-base text-white">Receiver Number</span>
-                        </label>
-                        <input type="text" name="receiverNumber" placeholder="Receiver Number" className="input input-bordered text-black w-full max-w-xs" />
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text text-base text-white">Type Amount</span>
-                        </label>
-                        <input type="text" name="amount" placeholder="Amount" className="input input-bordered w-full text-black max-w-xs" />
-                    </div>
-                    <div className="mt-4 form-control">
-                        <input type="submit" className="bg-[#1ba8c6] w-1/2 ml-14 p-2 rounded-lg mb-10" />
-                    </div>
-                </form>
-               
-            </div>
+        <div className="text-center mb-40">
+        <h1 className="text-4xl mt-4 font-bold">Send Money</h1>
+        <div className="pl-4 mt-4 md:w-1/2 mx-auto shadow-2xl bg-gradient-to-r from-[#4e63b8] to-gray-300 rounded-lg">
+            <form action="" onSubmit={sendMoney} className="md:w-full mx-auto md:px-20 mt-5">
+                <div className="form-control w-full">
+                    <label className="label">
+                        <span className="label-text text-base mt-2 text-white">Sender Number</span>
+                    </label>
+                    <input
+                        type="text"
+                        defaultValue={isUserInfo?.number}
+                        name="senderNumber"
+                        placeholder="Sender Number"
+                        className="input input-bordered text-black"
+                    />
+                </div>
+                <div className="form-control w-full py-2">
+                    <label className="label">
+                        <span className="label-text text-base text-white">Receiver Number</span>
+                    </label>
+                    <input
+                        type="number"
+                        name="receiverNumber"
+                        placeholder="Receiver Number"
+                        className="input input-bordered text-black w-full "
+                    />
+                </div>
+                <div className="form-control w-full">
+                    <label className="label">
+                        <span className="label-text text-base text-white">Type Amount</span>
+                    </label>
+                    <input
+                        type="number"
+                        name="amount"
+                        placeholder="Amount"
+                        className="input input-bordered text-black w-full"
+                    />
+                </div>
+                <div className="form-control w-full">
+                    <input
+                        type="submit"
+                        className="bg-[#4e63b8] p-2 my-5 border-0 rounded-xl mb-4 text-white cursor-pointer"
+                        value="Send Money"
+                    />
+                </div>
+            </form>
         </div>
+    </div>
     );
 };
 
-export default UserSendMoney;
+export default DashSendMoney;

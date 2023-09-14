@@ -1,11 +1,11 @@
-import React from 'react';
 
-const Setting = () => {
-    return (
+
+export default function Setting () {
+
+    return(
+
         <div>
-            <h4>This is setting implement in next week</h4>
+            <h1>Setting</h1>
         </div>
-    );
-};
-
-export default Setting;
+    )
+}

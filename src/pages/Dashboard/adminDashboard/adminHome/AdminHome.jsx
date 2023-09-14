@@ -1,7 +1,8 @@
+
 import useAxiosSecure from '../../../../Hook/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { useContext, useEffect, useState } from 'react';
-import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'recharts';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import axios from 'axios';
 
@@ -61,8 +62,8 @@ const data = [
 
 const AdminHome = () => {
     const [axiosSecure] = useAxiosSecure();
-    const {user} = useContext(AuthContext);
-    const [isUserInfo, setUserInfo ] = useState(false);
+    const { user } = useContext(AuthContext);
+    const [isUserInfo, setUserInfo] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -80,8 +81,8 @@ const AdminHome = () => {
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/allUsers');
-            console.log(res.data)
+            const res = await axios.get('https://red-quaint-snail.cyclic.app/allUsers');
+
             return res.data;
         }
     });
@@ -89,8 +90,7 @@ const AdminHome = () => {
     const { data: transection = [] } = useQuery({
         queryKey: ['transection'],
         queryFn: async () => {
-            const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/adminTransection');
-            console.log(res.data);
+            const res = await axios.get('https://red-quaint-snail.cyclic.app/adminTransection');
             return res.data;
         }
     })
@@ -99,27 +99,27 @@ const AdminHome = () => {
         <div>
             <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-1 mr-5 mt-6 text-white'>
                 <div className='m-5 pl-3 pt-4 w-[90%] h-38 bg-[#33C49D] rounded-xl text-2xl'>
-                   <p className='text-center font-bold pb-4'> Total Users <br /> <small className='text-5xl'>{users.length}</small></p> 
+                    <p className='text-center font-bold pb-4'> Total Users <br /> <small className='text-5xl'>{users.length}</small></p>
                 </div>
                 <div className='m-5 pl-3 pt-8 w-[90%] h-38 bg-[#C44933] rounded-xl text-2xl'>
-                    <p className='text-center font-bold pb-4'> Total Transactions <br /> <small className='text-5xl'>{transection.length}</small></p>
+                    <p className='text-center font-bold pb-4'> Total Transactions <br /><small className='text-3xl'>580500 Tk</small> </p>
                 </div>
-                <div className='m-5 pl-3 pt-8 w-[90%] h-38 bg-[#3348C4] rounded-xl text-2xl'> 
-                    <p className='text-center font-bold pb-4'>  Total Agents <br /> <small className='text-5xl'>8</small></p>
+                <div className='m-5 pl-3 pt-8 w-[90%] h-38 bg-[#4e63b8] rounded-xl text-2xl'>
+                    <p className='text-center font-bold pb-4'>  Total Agents <br /> <small className='text-3xl'>25</small> </p>
                 </div>
-                <div className='m-5 mr-5 pl-3 pt-8 w-[90%] h-38 bg-[#0F101A] rounded-xl text-2xl'> 
-                    <p className='text-center font-bold pb-4'>   Total Amount (Tk) <br /> 
-                    <small className='text-5xl'>{isUserInfo.balance}</small> </p>
+                <div className='m-5 mr-5 pl-3 pt-8 w-[90%] h-38 bg-gray-500 rounded-xl text-2xl'>
+                    <p className='text-center font-bold pb-4'>   Total Amount (Tk) <br />
+                        <small className='text-5xl'>{isUserInfo.balance}</small> </p>
                 </div>
             </div>
             <div className='w-full p-4 mt-10'>
                 <h2 className='text-2xl font-semibold'>Transaction Analytics</h2>
                 <BarChart
-                    width={1200}
+                    width={900}
                     height={400}
                     data={data}
 
-                    barSize={40}
+                    barSize={30}
                     className='mt-5'
                 >
                     <XAxis dataKey="name" />
