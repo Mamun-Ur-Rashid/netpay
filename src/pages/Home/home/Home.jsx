@@ -6,6 +6,7 @@ import FinicialCard from '../FinicialSection/FinicialCard';
 import TuchPoint from '../TuchPoint/TuchPoint';
 import WhyChooseUs from '../whyChooseUs/WhyChooseUs';
 import AnotherSEction from '../whyChooseUs/anotherSection/AnotherSEction';
+import Massage from '../../liveChat/massage/Massage';
 
 
 const Home = () => {
@@ -25,7 +26,7 @@ const Home = () => {
                 <AnotherSEction></AnotherSEction>
                 <AccountSystem></AccountSystem>
                 {/* <LatestNewes></LatestNewes> */}
-
+                <Massage />
             </div>
 
         </div>

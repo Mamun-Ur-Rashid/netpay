@@ -11,7 +11,7 @@ const Service = () => {
     }, []);
 
     return (
-        <div className='mt-16 bg-slate-200'>
+        <div className='mt- bg-slate-200'>
             <ServiceBanner></ServiceBanner>
             <div className="px-8 md:px-24">
                 <AllService></AllService>

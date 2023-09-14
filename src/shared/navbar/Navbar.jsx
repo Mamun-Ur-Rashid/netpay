@@ -57,12 +57,17 @@ const Navbar = () => {
 
             {/* --------------New Code ---------------- */}
 
-            <nav className=" w-full h-0 top-0 z-10">
-                <div className=' flex justify-between items-center container mx-auto'>
+            <nav className="bg-white w-full top-0 z-10">
+
+
+                <div className='flex justify-between items-center container mx-auto'>
+
                     <a href="/">
                         <img src={logo} className='w-32 h-24 m-[-15px]' />
                     </a>
+
                     <ul className='flex gap-10 text-black font-semibold text-base' id='navbar'>
+
                         <NavLink to='/' className="">Home</NavLink>
                         <NavLink to='/services' className="">Services</NavLink>
                         <NavLink to='/business' className="">Business</NavLink>
@@ -70,6 +75,8 @@ const Navbar = () => {
                         {user &&
                             <NavLink to='dashboard' className=" hover:text-blue-700">Dashboard</NavLink>
                         }
+
+
                     </ul>
 
                     {user ?
@@ -79,9 +86,13 @@ const Navbar = () => {
 
                 </div>
 
+
                 {/* <div className="flex items-center justify-between h-16">
+
+
                     <div className="flex items-center">
                         <div className="">
+
                             <NavLink to='/' className="text-white hover:text-orange-400 text-3xl">
                                 <div style={{ width: 'full', height: '62px' }}>
                                     <img className='w-20 h-20' src={logo} alt="" />
@@ -94,6 +105,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                     </div>
+
                     <div className="md:hidden">
                         <button
                             onClick={toggleMenu}
@@ -102,15 +114,16 @@ const Navbar = () => {
                             {isMenuOpen ? 'close' : 'open'}
                         </button>
                     </div>
+
                 </div> */}
 
-                {/* {isMenuOpen && (
+                {isMenuOpen && (
                     <div className="md:hidden">
                         <ul className="mt-2 space-y-2">
                             {li}
                         </ul>
                     </div>
-                )} */}
+                )}
 
             </nav>
         </div>
