@@ -1,4 +1,4 @@
-import image from '../../../../assets/logo/new2.png'
+import image from '../../../../assets/update.png'
 
 const BotAvater = () => {
     return (

@@ -54,7 +54,7 @@ const Navbar = () => {
     )
     return (
         <div >
-            
+
             {/* --------------New Code ---------------- */}
 
             <nav className="bg-white w-full top-0 z-10">
@@ -67,26 +67,26 @@ const Navbar = () => {
                     </a>
 
                     <ul className='flex gap-10 text-black font-semibold text-base' id='navbar'>
-                        
+
                         <NavLink to='/' className="">Home</NavLink>
                         <NavLink to='/services' className="">Services</NavLink>
                         <NavLink to='/business' className="">Business</NavLink>
                         <NavLink to='/about' className="">About</NavLink>
-                        { user &&
+                        {user &&
                             <NavLink to='dashboard' className=" hover:text-blue-700">Dashboard</NavLink>
                         }
-                        
-                    
+
+
                     </ul>
 
-                    { user ? 
+                    {user ?
                         <button onClick={logOut} className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-[6px] px-4 border border-blue-500 hover:border-transparent rounded">Logout</button>
-                        :  <Link to='/login' className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-[6px] px-4 border border-blue-500 hover:border-transparent rounded">Login</Link>
+                        : <Link to='/login' className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-[6px] px-4 border border-blue-500 hover:border-transparent rounded">Login</Link>
                     }
 
                 </div>
 
-                
+
                 {/* <div className="flex items-center justify-between h-16">
 
 
@@ -117,14 +117,14 @@ const Navbar = () => {
 
                 </div> */}
 
-                    {isMenuOpen && (
-                        <div className="md:hidden">
-                            <ul className="mt-2 space-y-2">
-                                {li}
-                            </ul>
-                        </div>
-                    )}
-                
+                {isMenuOpen && (
+                    <div className="md:hidden">
+                        <ul className="mt-2 space-y-2">
+                            {li}
+                        </ul>
+                    </div>
+                )}
+
             </nav>
         </div>
     );

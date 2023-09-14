@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Massage from "../liveChat/massage/Massage";
 
 const About = () => {
     // Scroll to the top of the page when it loads
@@ -10,7 +11,6 @@ const About = () => {
         <div className="container mx-auto">
 
             <h1 className="text-center font-bold text-4xl md:text-4xl mt-20 mb-10">About Us</h1>
-
 
             <div className="font-semibold w-5/6 mx-auto">
                 <p>
@@ -37,6 +37,7 @@ const About = () => {
                     Thank you for choosing NetPay
                 </p>
             </div>
+            <Massage />
         </div>
     );
 };
