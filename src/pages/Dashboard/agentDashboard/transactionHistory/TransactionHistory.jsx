@@ -23,7 +23,7 @@ const TransactionHistory =() => {
                     <table className="table">
                         {/* head */}
                         <thead>
-                            <tr className='bg-[#2727ab] text-lg text-white'>
+                            <tr className='bg-[#4e63b8] text-lg text-white'>
                                 <th>#</th>
                                 <th>User/Admin Name</th>
                                 <th>User/Admin Account</th>

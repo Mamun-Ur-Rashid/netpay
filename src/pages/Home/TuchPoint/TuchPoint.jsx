@@ -13,7 +13,7 @@ const TuchPoint = () => {
 
     return (
         <div className='container mx-auto  md:my-12 pt-14'>
-            <div data-aos="zoom-out"
+            <div data-aos="zoom-in"
             data-aos-duration="1000"
             data-aos-delay="100">
             <Title title={'Our Touchpoints'} subTitle={'Discover Nearest Convenient Locations for Accessing NetPay Services.'}></Title>
