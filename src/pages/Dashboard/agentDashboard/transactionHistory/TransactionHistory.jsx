@@ -1,15 +1,17 @@
 import axios from "axios";
 import useUser from "../../../../Hook/useUser";
 import { useQuery } from "@tanstack/react-query";
+import { useContext } from "react";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 const TransactionHistory =() => {
-    const [isUserInfo] = useUser();
+    // const [isUserInfo] = useUser();
 
-   const { data: agentTransactions = [], refetch } = useQuery({
+
+   const { data: agentTransactions = [], isLoading, refetch } = useQuery({
     queryKey: ['agentTransactions'],
     queryFn: async () => {
-        const res = await axios.get(`https://netpay-server-muhammadali246397.vercel.appagentTransactions/${isUserInfo?.number}`);
-        console.log(res.data);
+        const res = await axios.get('http://localhost:3000/agentAllTransactions');
         return res.data;
     }
 })

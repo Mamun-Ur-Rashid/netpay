@@ -14,7 +14,7 @@ const AgentToAdmin = () => {
 
     const onSubmit = async (data) => {
         try {
-            const response = await fetch('https://netpay-server-muhammadali246397.vercel.appagentToAdmin', {
+            const response = await fetch('http://localhost:3000/agentToAdmin', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

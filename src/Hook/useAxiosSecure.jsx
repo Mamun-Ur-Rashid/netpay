@@ -3,14 +3,14 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../pages/AuthProvider/AuthProvider';
 
-
+// https://attractive-hoodie-newt.cyclic.app/
 
 const useAxiosSecure = () => {
   const { handleLogOut } = useContext(AuthContext) 
   const navigate = useNavigate(); 
 
   const axiosSecure = axios.create({
-    baseURL: 'https://netpay-server-muhammadali246397.vercel.app', 
+    baseURL: 'http://localhost:3000', 
   });
 
   useEffect(() => {

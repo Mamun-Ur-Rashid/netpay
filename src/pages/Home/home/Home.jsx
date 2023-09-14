@@ -16,15 +16,15 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="mt-16 bg-[#070c33]">
+        <div className="bg-white">
             <Banner></Banner>
             <div className='px-6 md:px-24'>
                 <FinicialCard></FinicialCard>
-                <TuchPoint></TuchPoint>
                 <WhyChooseUs></WhyChooseUs>
+                <TuchPoint></TuchPoint>
                 <AnotherSEction></AnotherSEction>
-                <AccountSystem></AccountSystem>
-                <LatestNewes></LatestNewes>
+                {/* <AccountSystem></AccountSystem> */}
+                {/* <LatestNewes></LatestNewes> */}
 
             </div>
 

@@ -2,14 +2,13 @@ import Title from "../../../../shared/title/Title";
 import AllService from "../../allService/AllService";
 import Faq from "../../allServicesFAQ/Faq";
 import AllServicesHeader from "../../allServicesHeader/AllServicesHeader";
-import BannerImage from '../../../../assets/Banner/serviceB.png'
-import SendMoneyServiceDatails from "../sendMoneyProcess/SendMoneyServiceDatails";
 import ServiceBanner from "../../serviceBanner/ServiceBanner";
+import SendMoneyServiceDatails from "../sendMoneyProcess/SendMoneyServiceDatails";
 
 const SendMoney = () => {
 
     const headerData = {
-        imageUrl: 'https://img.freepik.com/free-vector/people-using-mobile-bank-remittance-money_74855-6617.jpg?w=2000',
+        imageUrl: 'https://thumbs.dreamstime.com/b/online-money-transfer-vector-illustration-cartoon-flat-tiny-friend-man-character-transferring-send-transaction-coin-out-178490363.jpg',
         title: 'Send Money',
         text: 'Send Money is now more easier to using NetPay. You can send money to one account to another account 24 hours in 7days. It can happend anywhere anytime.',
         btnText: 'Send Money Now'
@@ -88,7 +87,7 @@ const SendMoney = () => {
 
     return (
         <div className='mt-16 bg-[#070b29]'>
-            <ServiceBanner BannerImage={BannerImage} />
+            <ServiceBanner></ServiceBanner>
             <div className="px-8 md:px-24">
                 <AllService></AllService>
                 <Title title={'Send Money'}></Title>

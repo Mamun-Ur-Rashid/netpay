@@ -14,7 +14,7 @@ const AgentAddMoney = () => {
 
     const onSubmit = async (data) => {
         try {
-            const response = await fetch('https://netpay-server-muhammadali246397.vercel.appagentAddMoney', {
+            const response = await fetch('http://localhost:3000/agentAddMoney', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

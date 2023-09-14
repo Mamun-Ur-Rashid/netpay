@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 import AllService from "../allService/AllService";
-// import ServiceBanner from "../serviceBanner/ServiceBanner";
-import ServiceCard from "../serviceCard/ServiceCard";
-import BannerImage from '../../../assets/Banner/serviceB.png'
 import ServiceBanner from "../serviceBanner/ServiceBanner";
+import ServiceCard from "../serviceCard/ServiceCard";
 
 const Service = () => {
 
@@ -13,7 +11,7 @@ const Service = () => {
 
     return (
         <div className='mt-16 bg-[#070c33]'>
-            <ServiceBanner BannerImage={BannerImage} />
+            <ServiceBanner></ServiceBanner>
             <div className="px-8 md:px-24">
                 <AllService></AllService>
                 <ServiceCard></ServiceCard>
