@@ -12,23 +12,23 @@ import MobileRecharge from "../../pages/services/mobileRecharge/mobileRecharge/M
 import About from "../../pages/aboutUs/About";
 import Business from "../../pages/business/Business"
 import Help from "../../pages/help/help/Help";
-import Blog from "../../pages/blog/blog/Blog"; 
-
-import DashCashOut from "../../pages/Dashboard/UserDashboard/dash-CashOut/DashCashOut";
-import DashHome from "../../pages/Dashboard/UserDashboard/dashHome/DashHome";
-import DashSendMoney from "../../pages/Dashboard/UserDashboard/dashSendMoney/DashSendMoney"
-import DashLayout from "../../pages/Dashboard/DashboardLayout/DashLayout";
+import Blog from "../../pages/blog/blog/Blog";
 import AdminHome from "../../pages/Dashboard/adminDashboard/adminHome/AdminHome";
 import PaymentHistory from "../../pages/Dashboard/adminDashboard/paymentHistory/PaymentHistory";
 import AllUsers from "../../pages/Dashboard/adminDashboard/allUsers/AllUsers";
 import AdminSendMoney from "../../pages/Dashboard/adminDashboard/sendMoney/AdminSendMoney";
-import AdminAddMoney from "../../pages/Dashboard/adminDashboard/addMoney/AdminAddMoney";
 import AgentHome from "../../pages/Dashboard/agentDashboard/agentHome/AgentHome";
-import AgentAddMoney from "../../pages/Dashboard/agentDashboard/agentAddMoney/AgentAddMoney";
-import TransactionHistory from "../../pages/Dashboard/agentDashboard/transactionHistory/TransactionHistory";
-import AgentToAgent from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToAgent/AgentToAgent";
+
+import TransactionHistory from "../../pages/Dashboard/agentDashboard/transactionHistory/TransactionHistory";    
 import AgentToAdmin from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToAdmin/AgentToAdmin";
 import AgentToUser from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToUser/AgentToUser";
+import AgentAddMoney from "../../pages/Dashboard/agentDashboard/addMoney/AgentAddMoney";
+import UserHome from "../../pages/Dashboard/UserDashboard/userHome/UserHome";
+import DashLayout from "../../pages/Dashboard/DashboardLayout/DashLayout";
+import UserCashOut from "../../pages/Dashboard/UserDashboard/cashOut/UserCashOut";
+import AdminAddMoney from "../../pages/Dashboard/adminDashboard/addMoney/AdminAddMoney";
+import Setting from "../../pages/Dashboard/UserDashboard/setting/Setting";
+import UserSendMoney from "../../pages/Dashboard/UserDashboard/SendMoney/UserSendMoney";
 
 
 const router = createBrowserRouter([
@@ -90,41 +90,46 @@ const router = createBrowserRouter([
             }
         ]
     },
+
     {
         path: 'dashboard',
         element: <DashLayout></DashLayout>,
         children: [
 
             //user dashboard route here .......
-            {
-                path: 'dashboard/home',
-                element: <DashHome></DashHome>
-            },
+           {
+                path:'dashboard/userHome',
+                element: <UserHome></UserHome>
+           },
+           {
+                path: 'dashboard/cashOut',
+                element:<UserCashOut></UserCashOut>
+           },
             {
                 path: 'dashboard/send-money',
-                element: <DashSendMoney></DashSendMoney>
+                element: <UserSendMoney></UserSendMoney>
             },
             {
-                path: 'dashboard/cashout',
-                element: <DashCashOut></DashCashOut>
+                path:'dashboard/setting',
+                element:<Setting></Setting>
             },
 
             // admin dashboard route here.....
             {
-                path:'dashboard/adminHome',
-                element:<AdminHome></AdminHome>
+                path: 'dashboard/adminHome',
+                element: <AdminHome></AdminHome>
             },
             {
-                path:'dashboard/paymentHistory',
-                element:<PaymentHistory></PaymentHistory>
+                path: 'dashboard/paymentHistory',
+                element: <PaymentHistory></PaymentHistory>
             },
             {
-                path:'dashboard/allUsers',
-                element:<AllUsers></AllUsers>
+                path: 'dashboard/allUsers',
+                element: <AllUsers></AllUsers>
             },
             {
-                path:'dashboard/adminSendMoney',
-                element:<AdminSendMoney></AdminSendMoney>
+                path: 'dashboard/adminSendMoney',
+                element: <AdminSendMoney></AdminSendMoney>
             },
             {
                 path:'dashboard/adminAddMoney',
@@ -133,32 +138,29 @@ const router = createBrowserRouter([
 
             // agent dashboard route here.........
             {
-               path:'dashboard/agentHome',
-               element:<AgentHome></AgentHome>
+                path: 'dashboard/agentHome',
+                element: <AgentHome></AgentHome>
             },
             {
-                path:'dashboard/agentAddMoney',
-                element:<AgentAddMoney></AgentAddMoney>
+                path: 'dashboard/agentAddMoney',
+                element: <AgentAddMoney></AgentAddMoney>
             },
-           
+
             {
-                path:'dashboard/agentToAgent',
-                element:<AgentToAgent></AgentToAgent>
-            },
-            {
-                path:'dashboard/agentToAdmin',
-                element:<AgentToAdmin></AgentToAdmin>
+                path: 'dashboard/agentToAdmin',
+                element: <AgentToAdmin></AgentToAdmin>
             },
             {
-                path:'dashboard/agentToUser',
-                element:<AgentToUser></AgentToUser>
+                path: 'dashboard/agentToUser',
+                element: <AgentToUser></AgentToUser>
             },
             {
-                path:'dashboard/agentTransaction',
-                element:<TransactionHistory></TransactionHistory>
+                path: 'dashboard/agentTransaction',
+                element: <TransactionHistory></TransactionHistory>
             }
         ]
 
-    }
+    },
+
 ])
 export default router;

@@ -65,7 +65,7 @@ const AgentHome = () => {
     const { data: allTransactions = [], isLoading, refetch } = useQuery({
         queryKey: ['allTransactions'],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:3000/agentAllTransactions');
+            const res = await axios.get('https://red-quaint-snail.cyclic.app/agentAllTransactions');
             return res.data;
         }
     })

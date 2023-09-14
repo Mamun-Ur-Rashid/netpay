@@ -32,7 +32,7 @@ const AuthProvider = ({ children }) => {
 
             // get and set token
             if (currentUser) {
-                fetch('http://localhost:3000/jwt', {
+                fetch('https://red-quaint-snail.cyclic.app/jwt', {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",
