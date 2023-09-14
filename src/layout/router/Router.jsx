@@ -9,8 +9,8 @@ import CashOut from "../../pages/services/cashOut/cashOut/CashOut";
 import AddMoney from "../../pages/services/addMoney/addMoney/AddMoney";
 import Payment from "../../pages/services/payment/payment/Payment";
 import MobileRecharge from "../../pages/services/mobileRecharge/mobileRecharge/MobileRecharge";
-import About from "../../pages/aboutUs/about/About";
-import Business from "../../pages/business/business/Business"
+import About from "../../pages/aboutUs/About";
+import Business from "../../pages/business/Business"
 import Help from "../../pages/help/help/Help";
 import Blog from "../../pages/blog/blog/Blog";
 import AdminHome from "../../pages/Dashboard/adminDashboard/adminHome/AdminHome";

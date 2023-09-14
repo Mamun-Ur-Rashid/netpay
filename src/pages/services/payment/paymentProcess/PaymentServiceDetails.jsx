@@ -4,7 +4,7 @@ const PaymentServiceDetails = () => {
     return (
         <div className="mt-4 md:mt-8">
             <Title title={'Payment Service Details'}></Title>
-            <div className="bg-[#1B2654] text-slate-200 p-8 md:p-10">
+            <div className="bg-[#4e63b8] text-slate-200 p-8 md:p-10">
                 <p>NetPay&apos;s payment solutions offer a convenient and secure way to make transactions, whether you&apos;re shopping online, paying bills, or sending money to loved ones. Our versatile payment options empower you to manage your finances with ease.
                 </p>
                 <p>At NetPay, we&apos;re dedicated to making your financial transactions as convenient as possible. Our Add Money feature offers a simple and secure way to top up your account balance, enabling you to manage your funds effortlessly.

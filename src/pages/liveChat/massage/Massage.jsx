@@ -1,12 +1,9 @@
-import FixedChat from "../fixedChat/FixedChat";
+import SimpleChatBot from "../chatBot/chatBot/SimpleChatBot";
 
 const Massage = () => {
     return (
         <div className="relative h-10">
-            {/* Your main content */}
-
-            {/* Fixed Icon and Menu */}
-            <FixedChat />
+            <SimpleChatBot />
         </div>
     );
 };

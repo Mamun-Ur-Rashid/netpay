@@ -6,8 +6,7 @@ const PaymentHistory = () => {
     const { data: transection = [], isLoading, refetch } = useQuery({
         queryKey: ['transection'],
         queryFn: async () => {
-            const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/adminTransection');
-            console.log(res.data);
+            const res = await axios.get('https://red-quaint-snail.cyclic.app/adminTransection');
             return res.data;
         }
     })
@@ -19,7 +18,7 @@ const PaymentHistory = () => {
                     <table className="table">
                         {/* head */}
                         <thead>
-                            <tr className='bg-slate-400 text-lg'>
+                            <tr className='bg-[#4e63b8]  text-lg text-white rounded-lg'>
                                 <th>#</th>
                                 <th>From</th>
                                 <th>To</th>

@@ -1,10 +1,10 @@
 import Title from "../../../../shared/title/Title";
+import Massage from "../../../liveChat/massage/Massage";
 import AllService from "../../allService/AllService";
 import Faq from "../../allServicesFAQ/Faq";
 import AllServicesHeader from "../../allServicesHeader/AllServicesHeader";
-import BannerImage from '../../../../assets/Banner/serviceB.png'
-import CashOutServiceDetails from "../cashOutProcess/CashOutServiceDetails";
 import ServiceBanner from "../../serviceBanner/ServiceBanner";
+import CashOutServiceDetails from "../cashOutProcess/CashOutServiceDetails";
 
 const CashOut = () => {
 
@@ -88,8 +88,8 @@ const CashOut = () => {
     ];
 
     return (
-        <div className='mt-16 bg-[#070b29]'>
-            <ServiceBanner BannerImage={BannerImage}></ServiceBanner>
+        <div className=''>
+            <ServiceBanner></ServiceBanner>
             <div className="px-8 md:px-24 ">
                 <AllService></AllService>
                 <Title title={'Cash Out'} />
@@ -102,10 +102,11 @@ const CashOut = () => {
                     ></AllServicesHeader>
                 </div>
                 <CashOutServiceDetails />
-                <div className="bg-[#1B2654] p-8 mt-10">
+                <div className="bg-[#4e63b8] p-8 mt-10">
                     <Faq faqData={faqData}></Faq>
                 </div>
             </div>
+            <Massage />
         </div>
     );
 };

@@ -4,10 +4,10 @@ import axios from 'axios';
 
 const AllUsers = () => {
 
-    const { data: users = [], isLoading, refetch } = useQuery({
+    const { data: users = [], isLoading: loading, refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://netpay-server-muhammadali246397.vercel.app/allUsers');
+            const res = await axios.get('https://red-quaint-snail.cyclic.app/allUsers');
             console.log(res.data);
             return res.data;
         }
@@ -18,9 +18,9 @@ const AllUsers = () => {
             <div>
                 <div className="overflow-x-auto p-4">
                     <table className="table">
-                        {/* head */}
+                       
                         <thead>
-                            <tr className='bg-slate-400 text-lg'>
+                            <tr className='bg-[#4e63b8] text-white text-lg'>
                                 <th>#</th>
                                 <th>User Name</th>
                                 <th>Image</th>

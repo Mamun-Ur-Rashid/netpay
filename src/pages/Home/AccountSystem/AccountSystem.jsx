@@ -1,10 +1,15 @@
 // import nid from '../../../assets/nid.jpg'
 // import photo from '../../../assets/photo.jpg'
 // import password from '../../../assets/pincode.png'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import Title from '../../../shared/title/Title';
 
 
 const AccountSystem = () => {
+
+    Aos.init();
+
     // img 
     const nidImg = 'https://t3.ftcdn.net/jpg/04/39/02/84/360_F_439028436_fuB6JmwKELdcb0OAY6yPW7PwDVtCaWe5.jpg'
 
@@ -14,32 +19,40 @@ const AccountSystem = () => {
 
     return (
         <div className='container mx-auto pb-10 md:pb-14 mt-10 md:mt-14'>
-            <Title title={'Create Netpay Account'} subTitle={'Easy 3 steps to create your Netpay account'}></Title>
-            <div className=" mt-2 md:flex justify-between lg:gap-x-8 ">
+            <div data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-delay="100"> <Title title={'Create Netpay Account'} subTitle={'Easy 3 steps to create your Netpay account'}></Title></div>
+            <div className=" mt-2 md:flex justify-between md:gap-x-8 ">
 
-                <div className='bg-[#1B2654] p-8 md:w-1/3 sm:mt-5 px-4'>
+                <div data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-delay="100" className='bg-[#4e63b8]  p-8 md:w-1/3 sm:mt-5 px-4 rounded-xl'>
                     <div className=''>
                         <img className='mx-auto w-[200px] h-[164px]' src={nidImg} alt="" />
                     </div>
                     <div style={{ borderRadius: "80px 0px 80px 0px", boxShadow: "1px 1px 5px 2px" }} className='w-full h-20 mt-4 flex items-center justify-between text-white'>
-                        <p className='lg:text-xl ml-8 md:ml-2 lg:ml-8  font-bold text-center text-white'>Give your national id number </p>
+                        <p className='md:text-xl ml-8  font-bold text-center text-white'>Give your national id number </p>
                     </div>
                 </div>
 
-                <div className='bg-[#1B2654] p-8 md:w-1/3 sm:mt-5 px-4'>
+                <div data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-delay="300" className='bg-[#4e63b8] p-8 md:w-1/3 sm:mt-5 px-4 rounded-xl'>
                     <div className=''>
                         <img className='mx-auto w-[200px] h-[164px]' src={uploadImg} alt="" />
                     </div>
                     <div style={{ borderRadius: "80px 0px 80px 0px", boxShadow: "1px 1px 5px 2px" }} className='w-full h-20 mt-4 flex items-center justify-between text-white'>
-                        <p className='lg:text-xl ml-16 md:ml-2 lg:ml-16 font-bold text-center text-white'>Upload your photo </p>
+                        <p className='md:text-xl ml-16 font-bold text-center text-white'>Upload your photo </p>
                     </div>
                 </div>
-                <div className='bg-[#1B2654] p-8 md:w-1/3 sm:mt-5 px-4'>
+                <div data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-delay="400" className='bg-[#4e63b8] p-8 md:w-1/3 sm:mt-5 px-4 rounded-xl'>
                     <div className=''>
                         <img className='mx-auto w-[200px] h-[164px]' src={passImg} alt="" />
                     </div>
                     <div style={{ borderRadius: "80px 0px 80px 0px", boxShadow: "1px 1px 5px 2px" }} className='w-full h-20 mt-4 flex items-center justify-between text-white'>
-                        <p className='lg:text-xl ml-14 md:ml-2 lg:ml-14 font-bold text-center text-white'>Set your 4 digit password </p>
+                        <p className='md:text-xl ml-14 font-bold text-center text-white'>Set your 4 digit password </p>
                     </div>
                 </div>
             </div>
