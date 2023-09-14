@@ -18,7 +18,7 @@ const PaymentHistory = () => {
                     <table className="table">
                         {/* head */}
                         <thead>
-                            <tr className='bg-slate-400 text-lg'>
+                            <tr className='bg-[#4e63b8]  text-lg text-white rounded-lg'>
                                 <th>#</th>
                                 <th>From</th>
                                 <th>To</th>

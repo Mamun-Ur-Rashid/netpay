@@ -20,7 +20,7 @@ const AllUsers = () => {
                     <table className="table">
                        
                         <thead>
-                            <tr className='bg-slate-400 text-lg'>
+                            <tr className='bg-[#4e63b8] text-white text-lg'>
                                 <th>#</th>
                                 <th>User Name</th>
                                 <th>Image</th>

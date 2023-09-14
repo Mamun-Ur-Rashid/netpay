@@ -14,7 +14,7 @@ const FinicialCard = () => {
             <h1 data-aos="zoom-in"
                 data-aos-duration="1000"
                 data-aos-delay="100"
-                 className="text-center text-blue-500 text-5xl font-bold">Our Services</h1>
+                 className="text-center text-[#4e63b8] text-5xl font-bold">Our Services</h1>
             <p data-aos="zoom-in"
                 data-aos-duration="1000"
                 data-aos-delay="200" 
