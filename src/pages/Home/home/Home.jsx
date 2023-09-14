@@ -7,6 +7,7 @@ import TuchPoint from '../TuchPoint/TuchPoint';
 import WhyChooseUs from '../whyChooseUs/WhyChooseUs';
 import AnotherSEction from '../whyChooseUs/anotherSection/AnotherSEction';
 import LatestNewes from '../latestNews/LatestNewes';
+import Massage from '../../liveChat/massage/Massage';
 
 const Home = () => {
 
@@ -16,7 +17,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="bg-white">
+        <div className="bg-slate-50">
             <Banner></Banner>
             <div className='px-6 md:px-24'>
                 <FinicialCard></FinicialCard>
@@ -24,8 +25,8 @@ const Home = () => {
                 <TuchPoint></TuchPoint>
                 <AnotherSEction></AnotherSEction>
                 {/* <AccountSystem></AccountSystem> */}
-                {/* <LatestNewes></LatestNewes> */}
-
+                <LatestNewes></LatestNewes>
+                <Massage />
             </div>
 
         </div>
