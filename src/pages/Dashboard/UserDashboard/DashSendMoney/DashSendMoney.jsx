@@ -34,7 +34,7 @@ const DashSendMoney = () => {
 
         const sendMoneyInfo = { sdn: senderNumber, rcn: receiverNumber, tk: amount };
 
-        fetch(`https://attractive-hoodie-newt.cyclic.app/sendmoney`, {
+        fetch(`http://localhost:3000/sendmoney`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
 import img from "../../../../assets/josh-appel.jpg"
 import Button from "../../../../shared/button/Button";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 const AnotherSEction = () => {
+    Aos.init();
     return (
-        <div className="bg-[#1B2654] mt-20 block md:flex">
+        <div data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="100" className="bg-[#4e63b8]  mt-20 block md:flex">
             <div className="w-full md:w-1/2  ">
                 <img src={img} alt="" />
             </div>

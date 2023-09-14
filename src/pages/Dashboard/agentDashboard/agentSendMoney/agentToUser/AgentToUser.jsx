@@ -13,8 +13,10 @@ const AgentToUser = () => {
     }, [isUserInfo]);
 
     const onSubmit = async (data) => {
+        console.log(data)
+        data.agentAccount = isUserInfo.number;
         try {
-            const response = await fetch('https://attractive-hoodie-newt.cyclic.app/agentToUser', {
+            const response = await fetch('https://red-quaint-snail.cyclic.app/agentToUser', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -46,39 +48,34 @@ const AgentToUser = () => {
             console.error('An error occurred', error);
         }
     };
-   
+
     return (
         <div className='p-2 md:m-4 '>
-            <div className='md:flex gap-4 text-center items-center'>
-            <div className='w-1/4 rounded-xl bg-[#C44933] text-center'>
-                <p className='text-lg p-4'>Total Amount (Tk) <small className='text-2xl font-bold'>{totalBalance}</small></p>
-            </div>
             <div>
-                <p className='text-center text-2xl ml-20 font-bold'>Agent to User</p>
-            </div>
+                <p className='text-center text-2xl font-bold'>Agent to User</p>
             </div>
             <h3 className='text-3xl font-semibold text-center mb-5 '>Send Money</h3>
-            <div className='shadow-2xl p-5 md:w-1/2 my-4 mx-auto bg-gradient-to-r from-violet-400 to-fuchsia-400 rounded-xl'>
-            <form onSubmit={handleSubmit(onSubmit)} className='space-y-2 text-2xl'>
-                <div className='form-control md:w-3/4 mx-auto'>
-                    <label htmlFor="">Agent Account</label>
-                    <input type='text' className='input input-bordered mt-2' {...register("agentAccount", { minLength: 11, maxLength:11 })} defaultValue={isUserInfo && isUserInfo.number ? isUserInfo.number : ''} placeholder='Enter Agent Account Number'/>
-                    {errors.agentAccount && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
-                </div>
-                <div className='form-control md:w-3/4 mx-auto'>
-                    <label htmlFor="">User Account</label>
-                    <input type='text' className='input input-bordered mt-2' {...register("userAccount", { minLength: 11, maxLength:11 })} placeholder='Enter User Account Number' />
-                    {errors.userAccount && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
-                </div>
-                <div className='form-control md:w-3/4 mx-auto'>
-                    <label htmlFor="">Amount</label>
-                    <input type='number' className='input input-bordered mt-2' {...register("amount", { minLength: 3, maxLength:6 })} placeholder='Enter Amount' />
-                    {errors.amount && <span className='mt-3 text-red-600'>Please input correct value!</span>}
-                </div>
-                <div className='form-control md:w-3/4 mx-auto'>
-                    <input type="submit" className='btn bg-orange-700 border-0 rounded-xl mb-4' value="Send Money" />
-                </div>
-            </form>
+            <div className='shadow-2xl p-5 md:w-1/2 my-4 mx-auto bg-gradient-to-r from-[#4e63b8] to-gray-300 rounded-xl'>
+                <form onSubmit={handleSubmit(onSubmit)} className='space-y-2 text-2xl'>
+                    <div className='form-control md:w-3/4 mx-auto'>
+                        <label htmlFor="">Agent Account</label>
+                        <input type='text' disabled className='input input-bordered mt-2' {...register("agentAccount", { minLength: 11, maxLength: 11 })} defaultValue={isUserInfo && isUserInfo.number ? isUserInfo.number : ''} placeholder='Enter Agent Account Number' />
+                        {errors.agentAccount && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
+                    </div>
+                    <div className='form-control md:w-3/4 mx-auto'>
+                        <label htmlFor="">User Account</label>
+                        <input type='text' className='input input-bordered mt-2' {...register("userAccount", { maxLength: 11 })} placeholder='Enter User Account Number' />
+                        {errors.userAccount && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
+                    </div>
+                    <div className='form-control md:w-3/4 mx-auto'>
+                        <label htmlFor="">Amount</label>
+                        <input type='number' className='input input-bordered mt-2' {...register("amount", { minLength: 3, maxLength: 6 })} placeholder='Enter Amount' />
+                        {errors.amount && <span className='mt-3 text-red-600'>Please input correct value!</span>}
+                    </div>
+                    <div className='form-control md:w-3/4 mx-auto'>
+                        <input type="submit" className=' bg-[#4e63b8] p-2 my-5 border-0 rounded-xl mb-4' value="Send Money" />
+                    </div>
+                </form>
             </div>
         </div>
     );

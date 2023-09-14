@@ -3,14 +3,14 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../pages/AuthProvider/AuthProvider';
 
-
+// https://attractive-hoodie-newt.cyclic.app/
 
 const useAxiosSecure = () => {
   const { handleLogOut } = useContext(AuthContext) 
   const navigate = useNavigate(); 
 
   const axiosSecure = axios.create({
-    baseURL: 'https://attractive-hoodie-newt.cyclic.app/', 
+    baseURL: 'https://red-quaint-snail.cyclic.app/', 
   });
 
   useEffect(() => {

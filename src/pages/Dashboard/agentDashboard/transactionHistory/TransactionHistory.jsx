@@ -11,7 +11,7 @@ const TransactionHistory =() => {
    const { data: agentTransactions = [], isLoading, refetch } = useQuery({
     queryKey: ['agentTransactions'],
     queryFn: async () => {
-        const res = await axios.get('https://attractive-hoodie-newt.cyclic.app/agentAllTransactions');
+        const res = await axios.get('https://red-quaint-snail.cyclic.app/agentAllTransactions');
         return res.data;
     }
 })
@@ -23,7 +23,7 @@ const TransactionHistory =() => {
                     <table className="table">
                         {/* head */}
                         <thead>
-                            <tr className='bg-[#2727ab] text-lg text-white'>
+                            <tr className='bg-[#4e63b8] text-lg text-white'>
                                 <th>#</th>
                                 <th>User/Admin Name</th>
                                 <th>User/Admin Account</th>

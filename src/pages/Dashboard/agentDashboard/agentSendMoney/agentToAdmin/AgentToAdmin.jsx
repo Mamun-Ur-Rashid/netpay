@@ -14,7 +14,7 @@ const AgentToAdmin = () => {
 
     const onSubmit = async (data) => {
         try {
-            const response = await fetch('https://attractive-hoodie-newt.cyclic.app/agentToAdmin', {
+            const response = await fetch('https://red-quaint-snail.cyclic.app/agentToAdmin', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -49,16 +49,13 @@ const AgentToAdmin = () => {
 
     return (
         <div className='p-2 md:m-4 '>
-             <div className='md:flex gap-4 text-center items-center'>
-            <div className='w-1/4 rounded-xl bg-[#C44933] text-center'>
-                <p className='text-lg p-4'>Total Amount (Tk) <small className='text-2xl font-bold'>{totalBalance}</small></p>
-            </div>
+             
             <div>
-                <p className='text-center text-4xl ml-20 font-bold'>Agent to Admin</p>
+                <p className='text-center text-4xl  font-bold'>Agent to Admin</p>
             </div>
-            </div>
+            
             <h3 className='text-4xl font-semibold text-center mb-7 '>Send Money</h3>
-            <div className='shadow-2xl p-5 md:w-1/2 my-4 mx-auto bg-gradient-to-r from-violet-400 to-fuchsia-400 rounded-xl'>
+            <div className='shadow-2xl p-5 md:w-1/2 my-4 mx-auto bg-gradient-to-r from-[#4e63b8] to-gray-300 rounded-xl'>
             <form onSubmit={handleSubmit(onSubmit)} className='space-y-2 text-2xl'>
                 <div className='form-control md:w-3/4 mx-auto'>
                     <label htmlFor="">Agent Account</label>
@@ -76,8 +73,8 @@ const AgentToAdmin = () => {
                     {errors.amount && <span className='mt-3 text-red-600'>Please input correct value!</span>}
                 </div>
                 <div className='form-control md:w-3/4 mx-auto'>
-                    <input type="submit" className='btn bg-orange-700 border-0 rounded-xl mb-4' value="Send Money" />
-                </div>
+                        <input type="submit" className=' bg-[#4e63b8] p-2 my-5 border-0 rounded-xl mb-4' value="Send Money" />
+                    </div>
             </form>
             </div>
         </div>

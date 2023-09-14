@@ -7,7 +7,7 @@ const AllUsers = () => {
     const { data: users = [], isLoading: loading, refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://attractive-hoodie-newt.cyclic.app/allUsers');
+            const res = await axios.get('https://red-quaint-snail.cyclic.app/allUsers');
             console.log(res.data);
             return res.data;
         }
@@ -20,7 +20,7 @@ const AllUsers = () => {
                     <table className="table">
                        
                         <thead>
-                            <tr className='bg-slate-400 text-lg'>
+                            <tr className='bg-[#4e63b8] text-white text-lg'>
                                 <th>#</th>
                                 <th>User Name</th>
                                 <th>Image</th>
