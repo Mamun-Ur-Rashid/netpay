@@ -20,7 +20,7 @@ const CardSection = () => {
                 </div>
                 <div className="md:w-3/4 mx-auto px-4  ">
                     <h1 className="text-center md:text-left text-3xl pt-4 font-semibold pb-1 ">Fraud Detection</h1>
-                    <h3 className="text-sm md:text-base  py-2 pb-6"> Replacing a maintains the amount of lines. When replacing a selection. help agencies to define their new business objectives and then create.</h3>
+                    <h3 className="text-sm md:text-base  py-2 pb-6"> The Replacing a maintains the amount of lines. When replacing a selection. help agencies to define their new business objectives and then create.</h3>
                 </div>
             </div>
             <div
