@@ -8,8 +8,9 @@ const AdminSendMoney = () => {
     const [isUserInfo] = useUser()
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
+        data.adminAccount= isUserInfo?.number
         console.log(data)
-        fetch('https://red-quaint-snail.cyclic.app/adminToAgent', {
+        fetch('https://vast-rose-seahorse-hem.cyclic.cloud/adminToAgent', {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"

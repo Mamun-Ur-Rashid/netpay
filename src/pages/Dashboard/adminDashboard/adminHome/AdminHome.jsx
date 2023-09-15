@@ -68,7 +68,7 @@ const AdminHome = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axiosSecure.get(`/allUsers/${user?.email}`);
+                const response = await axiosSecure.get(`allUsers/${user?.email}`);
                 setUserInfo(response.data);
             } catch (error) {
                 console.error('Error fetching user data:', error);
@@ -81,7 +81,7 @@ const AdminHome = () => {
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://red-quaint-snail.cyclic.app/allUsers');
+            const res = await axios.get('https://vast-rose-seahorse-hem.cyclic.cloud/allUsers');
 
             return res.data;
         }
@@ -90,7 +90,7 @@ const AdminHome = () => {
     const { data: transection = [] } = useQuery({
         queryKey: ['transection'],
         queryFn: async () => {
-            const res = await axios.get('https://red-quaint-snail.cyclic.app/adminTransection');
+            const res = await axios.get('https://vast-rose-seahorse-hem.cyclic.cloud/adminTransection');
             return res.data;
         }
     })
