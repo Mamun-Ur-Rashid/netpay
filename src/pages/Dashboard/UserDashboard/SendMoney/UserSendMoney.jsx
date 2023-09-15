@@ -76,7 +76,7 @@ const DashSendMoney = () => {
                         <span className="label-text text-base mt-2 text-white">Sender Number</span>
                     </label>
                     <input
-                        type="text"
+                        type="text" disabled
                         defaultValue={isUserInfo?.number}
                         name="senderNumber"
                         placeholder="Sender Number"
