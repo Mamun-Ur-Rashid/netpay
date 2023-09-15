@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import AOS from 'aos';
 import '../banner/Banner.css'
 import cards from "../../../assets/sidepic.png";

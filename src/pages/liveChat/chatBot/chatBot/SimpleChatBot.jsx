@@ -44,9 +44,9 @@ const SimpleChatBot = () => {
             {
                 menuVisible ?
                     <div>
-                        <div className="fixed bottom-2 right-2 bg-slate-300 shadow-md rounded-md p-4" >
+                        <div className="fixed bottom-2 right-2  shadow-md rounded-md p-4" >
                             <div>
-                                <button className='text-4xl bg-white' onClick={toggleMenu}> <GrClose /></button>
+                                <button className='text-4xl bg-white ' onClick={toggleMenu}> <GrClose /></button>
                             </div>
                             <div>
                                 <Chatbot

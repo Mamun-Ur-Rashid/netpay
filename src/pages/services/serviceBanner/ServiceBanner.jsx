@@ -1,4 +1,4 @@
-import BannerImage from '../../../assets/serviceBanner.jpg'
+import BannerImage from '../../../assets/bannerImg/serviceBanner.png'
 
 const ServiceBanner = () => {
 
@@ -6,7 +6,7 @@ const ServiceBanner = () => {
 
     return (
         <div
-            className="bg-cover bg-center h-80 md:h-96 flex items-center justify-center text-white"
+            className="bg-cover bg-center h-80 md:h-70 flex items-center justify-center text-white"
             style={{ backgroundImage: `url(${BannerImage})` }}
         >
         </div>
