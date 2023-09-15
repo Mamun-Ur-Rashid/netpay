@@ -29,6 +29,7 @@ import UserCashOut from "../../pages/Dashboard/UserDashboard/cashOut/UserCashOut
 import AdminAddMoney from "../../pages/Dashboard/adminDashboard/addMoney/AdminAddMoney";
 import Setting from "../../pages/Dashboard/UserDashboard/setting/Setting";
 import UserSendMoney from "../../pages/Dashboard/UserDashboard/SendMoney/UserSendMoney";
+import UserMobileRecharge from "../../pages/Dashboard/UserDashboard/mobileRecharge/UserMobileRecharge";
 
 
 const router = createBrowserRouter([
@@ -112,6 +113,10 @@ const router = createBrowserRouter([
             {
                 path:'dashboard/setting',
                 element:<Setting></Setting>
+            },
+            {
+                path:'dashboard/mobileRecharge',
+                element: <UserMobileRecharge></UserMobileRecharge>
             },
 
             // admin dashboard route here.....

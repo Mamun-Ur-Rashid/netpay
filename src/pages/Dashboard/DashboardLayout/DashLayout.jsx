@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import useAdmin from '../../../Hook/useAdmin';
 import useAgent from '../../../Hook/useAgent';
-import { FaHistory, FaHome, FaHourglassHalf, FaMoneyBillWave, FaSearch, FaWhmcs } from "react-icons/fa";
+import { FaHistory, FaHome, FaHourglassHalf, FaMobileAlt, FaMoneyBillWave, FaSearch, FaWhmcs } from "react-icons/fa";
 import { FaChartColumn, FaUserGroup } from "react-icons/fa6";
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
@@ -46,7 +46,7 @@ const DashLayout = () => {
                                             <img className='ml-8 w-[180px]  h-full mb-6' src="https://i.ibb.co/Wy6R5qM/update.png" alt="update" border="0" />
                                         </div>
                                     </NavLink>
-                                    <NavLink to='dashboard/adminHome' className='inline-flex items-center mt-12'> <FaChartColumn className='m-3'/> Admin Dashboard</NavLink>
+                                    <NavLink to='dashboard/adminHome' className='inline-flex items-center mt-16'> <FaChartColumn className='m-3'/> Admin Dashboard</NavLink>
                                     <NavLink to='dashboard/paymentHistory' className='inline-flex items-center'><FaHistory className='m-3'></FaHistory> Transactions History</NavLink>
                                     <NavLink to='dashboard/allUsers' className="flex items-center"><FaUserGroup className='m-3'></FaUserGroup> All Users</NavLink>
                                     <NavLink to='dashboard/adminAddMoney' className="flex item"> <FaMoneyBillWave className='m-3'></FaMoneyBillWave>Add Money</NavLink>
@@ -61,7 +61,7 @@ const DashLayout = () => {
                                                 <img className='ml-8 w-[180px]  h-full mb-6' src="https://i.ibb.co/Wy6R5qM/update.png" alt="update" border="0" />
                                             </div>
                                         </NavLink>
-                                        <NavLink to='dashboard/agentHome' className="flex items-center mt-12"> <FaChartColumn className='m-3'></FaChartColumn>Agent Dashboard</NavLink>
+                                        <NavLink to='dashboard/agentHome' className="flex items-center mt-16"> <FaChartColumn className='m-3'></FaChartColumn>Agent Dashboard</NavLink>
                                         <NavLink to='dashboard/agentAddMoney' className="flex items-center"> <FaMoneyBillWave className=' m-3'></FaMoneyBillWave> Add Money</NavLink>
                                         
                                         {/* Step 2: Add a dropdown button */}
@@ -92,9 +92,10 @@ const DashLayout = () => {
                                                     <img className='ml-8 w-[180px] h-full mb-6' src="https://i.ibb.co/Wy6R5qM/update.png" alt="update" border="0" />
                                                 </div>
                                             </NavLink>
-                                            <NavLink to='dashboard/userHome' className="flex items-center"> <FaChartColumn className='m-3'></FaChartColumn> User Dashboard</NavLink>
+                                            <NavLink to='dashboard/userHome' className="flex items-center mt-16"> <FaChartColumn className='m-3'></FaChartColumn> User Dashboard</NavLink>
                                             <NavLink to='dashboard/cashOut' className="flex items-center"> <FaMoneyBillWave className='m-3'></FaMoneyBillWave> Cash Out</NavLink>
                                             <NavLink to='dashboard/send-money' className="flex items-center"><FaHourglassHalf className='m-3'></FaHourglassHalf> Send Money</NavLink>
+                                            <NavLink to='dashboard/mobileRecharge' className="flex items-center"> <FaMobileAlt className='m-3'></FaMobileAlt> Mobile Recharge</NavLink>
                                             <NavLink to='dashboard/setting' className="flex items-center"> <FaWhmcs className='m-3'></FaWhmcs> Setting</NavLink>
                                             <NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome> Home</NavLink></>
                                     )

@@ -5,7 +5,9 @@ import Swal from 'sweetalert2';
 import useUser from '../../../../Hook/useUser';
 
 const AdminAddMoney = () => {
+
     const [isUserInfo] = useUser();
+    console.log(isUserInfo.number)
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [totalBalance, setTotalBalance] = useState(isUserInfo.balance);
 
@@ -14,8 +16,10 @@ const AdminAddMoney = () => {
     }, [isUserInfo]);
 
     const onSubmit = async (data) => {
+        data.adminAccount=isUserInfo?.number
+        console.log(data)
         try {
-            const response = await fetch('https://red-quaint-snail.cyclic.app/adminAddMoney', {
+            const response = await fetch('https://vast-rose-seahorse-hem.cyclic.cloud/adminAddMoney', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -57,7 +61,7 @@ const AdminAddMoney = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-2 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">Admin Account</label>
-                        <input type='text' className='input input-bordered mt-2' {...register("adminAccount", { minLength: 11, maxLength: 11 })} defaultValue={isUserInfo && isUserInfo.number ? isUserInfo.number : ''} placeholder='Enter Admin Account Number' />
+                        <input type='text' className='input input-bordered mt-2' {...register("adminAccount", { minLength: 11, maxLength: 11 })} disabled defaultValue={isUserInfo && isUserInfo.number ? isUserInfo.number : ''} placeholder='Enter Admin Account Number' />
                         {errors.adminAccount && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
                     </div>
                     <div className='form-control md:w-3/4 mx-auto'>
