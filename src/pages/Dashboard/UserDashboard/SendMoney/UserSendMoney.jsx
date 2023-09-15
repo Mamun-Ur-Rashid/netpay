@@ -37,7 +37,7 @@ const DashSendMoney = () => {
 
         const sendMoneyInfo = { sdn: senderNumber, rcn: receiverNumber, tk: amount };
 
-        fetch(`https://red-quaint-snail.cyclic.app/sendmoney`, {
+        fetch(`https://vast-rose-seahorse-hem.cyclic.cloud/sendmoney`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

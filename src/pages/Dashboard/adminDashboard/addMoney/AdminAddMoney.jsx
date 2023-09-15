@@ -5,7 +5,9 @@ import Swal from 'sweetalert2';
 import useUser from '../../../../Hook/useUser';
 
 const AdminAddMoney = () => {
+
     const [isUserInfo] = useUser();
+    console.log(isUserInfo.number)
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [totalBalance, setTotalBalance] = useState(isUserInfo.balance);
 
@@ -14,8 +16,10 @@ const AdminAddMoney = () => {
     }, [isUserInfo]);
 
     const onSubmit = async (data) => {
+        data.adminAccount=isUserInfo?.number
+        console.log(data)
         try {
-            const response = await fetch('https://red-quaint-snail.cyclic.app/adminAddMoney', {
+            const response = await fetch('https://vast-rose-seahorse-hem.cyclic.cloud/adminAddMoney', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
