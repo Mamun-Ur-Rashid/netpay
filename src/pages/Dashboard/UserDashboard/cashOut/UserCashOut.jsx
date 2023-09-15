@@ -69,6 +69,5 @@ const UserCashOut = () => {
         </div>
     );
 };
+
 export default UserCashOut;
-
-
