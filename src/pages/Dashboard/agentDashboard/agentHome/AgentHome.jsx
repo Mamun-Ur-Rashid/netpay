@@ -65,7 +65,7 @@ const AgentHome = () => {
     const { data: allTransactions = [], isLoading, refetch } = useQuery({
         queryKey: ['allTransactions'],
         queryFn: async () => {
-            const res = await axios.get('https://red-quaint-snail.cyclic.app/agentAllTransactions');
+            const res = await axios.get('https://vast-rose-seahorse-hem.cyclic.cloud/agentAllTransactions');
             return res.data;
         }
     })

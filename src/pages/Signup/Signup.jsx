@@ -51,7 +51,7 @@ const Signup = () => {
 
               const user = result.user
 
-              fetch('https://red-quaint-snail.cyclic.app/allUsers', {
+              fetch('https://vast-rose-seahorse-hem.cyclic.cloud/allUsers', {
                 method: 'POST',
                 headers: {
                   'content-type': 'application/json'

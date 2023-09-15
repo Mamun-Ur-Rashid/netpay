@@ -11,7 +11,7 @@ const UserCashOut = () => {
         data.userNumber = user?.number;
         console.log(data)
 
-        fetch('https://red-quaint-snail.cyclic.app/cashOut', {
+        fetch('https://vast-rose-seahorse-hem.cyclic.cloud/cashOut', {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"
