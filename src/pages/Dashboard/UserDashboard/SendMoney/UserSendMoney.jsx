@@ -108,7 +108,7 @@ const DashSendMoney = () => {
                 <div className="form-control w-full">
                     <input
                         type="submit"
-                        className="bg-[#4e63b8] p-2 my-5 border-0 rounded-xl mb-4 text-white cursor-pointer"
+                        className="bg-[#4e63b8] p-2 my-5 border-0 rounded-xl mb-6 text-white cursor-pointer"
                         value="Send Money"
                     />
                 </div>
