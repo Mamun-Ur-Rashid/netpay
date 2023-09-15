@@ -13,8 +13,10 @@ const AgentToAdmin = () => {
     }, [isUserInfo]);
 
     const onSubmit = async (data) => {
+        data.agentAccount = isUserInfo?.number
+        console.log(data)
         try {
-            const response = await fetch('https://red-quaint-snail.cyclic.app/agentToAdmin', {
+            const response = await fetch('https://vast-rose-seahorse-hem.cyclic.cloud/agentToAdmin', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
