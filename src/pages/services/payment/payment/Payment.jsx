@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Title from "../../../../shared/title/Title";
 import Massage from "../../../liveChat/massage/Massage";
 import AllService from "../../allService/AllService";
@@ -7,6 +8,11 @@ import ServiceBanner from "../../serviceBanner/ServiceBanner";
 import PaymentServiceDetails from "../paymentProcess/PaymentServiceDetails";
 
 const Payment = () => {
+
+    // Scroll to the top of the page when it loads
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const headerData = {
         imageUrl: 'https://i.pinimg.com/736x/95/a1/d0/95a1d0a1226d81bde38336c7eee5c5d4.jpg',
