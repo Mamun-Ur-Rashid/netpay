@@ -1,13 +1,14 @@
 import { useEffect } from "react";
 import AOS from 'aos';
 import '../banner/Banner.css'
-import cards from "../../../assets/sidepic.png";
-import back from "../../../assets/background.png";
+import cards from "../../../assets/allPicture/sidepic.png";
+
 
 const Banner = () => {
+
     useEffect(() => {
         AOS.init({ duration: 800 });
-        
+
         return () => {
             AOS.refresh();
         };
