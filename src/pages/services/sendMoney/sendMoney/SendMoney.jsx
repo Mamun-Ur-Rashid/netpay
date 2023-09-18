@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Title from "../../../../shared/title/Title";
 import Massage from "../../../liveChat/massage/Massage";
 import AllService from "../../allService/AllService";
@@ -9,10 +8,7 @@ import SendMoneyServiceDatails from "../sendMoneyProcess/SendMoneyServiceDatails
 
 const SendMoney = () => {
 
-    // Scroll to the top of the page when it loads
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
 
     const headerData = {
         imageUrl: 'https://thumbs.dreamstime.com/b/online-money-transfer-vector-illustration-cartoon-flat-tiny-friend-man-character-transferring-send-transaction-coin-out-178490363.jpg',
