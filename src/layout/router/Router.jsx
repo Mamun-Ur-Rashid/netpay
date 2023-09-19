@@ -34,12 +34,12 @@ import Contact from "../../pages/contact/Contact";
 
 
 import UserMobileRecharge from "../../pages/Dashboard/UserDashboard/mobileRecharge/UserMobileRecharge";
-import RequestPayment from "../../pages/Dashboard/UserDashboard/requestPayment/RequestPayment";
+import RequestPayment from "../../pages/Dashboard/UserDashboard/requestPayment/RequestPayment"
+import AllTransaction from "../../pages/Dashboard/UserDashboard/allTransaction/AllTransaction";
 import BillPayment from "../../pages/Dashboard/UserDashboard/billPayment/BillPayment";
 import ElectricityBill from "../../pages/Dashboard/UserDashboard/billPayment/electricityBill/ElectricityBill";
 import GasBill from "../../pages/Dashboard/UserDashboard/billPayment/gasBill/GasBill";
 import NetworkBill from "../../pages/Dashboard/UserDashboard/billPayment/networkBill/NetworkBill";
-
 
 const router = createBrowserRouter([
     {
@@ -150,6 +150,10 @@ const router = createBrowserRouter([
             {
                 path:'dashboard/requestpayment',
                 element:<RequestPayment></RequestPayment>
+            },
+            {
+                path:'dashboard/userTransaction',
+                element: <AllTransaction></AllTransaction>
             },
 
             // admin dashboard route here.....

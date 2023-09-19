@@ -4,11 +4,12 @@ import useUser from '../../../../Hook/useUser';
 import Swal from 'sweetalert2';
 
 const UserCashOut = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [user] = useUser();
     const [error, SetError] = useState(null)
     const onSubmit = data => {
         data.userNumber = user?.number;
+        data.transactionName = "Cash Out";
         console.log(data)
 
         fetch('https://vast-rose-seahorse-hem.cyclic.cloud/cashOut', {
@@ -29,6 +30,7 @@ const UserCashOut = () => {
                     showConfirmButton: false,
                     timer: 2000
                 })
+                reset();
                 SetError(null)
             }
             else{
