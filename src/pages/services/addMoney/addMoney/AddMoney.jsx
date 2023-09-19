@@ -101,7 +101,7 @@ const AddMoney = () => {
                     ></AllServicesHeader>
                 </div>
                 <AddMoneyServiceDetalis />
-                <div className="bg-[#4e63b8] p-8 mt-10">
+                <div className="p-8 mt-10">
                     <Faq faqData={faqData}></Faq>
                 </div>
             </div>

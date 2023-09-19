@@ -2,9 +2,9 @@ import Title from "../../../../shared/title/Title";
 
 const SendMoneyServiceDatails = () => {
     return (
-        <div className="mt-4 md:mt-8">
+        <div className="mt-6 md:mt-10 ">
             <Title title={' Send Money Service Details'}></Title>
-            <div className="bg-[#4e63b8] text-slate-200 p-8 md:p-10">
+            <div className=" text-black p-8 md:p-10 bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl">
                 <p>Send money service allows you to send or transfer money from your NetPay account to any other NetPay account.
                 </p>
                 <ul className="py-1">

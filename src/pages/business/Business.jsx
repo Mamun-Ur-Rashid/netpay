@@ -45,13 +45,13 @@ const Business = () => {
                     <div data-aos="zoom-in"
                         data-aos-duration="1000"
                         data-aos-delay="100"
-                        className="bg-[#4e63b8]  my-10 block lg:flex rounded-2xl">
+                        className="my-10 block lg:flex bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl text-black">
                         <div className="w-full lg:w-1/2  ">
                             <img src={img1} alt="" />
                         </div>
                         <div className=" lg:w-1/2 px-3 md:px-8 py-2 md:py-10 ">
-                            <h1 className="text-white text-center font-semibold text-2xl md:text-5xl">Online Business</h1>
-                            <p className="text-white text-sm md:text-base lg:text-xl my-3 md:my-6 lg:my-14">NetPay provides the easiest and safest method for accepting online payments from your customers. You will get access to cutting-edge solutions like payment gateway, tokenized checkout, subscription payments, instant refunds, direct charges, B2C payout, and APIs. </p>
+                            <h1 className=" text-center font-semibold text-2xl md:text-5xl">Online Business</h1>
+                            <p className=" text-sm md:text-base lg:text-xl my-3 md:my-6 lg:my-14">NetPay provides the easiest and safest method for accepting online payments from your customers. You will get access to cutting-edge solutions like payment gateway, tokenized checkout, subscription payments, instant refunds, direct charges, B2C payout, and APIs. </p>
                             <Link to='/signup'>
                                 <Button text={'Sign Up Now'}></Button>
                             </Link>
@@ -68,10 +68,10 @@ const Business = () => {
                     <div data-aos="zoom-in"
                         data-aos-duration="1000"
                         data-aos-delay="100"
-                        className="bg-[#4e63b8]  my-10 block lg:flex rounded-2xl">
+                        className="my-10 block lg:flex bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl text-black">
                         <div className=" lg:w-1/2 px-3 md:px-8 py-2 md:py-10 ">
-                            <h1 className="text-white text-center font-semibold text-2xl md:text-5xl">Agent</h1>
-                            <p className="text-white text-sm md:text-base lg:text-xl my-3 md:my-6 lg:my-14">NetPay With their NetPay Agent Accounts, around 300,000 agents are providing services like Cash In, Cash Out, Pay Bill, Savings to more than 60 million NetPay customers easily and conveniently. As a NetPay agent, you can grow the business every day and be the most valued partner of NetPay. </p>
+                            <h1 className="text-center font-semibold text-2xl md:text-5xl">Agent</h1>
+                            <p className="text-sm md:text-base lg:text-xl my-3 md:my-6 lg:my-14">NetPay With their NetPay Agent Accounts, around 300,000 agents are providing services like Cash In, Cash Out, Pay Bill, Savings to more than 60 million NetPay customers easily and conveniently. As a NetPay agent, you can grow the business every day and be the most valued partner of NetPay. </p>
                             <Link to='/signup'>
                                 <Button text={'Sign Up Now'}></Button>
                             </Link>
@@ -92,10 +92,10 @@ const Business = () => {
                     <div data-aos="zoom-in"
                         data-aos-duration="1000"
                         data-aos-delay="100"
-                        className="bg-[#4e63b8]  my-10 block lg:flex rounded-2xl">
+                        className="my-10 block lg:flex rounded-2xl bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl text-black">
                         <div className=" lg:w-1/2 px-3 md:px-8 py-2 md:py-10 ">
-                            <h1 className="text-white text-center font-semibold text-2xl md:text-5xl">Corporate & Enterprise</h1>
-                            <p className="text-white text-sm md:text-base lg:text-xl my-3 md:my-6 lg:my-14">NetPay Corporate Disbursement and Collection Solutions enable you to digitally disburse money to employees, DSOs, retailers, and partners to facilitate day-to-day business operations, and receive payments from consumers, retailers, and distributors. </p>
+                            <h1 className="text-center font-semibold text-2xl md:text-5xl">Corporate & Enterprise</h1>
+                            <p className="text-sm md:text-base lg:text-xl my-3 md:my-6 lg:my-14">NetPay Corporate Disbursement and Collection Solutions enable you to digitally disburse money to employees, DSOs, retailers, and partners to facilitate day-to-day business operations, and receive payments from consumers, retailers, and distributors. </p>
                             <Link to='/signup'>
                                 <Button text={'Sign Up Now'}></Button>
                             </Link>

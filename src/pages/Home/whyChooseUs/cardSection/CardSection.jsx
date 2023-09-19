@@ -13,8 +13,8 @@ const CardSection = () => {
         <div className="text-white grid grid-cols-1 md:grid-cols-2 gap-9 mt-6  md:px-2">
             <div
                 data-aos="zoom-in-right"
-                data-aos-duration="1000"
-                data-aos-delay="100" className="bg-[#4e63b8]  py-1 pt-2 w-full mx-auto  md:flex border rounded-xl ">
+                data-aos-duration="500"
+                data-aos-delay="100" className=" py-1 pt-2 w-full mx-auto  md:flex text-black bg-[#e5e5e5] rounded-lg shadow-neutral-400 shadow-xl">
                 <div className="flex justify-center items-center w-1/4 md:w-1/6 mx-auto md:ml-4" >
                     <img src={img} alt="" />
                 </div>
@@ -25,8 +25,8 @@ const CardSection = () => {
             </div>
             <div
                 data-aos="zoom-in-left"
-                data-aos-duration="1000"
-                data-aos-delay="200" className="bg-[#4e63b8]  py-1 pt-2 w-full mx-auto  md:flex border rounded-xl">
+                data-aos-duration="500"
+                data-aos-delay="200" className=" py-1 pt-2 w-full mx-auto  md:flex text-black bg-[#e5e5e5] rounded-lg shadow-neutral-400 shadow-xl">
                 <div className="flex w-1/4 md:w-1/6 mx-auto items-center justify-center md:ml-4" >
                     <img src={img2} alt="" />
                 </div>
@@ -37,8 +37,8 @@ const CardSection = () => {
             </div>
             <div
                 data-aos="zoom-in-right"
-                data-aos-duration="1000"
-                data-aos-delay="300" className="bg-[#4e63b8]  py-1 pt-2 w-full mx-auto  md:flex border rounded-xl">
+                data-aos-duration="500"
+                data-aos-delay="300" className="py-1 pt-2 w-full mx-auto  md:flex text-black bg-[#e5e5e5] rounded-lg shadow-neutral-400 shadow-xl">
                 <div className="flex justify-center items-center md:ml-4 w-1/4 md:w-1/6 mx-auto" >
                     <img src={img3} alt="" />
                 </div>
@@ -48,8 +48,8 @@ const CardSection = () => {
                 </div>
             </div>
             <div data-aos="zoom-in-left"
-                data-aos-duration="1000"
-                data-aos-delay="400" className="bg-[#4e63b8]  py-1 pt-2 w-full mx-auto  md:flex border rounded-xl">
+                data-aos-duration="500"
+                data-aos-delay="400" className="py-1 pt-2 w-full mx-auto  md:flex text-black bg-[#e5e5e5] rounded-lg shadow-neutral-400 shadow-xl">
                 <div className="flex justify-center items-center md:ml-4 w-1/4 md:w-1/6 mx-auto" >
                     <img src={img} alt="" />
                 </div>
