@@ -17,7 +17,7 @@ const Faq = ({ faqData }) => {
     return (
         <div className="py-8">
             <Title title={'Frequently Asked Questions'}></Title>
-            <div className="py-6">
+            <div className="p-4 md:p-14 bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl text-black">
                 {faqData.map((item, index) => (
                     <FaqItem
                         key={index}

@@ -1,5 +1,5 @@
 
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AiOutlineClose } from 'react-icons/ai';
 import { BiAlignLeft } from 'react-icons/bi';
@@ -11,6 +11,22 @@ import './navbar.css'
 const Navbar = () => {
     const { user, handleLogOut } = useContext(AuthContext)
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const [isSticky, setSticky] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setSticky(true);
+            } else {
+                setSticky(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
 
     const toggleMenu = () => {
@@ -31,13 +47,14 @@ const Navbar = () => {
             .catch(error => {
                 // console.log(error.message)
             })
-    }
+    };
 
     const li = (
         <> <NavLink to='/' className="">Home</NavLink>
             <NavLink to='/services' className="">Services</NavLink>
             <NavLink to='/business' className="">Business</NavLink>
-            <NavLink to='/about' className="">About</NavLink>
+            <NavLink to='/contact' className="">Contact Us</NavLink>
+            {/* <NavLink to='/about' className="">About</NavLink> */}
             {user &&
                 <NavLink to='dashboard' className=" hover:text-blue-700">Dashboard</NavLink>
             }
@@ -46,7 +63,7 @@ const Navbar = () => {
     )
     return (
         <div >
-            <nav className="bg-white w-full top-0 z-10 ">
+            <nav className={`bg-white w-full top-0 z-10 ${isSticky ? 'fixed' : ''}`}>
                 <div>
                     <div>
                         <div className='hidden md:block'>
@@ -91,7 +108,8 @@ const Navbar = () => {
                                     <NavLink to='/' className=" block">Home</NavLink>
                                     <NavLink to='/services' className="block">Services</NavLink>
                                     <NavLink to='/business' className="block">Business</NavLink>
-                                    <NavLink to='/about' className="block">About</NavLink>
+                                    <NavLink to='/contact' className="">Contact Us</NavLink>
+                                    {/* <NavLink to='/about' className="block">About</NavLink> */}
                                     {user &&
                                         <NavLink to='dashboard' className=" hover:text-blue-700">Dashboard</NavLink>
                                     }

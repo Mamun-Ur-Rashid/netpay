@@ -19,7 +19,7 @@ import AllUsers from "../../pages/Dashboard/adminDashboard/allUsers/AllUsers";
 import AdminSendMoney from "../../pages/Dashboard/adminDashboard/sendMoney/AdminSendMoney";
 import AgentHome from "../../pages/Dashboard/agentDashboard/agentHome/AgentHome";
 
-import TransactionHistory from "../../pages/Dashboard/agentDashboard/transactionHistory/TransactionHistory";    
+import TransactionHistory from "../../pages/Dashboard/agentDashboard/transactionHistory/TransactionHistory";
 import AgentToAdmin from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToAdmin/AgentToAdmin";
 import AgentToUser from "../../pages/Dashboard/agentDashboard/agentSendMoney/agentToUser/AgentToUser";
 import AgentAddMoney from "../../pages/Dashboard/agentDashboard/addMoney/AgentAddMoney";
@@ -29,9 +29,17 @@ import UserCashOut from "../../pages/Dashboard/UserDashboard/cashOut/UserCashOut
 import AdminAddMoney from "../../pages/Dashboard/adminDashboard/addMoney/AdminAddMoney";
 import Setting from "../../pages/Dashboard/UserDashboard/setting/Setting";
 import UserSendMoney from "../../pages/Dashboard/UserDashboard/SendMoney/UserSendMoney";
+
+import Contact from "../../pages/contact/Contact";
+
+
 import UserMobileRecharge from "../../pages/Dashboard/UserDashboard/mobileRecharge/UserMobileRecharge";
-import RequestPayment from "../../pages/Dashboard/UserDashboard/requestPayment/RequestPayment";
+import RequestPayment from "../../pages/Dashboard/UserDashboard/requestPayment/RequestPayment"
 import AllTransaction from "../../pages/Dashboard/UserDashboard/allTransaction/AllTransaction";
+import BillPayment from "../../pages/Dashboard/UserDashboard/billPayment/BillPayment";
+import ElectricityBill from "../../pages/Dashboard/UserDashboard/billPayment/electricityBill/ElectricityBill";
+import GasBill from "../../pages/Dashboard/UserDashboard/billPayment/gasBill/GasBill";
+import NetworkBill from "../../pages/Dashboard/UserDashboard/billPayment/networkBill/NetworkBill";
 
 const router = createBrowserRouter([
     {
@@ -61,6 +69,10 @@ const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/contact',
+                element: <Contact></Contact>
             },
             {
                 path: '/login',
@@ -99,25 +111,41 @@ const router = createBrowserRouter([
         children: [
 
             //user dashboard route here .......
-           {
-                path:'dashboard/userHome',
+            {
+                path: 'dashboard/userHome',
                 element: <UserHome></UserHome>
-           },
-           {
+            },
+            {
                 path: 'dashboard/cashOut',
-                element:<UserCashOut></UserCashOut>
-           },
+                element: <UserCashOut></UserCashOut>
+            },
             {
                 path: 'dashboard/send-money',
                 element: <UserSendMoney></UserSendMoney>
             },
             {
-                path:'dashboard/setting',
-                element:<Setting></Setting>
+                path: 'dashboard/setting',
+                element: <Setting></Setting>
             },
             {
                 path:'dashboard/mobileRecharge',
                 element: <UserMobileRecharge></UserMobileRecharge>
+            },
+            {
+                path:'dashboard/billPayment',
+                element:<BillPayment></BillPayment>
+            },
+            {
+                path:'/dashboard/billPayment/electricityBill',
+                element:<ElectricityBill></ElectricityBill>
+            },
+            {
+                path:'/dashboard/billPayment/gasBill',
+                element:<GasBill></GasBill>
+            },
+            {
+                path:'/dashboard/billPayment/networkBill',
+                element:<NetworkBill></NetworkBill>
             },
             {
                 path:'dashboard/requestpayment',
@@ -146,8 +174,8 @@ const router = createBrowserRouter([
                 element: <AdminSendMoney></AdminSendMoney>
             },
             {
-                path:'dashboard/adminAddMoney',
-                element:<AdminAddMoney></AdminAddMoney>
+                path: 'dashboard/adminAddMoney',
+                element: <AdminAddMoney></AdminAddMoney>
             },
 
             // agent dashboard route here.........

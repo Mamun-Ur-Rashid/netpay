@@ -23,8 +23,8 @@ const FinicialHomeCard = () => {
         }
         ,
         {
-            imageUrl: sendmoney,
-            // imageUrl: 'https://media.istockphoto.com/id/1030875166/photo/sending-money.jpg?s=612x612&w=0&k=20&c=mO8gHQbiLymy0mxdhFbRjHKAUQqPrEBg4NH9bfsbX-g=',
+            // imageUrl: sendmoney,
+            imageUrl: 'https://img.freepik.com/free-vector/hand-holding-phone-with-digital-wallet-service-sending-money-payment-transaction-transfer-through-mobile-app-flat-illustration_74855-20589.jpg',
             title: 'Send Money',
             description: 'Send money from NetPay to another account instantly.',
             buttonText: 'Learn More',
@@ -44,11 +44,11 @@ const FinicialHomeCard = () => {
 
     return (
         <div className="py-8">
-            <div 
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-20">
+            <div
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-20">
                 {cardData.map((card, index) => (
                     <SingleCard key={index}
                         imageUrl={card?.imageUrl}

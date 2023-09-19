@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import useAdmin from '../../../Hook/useAdmin';
 import useAgent from '../../../Hook/useAgent';
-import { FaHistory, FaHome, FaHourglassHalf, FaMobileAlt, FaMoneyBillWave, FaMoneyBillWaveAlt, FaSearch, FaWhmcs } from "react-icons/fa";
+import { FaHistory, FaHome, FaHourglassHalf, FaMobileAlt, FaMoneyBillWave, FaLightbulb, FaMoneyBillWaveAlt, FaSearch, FaWhmcs } from "react-icons/fa";
 import { FaChartColumn, FaUserGroup } from "react-icons/fa6";
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
@@ -96,6 +96,7 @@ const DashLayout = () => {
                                             <NavLink to='dashboard/cashOut' className="flex items-center"> <FaMoneyBillWave className='m-3'></FaMoneyBillWave> Cash Out</NavLink>
                                             <NavLink to='dashboard/send-money' className="flex items-center"><FaHourglassHalf className='m-3'></FaHourglassHalf> Send Money</NavLink>
                                             <NavLink to='dashboard/mobileRecharge' className="flex items-center"> <FaMobileAlt className='m-3'></FaMobileAlt> Mobile Recharge</NavLink>
+                                            <NavLink to='dashboard/billPayment' className="flex items-center"> <FaLightbulb className='m-3'></FaLightbulb> Bill Payment</NavLink>
 
                                             <NavLink to='dashboard/requestpayment' className="flex items-center"> <FaMoneyBillWaveAlt className='m-3'></FaMoneyBillWaveAlt> Request Payment</NavLink>
                                             <NavLink to='dashboard/userTransaction' className="flex items-center"> <FaHistory className='m-3'></FaHistory>  All Transaction </NavLink>

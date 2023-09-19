@@ -5,14 +5,10 @@ import Faq from '../../allServicesFAQ/Faq';
 import Title from '../../../../shared/title/Title';
 import MobileRechareServiceDetails from '../mobileRechargeProcess/MobileRechareServiceDetails';
 import Massage from '../../../liveChat/massage/Massage';
-import { useEffect } from 'react';
 
 const MobileRecharge = () => {
 
-    // Scroll to the top of the page when it loads
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
     const headerData = {
         imageUrl: 'https://www.specificstep.com/wp-content/uploads/2021/06/mobile-recharge-apiimg.jpg',
 
@@ -108,7 +104,7 @@ const MobileRecharge = () => {
                     ></AllServicesHeader>
                 </div>
                 <MobileRechareServiceDetails />
-                <div className="bg-[#4e63b8] p-8 mt-10">
+                <div className="p-8 mt-10">
                     <Faq faqData={faqData}></Faq>
                 </div>
             </div>

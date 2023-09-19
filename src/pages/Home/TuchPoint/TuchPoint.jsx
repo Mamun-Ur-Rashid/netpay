@@ -14,14 +14,14 @@ const TuchPoint = () => {
     return (
         <div className='container mx-auto  md:my-12 pt-14'>
             <div data-aos="zoom-in"
-                data-aos-duration="1000"
+                data-aos-duration="500"
                 data-aos-delay="100">
                 <Title title={'Our Touchpoints'} subTitle={'Discover Nearest Convenient Locations for Accessing NetPay Services.'}></Title>
             </div>
             <div className='md:flex justify-between mt-4 md:mt-10 gap-9  '>
                 <div
                     data-aos="zoom-out"
-                    data-aos-duration="1000"
+                    data-aos-duration="500"
                     data-aos-delay="200" className='w-full md:w-1/3  md:py-0  h-96 rounded-xl border border-blue-600'>
                     <div className='text-center p-4'>
                         <h4 className='text-3xl font-semibold'>ATM Cash Out Points</h4>
