@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Massage from "../liveChat/massage/Massage";
-import BusinessBanner from "./BusinessBanner";
 import Title from "../../shared/title/Title";
 import { Link } from "react-router-dom";
 import Button from "../../shared/button/Button";
@@ -21,7 +20,7 @@ const Business = () => {
     return (
         <>
             <div>
-                <BusinessBanner />
+                {/* <BusinessBanner /> */}
             </div>
             <div className="container mx-auto p-8 pt-10">
                 <Title title={'Business'} subTitle={`Get's Your Business Solution Useing NetPay.`} />
@@ -45,7 +44,7 @@ const Business = () => {
                     <div data-aos="zoom-in"
                         data-aos-duration="1000"
                         data-aos-delay="100"
-                        className="my-10 block lg:flex bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl text-black">
+                        className="my-10 block lg:flex bg-gray-100 rounded-lg shadow-gray-200 shadow-lg text-black">
                         <div className="w-full lg:w-1/2  ">
                             <img src={img1} alt="" />
                         </div>
@@ -68,7 +67,7 @@ const Business = () => {
                     <div data-aos="zoom-in"
                         data-aos-duration="1000"
                         data-aos-delay="100"
-                        className="my-10 block lg:flex bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl text-black">
+                        className="my-10 block lg:flex bg-gray-100 rounded-lg shadow-gray-200 shadow-lg text-black">
                         <div className=" lg:w-1/2 px-3 md:px-8 py-2 md:py-10 ">
                             <h1 className="text-center font-semibold text-2xl md:text-5xl">Agent</h1>
                             <p className="text-sm md:text-base lg:text-xl my-3 md:my-6 lg:my-14">NetPay With their NetPay Agent Accounts, around 300,000 agents are providing services like Cash In, Cash Out, Pay Bill, Savings to more than 60 million NetPay customers easily and conveniently. As a NetPay agent, you can grow the business every day and be the most valued partner of NetPay. </p>
@@ -92,7 +91,7 @@ const Business = () => {
                     <div data-aos="zoom-in"
                         data-aos-duration="1000"
                         data-aos-delay="100"
-                        className="my-10 block lg:flex rounded-2xl bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl text-black">
+                        className="my-10 block lg:flex bg-gray-100 rounded-lg shadow-gray-200 shadow-lg text-black">
                         <div className=" lg:w-1/2 px-3 md:px-8 py-2 md:py-10 ">
                             <h1 className="text-center font-semibold text-2xl md:text-5xl">Corporate & Enterprise</h1>
                             <p className="text-sm md:text-base lg:text-xl my-3 md:my-6 lg:my-14">NetPay Corporate Disbursement and Collection Solutions enable you to digitally disburse money to employees, DSOs, retailers, and partners to facilitate day-to-day business operations, and receive payments from consumers, retailers, and distributors. </p>

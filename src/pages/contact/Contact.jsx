@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Button from "../../shared/button/Button";
 import Title from "../../shared/title/Title";
-import ContactBanner from "./ContactBanner";
 import ContactForm from "./ContactForm";
 // import ContactMap from "./ContactMap";
 
@@ -14,13 +13,13 @@ const Contact = () => {
 
     return (
         <div>
-            {/* <ContactBanner /> */}
+
             <Title title={'Contact Us '} subTitle={`Want to talk to us? Feel free to knock anytime for any queries regarding NetPay.`} />
 
             <div className="container mx-auto py-8">
                 <div className="grid grid-cols-1 gap-8 ">
                     {/* Contact Information */}
-                    <div className=" p-4 mb-20 bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl text-black ">
+                    <div className=" p-4 mb-20 bg-gray-100 rounded-lg shadow-gray-200 shadow-lg text-black">
                         <h2 className="text-lg md:text-3xl text-center font-semibold mb-4 underline underline-offset-4">Contact Information</h2>
                         <div className="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 p-4 md:p-6 lg:p-8">
 

@@ -1,5 +1,5 @@
 .btn {
-    background: #17aac9;
+    background: #4e63b8;
     color: #fff;
     display: inline-block;
     font-size: 15px;
@@ -11,13 +11,13 @@
 }
 
 .btn:hover {
-    border: 1px solid #17aac9;
-    color: #17aac9;
+    border: 1px solid #2c45ac;
+    background: #1d379c;
 }
 
 @media (max-width: 880px) {
     .btn {
-        background: #17aac9;
+        background: #4e63b8;
         color: #fff;
         display: inline-block;
         font-size: 15px;
@@ -28,9 +28,9 @@
         font-weight: 500;
     }
 
-    .btn:hover {
+    /* .btn:hover {
         border: 1px solid #17aac9;
         background: #070c33;
         color: #17aac9;
-    }
+    } */
 }

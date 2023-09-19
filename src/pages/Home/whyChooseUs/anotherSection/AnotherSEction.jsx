@@ -9,7 +9,7 @@ const AnotherSEction = () => {
     return (
         <div data-aos="zoom-in"
             data-aos-duration="500"
-            data-aos-delay="100" className="mt-20 block lg:flex bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl text-black ">
+            data-aos-delay="100" className="mt-20 block lg:flex bg-gray-100 rounded-lg shadow-gray-200 shadow-lg text-black">
             <div className="w-full lg:w-1/2  ">
                 <img src={img} alt="" />
             </div>

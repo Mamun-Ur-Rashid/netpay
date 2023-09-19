@@ -4,7 +4,7 @@ import Button from "../../../shared/button/Button";
 const SingleCard = ({ imageUrl, title, description, buttonText, link }) => {
     return (
         <div>
-            <div className="text-black p-7 bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl hover:shadow-2xl">
+            <div className="text-black p-7 rounded-lg shadow-gray-200 shadow-xl hover:shadow-2xl">
                 <div className="mb-1">
                     <img src={imageUrl} alt={title} className="w-full h-56" />
                 </div>
