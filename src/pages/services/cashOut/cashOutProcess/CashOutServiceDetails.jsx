@@ -2,9 +2,9 @@ import Title from "../../../../shared/title/Title";
 
 const CashOutServiceDetails = () => {
     return (
-        <div className="mt-4 md:mt-8">
+        <div className="mt-4 md:mt-10">
             <Title title={'Cash Out Service Details'}></Title>
-            <div className="bg-[#4e63b8] text-slate-200 p-8 md:p-10">
+            <div className=" text-black p-8 md:p-10 bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl">
                 <p>At NetPay, we understand the importance of having access to your funds when you need them. That&apos;s why we&apos;ve designed our Cash Out feature to provide you with a seamless and convenient way to withdraw your money whenever and wherever you are.
 
                     Whether you&apos;re a traveler in need of local currency, a freelancer looking to convert earnings, or simply looking to withdraw funds for daily expenses, our Cash Out feature has got you covered. With a network of partner ATMs and cash withdrawal points, you can access your funds securely and without hassle.
