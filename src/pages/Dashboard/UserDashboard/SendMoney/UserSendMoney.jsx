@@ -35,7 +35,7 @@ const DashSendMoney = () => {
         const amount = event.target.amount.value;
         
 
-        const sendMoneyInfo = { sdn: senderNumber, rcn: receiverNumber, tk: amount };
+        const sendMoneyInfo = { sdn: senderNumber, rcn: receiverNumber, tk: amount , transactionName: "Send Money"};
 
         fetch(`https://vast-rose-seahorse-hem.cyclic.cloud/sendmoney`, {
             method: 'PATCH',
