@@ -31,6 +31,10 @@ import Setting from "../../pages/Dashboard/UserDashboard/setting/Setting";
 import UserSendMoney from "../../pages/Dashboard/UserDashboard/SendMoney/UserSendMoney";
 import UserMobileRecharge from "../../pages/Dashboard/UserDashboard/mobileRecharge/UserMobileRecharge";
 import RequestPayment from "../../pages/Dashboard/UserDashboard/requestPayment/RequestPayment";
+import BillPayment from "../../pages/Dashboard/UserDashboard/billPayment/BillPayment";
+import ElectricityBill from "../../pages/Dashboard/UserDashboard/billPayment/electricityBill/ElectricityBill";
+import GasBill from "../../pages/Dashboard/UserDashboard/billPayment/gasBill/GasBill";
+import NetworkBill from "../../pages/Dashboard/UserDashboard/billPayment/networkBill/NetworkBill";
 
 const router = createBrowserRouter([
     {
@@ -117,6 +121,22 @@ const router = createBrowserRouter([
             {
                 path:'dashboard/mobileRecharge',
                 element: <UserMobileRecharge></UserMobileRecharge>
+            },
+            {
+                path:'dashboard/billPayment',
+                element:<BillPayment></BillPayment>
+            },
+            {
+                path:'/dashboard/billPayment/electricityBill',
+                element:<ElectricityBill></ElectricityBill>
+            },
+            {
+                path:'/dashboard/billPayment/gasBill',
+                element:<GasBill></GasBill>
+            },
+            {
+                path:'/dashboard/billPayment/networkBill',
+                element:<NetworkBill></NetworkBill>
             },
             {
                 path:'dashboard/requestpayment',
