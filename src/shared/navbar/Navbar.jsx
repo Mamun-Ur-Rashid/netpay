@@ -7,6 +7,7 @@ import logo from '../../assets/update.png'
 import { AuthContext } from '../../pages/AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 import './navbar.css'
+import Button from '../button/Button';
 
 const Navbar = () => {
     const { user, handleLogOut } = useContext(AuthContext)

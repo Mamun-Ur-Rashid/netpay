@@ -24,8 +24,8 @@ const AllService = () => {
                 {
                     services?.map((service, index) => (
                         // console.log(service)
-                        <div key={index} className=" bg-[#f5f5f4] rounded-lg shadow-neutral-400 shadow-xl
-                           hover:bg-[#e5e5e5] text-black p-3 text-center">
+                        <div key={index} className=" bg-[#4e63b8] rounded-lg shadow-neutral-100 shadow-md
+                           hover:bg-[#1d379c] text-white p-3 text-center">
                             <Link to={service?.link}>
                                 <img className="w-1/3 mx-auto" src={service?.serviceIcon} alt="" />
                                 <h1 className="text-2xl mt-2 font-bold ">{service?.serviceName}</h1>

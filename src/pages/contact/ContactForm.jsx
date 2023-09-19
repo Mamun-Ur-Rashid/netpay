@@ -31,7 +31,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className=' mt-10 md:mt-16 lg:mt-20 lg:w-1/2 mx-auto p-6 bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl text-black'>
+        <div className=' mt-10 md:mt-16 lg:mt-20 lg:w-1/2 mx-auto p-6 bg-gray-100 rounded-lg shadow-gray-200 shadow-lg text-black'>
             <h2 className="text-lg md:text-3xl text-center font-semibold mb-4 underline underline-offset-4">Contact Form</h2>
             <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                 <div className="mb-4">

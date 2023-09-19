@@ -26,7 +26,7 @@ const AccountSystem = () => {
 
                 <div data-aos="zoom-in"
                     data-aos-duration="500"
-                    data-aos-delay="100" className='bg-[#4e63b8]  p-8 md:w-1/3 sm:mt-5 px-4 rounded-lg shadow-gray-600 shadow-xl'>
+                    data-aos-delay="100" className='bg-[#4e63b8] mb-5 md:mb-0  p-8 md:w-1/3 sm:mt-5 px-4 rounded-lg shadow-gray-100 shadow-md'>
                     <div className=''>
                         <img className='mx-auto w-[200px] h-[164px]' src={nidImg} alt="" />
                     </div>
@@ -37,7 +37,7 @@ const AccountSystem = () => {
 
                 <div data-aos="zoom-in"
                     data-aos-duration="1000"
-                    data-aos-delay="300" className='bg-[#4e63b8] p-8 md:w-1/3 sm:mt-5 px-4 rounded-xl shadow-gray-600 shadow-xl'>
+                    data-aos-delay="300" className='bg-[#4e63b8] mb-5 md:mb-0 p-8 md:w-1/3 sm:mt-5 px-4 rounded-xl shadow-gray-100 shadow-md'>
                     <div className=''>
                         <img className='mx-auto w-[200px] h-[164px]' src={uploadImg} alt="" />
                     </div>
@@ -47,7 +47,7 @@ const AccountSystem = () => {
                 </div>
                 <div data-aos="zoom-in"
                     data-aos-duration="1000"
-                    data-aos-delay="400" className='bg-[#4e63b8] p-8 md:w-1/3 sm:mt-5 px-4 rounded-xl shadow-gray-600 shadow-xl'>
+                    data-aos-delay="400" className='bg-[#4e63b8] mb-5 md:mb-0 p-8 md:w-1/3 sm:mt-5 px-4 rounded-xl shadow-gray-300 shadow-md'>
                     <div className=''>
                         <img className='mx-auto w-[200px] h-[164px]' src={passImg} alt="" />
                     </div>

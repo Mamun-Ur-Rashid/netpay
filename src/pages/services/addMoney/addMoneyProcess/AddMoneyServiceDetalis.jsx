@@ -4,7 +4,7 @@ const AddMoneyServiceDetalis = () => {
     return (
         <div className="mt-4 md:mt-10">
             <Title title={'Add Money Service Details'}></Title>
-            <div className="text-black p-8 md:p-10 bg-[#e2e8f0] rounded-lg shadow-gray-600 shadow-xl">
+            <div className="p-8 md:p-10 bg-gray-100 rounded-lg shadow-gray-200 shadow-lg text-black">
                 <p>Adding money to your NetPay account should be hassle-free and secure. That&apos;s why we&apos;ve designed this feature to provide you with peace of mind, knowing that your financial transactions are conducted with the highest level of security and efficiency.
 
                     Experience the convenience of managing your funds on your terms. With NetPay&apos;s Add Money feature, you&apos;re always in control of your financial journey.

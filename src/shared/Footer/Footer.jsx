@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className='pt-20'>
 
-      <footer className="footer px-10 pt-10 pb-4 bg-[#26608a] text-white">
+      <footer className="footer px-10 pt-10 pb-4 bg-[#4e63b8] text-white">
         <div className="pt-5">
           <img src={logo} className='w-32 h-24 bg-white rounded-lg' />
           <p className=" text-2xl font-semibold">A fast an easy way of <br /> transferring money.</p>
@@ -29,12 +29,12 @@ const Footer = () => {
         <div className='text-xl'>
           <span className="footer-title">Others</span>
           <a className="link link-hover">Treams</a>
-          <a className="link link-hover">FAQ</a>
+          <a className="link link-hover">FAQ .</a>
           <a className="link link-hover"> Securety </a>
         </div>
       </footer>
       <hr />
-      <footer className="footer footer-center py-5 bg-[#26608a] pt-4 text-white">
+      <footer className="footer footer-center py-5 bg-[#4e63b8] pt-4 text-white">
         <div>
           <p>Copyright © 2023 - All right reserved by Netpay Industries Ltd.</p>
         </div>
