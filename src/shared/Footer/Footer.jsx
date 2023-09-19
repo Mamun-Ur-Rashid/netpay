@@ -29,7 +29,7 @@ const Footer = () => {
         <div className='text-xl'>
           <span className="footer-title">Others</span>
           <a className="link link-hover">Treams</a>
-          <a className="link link-hover">FAQ</a>
+          <a className="link link-hover">FAQ .</a>
           <a className="link link-hover"> Securety </a>
         </div>
       </footer>
