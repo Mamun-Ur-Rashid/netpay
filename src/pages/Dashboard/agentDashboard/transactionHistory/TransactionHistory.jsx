@@ -1,17 +1,12 @@
 import axios from "axios";
-import useUser from "../../../../Hook/useUser";
 import { useQuery } from "@tanstack/react-query";
-import { useContext } from "react";
-import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 const TransactionHistory =() => {
-    // const [isUserInfo] = useUser();
-
-
+   
    const { data: agentTransactions = [], isLoading, refetch } = useQuery({
     queryKey: ['agentTransactions'],
     queryFn: async () => {
-        const res = await axios.get('https://red-quaint-snail.cyclic.app/agentAllTransactions');
+        const res = await axios.get('https://vast-rose-seahorse-hem.cyclic.cloud/agentAllTransactions');
         return res.data;
     }
 })

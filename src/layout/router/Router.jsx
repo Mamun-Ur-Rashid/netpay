@@ -29,8 +29,17 @@ import UserCashOut from "../../pages/Dashboard/UserDashboard/cashOut/UserCashOut
 import AdminAddMoney from "../../pages/Dashboard/adminDashboard/addMoney/AdminAddMoney";
 import Setting from "../../pages/Dashboard/UserDashboard/setting/Setting";
 import UserSendMoney from "../../pages/Dashboard/UserDashboard/SendMoney/UserSendMoney";
+
 import Contact from "../../pages/contact/Contact";
 
+
+import UserMobileRecharge from "../../pages/Dashboard/UserDashboard/mobileRecharge/UserMobileRecharge";
+import RequestPayment from "../../pages/Dashboard/UserDashboard/requestPayment/RequestPayment"
+import AllTransaction from "../../pages/Dashboard/UserDashboard/allTransaction/AllTransaction";
+import BillPayment from "../../pages/Dashboard/UserDashboard/billPayment/BillPayment";
+import ElectricityBill from "../../pages/Dashboard/UserDashboard/billPayment/electricityBill/ElectricityBill";
+import GasBill from "../../pages/Dashboard/UserDashboard/billPayment/gasBill/GasBill";
+import NetworkBill from "../../pages/Dashboard/UserDashboard/billPayment/networkBill/NetworkBill";
 
 const router = createBrowserRouter([
     {
@@ -117,6 +126,34 @@ const router = createBrowserRouter([
             {
                 path: 'dashboard/setting',
                 element: <Setting></Setting>
+            },
+            {
+                path:'dashboard/mobileRecharge',
+                element: <UserMobileRecharge></UserMobileRecharge>
+            },
+            {
+                path:'dashboard/billPayment',
+                element:<BillPayment></BillPayment>
+            },
+            {
+                path:'/dashboard/billPayment/electricityBill',
+                element:<ElectricityBill></ElectricityBill>
+            },
+            {
+                path:'/dashboard/billPayment/gasBill',
+                element:<GasBill></GasBill>
+            },
+            {
+                path:'/dashboard/billPayment/networkBill',
+                element:<NetworkBill></NetworkBill>
+            },
+            {
+                path:'dashboard/requestpayment',
+                element:<RequestPayment></RequestPayment>
+            },
+            {
+                path:'dashboard/userTransaction',
+                element: <AllTransaction></AllTransaction>
             },
 
             // admin dashboard route here.....

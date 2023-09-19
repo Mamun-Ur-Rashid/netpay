@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import useAdmin from '../../../Hook/useAdmin';
 import useAgent from '../../../Hook/useAgent';
-import { FaHistory, FaHome, FaHourglassHalf, FaMoneyBillWave, FaSearch, FaWhmcs } from "react-icons/fa";
+import { FaHistory, FaHome, FaHourglassHalf, FaMobileAlt, FaMoneyBillWave, FaLightbulb, FaMoneyBillWaveAlt, FaSearch, FaWhmcs } from "react-icons/fa";
 import { FaChartColumn, FaUserGroup } from "react-icons/fa6";
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
@@ -37,7 +37,7 @@ const DashLayout = () => {
                 <div className='pb-20 md:flex w-full'>
 
                     {/* Side bar */}
-                    <div className=' md:w-[280px] md:h-screen'>
+                    <div className=' md:w-[280px] md:h-screen sticky top-0'>
                         <ul className='px-5 font-semibold text-lg' id='dashboard' >
                             {isAdmin ? (
                                 <>
@@ -46,7 +46,7 @@ const DashLayout = () => {
                                             <img className='ml-8 w-[180px]  h-full mb-6' src="https://i.ibb.co/Wy6R5qM/update.png" alt="update" border="0" />
                                         </div>
                                     </NavLink>
-                                    <NavLink to='dashboard/adminHome' className='inline-flex items-center mt-16'> <FaChartColumn className='m-3'/> Admin Dashboard</NavLink>
+                                    <NavLink to='dashboard/adminHome' className='inline-flex items-center mt-14'> <FaChartColumn className='m-3'/> Admin Dashboard</NavLink>
                                     <NavLink to='dashboard/paymentHistory' className='inline-flex items-center'><FaHistory className='m-3'></FaHistory> Transactions History</NavLink>
                                     <NavLink to='dashboard/allUsers' className="flex items-center"><FaUserGroup className='m-3'></FaUserGroup> All Users</NavLink>
                                     <NavLink to='dashboard/adminAddMoney' className="flex item"> <FaMoneyBillWave className='m-3'></FaMoneyBillWave>Add Money</NavLink>
@@ -61,7 +61,7 @@ const DashLayout = () => {
                                                 <img className='ml-8 w-[180px]  h-full mb-6' src="https://i.ibb.co/Wy6R5qM/update.png" alt="update" border="0" />
                                             </div>
                                         </NavLink>
-                                        <NavLink to='dashboard/agentHome' className="flex items-center mt-16"> <FaChartColumn className='m-3'></FaChartColumn>Agent Dashboard</NavLink>
+                                        <NavLink to='dashboard/agentHome' className="flex items-center mt-14"> <FaChartColumn className='m-3'></FaChartColumn>Agent Dashboard</NavLink>
                                         <NavLink to='dashboard/agentAddMoney' className="flex items-center"> <FaMoneyBillWave className=' m-3'></FaMoneyBillWave> Add Money</NavLink>
                                         
                                         {/* Step 2: Add a dropdown button */}
@@ -92,9 +92,14 @@ const DashLayout = () => {
                                                     <img className='ml-8 w-[180px] h-full mb-6' src="https://i.ibb.co/Wy6R5qM/update.png" alt="update" border="0" />
                                                 </div>
                                             </NavLink>
-                                            <NavLink to='dashboard/userHome' className="flex items-center mt-16"> <FaChartColumn className='m-3'></FaChartColumn> User Dashboard</NavLink>
+                                            <NavLink to='dashboard/userHome' className="flex items-center mt-14"> <FaChartColumn className='m-3'></FaChartColumn> User Dashboard</NavLink>
                                             <NavLink to='dashboard/cashOut' className="flex items-center"> <FaMoneyBillWave className='m-3'></FaMoneyBillWave> Cash Out</NavLink>
                                             <NavLink to='dashboard/send-money' className="flex items-center"><FaHourglassHalf className='m-3'></FaHourglassHalf> Send Money</NavLink>
+                                            <NavLink to='dashboard/mobileRecharge' className="flex items-center"> <FaMobileAlt className='m-3'></FaMobileAlt> Mobile Recharge</NavLink>
+                                            <NavLink to='dashboard/billPayment' className="flex items-center"> <FaLightbulb className='m-3'></FaLightbulb> Bill Payment</NavLink>
+
+                                            <NavLink to='dashboard/requestpayment' className="flex items-center"> <FaMoneyBillWaveAlt className='m-3'></FaMoneyBillWaveAlt> Request Payment</NavLink>
+                                            <NavLink to='dashboard/userTransaction' className="flex items-center"> <FaHistory className='m-3'></FaHistory>  All Transaction </NavLink>
                                             <NavLink to='dashboard/setting' className="flex items-center"> <FaWhmcs className='m-3'></FaWhmcs> Setting</NavLink>
                                             <NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome> Home</NavLink></>
                                     )
@@ -106,7 +111,7 @@ const DashLayout = () => {
 
                     {/* Main content */}
                     <div className=' w-[1100px] bg-gray-200 mt-10 md:mt-0'>
-                        <div className='w-full sticky top-0'>
+                        <div className=' w-full sticky top-0 z-10'>
                             <div className='flex shadow-lg bg-gray-300 justify-between items-center'>
                                 <div className='relative m-4 p-2 px-3 bg-[#4e63b8] rounded-2xl text-white'>
                                     <div className='text-2xl'>Total Amount : <span className='font-bold text-3xl'>{userInfor?.balance}</span> </div>

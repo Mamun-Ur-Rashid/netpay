@@ -10,7 +10,7 @@ const useAxiosSecure = () => {
   const navigate = useNavigate(); 
 
   const axiosSecure = axios.create({
-    baseURL: 'https://red-quaint-snail.cyclic.app/', 
+    baseURL: 'https://vast-rose-seahorse-hem.cyclic.cloud', 
   });
 
   useEffect(() => {

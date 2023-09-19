@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'recharts';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import axios from 'axios';
-
+import { useMediaQuery } from 'react-responsive';
 
 const data = [
     {
@@ -65,10 +65,13 @@ const AdminHome = () => {
     const { user } = useContext(AuthContext);
     const [isUserInfo, setUserInfo] = useState(false);
 
+    const isDesktop = useMediaQuery({ minWidth: 768 });
+    const isMobile = useMediaQuery({ maxWidth: 767 });
+
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axiosSecure.get(`/allUsers/${user?.email}`);
+                const response = await axiosSecure.get(`allUsers/${user?.email}`);
                 setUserInfo(response.data);
             } catch (error) {
                 console.error('Error fetching user data:', error);
@@ -81,7 +84,7 @@ const AdminHome = () => {
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://red-quaint-snail.cyclic.app/allUsers');
+            const res = await axios.get('https://vast-rose-seahorse-hem.cyclic.cloud/allUsers');
 
             return res.data;
         }
@@ -90,7 +93,7 @@ const AdminHome = () => {
     const { data: transection = [] } = useQuery({
         queryKey: ['transection'],
         queryFn: async () => {
-            const res = await axios.get('https://red-quaint-snail.cyclic.app/adminTransection');
+            const res = await axios.get('https://vast-rose-seahorse-hem.cyclic.cloud/adminTransection');
             return res.data;
         }
     })
@@ -112,24 +115,23 @@ const AdminHome = () => {
                         <small className='text-5xl'>{isUserInfo.balance}</small> </p>
                 </div>
             </div>
-            <div className='w-full p-4 mt-10'>
+          
+             <div className='w-full p-4 mt-10'>
                 <h2 className='text-2xl font-semibold'>Transaction Analytics</h2>
                 <BarChart
-                    width={900}
-                    height={400}
+                    width={isMobile ? 300 : 1000} 
+                    height={isMobile ? 300 : 400} 
                     data={data}
-
-                    barSize={30}
+                    barSize={isMobile ? 10 : 30} 
                     className='mt-5'
                 >
                     <XAxis dataKey="name" />
-                    <YAxis></YAxis>
+                    <YAxis />
                     <Tooltip />
                     <Legend />
                     <CartesianGrid strokeDasharray="3 3" />
                     <Bar dataKey="totalAmount" fill="#40218fd4" />
                 </BarChart>
-
             </div>
         </div>
     );
