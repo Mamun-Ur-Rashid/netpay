@@ -91,7 +91,7 @@ const MobileRecharge = () => {
 
     return (
         <div className=''>
-            {/* <ServiceBanner></ServiceBanner> */}
+            <ServiceBanner></ServiceBanner>
             <div className="px-8 md:px-24">
                 <AllService></AllService>
                 <Title title={'Mobile Recharge'} />
