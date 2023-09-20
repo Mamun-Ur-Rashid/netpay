@@ -66,12 +66,12 @@ const UserMobileRecharge = () => {
     return (
         <div className='p-2 md:m-12 '>
             <h3 className='text-4xl font-semibold text-center mb-7 '>Mobile Recharge</h3>
-            <div className='shadow-2xl p-5 md:w-3/4 my-4 mx-auto bg-gradient-to-r from-[#4e63b8] to-gray-300 rounded-xl'>
+            <div className='shadow-2xl p-5 md:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl'>
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-4 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label className='rounded p-2 mt-2'>Select Your Sim</label>
                         <select className='p-2 rounded-lg' {...register("sim")}>
-                            <option disabled selected>Select Your Sim</option>
+                            <option disabled>Select Your Sim</option>
                             <option value="banglalink">Banglalink</option>
                             <option value="grameenPhone">GrameenPhone</option>
                             <option value="robi">Robi</option>
