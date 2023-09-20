@@ -3,6 +3,7 @@ import Massage from "../liveChat/massage/Massage";
 import Title from "../../shared/title/Title";
 import { Link } from "react-router-dom";
 import Button from "../../shared/button/Button";
+import BusinessBanner from "./BusinessBanner";
 
 
 const Business = () => {
@@ -20,7 +21,7 @@ const Business = () => {
     return (
         <>
             <div>
-                {/* <BusinessBanner /> */}
+                <BusinessBanner />
             </div>
             <div className="container mx-auto p-8 pt-10">
                 <Title title={'Business'} subTitle={`Get's Your Business Solution Useing NetPay.`} />

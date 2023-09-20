@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Button from "../../shared/button/Button";
 import Title from "../../shared/title/Title";
 import ContactForm from "./ContactForm";
+import ContactBanner from "./ContactBanner";
 // import ContactMap from "./ContactMap";
 
 const Contact = () => {
@@ -13,7 +14,7 @@ const Contact = () => {
 
     return (
         <div>
-
+            <ContactBanner />
             <Title title={'Contact Us '} subTitle={`Want to talk to us? Feel free to knock anytime for any queries regarding NetPay.`} />
 
             <div className="container mx-auto py-8">
