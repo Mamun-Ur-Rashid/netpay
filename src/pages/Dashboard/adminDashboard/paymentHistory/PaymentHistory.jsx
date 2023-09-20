@@ -31,7 +31,7 @@ const PaymentHistory = () => {
                         <tbody>
                             {
                                 transection.map((trans, index) => <tr
-                                    key={trans._id}>
+                                    key={trans._id} className='bg-slate-400'>
                                     <th>{index + 1}</th>
                                     <th>{trans.Form}</th>
                                     <th>{trans.to}</th>
