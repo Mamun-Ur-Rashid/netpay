@@ -44,7 +44,7 @@ const UserMobileRecharge = () => {
     return (
         <div className='p-2 md:m-12 '>
             <h3 className='text-4xl font-semibold text-center mb-7 '>Mobile Recharge</h3>
-            <div className='shadow-2xl p-5 md:w-3/4 my-4 mx-auto bg-gradient-to-r from-[#4e63b8] to-gray-300 rounded-xl'>
+            <div className=' shadow-2xl p-5 md:w-3/4 my-4 mx-auto bg-opacity-30 backdrop-blur-md bg-[#BCB9F1] border border-white rounded-xl'>
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-4 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">Mobile Number</label>
@@ -62,7 +62,7 @@ const UserMobileRecharge = () => {
                         {errors.userAccount && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
                     </div>
                     <div className='form-control md:w-3/4 mx-auto'>
-                        <input type="submit" className=" bg-[#4e63b8] p-2 rounded-lg mt-2 mb-5" value="Mobile Recharge" />
+                        <input type="submit" className=" bg-[#044EB7] text-white p-2 rounded-lg mt-2 mb-5" value="Mobile Recharge" />
                     </div>
                 </form>
             </div>

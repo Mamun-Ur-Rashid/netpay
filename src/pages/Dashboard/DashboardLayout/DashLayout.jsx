@@ -6,6 +6,7 @@ import { FaChartColumn, FaUserGroup } from "react-icons/fa6";
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useAxiosSecure from '../../../Hook/useAxiosSecure';
+import dashbg from '../../../assets/dashbg.png'
 import './DashLayout.css';
 
 
@@ -32,12 +33,12 @@ const DashLayout = () => {
     }, [user]);
 
     return (
-        <div className=' mx-auto'>
-            <div className=''>
+        <div className='  '>
+            <div className='mx-auto '>
                 <div className='pb-20 md:flex w-full'>
 
                     {/* Side bar */}
-                    <div className=' md:w-[280px] md:h-screen'>
+                    <div className=' md:w-[280px] md:h-screen sticky top-0 border-r border-r-white border-white bg-[#BCB9F1] bg-opacity-30 backdrop-blur-md'>
                         <ul className='px-5 font-semibold text-lg' id='dashboard' >
                             {isAdmin ? (
                                 <>
@@ -46,7 +47,7 @@ const DashLayout = () => {
                                             <img className='ml-8 w-[180px]  h-full mb-6' src="https://i.ibb.co/Wy6R5qM/update.png" alt="update" border="0" />
                                         </div>
                                     </NavLink>
-                                    <NavLink to='dashboard/adminHome' className='inline-flex items-center mt-16'> <FaChartColumn className='m-3'/> Admin Dashboard</NavLink>
+                                    <NavLink to='dashboard/adminHome' className='inline-flex items-center mt-16'> <FaChartColumn className='m-3' /> Admin Dashboard</NavLink>
                                     <NavLink to='dashboard/paymentHistory' className='inline-flex items-center'><FaHistory className='m-3'></FaHistory> Transactions History</NavLink>
                                     <NavLink to='dashboard/allUsers' className="flex items-center"><FaUserGroup className='m-3'></FaUserGroup> All Users</NavLink>
                                     <NavLink to='dashboard/adminAddMoney' className="flex item"> <FaMoneyBillWave className='m-3'></FaMoneyBillWave>Add Money</NavLink>
@@ -63,7 +64,7 @@ const DashLayout = () => {
                                         </NavLink>
                                         <NavLink to='dashboard/agentHome' className="flex items-center mt-16"> <FaChartColumn className='m-3'></FaChartColumn>Agent Dashboard</NavLink>
                                         <NavLink to='dashboard/agentAddMoney' className="flex items-center"> <FaMoneyBillWave className=' m-3'></FaMoneyBillWave> Add Money</NavLink>
-                                        
+
                                         {/* Step 2: Add a dropdown button */}
                                         <button
                                             onClick={() => setSendMoneyDropdown(!sendMoneyDropdown)}
@@ -79,13 +80,13 @@ const DashLayout = () => {
                                                 <NavLink to='dashboard/agentToUser'>Agent to User</NavLink>
                                             </ul>
                                         )}
-                                    
+
                                         <NavLink to='dashboard/agentTransaction' className="flex items-center"> <FaHistory className='m-3'></FaHistory> Transaction History</NavLink>
                                         {/* <NavLink to='dashboard/#' className="flex items-center"> <FaWhmcs className='m-3'></FaWhmcs> Setting</NavLink> */}
                                         <NavLink to='/' className="flex items-center"> <FaHome className='m-3'></FaHome>Home</NavLink></>
 
                                 )
-                                    : ( 
+                                    : (
                                         <>
                                             <NavLink to='/' className=" text-3xl">
                                                 <div style={{ width: 'full', height: '79px' }}>
@@ -99,7 +100,7 @@ const DashLayout = () => {
                                             <NavLink to='dashboard/billPayment' className="flex items-center"> <FaLightbulb className='m-3'></FaLightbulb> Bill Payment</NavLink>
 
                                             <NavLink to='dashboard/requestpayment' className="flex items-center"> <FaWhmcs className='m-3'></FaWhmcs> Reqeust Payment</NavLink>
-                                  
+
                                             <NavLink to='dashboard/setting' className="flex items-center"> <FaWhmcs className='m-3'></FaWhmcs> Setting</NavLink>
                                             <NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome> Home</NavLink></>
                                     )
@@ -110,9 +111,9 @@ const DashLayout = () => {
                     </div>
 
                     {/* Main content */}
-                    <div className=' w-[1100px] bg-gray-200 mt-10 md:mt-0'>
-                        <div className='w-full sticky top-0'>
-                            <div className='flex shadow-lg bg-gray-300 justify-between items-center'>
+                    <div  className=' w-[1100px] mt-10 md:mt-0'>
+                        <div className='w-full relative z-10 sticky top-0'>
+                            <div className='flex shadow-lg border-b border-white bg-[#BCB9F1] bg-opacity-30 backdrop-blur-md justify-between items-center'>
                                 <div className='relative m-4 p-2 px-3 bg-[#4e63b8] rounded-2xl text-white'>
                                     <div className='text-2xl'>Total Amount : <span className='font-bold text-3xl'>{userInfor?.balance}</span> </div>
                                 </div>
@@ -125,7 +126,9 @@ const DashLayout = () => {
                                 </div>
                             </div>
                         </div>
-                        <Outlet></Outlet>
+                        <div >
+                            <Outlet></Outlet>
+                        </div>
                     </div>
                 </div>
             </div>
