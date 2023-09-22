@@ -13,7 +13,7 @@ export default function RequestPayment() {
         data.senderName = user?.name;
         data.senderNumber = user?.number;
 
-        fetch('https://vast-rose-seahorse-hem.cyclic.cloud/requestpayment', {
+        fetch('https://tasty-gray-goshawk.cyclic.cloud/requestpayment', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -38,8 +38,11 @@ export default function RequestPayment() {
 
 
     return(
-        <div className=''>
-            <form onSubmit={handleSubmit(onSubmit)} className='md:w-3/4 mx-auto md:px-20 mt-20'>
+        <div className='md:w-3/4 p-1 rounded-xl mx-auto shadow-xl bg-white bg-opacity-20 backdrop-blur-md'>
+            <div>
+                <p className='text-center font-bold text-3xl my-10'>Request Payment</p>
+            </div>
+            <form onSubmit={handleSubmit(onSubmit)} className=' mx-auto md:px-20 '>
                 <div className='form-control md:w-3/4 mx-auto'>
                     <label htmlFor="">Request User</label>
                     <input required type='number' className='input input-bordered mt-2' {...register("receiver")} placeholder='Enter User Account Number' />
@@ -54,7 +57,7 @@ export default function RequestPayment() {
                 </div>
                 
                 <div className='form-control md:w-3/4 mx-auto pt-5'>
-                    <button type="submit" className='bg-transparent hover:bg-[#4e63b8] font-semibold hover:text-white py-[6px] px-4 border border-blue-500 hover:border-transparent rounded mb-6'>Request</button>
+                    <button type="submit" className='bg-transparent mb-12 hover:bg-[#4e63b8] font-semibold hover:text-white py-[6px] px-4 border border-blue-500 hover:border-transparent rounded '>Request</button>
                 </div>
             </form>
         </div>

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import useUser from '../../../../Hook/useUser';
@@ -7,19 +6,13 @@ import useUser from '../../../../Hook/useUser';
 const AdminAddMoney = () => {
 
     const [isUserInfo] = useUser();
-    console.log(isUserInfo.number)
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
-    const [totalBalance, setTotalBalance] = useState(isUserInfo.balance);
 
-    useEffect(() => {
-        setTotalBalance(isUserInfo.balance);
-    }, [isUserInfo]);
 
     const onSubmit = async (data) => {
         data.adminAccount=isUserInfo?.number
-        console.log(data)
         try {
-            const response = await fetch('https://vast-rose-seahorse-hem.cyclic.cloud/adminAddMoney', {
+            const response = await fetch('https://tasty-gray-goshawk.cyclic.cloud/adminAddMoney', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -29,11 +22,6 @@ const AdminAddMoney = () => {
 
             if (response.ok) {
                 const responseData = await response.json();
-
-                // Check if responseData contains 'totalBalance'
-                if (responseData.hasOwnProperty('totalBalance')) {
-                    setTotalBalance(responseData.totalBalance);
-                }
 
                 Swal.fire({
                     position: 'top-center',
@@ -57,7 +45,7 @@ const AdminAddMoney = () => {
                 <p className='text-center text-2xl font-bold'>Admin From Agent</p>
             </div>
             <h3 className='text-3xl font-semibold text-center mb-5 '>Add Money</h3>
-            <div className='shadow-2xl p-5 md:w-1/2 my-4 mx-auto bg-gradient-to-r from-[#4e63b8] to-gray-300 rounded-xl'>
+            <div className='shadow-2xl p-5 md:w-1/2 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md  rounded-xl'>
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-2 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">Admin Account</label>

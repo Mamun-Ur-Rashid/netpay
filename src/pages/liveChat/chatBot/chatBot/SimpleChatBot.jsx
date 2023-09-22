@@ -60,7 +60,7 @@ const SimpleChatBot = () => {
                     </div> :
                     <div>
                         <div
-                            className="fixed bottom-2 right-2 bg-blue-500 w-32 md:w-40 h-8 md:h-10 rounded-full flex items-center justify-center text-white cursor-pointer"
+                            className="fixed bottom-2 right-2 bg-[#4e63b8] w-32 md:w-40 h-8 md:h-10 rounded-full flex items-center justify-center text-white cursor-pointer border-2 border-slate-200"
                             onClick={toggleMenu}
                         >
                             <h1 className='font-bold'> Live Chat</h1>

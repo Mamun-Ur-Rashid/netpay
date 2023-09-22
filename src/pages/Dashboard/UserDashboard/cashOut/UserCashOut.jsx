@@ -4,14 +4,15 @@ import useUser from '../../../../Hook/useUser';
 import Swal from 'sweetalert2';
 
 const UserCashOut = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [user] = useUser();
     const [error, SetError] = useState(null)
     const onSubmit = data => {
         data.userNumber = user?.number;
+        data.transactionName = "Cash Out";
         console.log(data)
 
-        fetch('https://vast-rose-seahorse-hem.cyclic.cloud/cashOut', {
+        fetch('https://tasty-gray-goshawk.cyclic.cloud/cashOut', {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"
@@ -29,6 +30,7 @@ const UserCashOut = () => {
                     showConfirmButton: false,
                     timer: 2000
                 })
+                reset();
                 SetError(null)
             }
             else{
@@ -39,7 +41,7 @@ const UserCashOut = () => {
     return (
         <div className='p-2 md:m-12 '>
             <h3 className='text-4xl font-semibold text-center mb-7 '>Cash Out form Agent</h3>
-            <div className='shadow-2xl p-5 md:w-3/4 my-4 mx-auto bg-gradient-to-r from-[#4e63b8] to-gray-300 rounded-xl'>
+            <div className='shadow-2xl p-5 md:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl'>
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-4 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">User Account</label>

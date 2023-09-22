@@ -1,0 +1,11 @@
+.bg-blue-50 {
+    background-color: #abcdef;
+}
+
+
+@media (min-width: 1024px) {
+    .bg-blue-50 {
+        background-image: url('../../../assets/background.png');
+        background-size: cover;
+    }
+}

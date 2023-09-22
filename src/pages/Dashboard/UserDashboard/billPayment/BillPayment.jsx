@@ -12,7 +12,7 @@ const BillPayment = () => {
 
     const onClick = () => {
         setHidden(true)
-        gashidden(false)
+        setGasHidden(false)
         setNetHidden(false)
     }
 

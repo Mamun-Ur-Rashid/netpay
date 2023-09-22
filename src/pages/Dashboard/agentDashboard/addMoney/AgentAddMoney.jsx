@@ -19,7 +19,7 @@ const AgentAddMoney = () => {
         console.log(data)
 
         try {
-            const response = await fetch('https://vast-rose-seahorse-hem.cyclic.cloud/agentAddMoney', {
+            const response = await fetch('https://tasty-gray-goshawk.cyclic.cloud/agentAddMoney', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -58,7 +58,7 @@ const AgentAddMoney = () => {
                 <p className='text-center text-2xl font-bold'>Agent From User</p>
             </div>
             <h3 className='text-3xl font-semibold text-center mb-5 '>Add Money</h3>
-            <div className='shadow-2xl p-5 md:w-1/2 my-4 mx-auto bg-gradient-to-r from-[#4e63b8] to-gray-300 rounded-xl'>
+            <div className='shadow-2xl p-5 md:w-1/2 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md  rounded-xl'>
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-2 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">Agent Account</label>
