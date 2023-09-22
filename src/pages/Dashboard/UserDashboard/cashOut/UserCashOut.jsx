@@ -12,7 +12,7 @@ const UserCashOut = () => {
         data.transactionName = "Cash Out";
         console.log(data)
 
-        fetch('https://vast-rose-seahorse-hem.cyclic.cloud/cashOut', {
+        fetch('https://tasty-gray-goshawk.cyclic.cloud/cashOut', {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"

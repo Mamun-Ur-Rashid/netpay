@@ -37,7 +37,7 @@ const DashSendMoney = () => {
 
         const sendMoneyInfo = { sdn: senderNumber, rcn: receiverNumber, tk: amount , transactionName: "Send Money"};
 
-        fetch(`https://vast-rose-seahorse-hem.cyclic.cloud/sendmoney`, {
+        fetch("https://tasty-gray-goshawk.cyclic.cloud/sendmoney", {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -56,7 +56,7 @@ const DashSendMoney = () => {
               })
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('Error:', error.message);
         });
         
         setIsSubmitted(true);

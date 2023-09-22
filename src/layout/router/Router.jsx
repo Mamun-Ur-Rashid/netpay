@@ -40,6 +40,7 @@ import BillPayment from "../../pages/Dashboard/UserDashboard/billPayment/BillPay
 import ElectricityBill from "../../pages/Dashboard/UserDashboard/billPayment/electricityBill/ElectricityBill";
 import GasBill from "../../pages/Dashboard/UserDashboard/billPayment/gasBill/GasBill";
 import NetworkBill from "../../pages/Dashboard/UserDashboard/billPayment/networkBill/NetworkBill";
+import NextForm from "../../pages/Dashboard/UserDashboard/billPayment/electricityBill/NextForm";
 
 const router = createBrowserRouter([
     {
@@ -138,6 +139,10 @@ const router = createBrowserRouter([
             {
                 path:'/dashboard/billPayment/electricityBill',
                 element:<ElectricityBill></ElectricityBill>
+            },
+            {
+                path:'/dashboard/billPayment/nextform',
+                element:<NextForm></NextForm>
             },
             {
                 path:'/dashboard/billPayment/gasBill',

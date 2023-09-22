@@ -84,7 +84,7 @@ const AdminHome = () => {
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://vast-rose-seahorse-hem.cyclic.cloud/allUsers');
+            const res = await axios.get('https://tasty-gray-goshawk.cyclic.cloud/allUsers');
 
             return res.data;
         }
@@ -93,7 +93,7 @@ const AdminHome = () => {
     const { data: transection = [] } = useQuery({
         queryKey: ['transection'],
         queryFn: async () => {
-            const res = await axios.get('https://vast-rose-seahorse-hem.cyclic.cloud/adminTransection');
+            const res = await axios.get('https://tasty-gray-goshawk.cyclic.cloud/adminTransection');
             return res.data;
         }
     })
@@ -108,7 +108,7 @@ const AdminHome = () => {
                     <p className='text-center font-bold pb-4'> Total Transactions <br /><small className='text-3xl'>580500 Tk</small> </p>
                 </div>
                 <div className='m-5 pl-3 pt-8 w-[90%] h-38 bg-[#4e63b8] rounded-xl text-2xl'>
-                    <p className='text-center font-bold pb-4'>  Total Agents <br /> <small className='text-3xl'>25</small> </p>
+                    <p className='text-center font-bold pb-4'>  Total Agents <br /> <small className='text-3xl'>5</small> </p>
                 </div>
                 <div className='m-5 mr-5 pl-3 pt-8 w-[90%] h-38 bg-gray-500 rounded-xl text-2xl'>
                     <p className='text-center font-bold pb-4'>   Total Amount (Tk) <br />

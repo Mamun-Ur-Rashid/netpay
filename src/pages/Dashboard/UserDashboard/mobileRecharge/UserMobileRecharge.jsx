@@ -35,7 +35,7 @@ const UserMobileRecharge = () => {
         }
 
         try {
-            const response = await fetch('https://vast-rose-seahorse-hem.cyclic.cloud/mobileRecharge', {
+            const response = await fetch('https://tasty-gray-goshawk.cyclic.cloud/mobileRecharge', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -97,7 +97,7 @@ const UserMobileRecharge = () => {
                         {errors.userAccount && <span className='mt-3 text-red-600'>{errors.userAccount.message}</span>}
                     </div>
                     <div className='form-control md:w-3/4 mx-auto'>
-                        <input type="submit" className=" bg-[#4e63b8] p-2 rounded-lg mt-2 mb-5" value="Mobile Recharge" />
+                        <input type="submit" className=" bg-[#044EB7] text-white p-2 rounded-lg mt-2 mb-5" value="Mobile Recharge" />
                     </div>
                 </form>
             </div>

@@ -6,6 +6,7 @@ import { FaChartColumn, FaUserGroup } from "react-icons/fa6";
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useAxiosSecure from '../../../Hook/useAxiosSecure';
+import dashbg from '../../../assets/dashbg.png'
 import './DashLayout.css';
 import image from '../../../assets/icon/d4.jpg';
 
@@ -67,7 +68,7 @@ const DashLayout = () => {
                                         </NavLink>
                                         <NavLink to='dashboard/agentHome' className="flex items-center mt-14"> <FaChartColumn className='m-3'></FaChartColumn>Agent Dashboard</NavLink>
                                         <NavLink to='dashboard/agentAddMoney' className="flex items-center"> <FaMoneyBillWave className=' m-3'></FaMoneyBillWave> Add Money</NavLink>
-                                        
+
                                         {/* Step 2: Add a dropdown button */}
                                         <button
                                             onClick={() => setSendMoneyDropdown(!sendMoneyDropdown)}
@@ -83,13 +84,13 @@ const DashLayout = () => {
                                                 <NavLink to='dashboard/agentToUser'>Agent to User</NavLink>
                                             </ul>
                                         )}
-                                    
+
                                         <NavLink to='dashboard/agentTransaction' className="flex items-center"> <FaHistory className='m-3'></FaHistory> Transaction History</NavLink>
                                         {/* <NavLink to='dashboard/#' className="flex items-center"> <FaWhmcs className='m-3'></FaWhmcs> Setting</NavLink> */}
                                         <NavLink to='/' className="flex items-center"> <FaHome className='m-3'></FaHome>Home</NavLink></>
 
                                 )
-                                    : ( 
+                                    : (
                                         <>
                                             <NavLink to='/' className=" text-3xl">
                                                 <div style={{ width: 'full', height: '79px' }}>
@@ -129,7 +130,9 @@ const DashLayout = () => {
                                 </div>
                             </div>
                         </div>
-                        <Outlet></Outlet>
+                        <div >
+                            <Outlet></Outlet>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -19,7 +19,7 @@ const AgentAddMoney = () => {
         console.log(data)
 
         try {
-            const response = await fetch('https://vast-rose-seahorse-hem.cyclic.cloud/agentAddMoney', {
+            const response = await fetch('https://tasty-gray-goshawk.cyclic.cloud/agentAddMoney', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
