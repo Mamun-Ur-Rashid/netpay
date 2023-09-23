@@ -41,6 +41,8 @@ import ElectricityBill from "../../pages/Dashboard/UserDashboard/billPayment/ele
 import GasBill from "../../pages/Dashboard/UserDashboard/billPayment/gasBill/GasBill";
 import NetworkBill from "../../pages/Dashboard/UserDashboard/billPayment/networkBill/NetworkBill";
 import NextForm from "../../pages/Dashboard/UserDashboard/billPayment/electricityBill/NextForm";
+import NextFormNet from "../../pages/Dashboard/UserDashboard/billPayment/networkBill/NextFormNet";
+import GasNextForm from "../../pages/Dashboard/UserDashboard/billPayment/gasBill/GasNextForm";
 
 const router = createBrowserRouter([
     {
@@ -149,8 +151,16 @@ const router = createBrowserRouter([
                 element:<GasBill></GasBill>
             },
             {
-                path:'/dashboard/billPayment/networkBill',
+                path:'/dashboard/billPayment/nextformGas',
+                element:<GasNextForm></GasNextForm>
+            },
+            {
+                path:'/dashboard/billPayment/netbill',
                 element:<NetworkBill></NetworkBill>
+            },
+            {
+                path:'/dashboard/billPayment/nextformNet',
+                element:<NextFormNet></NextFormNet>
             },
             {
                 path:'dashboard/requestpayment',
