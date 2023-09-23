@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import useUser from '../../../../Hook/useUser';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 
 const AgentAddMoney = () => {
+
     const [isUserInfo] = useUser();
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
-    const [totalBalance, setTotalBalance] = useState(isUserInfo.balance);
-
-    useEffect(() => {
-        setTotalBalance(isUserInfo.balance);
-    }, [isUserInfo]);
+    
 
     const onSubmit = async (data) => {
 
         data.agentAccount = isUserInfo?.number;
-
-        console.log(data)
 
         try {
             const response = await fetch('https://tasty-gray-goshawk.cyclic.cloud/agentAddMoney', {
@@ -30,11 +25,6 @@ const AgentAddMoney = () => {
             if (response.ok) {
                 const responseData = await response.json();
 
-                // Check if responseData contains 'totalBalance'
-                if (responseData.hasOwnProperty('totalBalance')) {
-                    setTotalBalance(responseData.totalBalance);
-                }
-
                 Swal.fire({
                     position: 'top-center',
                     icon: 'success',
@@ -45,7 +35,7 @@ const AgentAddMoney = () => {
 
                 reset();
             } else {
-                console.error('Failed to send money');
+                console.error('Failed to Add money');
             }
         } catch (error) {
             console.error('An error occurred', error);
