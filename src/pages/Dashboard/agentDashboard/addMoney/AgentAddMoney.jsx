@@ -48,11 +48,11 @@ const AgentAddMoney = () => {
                 <p className='text-center text-2xl font-bold'>Agent From User</p>
             </div>
             <h3 className='text-3xl font-semibold text-center mb-5 '>Add Money</h3>
-            <div className='shadow-2xl p-5 md:w-1/2 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md  rounded-xl'>
+            <div className='shadow-2xl p-5 lg:w-1/2 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md  rounded-xl'>
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-2 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">Agent Account</label>
-                        <input type='text' className='input input-bordered mt-2' {...register("agentAccount", { minLength: 11, maxLength: 11 })}  disabled defaultValue={isUserInfo && isUserInfo.number ? isUserInfo.number : ''} placeholder='Enter Agent Account Number' />
+                        <input type='text' className='input input-bordered mt-2' {...register("agentAccount", { minLength: 11, maxLength: 11 })} disabled defaultValue={isUserInfo && isUserInfo.number ? isUserInfo.number : ''} placeholder='Enter Agent Account Number' />
                         {errors.agentAccount && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
                     </div>
                     <div className='form-control md:w-3/4 mx-auto'>

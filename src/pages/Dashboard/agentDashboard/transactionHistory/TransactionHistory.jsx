@@ -3,8 +3,8 @@ import { useQuery } from "@tanstack/react-query";
 import useUser from "../../../../Hook/useUser";
 import useAxiosSecure from "../../../../Hook/useAxiosSecure";
 
-const TransactionHistory =() => {
-   
+const TransactionHistory = () => {
+
     const [user] = useUser();
     const [axiosSecure] = useAxiosSecure();
     const { data: agentTransactions = [], isLoading, refetch } = useQuery({
@@ -17,10 +17,10 @@ const TransactionHistory =() => {
     })
     return (
         <div>
-             <h2 className='text-4xl my-6 text-center font-bold'>All Transactions!</h2>
+            <h2 className='text-4xl my-6 text-center font-bold'>All Transactions!</h2>
             <div>
-                <div className="overflow-x-auto p-4">
-                    <table className="table">
+                <div className="overflow-x-auto px-4 ">
+                    <table className="table p-8 rounded-xl">
                         {/* head */}
                         <thead>
                             <tr className='bg-[#4e63b8] text-lg text-white'>

@@ -45,7 +45,7 @@ const AdminAddMoney = () => {
                 <p className='text-center text-2xl font-bold'>Admin From Agent</p>
             </div>
             <h3 className='text-3xl font-semibold text-center mb-5 '>Add Money</h3>
-            <div className='shadow-2xl p-5 md:w-1/2 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md  rounded-xl'>
+            <div className='shadow-2xl p-5 lg:w-1/2 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md  rounded-xl'>
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-2 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">Admin Account</label>
