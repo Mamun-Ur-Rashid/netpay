@@ -16,7 +16,7 @@ const AgentToUser = () => {
         console.log(data)
         data.agentAccount = isUserInfo?.number;
         try {
-            const response = await fetch('https://tasty-gray-goshawk.cyclic.cloud/agentToUser', {
+            const response = await fetch('https://eager-getup-colt.cyclic.cloud/agentToUser', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

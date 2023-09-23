@@ -17,7 +17,7 @@ const NextForm = () => {
         data.userAccount= isUserInfo.number
         data.transactionName = "Electricity bill";
         console.log(data)
-        fetch('https://tasty-gray-goshawk.cyclic.cloud/upadateBill',{
+        fetch('https://eager-getup-colt.cyclic.cloud/upadateBill',{
             method:"PATCH",
             headers:{
                 "content-type":"application/json"

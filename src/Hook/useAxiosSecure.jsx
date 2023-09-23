@@ -10,7 +10,7 @@ const useAxiosSecure = () => {
   const navigate = useNavigate(); 
 
   const axiosSecure = axios.create({
-    baseURL: 'https://tasty-gray-goshawk.cyclic.cloud', 
+    baseURL: 'https://eager-getup-colt.cyclic.cloud', 
   });
 
   useEffect(() => {

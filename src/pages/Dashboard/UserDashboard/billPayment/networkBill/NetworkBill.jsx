@@ -12,7 +12,7 @@ const NetworkBill = () => {
     const onSubmit = data => {
         data.account=isUserInfo.number
         
-        fetch('https://tasty-gray-goshawk.cyclic.cloud/NetbillPay', {
+        fetch('https://eager-getup-colt.cyclic.cloud/NetbillPay', {
             method: "PATCH",
             headers: {
                 'content-type': 'application/json'

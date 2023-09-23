@@ -17,7 +17,7 @@ const NextFormNet = () => {
         data.userAccount= isUserInfo.number
         data.transactionName = "Network bill";
         console.log(data)
-        fetch('https://tasty-gray-goshawk.cyclic.cloud/upadatenetBill',{
+        fetch('https://eager-getup-colt.cyclic.cloud/upadatenetBill',{
             method:"PATCH",
             headers:{
                 "content-type":"application/json"

@@ -15,7 +15,7 @@ const ElectricityBill = () => {
     const onSubmit = datas => {
         datas.account=isUserInfo.number
         
-        fetch('https://tasty-gray-goshawk.cyclic.cloud/billPay', {
+        fetch('https://eager-getup-colt.cyclic.cloud/billPay', {
             method: "PATCH",
             headers: {
                 'content-type': 'application/json'

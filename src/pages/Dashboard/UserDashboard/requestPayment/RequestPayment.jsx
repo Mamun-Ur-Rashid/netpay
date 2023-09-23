@@ -13,7 +13,7 @@ export default function RequestPayment() {
         data.senderName = user?.name;
         data.senderNumber = user?.number;
 
-        fetch('https://tasty-gray-goshawk.cyclic.cloud/requestpayment', {
+        fetch('https://eager-getup-colt.cyclic.cloud/requestpayment', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

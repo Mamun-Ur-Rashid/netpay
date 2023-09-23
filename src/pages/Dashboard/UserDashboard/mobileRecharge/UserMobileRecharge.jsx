@@ -35,7 +35,7 @@ const UserMobileRecharge = () => {
         }
 
         try {
-            const response = await fetch('https://tasty-gray-goshawk.cyclic.cloud/mobileRecharge', {
+            const response = await fetch('https://eager-getup-colt.cyclic.cloud/mobileRecharge', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
