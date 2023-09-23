@@ -4,7 +4,7 @@ import useUser from '../../../../../Hook/useUser';
 import Swal from 'sweetalert2';
 
 
-const NextForm = () => {
+const NextFormNet = () => {
     const [isUserInfo] = useUser();
     const billInfo = localStorage.getItem("resultInfo")
     const Info = JSON.parse(billInfo)
@@ -15,9 +15,9 @@ const NextForm = () => {
         data.month= Info.month;
         data.totalBill = Info.totalbill;
         data.userAccount= isUserInfo.number
-        data.transactionName = "Electricity bill";
+        data.transactionName = "Network bill";
         console.log(data)
-        fetch('https://tasty-gray-goshawk.cyclic.cloud/upadateBill',{
+        fetch('https://tasty-gray-goshawk.cyclic.cloud/upadatenetBill',{
             method:"PATCH",
             headers:{
                 "content-type":"application/json"
@@ -45,7 +45,7 @@ const NextForm = () => {
                     <div className='shadow-2xl p-5 md:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl'>
                         <form onSubmit={handleSubmit(onSubmit)} className='space-y-4 text-2xl'>
                             <div className='form-control md:w-3/4 mx-auto'>
-                                <label className='rounded p-2 mt-2'>Meter Number</label>
+                                <label className='rounded p-2 mt-2'>Subscriber ID</label>
                                 <input type='text' className='input input-bordered mt-2' disabled defaultValue={Info?.meter}   {...register("meter", { maxLength: 11 })} placeholder='Meter Number' />
                             </div>
                             <div className='md:flex md:w-3/4 mx-auto gap-4'>
@@ -74,4 +74,4 @@ const NextForm = () => {
     );
 };
 
-export default NextForm;
+export default NextFormNet;
