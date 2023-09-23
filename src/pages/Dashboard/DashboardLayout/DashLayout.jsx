@@ -6,6 +6,7 @@ import { FaChartColumn, FaUserGroup } from "react-icons/fa6";
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useAxiosSecure from '../../../Hook/useAxiosSecure';
+import dashbg from '../../../assets/dashbg.png'
 import './DashLayout.css';
 import image from '../../../assets/icon/d4.jpg';
 
@@ -36,21 +37,21 @@ const DashLayout = () => {
 
     return (
         <div className=' mx-auto'>
-            
-            <div style={{backgroundImage: `url(${image})`, backgroundSize:'cover'}}>
-                <div className='pb-20 md:flex w-full'>
+
+            <div style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover' }}>
+                <div className='lg:pb-16 lg:flex w-full'>
 
                     {/* Side bar */}
-                    <div className='md:w-[280px] md:h-screen pt-10 ml-2 sticky top-0 '>
-                        <ul className='px-5 text-lg font-bold backdrop-blur-md  bg-opacity-30' id='dashboard' >
+                    <div className='lg:w-[280px] lg:h-screen pt-4 md:pt-10  lg:sticky top-0  '>
+                        <ul className='px-5 pb-3 lg:p-0 text-lg font-bold backdrop-blur-md  bg-opacity-30 ' id='dashboard' >
                             {isAdmin ? (
                                 <>
                                     <NavLink to='/' className="text-white hover:text-orange-400 text-3xl">
                                         <div style={{ width: 'full', height: '79px' }}>
-                                            <img className='ml-8 w-[180px]  h-full mb-6' src="https://i.ibb.co/Wy6R5qM/update.png" alt="update" border="0" />
+                                            <img className='ml-8 w-[180px] h-full mb-6' src="https://i.ibb.co/Wy6R5qM/update.png" alt="update" border="0" />
                                         </div>
                                     </NavLink>
-                                    <NavLink to='dashboard/adminHome' className='inline-flex items-center mt-14'> <FaChartColumn className='m-3'/> Admin Dashboard</NavLink>
+                                    <NavLink to='dashboard/adminHome' className='flex items-center md:mt-8'> <FaChartColumn className='m-3' /> Admin Dashboard</NavLink>
                                     <NavLink to='dashboard/paymentHistory' className='inline-flex items-center'><FaHistory className='m-3'></FaHistory> Transactions History</NavLink>
                                     <NavLink to='dashboard/allUsers' className="flex items-center"><FaUserGroup className='m-3'></FaUserGroup> All Users</NavLink>
                                     <NavLink to='dashboard/adminAddMoney' className="flex item"> <FaMoneyBillWave className='m-3'></FaMoneyBillWave>Add Money</NavLink>
@@ -67,7 +68,7 @@ const DashLayout = () => {
                                         </NavLink>
                                         <NavLink to='dashboard/agentHome' className="flex items-center mt-14"> <FaChartColumn className='m-3'></FaChartColumn>Agent Dashboard</NavLink>
                                         <NavLink to='dashboard/agentAddMoney' className="flex items-center"> <FaMoneyBillWave className=' m-3'></FaMoneyBillWave> Add Money</NavLink>
-                                        
+
                                         {/* Step 2: Add a dropdown button */}
                                         <button
                                             onClick={() => setSendMoneyDropdown(!sendMoneyDropdown)}
@@ -83,20 +84,20 @@ const DashLayout = () => {
                                                 <NavLink to='dashboard/agentToUser'>Agent to User</NavLink>
                                             </ul>
                                         )}
-                                    
+
                                         <NavLink to='dashboard/agentTransaction' className="flex items-center"> <FaHistory className='m-3'></FaHistory> Transaction History</NavLink>
                                         {/* <NavLink to='dashboard/#' className="flex items-center"> <FaWhmcs className='m-3'></FaWhmcs> Setting</NavLink> */}
                                         <NavLink to='/' className="flex items-center"> <FaHome className='m-3'></FaHome>Home</NavLink></>
 
                                 )
-                                    : ( 
+                                    : (
                                         <>
                                             <NavLink to='/' className=" text-3xl">
                                                 <div style={{ width: 'full', height: '79px' }}>
                                                     <img className='ml-8 w-[180px] h-full mb-6' src="https://i.ibb.co/Wy6R5qM/update.png" alt="update" border="0" />
                                                 </div>
                                             </NavLink>
-                                            <NavLink to='dashboard/userHome' className="flex items-center mt-14"> <FaChartColumn className='m-3'></FaChartColumn> User Dashboard</NavLink>
+                                            <NavLink to='dashboard/userHome' className="flex items-center md:mt-8"> <FaChartColumn className='m-3'></FaChartColumn> User Dashboard</NavLink>
                                             <NavLink to='dashboard/cashOut' className="flex items-center"> <FaMoneyBillWave className='m-3'></FaMoneyBillWave> Cash Out</NavLink>
                                             <NavLink to='dashboard/send-money' className="flex items-center"><FaHourglassHalf className='m-3'></FaHourglassHalf> Send Money</NavLink>
                                             <NavLink to='dashboard/mobileRecharge' className="flex items-center"> <FaMobileAlt className='m-3'></FaMobileAlt> Mobile Recharge</NavLink>
@@ -114,22 +115,24 @@ const DashLayout = () => {
                     </div>
 
                     {/* Main content */}
-                    <div className=' w-[1100px] mt-10 md:mt-0 pt-10'>
-                        <div className=' w-full sticky top-0 z-10 mb-10'>
-                            <div className='flex shadow-lg bg-white bg-opacity-20 backdrop-blur-md justify-between items-center'>
-                                <div className='relative ml-8 p-2 px-3 bg-[#4e63b8] rounded-2xl text-white'>
-                                    <div className='text-2xl'>Total Amount : <span className='font-bold text-3xl'>{userInfor?.balance}</span> </div>
+                    <div className=' lg:w-[1100px] mt- md:mt-0 md:pt-8 '>
+                        <div className=' w-full sticky top-0 z-10 mb-4  '>
+                            <div className='flex shadow-lg  bg-opacity-20 backdrop-blur-md justify-between items-center'>
+                                <div className='relative ml-8 p-2 md:px-3 bg-[#4e63b8] rounded-2xl text-white'>
+                                    <div className='text-base lg:text-2xl'>Total Amount : <span className='font-bold text-xl lg:text-3xl'>{userInfor?.balance}</span> </div>
                                 </div>
-                                <div className='flex m-4 gap-2 '>
-                                    <img className='w-14 h-14 rounded-full mt-[7px]' src={userInfor?.ImgUrl} alt="" />
-                                    <div className='mr-10'>
-                                        <p className='ml-3 pr-2 text-lg uppercase font-semibold'>{userInfor?.name}</p>
-                                        <p className='ml-3 mt-1 '><span className='bg-[#4e63b8]  rounded flex items-center justify-center  text-white'>{userInfor?.role}</span></p>
+                                <div className='flex p-4 gap-2'>
+                                    <img className='w-10 h-10 md:w-14 md:h-14 rounded-full md:mt-[7px]' src={userInfor?.ImgUrl} alt="" />
+                                    <div className='md:mr-10'>
+                                        <p className='ml-3 pr-2 text-sm md:text-lg uppercase font-semibold'>{userInfor?.name}</p>
+                                        <p className='mi-1 md:ml-3 md:mt-1 '><span className='bg-[#4e63b8]  rounded flex items-center justify-center  text-white'>{userInfor?.role}</span></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <Outlet></Outlet>
+                        <div className=''>
+                            <Outlet></Outlet>
+                        </div>
                     </div>
                 </div>
             </div>

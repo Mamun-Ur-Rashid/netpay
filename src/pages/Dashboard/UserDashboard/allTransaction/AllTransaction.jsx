@@ -29,7 +29,7 @@ const AllTransaction = () => {
                                 <tr className='bg-gray-500 text-lg text-white'>
                                     <th>#</th>
                                     <th>Transaction Name</th>
-                                    <th>Receiver Number</th>
+                                    <th>Receiver/Meter Number</th>
                                     <th>Amount</th>
                                     <th>Transaction Id</th>
                                     <th>Date</th>

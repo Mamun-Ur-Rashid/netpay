@@ -12,7 +12,7 @@ const BillPayment = () => {
 
     const onClick = () => {
         setHidden(true)
-        gashidden(false)
+        setGasHidden(false)
         setNetHidden(false)
     }
 
@@ -34,7 +34,7 @@ const BillPayment = () => {
                 <div>
 
                     <button onClick={onClick} className='w-full' >
-                        <div className='m-5 pl-3 pt-4 w-[90%] h-38 bg-[#33C49D] rounded-xl text-2xl'>
+                        <div className='m-5 pl-3 pt-4 w-[90%] h-38 bg-[#33C49D] bg-opacity-30 backdrop-blur-md border border-white rounded-xl text-2xl'>
 
                             <FaRegLightbulb className='mx-auto my-3 text-3xl'></FaRegLightbulb>
 
@@ -43,7 +43,7 @@ const BillPayment = () => {
                     </button>
                     {
                         hidden &&
-                        <div className='mt-5 bg-[#33C49D] w-[90%] mx-auto rounded-md px-3 py-4'>
+                        <div className='mt-5 bg-[#33C49D] w-[90%] bg-opacity-30 backdrop-blur-md border border-white mx-auto rounded-md px-3 py-4'>
                             <p className='text-center font-bold font-2xl my-2'>Select Industry</p>
                             <Link to='/dashboard/billPayment/electricityBill' className='my-2 bg-[#4e63b8] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>Polli Bidyut (postpaid)</Link> <br />
                             <Link to='/dashboard/billPayment/electricityBill' className='my-2 bg-[#4e63b8] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>DESCO (prepaid)</Link> <br />
@@ -57,7 +57,7 @@ const BillPayment = () => {
                 <div>
                     {/*  */}
                     <button onClick={Gashidden} className='w-full'>
-                        <div className='m-5 pl-3 pt-4 w-[90%] h-38 bg-[#C44933] rounded-xl text-2xl'>
+                        <div className='m-5 pl-3 pt-4 w-[90%] h-38  bg-[#33C49D] bg-opacity-20 backdrop-blur-md border border-white rounded-xl text-2xl'>
                             <div>
                                 <BsFire className='mx-auto my-3 text-3xl'></BsFire>
                             </div>
@@ -66,7 +66,7 @@ const BillPayment = () => {
                     </button>
                     {
                         gashidden &&
-                        <div className='mt-5 bg-[#C44933] w-[90%] mx-auto rounded-md px-3 py-4'>
+                        <div className='mt-5  bg-[#33C49D] w-[90%] bg-opacity-20 backdrop-blur-md border border-white mx-auto rounded-md px-3 py-4'>
                             <p className='text-center font-bold font-2xl my-2'>Select Industry</p>
                             <Link to='/dashboard/billPayment/gasBill' className='my-2 bg-[#2949c7] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>Titas Gas Postpaid (Non-metered)</Link> <br />
                             <Link to='/dashboard/billPayment/gasBill' className='my-2 bg-[#2949c7] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>Titas Gas Postpaid (Metered)</Link> <br />
@@ -79,7 +79,7 @@ const BillPayment = () => {
                 {/* to='/dashboard/billPayment/networkBill' */}
                 <div>
                     <button onClick={Nethidden} className='w-full' >
-                        <div className='m-5 mr-5 pl-3 pt-4 w-[90%] h-38 bg-[#0F101A] rounded-xl text-2xl'>
+                        <div className='m-5 mr-5 pl-3 pt-4 w-[90%] h-38  bg-[#33C49D] rounded-xl bg-opacity-30 backdrop-blur-md border border-white text-2xl'>
                             <div>
                                 <FaWifi className='mx-auto my-3 text-3xl'></FaWifi>
                             </div>
@@ -88,13 +88,13 @@ const BillPayment = () => {
                     </button>
                     {
                         nethidden &&
-                        <div className='mt-5 bg-[#0F101A] w-[90%] mx-auto rounded-md px-3 py-4'>
+                        <div className='mt-5  bg-[#33C49D] w-[90%] bg-opacity-30 backdrop-blur-md border border-white mx-auto rounded-md px-3 py-4'>
                             <p className='text-center font-bold font-2xl my-2'>Select Industry</p>
-                            <Link to='/dashboard/billPayment/gasBill' className='my-2 bg-[#2949c7] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>Link3 Internet</Link> <br />
-                            <Link to='/dashboard/billPayment/gasBill' className='my-2 bg-[#2949c7] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>Amber IT Internet</Link> <br />
-                            <Link to='/dashboard/billPayment/gasBill' className='my-2 bg-[#2949c7] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>Carnival Internet</Link> <br />
-                            <Link to='/dashboard/billPayment/gasBill' className='my-2 bg-[#2949c7] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>SamOnline Internet</Link> <br />
-                            <Link to='/dashboard/billPayment/gasBill' className='my-2 bg-[#2949c7] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>Triangle Internet</Link> <br />
+                            <Link to='/dashboard/billPayment/netbill' className='my-2 bg-[#2949c7] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>Link3 Internet</Link> <br />
+                            <Link to='/dashboard/billPayment/netbill' className='my-2 bg-[#2949c7] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>Amber IT Internet</Link> <br />
+                            <Link to='/dashboard/billPayment/netbill' className='my-2 bg-[#2949c7] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>Carnival Internet</Link> <br />
+                            <Link to='/dashboard/billPayment/netbill' className='my-2 bg-[#2949c7] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>SamOnline Internet</Link> <br />
+                            <Link to='/dashboard/billPayment/netbill' className='my-2 bg-[#2949c7] px-3 rounded-md leading-10 hover:bg-[#1a349e] py-1'>Triangle Internet</Link> <br />
                         </div>
                     }
                 </div>

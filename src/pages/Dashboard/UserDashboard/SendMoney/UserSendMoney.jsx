@@ -2,17 +2,14 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../../Hook/useAxiosSecure';
-import { useQuery } from "@tanstack/react-query";
 
 
 const DashSendMoney = () => {
 
-
-
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const [axiosSecure] = useAxiosSecure();
-    const [isUserInfo, setUserInfo ] = useState(false);
+    const [isUserInfo, setUserInfo] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -33,88 +30,82 @@ const DashSendMoney = () => {
         const senderNumber = event.target.senderNumber.value;
         const receiverNumber = event.target.receiverNumber.value;
         const amount = event.target.amount.value;
-        
 
-        const sendMoneyInfo = { sdn: senderNumber, rcn: receiverNumber, tk: amount , transactionName: "Send Money"};
 
-        fetch(`https://tasty-gray-goshawk.cyclic.cloud/sendmoney`, {
+        const sendMoneyInfo = { sdn: senderNumber, rcn: receiverNumber, tk: amount, transactionName: "Send Money" };
+
+        fetch("https://tasty-gray-goshawk.cyclic.cloud/sendmoney", {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(sendMoneyInfo)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            Swal.fire({
-                position: 'top-center',
-                icon: 'success',
-                title: 'Send Money Successfully Completed!',
-                showConfirmButton: false,
-                timer: 1500
-              })
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-        
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'Send Money Successfully Completed!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            })
+            .catch(error => {
+                console.error('Error:', error.message);
+            });
+
         setIsSubmitted(true);
         event.target.reset();
     };
 
 
-    
+
 
     return (
-        <div className="text-center mb-40">
-        <h1 className="text-4xl mt-4 font-bold">Send Money</h1>
-        <div className="pl-4 mt-4 md:w-1/2 mx-auto shadow-xl bg-white bg-opacity-20 backdrop-blur-md rounded-lg">
-            <form action="" onSubmit={sendMoney} className="md:w-full mx-auto md:px-20 mt-5">
-                <div className="form-control w-full">
-                    <label className="label">
-                        <span className="label-text text-base mt-2 text-white">Sender Number</span>
-                    </label>
-                    <input
-                        type="text" disabled
-                        defaultValue={isUserInfo?.number}
-                        name="senderNumber"
-                        placeholder="Sender Number"
-                        className="input input-bordered text-black"
-                    />
-                </div>
-                <div className="form-control w-full py-2">
-                    <label className="label">
-                        <span className="label-text text-base text-white">Receiver Number</span>
-                    </label>
-                    <input
-                        type="number"
-                        name="receiverNumber"
-                        placeholder="Receiver Number"
-                        className="input input-bordered text-black w-full "
-                    />
-                </div>
-                <div className="form-control w-full">
-                    <label className="label">
-                        <span className="label-text text-base text-white">Type Amount</span>
-                    </label>
-                    <input
-                        type="number"
-                        name="amount"
-                        placeholder="Amount"
-                        className="input input-bordered text-black w-full"
-                    />
-                </div>
-                <div className="form-control w-full">
-                    <input
-                        type="submit"
-                        className="bg-[#4e63b8] p-2 my-5 border-0 rounded-xl mb-6 text-white cursor-pointer"
-                        value="Send Money"
-                    />
-                </div>
-            </form>
+        <div className="p-6 lg:p-0 md:m-12">
+            <h1 className="text-4xl font-semibold text-center mb-7 ">Send Money</h1>
+            <div className="shadow-2xl p-8 lg:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl">
+                <form action="" onSubmit={sendMoney} className="space-y-4 text-2xl">
+                    <div className="form-control md:w-3/4 mx-auto">
+                        <label htmlFor="">Sender Number</label>
+                        <input
+                            type="text" disabled
+                            defaultValue={isUserInfo?.number}
+                            name="senderNumber"
+                            placeholder="Sender Number"
+                            className="input input-bordered mt-2"
+                        />
+                    </div>
+                    <div className="form-control md:w-3/4 mx-auto ">
+                        <label htmlFor="">Receiver Number</label>
+                        <input
+                            type="number"
+                            name="receiverNumber"
+                            placeholder="Receiver Number"
+                            className="input input-bordered mt-2 "
+                        />
+                    </div>
+                    <div className="form-control md:w-3/4 mx-auto">
+                        <label htmlFor="">Type Amount</label>
+                        <input
+                            type="number"
+                            name="amount"
+                            placeholder="Amount"
+                            className="input input-bordered mt-2 "
+                        />
+                    </div>
+                    <div className="form-control md:w-3/4 mx-auto">
+                        <input
+                            type="submit"
+                            className="bg-[#4e63b8] p-2 my-5 border-0 rounded-xl mb-6 text-white cursor-pointer"
+                            value="Send Money"
+                        />
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
     );
 };
 

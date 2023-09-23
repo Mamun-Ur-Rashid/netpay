@@ -14,7 +14,6 @@ const UserHome = () => {
 
     const [axiosSecure] = useAxiosSecure();
     const { user } = useContext(AuthContext);
-    const [isUserInfo] = useUser();
 
 
     const { data: userData, isLoading, refetch } = useQuery({

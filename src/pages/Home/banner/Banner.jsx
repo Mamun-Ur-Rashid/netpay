@@ -18,7 +18,7 @@ const Banner = () => {
         <div className="bg-blue-50">
             <div className="px-14 md:flex justify-between container mx-auto md:py-16 py-5">
                 <div data-aos="fade-right" className=" lg:w-3/5 md:text-left text-center">
-                    <h1 className="lg:text-7xl text-5xl space-3 text-slate-700 leading-tight">Online <span className="text-[#4e63b8] font-bold">money <br /> transfer </span> made simple.</h1>
+                    <h1 className="lg:text-7xl text-5xl space-3 text-slate-700 leading-tight">Online <span className="text-[#4e63b8] font-bold">money <br /> transfer </span> made <br /> simple.</h1>
                     <h1 className="text-black font-semibold text-lg pt-4">Easy way to save your money and time. <br /> Transfer with NetPay.</h1>
                 </div>
 

@@ -16,9 +16,9 @@ const AllUsers = () => {
         <div>
             <h2 className='text-4xl my-6 text-center font-bold'>All Users</h2>
             <div>
-                <div className="overflow-x-auto p-4">
+                <div className="overflow-x-scroll overflow-y-scroll p-4 lg:p-10">
                     <table className="table">
-                       
+
                         <thead>
                             <tr className='bg-[#4e63b8] text-white text-lg'>
                                 <th>#</th>
