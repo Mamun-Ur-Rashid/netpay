@@ -64,9 +64,9 @@ const UserMobileRecharge = () => {
     };
 
     return (
-        <div className='p-2 md:m-12 '>
+        <div className='p-6 lg:p-0 md:m-12'>
             <h3 className='text-4xl font-semibold text-center mb-7 '>Mobile Recharge</h3>
-            <div className='shadow-2xl p-5 md:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl'>
+            <div className='shadow-2xl p-4 lg:p-8 lg:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl'>
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-4 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label className='rounded p-2 mt-2'>Select Your Sim</label>
@@ -79,13 +79,15 @@ const UserMobileRecharge = () => {
                             <option value="airtel">Airtel</option>
                         </select>
                     </div>
-                    <div className='md:flex md:w-3/4 mx-auto gap-4'>
-                        <div className='form-control w-1/2'>
+                    <div className='form-control md:w-3/4 mx-auto'>
+                        <div className='form-control'>
                             <label htmlFor="">Mobile Number</label>
                             <input type='text' className='input input-bordered mt-2' {...register("mobileNumber", { minLength: 11, maxLength: 11 })} placeholder='Enter Mobile Number' />
                             {errors.mobileNumber && <span className='mt-3 text-red-400'>{errors.mobileNumber.message}</span>}
                         </div>
-                        <div className='form-control w-1/2'>
+                    </div>
+                    <div className='form-control md:w-3/4 mx-auto'>
+                        <div className='form-control '>
                             <label htmlFor="">Amount</label>
                             <input type='number' className='input input-bordered mt-2' {...register("amount", { minLength: 2, maxLength: 6 })} placeholder='Enter Amount' />
                             {errors.amount && <span className='mt-3 text-red-600'>{errors.amount.message}</span>}
