@@ -45,13 +45,13 @@ const UserCashOut = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-2 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">User Account</label>
-                        <input type='text' className='input input-bordered mt-2' disabled defaultValue={user?.number} {...register("userNumber", { maxLength: 11 })} placeholder='Enter Admin Account Number' />
-                        {errors.adminAccount && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
+                        <input type='text' className='input input-bordered mt-2' disabled defaultValue={user?.number} {...register("userNumber", { maxLength: 11 })} placeholder='Enter user Account Number' />
+                        {errors.userNumber && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
                     </div>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">Agent Account</label>
                         <input type='text' className='input input-bordered mt-2' {...register("agentNumber", { minLength: 11, maxLength: 11 })} placeholder='Enter Agent Account Number' />
-                        {errors.agentAccount && <span className='mt-3 text-red-600'>Wrong Agent Number</span>}
+                        {errors.agentNumber && <span className='mt-3 text-red-600'>Wrong Agent Number</span>}
                     </div>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">Amount</label>

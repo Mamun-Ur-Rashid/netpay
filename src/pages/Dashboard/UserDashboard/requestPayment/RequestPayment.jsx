@@ -39,7 +39,7 @@ export default function RequestPayment() {
 
     return (
         <div className='p-6 lg:p-0 md:m-12'>
-            <p className='text-4xl font-semibold text-center mb-7 '>Request Payment</p>
+            <p className='text-4xl font-semibold text-center mb-7 '>Request Add Money</p>
             <div className='shadow-2xl p-4 lg:p-8 lg:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl'>
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-4 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>

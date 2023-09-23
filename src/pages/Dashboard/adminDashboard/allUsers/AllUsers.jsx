@@ -33,7 +33,7 @@ const AllUsers = () => {
                         <tbody>
                             {
                                 users.map((user, index) => <tr
-                                    key={user._id}>
+                                    key={user._id} className='bg-white bg-opacity-20 backdrop-blur-lg'>
                                     <th>{index + 1}</th>
                                     <th>{user.name}</th>
                                     <th><img className='h-10 w-10 rounded-full' src={user.ImgUrl} alt="" /></th>
