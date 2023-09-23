@@ -16,7 +16,7 @@ const AgentToAdmin = () => {
         data.agentAccount = isUserInfo?.number
         console.log(data)
         try {
-            const response = await fetch('https://vast-rose-seahorse-hem.cyclic.cloud/agentToAdmin', {
+            const response = await fetch('https://tasty-gray-goshawk.cyclic.cloud/agentToAdmin', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

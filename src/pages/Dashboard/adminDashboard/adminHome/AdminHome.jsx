@@ -84,7 +84,7 @@ const AdminHome = () => {
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axios.get('https://vast-rose-seahorse-hem.cyclic.cloud/allUsers');
+            const res = await axios.get('https://tasty-gray-goshawk.cyclic.cloud/allUsers');
 
             return res.data;
         }
@@ -93,7 +93,7 @@ const AdminHome = () => {
     const { data: transection = [] } = useQuery({
         queryKey: ['transection'],
         queryFn: async () => {
-            const res = await axios.get('https://vast-rose-seahorse-hem.cyclic.cloud/adminTransection');
+            const res = await axios.get('https://tasty-gray-goshawk.cyclic.cloud/adminTransection');
             return res.data;
         }
     })

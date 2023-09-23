@@ -12,7 +12,7 @@ const AdminAddMoney = () => {
     const onSubmit = async (data) => {
         data.adminAccount=isUserInfo?.number
         try {
-            const response = await fetch('https://vast-rose-seahorse-hem.cyclic.cloud/adminAddMoney', {
+            const response = await fetch('https://tasty-gray-goshawk.cyclic.cloud/adminAddMoney', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

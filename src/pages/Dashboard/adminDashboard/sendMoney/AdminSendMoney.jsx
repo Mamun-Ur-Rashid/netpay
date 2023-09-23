@@ -10,7 +10,7 @@ const AdminSendMoney = () => {
     const onSubmit = data => {
         data.adminAccount= isUserInfo?.number
         console.log(data)
-        fetch('https://vast-rose-seahorse-hem.cyclic.cloud/adminToAgent', {
+        fetch('https://tasty-gray-goshawk.cyclic.cloud/adminToAgent', {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"
