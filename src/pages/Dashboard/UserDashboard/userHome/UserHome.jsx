@@ -9,23 +9,23 @@ import Swal from 'sweetalert2';
 const UserHome = () => {
 
     const [axiosSecure] = useAxiosSecure();
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
 
-    const { data:userData ,isLoading,refetch} = useQuery({
-    queryKey : ['managerequests'] ,
-    queryFn : () => {
-        const value = axiosSecure.get(`/allUsers/${user?.email}`)
-        return value
+    const { data: userData, isLoading, refetch } = useQuery({
+        queryKey: ['managerequests'],
+        queryFn: () => {
+            const value = axiosSecure.get(`/allUsers/${user?.email}`)
+            return value
         }
     })
 
-    const acceptPayment = (data)  => {
+    const acceptPayment = (data) => {
         data.decision = 'accept'
         data.myinfo = userData?.data?.number;
-        axiosSecure.post(`/paymentdecision`,data).then(data => {
+        axiosSecure.post(`/paymentdecision`, data).then(data => {
             refetch();
-            if(data?.data?.modifiedCount == 1){
+            if (data?.data?.modifiedCount == 1) {
                 Swal.fire({
                     position: 'center',
                     icon: 'success',
@@ -40,8 +40,8 @@ const UserHome = () => {
     const cancelPayment = (data) => {
         data.decision = 'cancel';
         data.myinfo = userData?.data?.number;
-        axiosSecure.post(`/paymentdecision`,data).then(data => {
-            if(data?.data.modifiedCount == 1){
+        axiosSecure.post(`/paymentdecision`, data).then(data => {
+            if (data?.data.modifiedCount == 1) {
                 refetch()
             }
         })
@@ -64,8 +64,8 @@ const UserHome = () => {
                             <br />
 
                             <div className='flex justify-between px-1'>
-                                <button className='bg-transparent hover:bg-red-500 text-blue-700 font-semibold hover:text-white py-[6px] px-4 border border-blue-500 hover:border-transparent rounded' onClick={()=>cancelPayment(data)}>Cancel</button>
-                                <button className='bg-transparent hover:bg-green-500 text-blue-700 font-semibold hover:text-white py-[6px] px-4 border border-blue-500 hover:border-transparent rounded' onClick={()=>acceptPayment(data)}>Accept</button>
+                                <button className='bg-transparent hover:bg-red-500 text-blue-700 font-semibold hover:text-white py-[6px] px-4 border border-blue-500 hover:border-transparent rounded' onClick={() => cancelPayment(data)}>Cancel</button>
+                                <button className='bg-transparent hover:bg-green-500 text-blue-700 font-semibold hover:text-white py-[6px] px-4 border border-blue-500 hover:border-transparent rounded' onClick={() => acceptPayment(data)}>Accept</button>
                             </div>
                         </div>
                     ))

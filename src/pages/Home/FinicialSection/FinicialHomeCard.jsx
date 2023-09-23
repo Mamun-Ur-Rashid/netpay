@@ -1,6 +1,5 @@
 import SingleCard from "../../services/serviceCard/SingleCard";
 import addmoney from "../../../assets/addmoney.png"
-import sendmoney from "../../../assets/sendmoney.jpg"
 import cashout from "../../../assets/cashout.png"
 import Aos from "aos";
 import 'aos/dist/aos.css';
@@ -23,7 +22,7 @@ const FinicialHomeCard = () => {
         }
         ,
         {
-            // imageUrl: sendmoney,
+
             imageUrl: 'https://img.freepik.com/free-vector/hand-holding-phone-with-digital-wallet-service-sending-money-payment-transaction-transfer-through-mobile-app-flat-illustration_74855-20589.jpg',
             title: 'Send Money',
             description: 'Send money from NetPay to another account instantly.',

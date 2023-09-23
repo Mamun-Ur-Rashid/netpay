@@ -10,7 +10,7 @@ const AdminAddMoney = () => {
 
 
     const onSubmit = async (data) => {
-        data.adminAccount=isUserInfo?.number
+        data.adminAccount = isUserInfo?.number
         try {
             const response = await fetch('https://tasty-gray-goshawk.cyclic.cloud/adminAddMoney', {
                 method: 'PATCH',
