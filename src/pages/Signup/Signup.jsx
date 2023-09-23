@@ -52,7 +52,7 @@ const Signup = () => {
 
               const user = result.user
 
-              fetch('https://tasty-gray-goshawk.cyclic.cloud/allUsers', {
+              fetch('https://eager-getup-colt.cyclic.cloud/allUsers', {
                 method: 'POST',
                 headers: {
                   'content-type': 'application/json'

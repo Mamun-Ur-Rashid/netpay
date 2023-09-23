@@ -37,7 +37,7 @@ const DashSendMoney = () => {
 
         const sendMoneyInfo = { sdn: senderNumber, rcn: receiverNumber, tk: amount , transactionName: "Send Money"};
 
-        fetch("https://tasty-gray-goshawk.cyclic.cloud/sendmoney", {
+        fetch("https://eager-getup-colt.cyclic.cloud/sendmoney", {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

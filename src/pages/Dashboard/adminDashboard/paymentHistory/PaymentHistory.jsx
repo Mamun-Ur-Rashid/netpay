@@ -6,7 +6,7 @@ const PaymentHistory = () => {
     const { data: transection = [], isLoading, refetch } = useQuery({
         queryKey: ['transection'],
         queryFn: async () => {
-            const res = await axios.get('https://tasty-gray-goshawk.cyclic.cloud/adminTransection');
+            const res = await axios.get('https://eager-getup-colt.cyclic.cloud/adminTransection');
             return res.data;
         }
     })

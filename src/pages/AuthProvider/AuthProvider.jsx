@@ -32,7 +32,7 @@ const AuthProvider = ({ children }) => {
 
             // get and set token
             if (currentUser) {
-                fetch('https://tasty-gray-goshawk.cyclic.cloud/jwt', {
+                fetch('https://eager-getup-colt.cyclic.cloud/jwt', {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",

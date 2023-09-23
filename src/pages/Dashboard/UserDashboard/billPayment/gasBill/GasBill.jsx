@@ -12,7 +12,7 @@ const GasBill = () => {
         data.userAccount=isUserInfo.number
         console.log(data)
 
-        fetch('https://tasty-gray-goshawk.cyclic.cloud/gasbillPay', {
+        fetch('https://eager-getup-colt.cyclic.cloud/gasbillPay', {
             method: "PATCH",
             headers: {
                 'content-type': 'application/json'
