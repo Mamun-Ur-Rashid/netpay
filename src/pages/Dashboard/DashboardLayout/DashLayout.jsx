@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import useAdmin from '../../../Hook/useAdmin';
 import useAgent from '../../../Hook/useAgent';
-import { FaHistory, FaHome, FaHourglassHalf, FaMobileAlt, FaMoneyBillWave, FaLightbulb, FaMoneyBillWaveAlt, FaSearch, FaWhmcs } from "react-icons/fa";
+import { FaHistory, FaHome, FaHourglassHalf, FaMobileAlt, FaMoneyBillWave, FaLightbulb, FaMoneyBillWaveAlt, FaSearch, FaWhmcs, FaRegMoneyBillAlt } from "react-icons/fa";
 import { FaChartColumn, FaUserGroup } from "react-icons/fa6";
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
@@ -43,7 +43,7 @@ const DashLayout = () => {
 
                     {/* Side bar */}
                     <div className='lg:w-[280px] lg:h-screen pt-4 md:pt-10  lg:sticky top-0  '>
-                        <ul className='px-5 pb-3 lg:p-0 text-lg font-bold backdrop-blur-md  bg-opacity-30 ' id='dashboard' >
+                        <ul className='px-5 pb-3 lg:p-0 text-lg font-bold backdrop-blur-md  bg-opacity-30  ' id='dashboard' >
                             {isAdmin ? (
                                 <>
                                     <NavLink to='/' className="text-white hover:text-orange-400 text-3xl">
@@ -101,9 +101,10 @@ const DashLayout = () => {
                                             <NavLink to='dashboard/cashOut' className="flex items-center"> <FaMoneyBillWave className='m-3'></FaMoneyBillWave> Cash Out</NavLink>
                                             <NavLink to='dashboard/send-money' className="flex items-center"><FaHourglassHalf className='m-3'></FaHourglassHalf> Send Money</NavLink>
                                             <NavLink to='dashboard/mobileRecharge' className="flex items-center"> <FaMobileAlt className='m-3'></FaMobileAlt> Mobile Recharge</NavLink>
+                                            <NavLink to='dashboard/makePayment' className="flex items-center"> <FaRegMoneyBillAlt className='m-3'></FaRegMoneyBillAlt> Make Payment</NavLink>
                                             <NavLink to='dashboard/billPayment' className="flex items-center"> <FaLightbulb className='m-3'></FaLightbulb> Bill Payment</NavLink>
 
-                                            <NavLink to='dashboard/requestpayment' className="flex items-center"> <FaMoneyBillWaveAlt className='m-3'></FaMoneyBillWaveAlt> Request Payment</NavLink>
+                                            <NavLink to='dashboard/requestpayment' className="flex items-center"> <FaMoneyBillWaveAlt className='m-3'></FaMoneyBillWaveAlt> Request AddMoney</NavLink>
                                             <NavLink to='dashboard/userTransaction' className="flex items-center"> <FaHistory className='m-3'></FaHistory>  All Transaction </NavLink>
                                             <NavLink to='dashboard/setting' className="flex items-center"> <FaWhmcs className='m-3'></FaWhmcs> Setting</NavLink>
                                             <NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome> Home</NavLink></>

@@ -98,13 +98,13 @@ const UserHome = () => {
                     <p className='text-center  mb-4 '> Pay Bill </p>
                 </div></Link>
 
-                <div className='p-2 m-5 pt-4 w-[90%] h-38 bg-[#adb9e6] rounded-xl text-xl'>
+                <Link to='/dashboard/dashboard/makePayment'><div className='p-2 m-5 pt-4 w-[90%] h-38 bg-[#91a2e1] rounded-xl text-xl'>
                     <div className=' flex items-center justify-center mb-4'>
                         <img className='w-1/2 h-16 rounded  ' src="https://i.ibb.co/yV6xRX3/makepayment.jpg" alt="" />
                     </div>
                     <p className='text-center  mb-4'> Make Payment </p>
-                </div>
-                <Link to='/dashboard/dashboard/requestpayment'> <div className='p-2 m-5 pt-4 w-[90%] h-38 bg-white bg-opacity-20 backdrop-blur-md rounded-xl text-xl'>
+                </div></Link>
+                <Link to='/dashboard/dashboard/requestpayment'> <div className='p-2 m-5 pt-4 w-[90%] h-38 bg-[#383b47] rounded-xl text-xl'>
                     <div className=' flex items-center justify-center mb-4'>
                         <img className='w-1/2 h-16 rounded  ' src="https://i.ibb.co/rv0c73k/payment.jpg" alt="" />
                     </div>
@@ -121,10 +121,10 @@ const UserHome = () => {
                         cx="50%"
                         cy="50%"
                         outerRadius={80}
-                        fill="#8884d8"
+                        fill="#4e63b8"
                         label
                     />
-                    <Pie dataKey="value" data={dataPie2} cx={500} cy={200} innerRadius={40} outerRadius={80} fill="#82ca9d" />
+                    <Pie dataKey="value" data={dataPie2} cx={500} cy={200} innerRadius={40} outerRadius={80} fill="#4e63b8" />
                     <Tooltip />
                 </PieChart>
             </div>
