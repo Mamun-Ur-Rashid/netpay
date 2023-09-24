@@ -13,8 +13,8 @@ const AllUsers = () => {
         }
     })
     return (
-        <div>
-            <h2 className='text-4xl my-6 text-center font-bold'>All Users</h2>
+        <div className='mt-10'>
+            <h2 className='text-4xl  text-center my-4 font-bold'>All Users</h2>
             <div>
                 <div className="overflow-x-scroll overflow-y-scroll p-4 lg:p-10">
                     <table className="table">
