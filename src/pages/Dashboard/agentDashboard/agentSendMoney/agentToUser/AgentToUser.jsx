@@ -33,7 +33,7 @@ const AgentToUser = () => {
                 }
 
                 Swal.fire({
-                    position: 'top-end',
+                    position: 'center',
                     icon: 'success',
                     title: `${responseData.message}`,
                     showConfirmButton: false,

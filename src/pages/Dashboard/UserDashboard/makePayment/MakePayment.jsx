@@ -8,10 +8,11 @@ const MakePayment = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [user] = useUser();
     const onSubmit =async (data) =>{
+        console.log(data);
         data.userNumber = user?.number;
         data.transactionName = "Make Payment";
         try {
-            const response = await fetch('https://tasty-gray-goshawk.cyclic.cloud/makePayment', {
+            const response = await fetch('https://eager-getup-colt.cyclic.cloud/makePayment', {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -21,6 +22,7 @@ const MakePayment = () => {
 
             if (response.ok) {
                 const responseData = await response.json();
+                console.log(responseData);
 
                 Swal.fire({
                     position: 'center',
@@ -40,7 +42,7 @@ const MakePayment = () => {
     };
 
     return (
-        <div className='p-2 md:m-4 mb-28 pb-10'>
+        <div className='p-2 md:m-4 mb-28 pb-10 md:mt-10'>
             <h3 className='text-center text-2xl font-bold'>Make Payment</h3>
             <div className='shadow-2xl p-5 md:w-1/2 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md  rounded-xl'>
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-2 text-2xl'>

@@ -70,7 +70,7 @@ const UserMobileRecharge = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-4 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label className='rounded p-2 mt-2'>Select Your Sim</label>
-                        <select className='p-2 rounded-lg' {...register("sim")}>
+                        <select className='p-3 rounded-lg text-sm' {...register("sim")}>
                             <option disabled>Select Your Sim</option>
                             <option value="banglalink">Banglalink</option>
                             <option value="grameenPhone">GrameenPhone</option>
