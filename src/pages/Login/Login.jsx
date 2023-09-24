@@ -8,6 +8,7 @@ import { AiFillEye } from 'react-icons/ai'
 import { FaUser } from 'react-icons/fa'
 import { MdLock } from 'react-icons/md'
 import Massage from '../liveChat/massage/Massage';
+import Button from '../../shared/button/Button';
 
 const Login = () => {
 
@@ -101,9 +102,10 @@ const Login = () => {
                                     }
                                 }} />
                             </div>
-                            <Link to={'/signup'} className="hover:underline text-[#8090a3] pt-3">Don't have an account ? </Link>
+                            <Link to={'/signup'} className="hover:underline text-[#8090a3] pt-3">Don&apos;t have an account ? </Link>
                             <div className="form-control mt-3">
-                                <button type="submit" className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-[8px] px-4 border border-blue-500 hover:border-transparent rounded">Login</button>
+                                <Button type="submit" text={'Login'}></Button>
+                                {/* <button type="submit" className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-[8px] px-4 border border-blue-500 hover:border-transparent rounded">Login</button> */}
                             </div>
                             {/* <div className="flex flex-col w-full border-opacity-50">  
                             <div className="divider">OR</div>

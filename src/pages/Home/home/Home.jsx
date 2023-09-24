@@ -17,7 +17,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="bg-slate-50">
+        <div className="">
             <Banner></Banner>
             <div className='px-6 md:px-24'>
                 <FinicialCard></FinicialCard>

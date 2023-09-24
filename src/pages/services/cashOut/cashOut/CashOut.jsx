@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Title from "../../../../shared/title/Title";
 import Massage from "../../../liveChat/massage/Massage";
 import AllService from "../../allService/AllService";
@@ -9,10 +8,7 @@ import CashOutServiceDetails from "../cashOutProcess/CashOutServiceDetails";
 
 const CashOut = () => {
 
-    // Scroll to the top of the page when it loads
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
 
     const sendMoneyHeader = {
         imageUrl: 'https://img.freepik.com/premium-vector/3d-cartoon-smartphone-with-credit-card-money-online-payment-concept-mobile-wallet-application-banking-app-transfer-money-via-smartphone-vector-3d-illustration_221648-593.jpg',
@@ -108,7 +104,7 @@ const CashOut = () => {
                     ></AllServicesHeader>
                 </div>
                 <CashOutServiceDetails />
-                <div className="bg-[#4e63b8] p-8 mt-10">
+                <div className="p-8 mt-10">
                     <Faq faqData={faqData}></Faq>
                 </div>
             </div>

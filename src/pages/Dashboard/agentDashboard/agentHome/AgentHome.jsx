@@ -4,6 +4,7 @@ import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { useMediaQuery } from 'react-responsive';
 
 const data = [
     {
@@ -59,13 +60,15 @@ const data = [
 
 const AgentHome = () => {
     const [axiosSecure] = useAxiosSecure();
-    const {user} = useContext(AuthContext);
-    const [isUserInfo, setUserInfo ] = useState(false);
+    const { user } = useContext(AuthContext);
+    const [isUserInfo, setUserInfo] = useState(false);
+    const isTab = useMediaQuery({ maxWidth: 968 });
+    const isMobile = useMediaQuery({ maxWidth: 767 });
 
     const { data: allTransactions = [], isLoading, refetch } = useQuery({
         queryKey: ['allTransactions'],
         queryFn: async () => {
-            const res = await axios.get('https://vast-rose-seahorse-hem.cyclic.cloud/agentAllTransactions');
+            const res = await axios.get('https://eager-getup-colt.cyclic.cloud/agentAllTransactions');
             return res.data;
         }
     })
@@ -85,24 +88,24 @@ const AgentHome = () => {
         <div>
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-1 mr-5 mt-6 text-white'>
                 <div className='m-5 pl-3 pt-4 w-[90%] h-38 bg-[#33C49D] rounded-xl text-2xl'>
-                   <p className='text-center font-bold pb-4'> Total Transactions <br /> <small className='text-5xl'>{allTransactions.length}</small></p> 
+                    <p className='text-center font-bold pb-4'> Total Transactions <br /> <small className='text-5xl'>{allTransactions.length}</small></p>
                 </div>
                 <div className='m-5 pl-3 pt-4 w-[90%] h-38 bg-[#C44933] rounded-xl text-2xl'>
                     <p className='text-center font-bold pb-4'> Total Transactions Money  <small className='text-5xl'>570000</small> </p>
                 </div>
-                <div className='m-5 mr-5 pl-3 pt-4 w-[90%] h-38 bg-[#0F101A] rounded-xl text-2xl'> 
-                    <p className='text-center font-bold pb-4'>   Total Amount (Tk) <br /> 
-                    <small className='text-5xl'>{isUserInfo.balance}</small> </p>
+                <div className='m-5 mr-5 pl-3 pt-4 w-[90%] h-38 bg-[#0F101A] rounded-xl text-2xl'>
+                    <p className='text-center font-bold pb-4'>   Total Amount (Tk) <br />
+                        <small className='text-5xl'>{isUserInfo.balance}</small> </p>
                 </div>
             </div>
-            <div className='w-full p-4 mt-18 ml-14'>
+            <div className='w-screen p-4 mt-10 '>
                 <h2 className='text-2xl font-semibold text-center my-8'>Transaction Analytics</h2>
                 <BarChart
-                    width={900}
-                    height={400}
+                    width={isMobile ? 300 : 1000}
+                    // width={isTab? 600 : 1400}
+                    height={isMobile ? 300 : 400}
                     data={data}
-
-                    barSize={30}
+                    barSize={isMobile ? 10 : 30}
                     className='mt-5'
                 >
                     <XAxis dataKey="name" />

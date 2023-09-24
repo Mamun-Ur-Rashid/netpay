@@ -6,12 +6,12 @@ const PaymentHistory = () => {
     const { data: transection = [], isLoading, refetch } = useQuery({
         queryKey: ['transection'],
         queryFn: async () => {
-            const res = await axios.get('https://vast-rose-seahorse-hem.cyclic.cloud/adminTransection');
+            const res = await axios.get('https://eager-getup-colt.cyclic.cloud/adminTransection');
             return res.data;
         }
     })
     return (
-        <div>
+        <div className='md:mt-10'>
             <h2 className='text-4xl my-6 text-center font-bold'>Admin Payment History</h2>
             <div>
                 <div className="overflow-x-auto p-4">
@@ -31,7 +31,7 @@ const PaymentHistory = () => {
                         <tbody>
                             {
                                 transection.map((trans, index) => <tr
-                                    key={trans._id}>
+                                    key={trans._id} className='bg-slate-400'>
                                     <th>{index + 1}</th>
                                     <th>{trans.Form}</th>
                                     <th>{trans.to}</th>

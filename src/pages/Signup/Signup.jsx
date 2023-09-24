@@ -12,6 +12,7 @@ import { HiOutlineMail } from 'react-icons/hi'
 import { BsTelephone } from 'react-icons/bs'
 import { ImProfile } from 'react-icons/im'
 import Massage from '../liveChat/massage/Massage';
+import Button from '../../shared/button/Button';
 
 
 
@@ -51,7 +52,7 @@ const Signup = () => {
 
               const user = result.user
 
-              fetch('https://vast-rose-seahorse-hem.cyclic.cloud/allUsers', {
+              fetch('https://eager-getup-colt.cyclic.cloud/allUsers', {
                 method: 'POST',
                 headers: {
                   'content-type': 'application/json'
@@ -259,7 +260,8 @@ const Signup = () => {
             <Link to={'/login'} className="hover:underline text-[#8090a3] pt-3">Already have an account ?</Link>
 
             <div className="form-control mt-2">
-              <button type="submit" className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-[10px] px-4 border border-blue-500 hover:border-transparent rounded">Sign Up</button>
+              <Button type='submit' text={'Sign Up'}></Button>
+              {/* <button type="submit" className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-[10px] px-4 border border-blue-500 hover:border-transparent rounded">Sign Up</button> */}
             </div>
             {/* <div className="flex flex-col w-full border-opacity-50">  
               <div className="divider">OR</div>
