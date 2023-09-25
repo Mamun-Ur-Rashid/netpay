@@ -43,7 +43,7 @@ const Signup = () => {
           if (imageRes.success) {
             const images = imageRes.data.display_url
             const { name, email, nid, number, password } = data
-            const tk = '1000'
+            const tk = '05'
             const userInfo = { name, email, nid, number, password, ImgUrl: images, role: 'user', balance: parseInt(tk) }
 
             console.log(userInfo)

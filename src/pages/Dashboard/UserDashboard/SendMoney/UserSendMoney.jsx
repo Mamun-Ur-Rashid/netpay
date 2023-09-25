@@ -64,49 +64,54 @@ const DashSendMoney = () => {
 
 
     return (
-        <div className="p-6 lg:p-0 md:m-12">
-            <h1 className="text-4xl font-semibold text-center mb-7 ">Send Money</h1>
-            <div className="shadow-2xl p-8 lg:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl">
-                <form action="" onSubmit={sendMoney} className="space-y-4 text-2xl">
-                    <div className="form-control md:w-3/4 mx-auto">
-                        <label htmlFor="">Sender Number</label>
+        <div className="text-center mb-40">
+            <h1 className="text-4xl mt-4 font-bold">Send Money</h1>
+            <div className="shadow-2xl p-5 md:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl">
+                <form action="" onSubmit={sendMoney} className="md:w-full mx-auto md:px-20 mt-5">
+                    <div className="form-control w-full">
+                        <label className="label">
+                            <span className="label-text text-base mt-2 text-white">Sender Number</span>
+                        </label>
                         <input
                             type="text" disabled
                             defaultValue={isUserInfo?.number}
                             name="senderNumber"
                             placeholder="Sender Number"
-                            className="input input-bordered mt-2"
+                            className="input input-bordered text-black"
                         />
                     </div>
-                    <div className="form-control md:w-3/4 mx-auto ">
-                        <label htmlFor="">Receiver Number</label>
+                    <div className="form-control w-full py-2">
+                        <label className="label">
+                            <span className="label-text text-base text-white">Receiver Number</span>
+                        </label>
                         <input
                             type="number"
                             name="receiverNumber"
                             placeholder="Receiver Number"
-                            className="input input-bordered mt-2 "
+                            className="input input-bordered text-black w-full "
                         />
                     </div>
-                    <div className="form-control md:w-3/4 mx-auto">
-                        <label htmlFor="">Type Amount</label>
+                    <div className="form-control w-full">
+                        <label className="label">
+                            <span className="label-text text-base text-white">Type Amount</span>
+                        </label>
                         <input
                             type="number"
                             name="amount"
                             placeholder="Amount"
-                            className="input input-bordered mt-2 "
+                            className="input input-bordered text-black w-full"
                         />
                     </div>
-                    <div className="form-control md:w-3/4 mx-auto">
+                    <div className="form-control w-full">
                         <input
                             type="submit"
-                            className="bg-[#4e63b8] p-2 my-5 border-0 rounded-xl mb-6 text-white cursor-pointer"
+                            className="cursor-pointer hover:bg-[#044fb7d8] bg-[#044EB7] text-white p-2 rounded-lg mt-8 mb-5"
                             value="Send Money"
                         />
                     </div>
                 </form>
             </div>
-        </div>
+            </div>
     );
 };
-
-export default DashSendMoney;
+  export default DashSendMoney;
