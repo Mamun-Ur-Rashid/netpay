@@ -64,7 +64,7 @@ const UserCashOut = () => {
                         </div>
                     )}
                     <div className='form-control md:w-3/4 mx-auto'>
-                        <input type="submit" className=" bg-[#4e63b8] p-2 rounded-xl mt-2 mb-4" value="Cash Out" />
+                        <input type="submit" className="cursor-pointer hover:bg-[#044fb7d8] bg-[#044EB7] text-white p-2 rounded-lg mt-2 mb-5" value="Cash Out" />
                     </div>
                 </form>
             </div>

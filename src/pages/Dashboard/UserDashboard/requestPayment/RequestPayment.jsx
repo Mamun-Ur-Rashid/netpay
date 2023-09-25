@@ -60,7 +60,24 @@ export default function RequestPayment() {
                     </div>
                 </form>
             </div>
-
+            <form onSubmit={handleSubmit(onSubmit)} className=' mx-auto md:px-20 '>
+                <div className='form-control md:w-3/4 mx-auto'>
+                    <label htmlFor="">Request User</label>
+                    <input required type='number' className='input input-bordered mt-2' {...register("receiver")} placeholder='Enter User Account Number' />
+                </div>
+                <div className='form-control md:w-3/4 mx-auto'>
+                    <label htmlFor="">Requested ammount</label>
+                    <input required type='number' className='input input-bordered mt-2' {...register("amount")} placeholder='Enter Requested Amount' />
+                </div>
+                <div className='form-control md:w-3/4 mx-auto'>
+                    <label htmlFor="">Message</label>
+                    <textarea required type='text' className='mt-2 p-1' {...register("message")} placeholder='Write Message' />
+                </div>
+                
+                <div className='form-control md:w-3/4 mx-auto pt-5'>
+                    <button type="submit" className='cursor-pointer hover:bg-[#044fb7d8] bg-[#044EB7] text-white p-2 rounded-lg mt-2 mb-5'>Request</button>
+                </div>
+            </form>
         </div>
     )
 }
