@@ -55,6 +55,7 @@ const Navbar = () => {
             <NavLink to='/services' className="">Services</NavLink>
             <NavLink to='/business' className="">Business</NavLink>
             <NavLink to='/contact' className="">Contact Us</NavLink>
+            <br />
             {/* <NavLink to='/about' className="">About</NavLink> */}
             {user &&
                 <NavLink to='dashboard' className=" hover:text-blue-700">Dashboard</NavLink>

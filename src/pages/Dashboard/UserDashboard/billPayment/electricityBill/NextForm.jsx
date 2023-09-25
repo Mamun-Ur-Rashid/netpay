@@ -52,7 +52,7 @@ const NextForm = () => {
                                 <div className='form-control w-1/2'>
                                     <label htmlFor="">Month</label>
                                     <input type='text' className='input input-bordered mt-2' disabled defaultValue={Info?.month}   {...register("month", { minLength: 11, maxLength: 11 })} placeholder='Enter Mobile Number' />
-                                    {errors.mobileNumber && <span className='mt-3 text-red-400'>{errors.mobileNumber.message}</span>}
+                                    {errors.month && <span className='mt-3 text-red-400'>{errors.month.message}</span>}
                                 </div>
                                 <div className='form-control w-1/2'>
                                     <label htmlFor="">Total bill</label>

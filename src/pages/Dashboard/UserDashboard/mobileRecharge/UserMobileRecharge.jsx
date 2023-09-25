@@ -9,6 +9,7 @@ const UserMobileRecharge = () => {
 
     const onSubmit = async (data) => {
         data.transactionName = 'Mobile Recharge';
+        data.userAccount= isUserInfo?.number;
         const { sim, mobileNumber } = data;
         const simFirst3Digits = {
             banglalink: ['019', '014'],
@@ -93,11 +94,11 @@ const UserMobileRecharge = () => {
                             {errors.amount && <span className='mt-3 text-red-600'>{errors.amount.message}</span>}
                         </div>
                     </div>
-                    <div className='form-control md:w-3/4 mx-auto'>
+                    {/* <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">My Account</label>
                         <input type='text' className='input input-bordered mt-2' defaultValue={isUserInfo?.number} {...register("userAccount", { maxLength: 11 })} placeholder='Enter my Account Number' />
                         {errors.userAccount && <span className='mt-3 text-red-600'>{errors.userAccount.message}</span>}
-                    </div>
+                    </div> */}
                     <div className='form-control md:w-3/4 mx-auto'>
                         <input type="submit" className=" bg-[#044EB7] text-white p-2 rounded-lg mt-2 mb-5" value="Mobile Recharge" />
                     </div>

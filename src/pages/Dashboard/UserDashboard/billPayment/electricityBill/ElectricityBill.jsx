@@ -62,7 +62,7 @@ const ElectricityBill = () => {
                             </div>
                             <div className='form-control md:w-3/4 mx-auto'>
                                 <label htmlFor="">Meter Number</label>
-                                <input type='text' className='input input-bordered mt-2' {...register("meter", { maxLength: 16 })} placeholder='Enter Meter Number' />
+                                <input type='text' className='input input-bordered mt-2' required {...register("meter",{ maxLength: 16 })} placeholder='Enter Meter Number' />
                                 {errors.userAccount && <span className='mt-3 text-red-600'>Please input correct Meter number!</span>}
                             </div>
                             <div className='form-control md:w-3/4 mx-auto'>
