@@ -19,7 +19,7 @@ const AllTransaction = () => {
         }
     })
         return (
-            <div>
+            <div className='mt-10'>
                  <h2 className='text-4xl my-6 text-center font-bold'>All Transactions!</h2>
                 <div>
                     <div className="overflow-x-auto p-4">

@@ -43,6 +43,7 @@ import NetworkBill from "../../pages/Dashboard/UserDashboard/billPayment/network
 import NextForm from "../../pages/Dashboard/UserDashboard/billPayment/electricityBill/NextForm";
 import NextFormNet from "../../pages/Dashboard/UserDashboard/billPayment/networkBill/NextFormNet";
 import GasNextForm from "../../pages/Dashboard/UserDashboard/billPayment/gasBill/GasNextForm";
+import MakePayment from "../../pages/Dashboard/UserDashboard/makePayment/MakePayment";
 
 const router = createBrowserRouter([
     {
@@ -133,6 +134,10 @@ const router = createBrowserRouter([
             {
                 path:'dashboard/mobileRecharge',
                 element: <UserMobileRecharge></UserMobileRecharge>
+            },
+            {
+                path:'dashboard/makePayment',
+                element: <MakePayment></MakePayment>
             },
             {
                 path:'dashboard/billPayment',

@@ -115,14 +115,14 @@ const AdminHome = () => {
                         <small className='text-5xl'>{isUserInfo.balance}</small> </p>
                 </div>
             </div>
-          
-             <div className='w-full p-4 mt-10'>
+
+            <div className=' lg:w-full p-4 mt-10'>
                 <h2 className='text-2xl font-semibold'>Transaction Analytics</h2>
                 <BarChart
-                    width={isMobile ? 300 : 1000} 
-                    height={isMobile ? 300 : 400} 
+                    width={isMobile ? 300 : 1000}
+                    height={isMobile ? 300 : 400}
                     data={data}
-                    barSize={isMobile ? 10 : 30} 
+                    barSize={isMobile ? 10 : 30}
                     className='mt-5'
                 >
                     <XAxis dataKey="name" />

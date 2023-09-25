@@ -13,12 +13,12 @@ const AllUsers = () => {
         }
     })
     return (
-        <div>
-            <h2 className='text-4xl my-6 text-center font-bold'>All Users</h2>
+        <div className='mt-10'>
+            <h2 className='text-4xl  text-center my-4 font-bold'>All Users</h2>
             <div>
-                <div className="overflow-x-auto p-4">
+                <div className="overflow-x-scroll overflow-y-scroll p-4 lg:p-10">
                     <table className="table">
-                       
+
                         <thead>
                             <tr className='bg-[#4e63b8] text-white text-lg'>
                                 <th>#</th>
@@ -33,7 +33,7 @@ const AllUsers = () => {
                         <tbody>
                             {
                                 users.map((user, index) => <tr
-                                    key={user._id}>
+                                    key={user._id} className='bg-white bg-opacity-20 backdrop-blur-lg'>
                                     <th>{index + 1}</th>
                                     <th>{user.name}</th>
                                     <th><img className='h-10 w-10 rounded-full' src={user.ImgUrl} alt="" /></th>
