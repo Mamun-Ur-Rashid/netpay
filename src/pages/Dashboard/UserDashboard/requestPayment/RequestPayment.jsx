@@ -57,7 +57,7 @@ export default function RequestPayment() {
                 </div>
                 
                 <div className='form-control md:w-3/4 mx-auto pt-5'>
-                    <button type="submit" className='bg-transparent mb-12 hover:bg-[#4e63b8] font-semibold hover:text-white py-[6px] px-4 border border-blue-500 hover:border-transparent rounded '>Request</button>
+                    <button type="submit" className='cursor-pointer hover:bg-[#044fb7d8] bg-[#044EB7] text-white p-2 rounded-lg mt-2 mb-5'>Request</button>
                 </div>
             </form>
         </div>

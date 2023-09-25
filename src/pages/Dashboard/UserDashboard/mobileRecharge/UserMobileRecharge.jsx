@@ -97,7 +97,7 @@ const UserMobileRecharge = () => {
                         {errors.userAccount && <span className='mt-3 text-red-600'>{errors.userAccount.message}</span>}
                     </div>
                     <div className='form-control md:w-3/4 mx-auto'>
-                        <input type="submit" className=" bg-[#044EB7] text-white p-2 rounded-lg mt-2 mb-5" value="Mobile Recharge" />
+                        <input type="submit" className=" cursor-pointer hover:bg-[#044fb7d8] bg-[#044EB7] text-white p-2 rounded-lg mt-2 mb-5" value="Mobile Recharge" />
                     </div>
                 </form>
             </div>

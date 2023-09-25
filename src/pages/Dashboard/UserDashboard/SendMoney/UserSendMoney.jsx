@@ -69,7 +69,7 @@ const DashSendMoney = () => {
     return (
         <div className="text-center mb-40">
         <h1 className="text-4xl mt-4 font-bold">Send Money</h1>
-        <div className="pl-4 mt-4 md:w-1/2 mx-auto shadow-xl bg-white bg-opacity-20 backdrop-blur-md rounded-lg">
+        <div className="shadow-2xl p-5 md:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl">
             <form action="" onSubmit={sendMoney} className="md:w-full mx-auto md:px-20 mt-5">
                 <div className="form-control w-full">
                     <label className="label">
@@ -108,7 +108,7 @@ const DashSendMoney = () => {
                 <div className="form-control w-full">
                     <input
                         type="submit"
-                        className="bg-[#4e63b8] p-2 my-5 border-0 rounded-xl mb-6 text-white cursor-pointer"
+                        className="cursor-pointer hover:bg-[#044fb7d8] bg-[#044EB7] text-white p-2 rounded-lg mt-8 mb-5"
                         value="Send Money"
                     />
                 </div>

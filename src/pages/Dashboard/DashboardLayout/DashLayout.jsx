@@ -105,7 +105,7 @@ const DashLayout = () => {
 
                                             <NavLink to='dashboard/requestpayment' className="flex items-center"> <FaMoneyBillWaveAlt className='m-3'></FaMoneyBillWaveAlt> Request Payment</NavLink>
                                             <NavLink to='dashboard/userTransaction' className="flex items-center"> <FaHistory className='m-3'></FaHistory>  All Transaction </NavLink>
-                                            <NavLink to='dashboard/setting' className="flex items-center"> <FaWhmcs className='m-3'></FaWhmcs> Setting</NavLink>
+                                            {/* <NavLink to='dashboard/setting' className="flex items-center"> <FaWhmcs className='m-3'></FaWhmcs> Setting</NavLink> */}
                                             <NavLink to='/'> <FaHome className='inline-flex mb-[2px] mx-2'></FaHome> Home</NavLink></>
                                     )
 
