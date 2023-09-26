@@ -9,6 +9,7 @@ const UserMobileRecharge = () => {
 
     const onSubmit = async (data) => {
         data.transactionName = 'Mobile Recharge';
+        data.userAccount= isUserInfo?.number;
         const { sim, mobileNumber } = data;
         const simFirst3Digits = {
             banglalink: ['019', '014'],
@@ -64,9 +65,9 @@ const UserMobileRecharge = () => {
     };
 
     return (
-        <div className='p-6 lg:p-0 md:m-12'>
+        <div className='p-2 md:m-4 mb-28 pb-10 mt-10'>
             <h3 className='text-4xl font-semibold text-center mb-7 '>Mobile Recharge</h3>
-            <div className='shadow-2xl p-4 lg:p-8 lg:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl'>
+            <div className='shadow-2xl p-5 lg:w-1/2 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md  rounded-xl'>
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-4 text-2xl'>
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label className='rounded p-2 mt-2'>Select Your Sim</label>
@@ -93,11 +94,11 @@ const UserMobileRecharge = () => {
                             {errors.amount && <span className='mt-3 text-red-600'>{errors.amount.message}</span>}
                         </div>
                     </div>
-                    <div className='form-control md:w-3/4 mx-auto'>
+                    {/* <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">My Account</label>
                         <input type='text' className='input input-bordered mt-2' defaultValue={isUserInfo?.number} {...register("userAccount", { maxLength: 11 })} placeholder='Enter my Account Number' />
                         {errors.userAccount && <span className='mt-3 text-red-600'>{errors.userAccount.message}</span>}
-                    </div>
+                    </div> */}
                     <div className='form-control md:w-3/4 mx-auto'>
                         <input type="submit" className=" cursor-pointer hover:bg-[#044fb7d8] bg-[#044EB7] text-white p-2 rounded-lg mt-2 mb-5" value="Mobile Recharge" />
                     </div>

@@ -40,9 +40,9 @@ const NextForm = () => {
         })
     }
     return (
-        <div>
+        <div className='p-2 md:m-4 mb-28 pb-10 md:mt-10'>
              <h3 className='text-3xl font-semibold text-center mb-5 '>Check Your Information</h3>
-                    <div className='shadow-2xl p-5 md:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl'>
+                    <div className='shadow-2xl p-5 lg:w-1/2 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md  rounded-xl'>
                         <form onSubmit={handleSubmit(onSubmit)} className='space-y-4 text-2xl'>
                             <div className='form-control md:w-3/4 mx-auto'>
                                 <label className='rounded p-2 mt-2'>Meter Number</label>
@@ -52,7 +52,7 @@ const NextForm = () => {
                                 <div className='form-control w-1/2'>
                                     <label htmlFor="">Month</label>
                                     <input type='text' className='input input-bordered mt-2' disabled defaultValue={Info?.month}   {...register("month", { minLength: 11, maxLength: 11 })} placeholder='Enter Mobile Number' />
-                                    {errors.mobileNumber && <span className='mt-3 text-red-400'>{errors.mobileNumber.message}</span>}
+                                    {errors.month && <span className='mt-3 text-red-400'>{errors.month.message}</span>}
                                 </div>
                                 <div className='form-control w-1/2'>
                                     <label htmlFor="">Total bill</label>

@@ -40,9 +40,9 @@ const NextFormNet = () => {
         })
     }
     return (
-        <div>
+        <div className='p-2 md:m-4 mb-28 pb-10 md:mt-10'>
              <h3 className='text-3xl font-semibold text-center mb-5 '>Check Your Information</h3>
-                    <div className='shadow-2xl p-5 md:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl'>
+                    <div className='shadow-2xl p-5 lg:w-1/2 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md  rounded-xl'>
                         <form onSubmit={handleSubmit(onSubmit)} className='space-y-4 text-2xl'>
                             <div className='form-control md:w-3/4 mx-auto'>
                                 <label className='rounded p-2 mt-2'>Subscriber ID</label>

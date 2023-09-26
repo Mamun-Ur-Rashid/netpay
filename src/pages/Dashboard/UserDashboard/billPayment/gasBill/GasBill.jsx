@@ -39,8 +39,8 @@ const GasBill = () => {
                   
                     <div className='form-control md:w-3/4 mx-auto'>
                         <label htmlFor="">Custumar ID </label>
-                        <input type='text' className='input input-bordered mt-2' {...register("custumarId", { maxLength: 11 })} placeholder='Enter User Account Number' />
-                        {errors.userAccount && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
+                        <input type='text' className='input input-bordered mt-2' required {...register("custumarId", { maxLength: 11 })} placeholder='Enter User Account Number' />
+                        {errors.custumarId && <span className='mt-3 text-red-600'>Please input correct account number!</span>}
                     </div>
                     <div className='form-control md:w-3/4 mx-auto'>
                                 <label htmlFor="">Your Account Number</label>
