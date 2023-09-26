@@ -64,13 +64,13 @@ const DashSendMoney = () => {
 
 
     return (
-        <div className="text-center mb-40">
-            <h1 className="text-4xl mt-4 font-bold">Send Money</h1>
-            <div className="shadow-2xl p-5 md:w-3/4 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md rounded-xl">
-                <form action="" onSubmit={sendMoney} className="md:w-full mx-auto md:px-20 mt-5">
+        <div className="p-2 md:m-4 mb-28 pb-10 mt-10">
+            <h1 className="text-4xl text-center mb-6  font-bold">Send Money</h1>
+            <div className="shadow-2xl p-5 lg:w-1/2 my-4 mx-auto bg-white bg-opacity-20 backdrop-blur-md  rounded-xl">
+                <form action="" onSubmit={sendMoney} className="md:w-3/4 mx-auto  text-lg">
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text text-base mt-2 text-white">Sender Number</span>
+                            <span className="label-text mt-2">Sender Number</span>
                         </label>
                         <input
                             type="text" disabled
@@ -82,7 +82,7 @@ const DashSendMoney = () => {
                     </div>
                     <div className="form-control w-full py-2">
                         <label className="label">
-                            <span className="label-text text-base text-white">Receiver Number</span>
+                            <span className="label-text ">Receiver Number</span>
                         </label>
                         <input
                             type="number"
@@ -93,7 +93,7 @@ const DashSendMoney = () => {
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text text-base text-white">Type Amount</span>
+                            <span className="label-text ">Type Amount</span>
                         </label>
                         <input
                             type="number"
